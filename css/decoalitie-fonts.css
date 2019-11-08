@@ -1,0 +1,29 @@
+@font-face {
+	font-family: 'Syne';
+	font-weight: 700;
+	font-style: normal;
+	src: local('Syne Bold'), local('Syne-Bold'), url('../fonts/Syne-Bold.otf');
+}
+@font-face {
+	font-family: 'Sporting Grotesque';
+	font-weight: 700;
+	font-style: normal;
+	src: local('Sporting Grotesque Bold'), local('SportingGrotesque-Bold'), url('../fonts/SportingGrotesque-Bold.otf');
+}
+@font-face {
+	font-family: 'Libre Franklin';
+	font-weight: 400;
+	font-style: normal;
+	src: local('Libre Franklin Regular'), local('LibreFranklin-Regular'), url('../fonts/LibreFranklin-Regular.otf');
+}
+@font-face {
+	font-family: 'Libre Franklin';
+	font-weight: 400;
+	font-style: italic;
+	src: local('Libre Franklin Italic'), local('LibreFranklin-Italic'), url('../fonts/LibreFranklin-Italic.otf');
+}
+
+:root {
+	--system-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--libre-franklin-stack: 'Libre Franklin', var(--system-stack), sans-serif;
+}
