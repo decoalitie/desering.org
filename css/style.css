@@ -231,3 +231,48 @@ body.purple {
 .purple iframe {
 	background: var(--purple-light);
 }
+
+.agenda {
+	background: var(--purple-dark);
+	color: var(--purple-white);
+	padding: 2rem 2rem;
+	margin-top: 3rem;
+}
+.agenda .event {
+	/*font-weight: bold;*/
+	margin-bottom: .7rem;
+}
+.event .event-time {
+	color: var(--purple-light);
+	float: right;
+}
+.event .event-fb {
+	float: right;
+	border-bottom: none;
+}
+.event .event-fb:before {
+	content: '';
+	/*background-image: url('img/facebook.png');*/
+	background: url("../img/facebook.png") no-repeat;
+	background-size: cover;
+	width: 1.2em;
+	height: 1.2em;
+	margin-top: .1em;
+	display: block;
+	margin-right: .7rem;
+	text-decoration: none;
+}
+.event .event-fb:hover:before {
+	background-image: url("../img/facebook-white.png");
+}
+.agenda h3 {
+	color: var(--purple-light);
+	font-size: 2rem;
+	font-weight: bold;
+	margin-top: 0;
+}
+.agenda h4 {
+	border-top: 3px solid var(--purple-light);
+	padding-top: 1rem;
+	margin-bottom: .7rem;
+}
