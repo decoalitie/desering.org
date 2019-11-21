@@ -24,9 +24,14 @@ body {
 }
 
 .container {
-	/*margin: 2rem 0;*/
 	width: 100%;
 	max-width: 40rem;
+	margin-right: 1rem;
+	margin-left: 1rem;
+}
+.container-wide {
+	width: 100%;
+	max-width: 50rem;
 	margin-right: 1rem;
 	margin-left: 1rem;
 }
@@ -241,23 +246,33 @@ body.purple {
 .agenda .event {
 	/*font-weight: bold;*/
 	margin-bottom: .7rem;
+	display: flex;
+	width: 100%;
+}
+.event .event-desc {
+	text-align: left;
+	flex-grow: 1;
+}
+.event .event-details {
+	flex-shrink: 0;
+	margin-left: 1rem;
+	display: flex;
 }
 .event .event-time {
 	color: var(--purple-light);
-	float: right;
+	margin-top: auto;
 }
 .event .event-fb {
-	float: right;
 	border-bottom: none;
+	margin-top: auto;
 }
 .event .event-fb:before {
 	content: '';
-	/*background-image: url('img/facebook.png');*/
 	background: url("../img/facebook.png") no-repeat;
 	background-size: cover;
 	width: 1.2em;
 	height: 1.2em;
-	margin-top: .1em;
+	margin-bottom: .2rem;
 	display: block;
 	margin-right: .7rem;
 	text-decoration: none;
