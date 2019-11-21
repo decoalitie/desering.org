@@ -291,3 +291,9 @@ body.purple {
 	padding-top: 1rem;
 	margin-bottom: .7rem;
 }
+
+@media(max-width: 600px) {
+	body {
+		font-size: 16px;
+	}
+}
