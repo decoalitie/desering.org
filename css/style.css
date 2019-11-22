@@ -171,7 +171,7 @@ ul, ol {
 }
 li ul,
 li ol {
-	margin-top: .7rem;
+	margin-top: .3rem;
 }
 
 p + ul,
@@ -296,4 +296,8 @@ body.purple {
 	body {
 		font-size: 16px;
 	}
+}
+
+li ul li {
+	margin-bottom: 0;
 }
