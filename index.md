@@ -43,7 +43,7 @@ translation: index
     <div class="agenda">
       <h3>Agenda</h3>
 
-      {% for event in site.events %}
+      {% for event in site.data.events %}
 
         {% assign weekday = event.date | date: "%u" | minus: 1 %}
         {% assign day = event.date | date: "%e" %}

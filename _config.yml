@@ -3,8 +3,5 @@
 # for documentation, see:
 # https://jekyllrb.com/docs/configuration/
 
-collections:
-  - events
-
 exclude:
   - README.md

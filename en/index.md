@@ -42,7 +42,7 @@ translation: index
     <div class="agenda">
       <h3>Agenda</h3>
 
-      {% for event in site.events %}
+      {% for event in site.data.events %}
 
       <h4>{{ event.date | date: "%A %e %B %Y" }}</h4>
 
