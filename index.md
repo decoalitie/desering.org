@@ -45,12 +45,16 @@ translation: index
 
       {% for event in site.data.events %}
 
-        {% assign weekday = event.date | date: "%u" | minus: 1 %}
-        {% assign day = event.date | date: "%e" %}
-        {% assign month = event.date | date: "%-m" | minus: 1 %}
-        {% assign year = event.date | date: "%Y" %}
+        {% unless prev.date == event.date %}
 
-        <h4>{{ site.data.i18n.weekdays-nl[weekday] | capitalize }} {{ day }} {{ site.data.i18n.months-nl[month] }} {{ year }}</h4>
+          {% assign weekday = event.date | date: "%u" | minus: 1 %}
+          {% assign day = event.date | date: "%e" %}
+          {% assign month = event.date | date: "%-m" | minus: 1 %}
+          {% assign year = event.date | date: "%Y" %}
+
+          <h4>{{ site.data.i18n.weekdays-nl[weekday] | capitalize }} {{ day }} {{ site.data.i18n.months-nl[month] }} {{ year }}</h4>
+
+        {% endunless %}
 
         <div class="event">
           <span class="event-desc">
@@ -68,6 +72,7 @@ translation: index
           </span>
         </div>
 
+      {% assign prev = event %}
       {% endfor %}
 
     </div>

@@ -44,7 +44,9 @@ translation: index
 
       {% for event in site.data.events %}
 
+      {% unless prev.date == event.date %}
       <h4>{{ event.date | date: "%A %e %B %Y" }}</h4>
+      {% endunless %}
 
       <div class="event">
         <span class="event-desc">
@@ -58,6 +60,8 @@ translation: index
           <span class="event-time">{{ event.time }}</span>
         </span>
       </div>
+
+      {% assign prev = event %}
       {% endfor %}
 
     </div>
