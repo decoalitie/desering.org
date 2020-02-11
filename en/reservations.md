@@ -2,10 +2,8 @@
 title: De Sering - Reservations
 layout: default
 language: en
+translation: reserveren
 ---
-
-<div class="row purple"><div class="container"><p style="float:right"><a href="/reserveren.html">Nederlands</a></p></div></div>
-
 
 <div class="row">
 

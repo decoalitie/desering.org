@@ -2,13 +2,8 @@
 title: De Sering - Contributing
 layout: default
 language: en
+translation: index
 ---
-
-<div class="row purple">
-  <div class="container">
-    <p style="float:right"><a href="/index.html">Nederlands</a></p>
-  </div>
-</div>
 
 <div class="row">
   <div class="container">

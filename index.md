@@ -3,13 +3,9 @@ title: De Sering
 layout: default
 language: nl
 description: 'Buurtkeuken De Sering in Amsterdam: Elke dinsdag en donderdag samen eten, voor €2,50.'
+translation: index
 ---
 
-<div class="row purple">
-  <div class="container">
-    <p style="float:right"><a href="/en/index.html">English</a></p>
-  </div>
-</div>
 
 <div class="row">
   <div class="container">

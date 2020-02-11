@@ -2,9 +2,8 @@
 title: De Sering - bijdragen
 layout: default
 language: nl
+translation: contributing
 ---
-
-<div class="row purple"><div class="container"><p style="float:right"><a href="/en/contributing.html">English</a></p></div></div>
 
 <div class="row">
 
