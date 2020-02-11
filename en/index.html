@@ -1,410 +1,95 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+---
+title: De Sering - Contributing
+layout: default
+language: en
+---
 
-    <title>De Sering</title>
+<div class="row purple">
+  <div class="container">
+    <p style="float:right"><a href="/index.html">Nederlands</a></p>
+  </div>
+</div>
 
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/decoalitie-colours.css" />
-    <link rel="stylesheet" href="/css/decoalitie-fonts.css" />
-    <link rel="stylesheet" href="/css/style.css" />
+<div class="row">
+  <div class="container">
+    <h1>People's Kitchen De Sering</h1>
 
-    <!-- generated with realfavicongenerator.net -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e55420" />
-    <meta name="msapplication-TileColor" content="#e55420" />
-    <meta name="theme-color" content="#e55420" />
-  </head>
-  <body lang="en" class="purple">
-    <div class="row purple">
-      <div class="container">
-        <p style="float:right"><a href="/index.html">Nederlands</a></p>
+    <p>
+      Coming together for dinner every Tuesdays and Thursdays, for €2,50.
+      Everyone is welcome starting from 18:30 and the kitchen stays open
+      till 21:00. The food is vegetarian, and there is always a vegan option
+      available.
+    </p>
+
+    <h3>Location</h3>
+    <p>
+      The location is the Middenweg 22bg in Amsterdam-East. We leave the
+      door open – you have to go through a tunnel and then you enter the
+      garden. In the back is the building of de Sering.
+      <strong>Be careful not to make any noise in the garden!</strong> Our
+      neighbors can hear everything, and we like to stay on friendly terms
+      with them.
+    </p>
+
+    <h3>Reservations</h3>
+    <p>
+      We reach people through various platforms and we need some indication
+      of attendance. At this time we have a maximum capacity of 40 people.
+      <a href="reservations.html">Reserve a spot</a> to be sure you can join
+      for dinner!
+    </p>
+    <a class="button" href="reservations.html">Reserve for dinner</a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="container-wide">
+    <div class="agenda">
+      <h3>Agenda</h3>
+
+      {% for event in site.events %}
+      <h4>{{ event.date-en }}</h4>
+
+      <div class="event">
+        <span class="event-desc">
+          {% comment %} fallback on Dutch description {% endcomment %}
+          {{ event.description-en | default: event.description-nl }}
+        </span>
+        <span class="event-details">
+          <a class="event-fb" href="{{ event.fb-url }}"></a>
+          <span class="event-time">{{ event.time }}</span>
+        </span>
       </div>
+      {% endfor %}
+
     </div>
 
-    <div class="row">
-      <div class="container">
-        <h1>People's Kitchen De Sering</h1>
+  </div>
+</div>
 
-        <p>
-          Coming together for dinner every Tuesdays and Thursdays, for €2,50.
-          Everyone is welcome starting from 18:30 and the kitchen stays open
-          till 21:00. The food is vegetarian, and there is always a vegan option
-          available.
-        </p>
+<div class="row">
+  <div class="container">
+    <h3>Want to help?</h3>
+    <p>
+      De Sering is being run by volunteers, and for furniture and decoration
+      we are dependent on donations. Would you like to contribute too? On
+      <a href="contributing.html">this page about contributing</a> you can
+      sign up as a volunteer, and you can find out which things we can make
+      good use of. We'd be very grateful for it!
+    </p>
 
-        <h3>Location</h3>
-        <p>
-          The location is the Middenweg 22bg in Amsterdam-East. We leave the
-          door open – you have to go through a tunnel and then you enter the
-          garden. In the back is the building of de Sering.
-          <strong>Be careful not to make any noise in the garden!</strong> Our
-          neighbors can hear everything, and we like to stay on friendly terms
-          with them.
-        </p>
+    <a class="button" href="contributing.html"
+      >Contribute to the De Sering</a
+    >
 
-        <h3>Reservations</h3>
-        <p>
-          We reach people through various platforms and we need some indication
-          of attendance. At this time we have a maximum capacity of 40 people.
-          <a href="reservations.html">Reserve a spot</a> to be sure you can join
-          for dinner!
-        </p>
-        <a class="button" href="reservations.html">Reserve for dinner</a>
-      </div>
-    </div>
+    <img src="/img/sering.png" />
 
-    <div class="row">
-      <div class="container-wide">
-        <div class="agenda">
-          <h3>Agenda</h3>
+    <h3>Contact</h3>
 
-          <h4>Tuesday 28 January 2020</h4>
+    <p><a href="mailto:info@desering.org">info@desering.org</a></p>
 
-          <div class="event">
-            <span class="event-desc"
-              >Kitchen open <a href="/reserveren.html">(reservations)</a></span
-            >
-            <span class="event-details">
-              <a
-                class="event-fb"
-                href="https://www.facebook.com/events/515440649328868/"
-              ></a>
-              <span class="event-time">18:00 – 21:00</span>
-            </span>
-          </div>
+    <p>+31 6 – 17 64 27 91</p>
 
-          <div class="event">
-            <span class="event-desc"
-              >Talk (English):
-              <em>Heading for Extinction and what to do about it</em>
-              <a href="https://extinctionrebellion.nl/en"
-                >(Extinction Rebellion)</a
-              ></span
-            >
-            <span class="event-details">
-              <a
-                class="event-fb"
-                href="https://www.facebook.com/events/561979884357775/"
-              ></a>
-              <span class="event-time">18:30 – 19:30</span>
-            </span>
-          </div>
-
-          <div class="event">
-            <span class="event-desc"
-              >Talk (English):
-              <em>Introduction to XR</em>
-              <a href="https://extinctionrebellion.nl/en"
-                >(Extinction Rebellion)</a
-              ></span
-            >
-            <span class="event-details">
-              <a
-                class="event-fb"
-                href="https://www.facebook.com/events/462366211373890/"
-              ></a>
-              <span class="event-time">20:00 – 21:00</span>
-            </span>
-          </div>
-
-          <h4>Thursday 30 January 2020</h4>
-
-          <div class="event">
-            <span class="event-desc"
-              >Kitchen open <a href="/reserveren.html">(reservations)</a></span
-            >
-            <span class="event-details">
-              <a
-                class="event-fb"
-                href="https://www.facebook.com/events/515440649328868/"
-              ></a>
-              <span class="event-time">18:00 – 21:00</span>
-            </span>
-          </div>
-
-          <div class="event">
-            <span class="event-desc"
-              >Talk (Dutch):
-              <em>Op weg naar uitsterving en wat er aan te doen</em>
-              <a href="https://extinctionrebellion.nl/en"
-                >(Extinction Rebellion)</a
-              ></span
-            >
-            <span class="event-details">
-              <a
-                class="event-fb"
-                href="https://www.facebook.com/events/1506327772851412/"
-              ></a>
-              <span class="event-time">18:30 – 19:30</span>
-            </span>
-          </div>
-
-          <div class="event">
-            <span class="event-desc">Film Night (Spirited Away)</span>
-            <span class="event-details">
-              <a
-                class="event-fb"
-                href="https://www.facebook.com/events/1031823387186460/"
-              ></a>
-              <span class="event-time">20:00 – 23:00</span>
-            </span>
-          </div>
-
-          <h4>Saturday 1 February 2020</h4>
-
-          <div class="event">
-            <span class="event-desc"
-              >XR Agriculture Day
-              <a href="https://extinctionrebellion.nl/en"
-                >(Extinction Rebellion)</a
-              ></span
-            >
-            <span class="event-details">
-              <a
-                class="event-fb"
-                href="https://www.facebook.com/events/2692886440805736/"
-              ></a>
-              <span class="event-time">11:00 – 17:00</span>
-            </span>
-          </div>
-
-          <h4>Sunday 2 February 2020</h4>
-
-          <div class="event">
-            <span class="event-desc">Weekly Cooking and Handywork</span>
-            <span class="event-details">
-              <a
-                class="event-fb"
-                href="https://www.facebook.com/events/1018993861811248/"
-              ></a>
-              <span class="event-time">11:00 – 17:30</span>
-            </span>
-          </div>
-
-          <div class="event">
-            <span class="event-desc"
-              >Weekly Speakers Training (Dutch/English)
-              <a href="https://extinctionrebellion.nl/en"
-                >(Extinction Rebellion)</a
-              ></span
-            >
-            <span class="event-details">
-              <a
-                class="event-fb"
-                href="https://www.facebook.com/events/485388062119099/"
-              ></a>
-              <span class="event-time">15:00 – 17:30</span>
-            </span>
-          </div>
-
-          <div class="event">
-            <span class="event-desc"
-              >Weekly Speakers Roundtable
-              <a href="https://extinctionrebellion.nl/en"
-                >(Extinction Rebellion)</a
-              ></span
-            >
-            <span class="event-details">
-              <a
-                class="event-fb"
-                href="https://www.facebook.com/events/601467640638355/"
-              ></a>
-              <span class="event-time">18:30 – 23:00</span>
-            </span>
-          </div>
-
-          <h4>Tuesday 4 February 2020</h4>
-
-          <div class="event">
-            <span class="event-desc"
-              >Kitchen open <a href="/reserveren.html">(reservations)</a></span
-            >
-            <span class="event-details">
-              <a
-                class="event-fb"
-                href="https://www.facebook.com/events/515440649328868/"
-              ></a>
-              <span class="event-time">18:00 – 21:00</span>
-            </span>
-          </div>
-
-          <div class="event">
-            <span class="event-desc"
-              >Talk (English):
-              <em>Heading for Extinction and what to do about it</em>
-              <a href="https://extinctionrebellion.nl/en"
-                >(Extinction Rebellion)</a
-              ></span
-            >
-            <span class="event-details">
-              <a
-                class="event-fb"
-                href="https://www.facebook.com/events/561979884357775/"
-              ></a>
-              <span class="event-time">18:30 – 19:30</span>
-            </span>
-          </div>
-
-          <div class="event">
-            <span class="event-desc"
-              >Talk (English):
-              <em>Introduction to XR</em>
-              <a href="https://extinctionrebellion.nl/en"
-                >(Extinction Rebellion)</a
-              ></span
-            >
-            <span class="event-details">
-              <a
-                class="event-fb"
-                href="https://www.facebook.com/events/462366211373890/"
-              ></a>
-              <span class="event-time">20:00 – 21:00</span>
-            </span>
-          </div>
-
-          <h4>Wednesday 5 Februari 2020</h4>
-
-          <div class="event">
-            <span class="event-desc"
-              >Open gathering Regenerative Culture XR Amsterdam
-              <a href="https://extinctionrebellion.nl/en"
-                >(Extinction Rebellion)</a
-              ></span
-            >
-            <span class="event-details">
-              <a
-                class="event-fb"
-                href="facebook.com/events/510992919546792/"
-              ></a>
-              <span class="event-time">18:30 – 21:00</span>
-            </span>
-          </div>
-
-          <h4>Thursday 6 February 2020</h4>
-
-          <div class="event">
-            <span class="event-desc"
-              >Kitchen open <a href="/reserveren.html">(reservations)</a></span
-            >
-            <span class="event-details">
-              <a
-                class="event-fb"
-                href="https://www.facebook.com/events/515440649328868/"
-              ></a>
-              <span class="event-time">18:00 – 21:00</span>
-            </span>
-          </div>
-
-          <div class="event">
-            <span class="event-desc"
-              >Talk (Dutch):
-              <em>Op weg naar uitsterving en wat er aan te doen</em>
-              <a href="https://extinctionrebellion.nl/en"
-                >(Extinction Rebellion)</a
-              ></span
-            >
-            <span class="event-details">
-              <a
-                class="event-fb"
-                href="https://www.facebook.com/events/1506327772851412/"
-              ></a>
-              <span class="event-time">18:30 – 19:30</span>
-            </span>
-          </div>
-
-          <div class="event">
-            <span class="event-desc">Film Night (film TBA)</span>
-            <span class="event-details">
-              <a
-                class="event-fb"
-                href="https://www.facebook.com/events/1031823387186460/"
-              ></a>
-              <span class="event-time">20:00 – 23:00</span>
-            </span>
-          </div>
-
-          <h4>Sunday 9 February 2020</h4>
-
-          <div class="event">
-            <span class="event-desc">Weekly Cooking and Handywork</span>
-            <span class="event-details">
-              <a
-                class="event-fb"
-                href="https://www.facebook.com/events/1018993861811248/"
-              ></a>
-              <span class="event-time">11:00 – 17:30</span>
-            </span>
-          </div>
-
-          <div class="event">
-            <span class="event-desc"
-              >Weekly Speakers Training (Dutch/English)
-              <a href="https://extinctionrebellion.nl/en"
-                >(Extinction Rebellion)</a
-              ></span
-            >
-            <span class="event-details">
-              <a
-                class="event-fb"
-                href="https://www.facebook.com/events/485388062119099/"
-              ></a>
-              <span class="event-time">15:00 – 17:30</span>
-            </span>
-          </div>
-
-          <div class="event">
-            <span class="event-desc"
-              >Weekly Speakers Roundtable
-              <a href="https://extinctionrebellion.nl/en"
-                >(Extinction Rebellion)</a
-              ></span
-            >
-            <span class="event-details">
-              <a
-                class="event-fb"
-                href="https://www.facebook.com/events/601467640638355/"
-              ></a>
-              <span class="event-time">18:30 – 23:00</span>
-            </span>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="container">
-        <h3>Want to help?</h3>
-        <p>
-          De Sering is being run by volunteers, and for furniture and decoration
-          we are dependent on donations. Would you like to contribute too? On
-          <a href="contributing.html">this page about contributing</a> you can
-          sign up as a volunteer, and you can find out which things we can make
-          good use of. We'd be very grateful for it!
-        </p>
-
-        <a class="button" href="contributing.html"
-          >Contribute to the De Sering</a
-        >
-
-        <img src="/img/sering.png" />
-
-        <h3>Contact</h3>
-
-        <p><a href="mailto:info@desering.org">info@desering.org</a></p>
-
-        <p>+31 6 – 17 64 27 91</p>
-
-        <p>Middenweg 22, 1097 BN Amsterdam</p>
-      </div>
-    </div>
-  </body>
-</html>
+    <p>Middenweg 22, 1097 BN Amsterdam</p>
+  </div>
+</div>
