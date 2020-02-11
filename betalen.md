@@ -122,35 +122,20 @@ display: none;
 
 		<p><em>Je wordt doorgestuurd naar Tikkie.</em></p>
 
-		<!-- di 28 jan-->
-		<p>
-			Duurt het te lang?
-			Klik op <a class="tikkie-link" data-date="2020-01-28" href="https://tikkie.me/pay/1vttl2rcqo17fqi6cm71">deze link.</a>
-		</p>
+		{% for tikkie in site.data.tikkies %}
 
-		<!-- do 30 jan -->
-		<p class="hidden">
-			Duurt het te lang?
-			Klik op <a class="tikkie-link" data-date="2020-01-30" data-valid-until="2020-02-10" href="https://tikkie.me/pay/oalk7de8uk3h8k5igknm">deze link.</a>
-		</p>
+			{% if forloop.index0 == 0 %}
+			<p>
+			{% else %}
+			<p class="hidden">
+			{% endif %}
 
-		<!-- za 1 feb - valid until 10 feb -->
-		<p class="hidden">
-			Duurt het te lang?
-			Klik op <a class="tikkie-link" data-date="2020-02-01" data-valid-until="2020-02-10" href="https://tikkie.me/pay/77u3mem15h1vaca9kuiq">deze link.</a>
-		</p>
+				Duurt het te lang?
+				Klik op <a class="tikkie-link" data-date="{{ tikkie.date }}" data-valid-until="{{ tikkie.valid-until }}" href="https://tikkie.me/pay/{{ tikkie.link-slug }}">deze link.</a>
 
-		<!-- di 4 feb - valid until 10 feb -->
-		<p class="hidden">
-			Duurt het te lang?
-			Klik op <a class="tikkie-link" data-date="2020-02-04" data-valid-until="2020-02-10" href="https://tikkie.me/pay/qatee2j1ufiraqgn0l5s">deze link.</a>
-		</p>
+			</p>
 
-		<!-- do 6 feb - valid until 10 feb-->
-		<p class="hidden">
-			Duurt het te lang?
-			Klik op <a class="tikkie-link" data-date="2020-02-06" data-valid-until="2020-02-10" href="https://tikkie.me/pay/crt0f87kn4pjq7n04p8m">deze link.</a>
-		</p>
+		{% endfor %}
 
 	</div>
 
