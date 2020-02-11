@@ -64,10 +64,9 @@ translation: index
 						{% endif %}
 					</span>
 					<span class="event-details">
-						<a
-							class="event-fb"
-							href="{{ event.fb-url }}"
-						></a>
+						{% if event.fb-url %}
+						<a class="event-fb" href="{{ event.fb-url }}"></a>
+						{% endif %}
 						<span class="event-time">{{ event.time }}</span>
 					</span>
 				</div>
