@@ -47,9 +47,12 @@ translation: index
       <h4>{{ event.date-nl }}</h4>
 
       <div class="event">
-        <span class="event-desc"
-          >{{ event.description-nl }}</span
-        >
+        <span class="event-desc">
+          {{ event.description-nl }}
+          {% if event.xr %}
+            <a href="https://extinctionrebellion.nl">(Extinction Rebellion)</a>
+          {% endif %}
+        </span>
         <span class="event-details">
           <a
             class="event-fb"

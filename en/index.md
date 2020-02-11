@@ -47,8 +47,10 @@ translation: index
 
       <div class="event">
         <span class="event-desc">
-          {% comment %} fallback on Dutch description {% endcomment %}
           {{ event.description-en | default: event.description-nl }}
+          {% if event.xr %}
+            <a href="https://extinctionrebellion.nl/en/">(Extinction Rebellion)</a>
+          {% endif %}
         </span>
         <span class="event-details">
           <a class="event-fb" href="{{ event.fb-url }}"></a>
