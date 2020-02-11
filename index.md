@@ -44,23 +44,30 @@ translation: index
       <h3>Agenda</h3>
 
       {% for event in site.events %}
-      <h4>{{ event.date-nl }}</h4>
 
-      <div class="event">
-        <span class="event-desc">
-          {{ event.description-nl }}
-          {% if event.xr %}
-            <a href="https://extinctionrebellion.nl">(Extinction Rebellion)</a>
-          {% endif %}
-        </span>
-        <span class="event-details">
-          <a
-            class="event-fb"
-            href="{{ event.fb-url }}"
-          ></a>
-          <span class="event-time">{{ event.time }}</span>
-        </span>
-      </div>
+        {% assign weekday = event.date | date: "%u" | minus: 1 %}
+        {% assign day = event.date | date: "%e" %}
+        {% assign month = event.date | date: "%-m" | minus: 1 %}
+        {% assign year = event.date | date: "%Y" %}
+
+        <h4>{{ site.data.i18n.weekdays-nl[weekday] | capitalize }} {{ day }} {{ site.data.i18n.months-nl[month] }} {{ year }}</h4>
+
+        <div class="event">
+          <span class="event-desc">
+            {{ event.description-nl }}
+            {% if event.xr %}
+              <a href="https://extinctionrebellion.nl">(Extinction Rebellion)</a>
+            {% endif %}
+          </span>
+          <span class="event-details">
+            <a
+              class="event-fb"
+              href="{{ event.fb-url }}"
+            ></a>
+            <span class="event-time">{{ event.time }}</span>
+          </span>
+        </div>
+
       {% endfor %}
 
     </div>

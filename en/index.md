@@ -43,7 +43,8 @@ translation: index
       <h3>Agenda</h3>
 
       {% for event in site.events %}
-      <h4>{{ event.date-en }}</h4>
+
+      <h4>{{ event.date | date: "%A %e %B %Y" }}</h4>
 
       <div class="event">
         <span class="event-desc">
