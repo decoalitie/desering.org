@@ -24,6 +24,12 @@
   description-en: 'Film Night (For Sama)'
   fb-url: 'https://www.facebook.com/events/193828891678229/'
 
+- date: '2020-02-19'
+  time: '11:00 – 14:00'
+  description-nl: 'Wellbeing Training'
+  description-en: 'Wellbeing Training'
+  xr: true
+
 - date: '2020-02-23'
   time: '11:00 – 17:30'
   description-nl: 'Wekelijkse Koken en Klussen'
