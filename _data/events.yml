@@ -1,30 +1,4 @@
-- date: '2020-02-19'
-  time: '18:30 – 21:00'
-  description-nl: 'Open bijeenkomst Regeneratieve Cultuur XR Amsterdam'
-  description-en: 'Open gathering Regenerative Culture XR Amsterdam'
-  xr: true
-  fb-url: 'https://facebook.com/events/510992919546792/'
-
-- date: '2020-02-20'
-  time: '18:00 – 21:00'
-  description-nl: 'Keuken open <a href="/reserveren.html">(reserveren)</a>'
-  description-en: 'Kitchen open <a href="/reservations.html">(reservations)</a>'
-  fb-url: 'https://www.facebook.com/events/515440649328868/'
-
-- date: '2020-02-20'
-  time: '18:30 – 19:30'
-  description-nl: 'Lezing (Nederlandstalig): <em>Op weg naar uitsterving en wat er aan te doen</em>'
-  description-en: 'Talk (Dutch): <em>Op weg naar uitsterving en wat er aan te doen</em>'
-  xr: true
-  fb-url: 'https://www.facebook.com/events/1506327772851412/'
-
-- date: '2020-02-20'
-  time: '20:00 – 22:30'
-  description-nl: 'Filmavond (For Sama)'
-  description-en: 'Film Night (For Sama)'
-  fb-url: 'https://www.facebook.com/events/193828891678229/'
-
-- date: '2020-02-19'
+- date: '2020-02-23'
   time: '11:00 – 14:00'
   description-nl: 'Wellbeing Training'
   description-en: 'Wellbeing Training'
@@ -50,7 +24,7 @@
   xr: true
   fb-url: 'https://www.facebook.com/events/601467640638355/'
 
-- date: '2020-02-26'
+- date: '2020-02-24'
   time: '19:00 – 21:00'
   description-nl: 'XR Boekenclub (Engelstalig)'
   description-en: 'XR Bookclub'
@@ -117,6 +91,72 @@
   fb-url: 'https://www.facebook.com/events/485388062119099'
 
 - date: '2020-02-30'
+  time: '18:30 – 23:00'
+  description-nl: 'Wekelijkse Sprekersborrel'
+  description-en: 'Weekly Speakers Roundtable'
+  xr: true
+  fb-url: 'https://www.facebook.com/events/601467640638355/'
+
+- date: '2020-03-02'
+  time: '19:00 – 21:00'
+  description-nl: 'XR Boekenclub (Engelstalig)'
+  description-en: 'XR Bookclub'
+  xr: true
+  fb-url: 'https://www.facebook.com/events/654131528702330/'
+
+- date: '2020-03-03'
+  time: '18:00 – 21:00'
+  description-nl: 'Keuken open <a href="/reserveren.html">(reserveren)</a>'
+  description-en: 'Kitchen open <a href="/reservations.html">(reservations)</a>'
+  fb-url: 'https://www.facebook.com/events/515440649328868/'
+
+- date: '2020-03-03'
+  time: '18:30 – 19:30'
+  description-nl: 'Lezing (Engelstalig): <em>Heading for Extinction and what to do about it</em>'
+  description-en: 'Talk (English): <em>Heading for Extinction and what to do about it</em>'
+  xr: true
+  fb-url: 'https://www.facebook.com/events/561979884357775/'
+
+# - date: '2020-03-03'
+#   time: '20:00 – 21:00'
+#   description-nl: 'Lezing (Engelstalig): <em>Introduction to XR</em>'
+#   description-en: 'Talk (English): <em>Introduction to XR</em>'
+#   xr: true
+#   fb-url: 'https://www.facebook.com/events/462366211373890/'
+
+- date: '2020-03-05'
+  time: '18:00 – 21:00'
+  description-nl: 'Keuken open <a href="/reserveren.html">(reserveren)</a>'
+  description-en: 'Kitchen open <a href="/reservations.html">(reservations)</a>'
+  fb-url: 'https://www.facebook.com/events/515440649328868/'
+
+- date: '2020-03-05'
+  time: '18:30 – 19:30'
+  description-nl: 'Lezing (Nederlandstalig): <em>Op weg naar uitsterving en wat er aan te doen</em>'
+  description-en: 'Talk (Dutch): <em>Op weg naar uitsterving en wat er aan te doen</em>'
+  xr: true
+  fb-url: 'https://www.facebook.com/events/1506327772851412/'
+
+- date: '2020-03-05'
+  time: '20:00 – 22:30'
+  description-nl: 'Filmavond (TBA)'
+  description-en: 'Film Night (TBA)'
+  # fb-url: 'https://www.facebook.com/events/230115424674168/'
+
+- date: '2020-03-08'
+  time: '11:00 – 17:30'
+  description-nl: 'Wekelijkse Koken en Klussen'
+  description-en: 'Weekly Cooking and Handywork'
+  fb-url: 'https://www.facebook.com/events/1018993861811248/'
+
+- date: '2020-03-08'
+  time: '15:00 – 17:30'
+  description-nl: 'Wekelijkse Sprekerstraining (Nederlands/Engels)'
+  description-en: 'Weekly Speakers Training (Dutch/English)'
+  xr: true
+  fb-url: 'https://www.facebook.com/events/485388062119099'
+
+- date: '2020-03-08'
   time: '18:30 – 23:00'
   description-nl: 'Wekelijkse Sprekersborrel'
   description-en: 'Weekly Speakers Roundtable'
