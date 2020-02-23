@@ -19,7 +19,7 @@ translation: index
 
 		<h3>Locatie</h3>
 		<p>
-			De locatie is de Middenweg 22bg in Amsterdam-Oost. De deur laten we
+			De locatie is de Middenweg 22 in Amsterdam-Oost. De deur laten we
 			open, je moet dan door een tunnel en dan kom je in de binnentuin.
 			Achterin staat het gebouw van de Sering.
 			<strong>Zorg dat je geen geluid maakt in de tuin!</strong> Onze buren

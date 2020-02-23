@@ -18,7 +18,7 @@ translation: index
 
 		<h3>Location</h3>
 		<p>
-			The location is the Middenweg 22bg in Amsterdam-East. We leave the
+			The location is the Middenweg 22 in Amsterdam-East. We leave the
 			door open – you have to go through a tunnel and then you enter the
 			garden. In the back is the building of de Sering.
 			<strong>Be careful not to make any noise in the garden!</strong> Our
