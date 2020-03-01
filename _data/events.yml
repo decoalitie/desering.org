@@ -124,6 +124,11 @@
   xr: true
   fb-url: 'https://www.facebook.com/events/561979884357775/'
 
+- date: '2020-03-03'
+  time: '20:00 – 21:00'
+  description-nl: 'Informatieavond biomassacentrale Diemen (Amsterdam Fossielvrij)'
+  description-en: 'Information evening biomassa plant Diemen (Amsterdam Fossilfree)'
+
 # - date: '2020-03-03'
 #   time: '20:00 – 21:00'
 #   description-nl: 'Lezing (Engelstalig): <em>Introduction to XR</em>'
