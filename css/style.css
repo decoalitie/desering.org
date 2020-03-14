@@ -183,7 +183,10 @@ p + ol {
 	background: var(--purple-regular);
 	color: var(--purple-white);
 }
-
+.row.red {
+	background: var(--red-regular);
+	color: var(--red-white);
+}
 
 
 
