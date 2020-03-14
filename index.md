@@ -26,7 +26,7 @@ translation: index
 			horen alles, en we houden ze graag te vriend.
 		</p>
 
-		<h3>Reserveringen</h3>
+<!-- 		<h3>Reserveringen</h3>
 		<p>
 			We bereiken mensen via verschillende platformen en we hebben een
 			indicatie nodig van de opkomst. Op dit moment hebben we een maximale
@@ -34,7 +34,7 @@ translation: index
 			<a href="/reserveren.html">Reserveer</a> om er zeker van te zijn dat
 			je mee kan eten!
 		</p>
-		<a class="button" href="/reserveren.html">Reserveren voor eten</a>
+		<a class="button" href="/reserveren.html">Reserveren voor eten</a> -->
 	</div>
 </div>
 

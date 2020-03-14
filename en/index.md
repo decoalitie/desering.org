@@ -26,14 +26,14 @@ translation: index
 			with them.
 		</p>
 
-		<h3>Reservations</h3>
+<!-- 		<h3>Reservations</h3>
 		<p>
 			We reach people through various platforms and we need some indication
 			of attendance. At this time we have a maximum capacity of 40 people.
 			<a href="reservations.html">Reserve a spot</a> to be sure you can join
 			for dinner!
 		</p>
-		<a class="button" href="reservations.html">Reserve for dinner</a>
+		<a class="button" href="reservations.html">Reserve for dinner</a> -->
 	</div>
 </div>
 
