@@ -9,7 +9,7 @@ translation: index
 	<div class="container">
 		<h1>People's Kitchen De Sering</h1>
 
-		<p>
+<!-- 		<p>
 			Coming together for dinner every Tuesdays and Thursdays, for €2,50.
 			Everyone is welcome starting from 18:30 and the kitchen stays open
 			till 21:00. The food is vegetarian, and there is always a vegan option
@@ -24,7 +24,7 @@ translation: index
 			<strong>Be careful not to make any noise in the garden!</strong> Our
 			neighbors can hear everything, and we like to stay on friendly terms
 			with them.
-		</p>
+		</p> -->
 
 <!-- 		<h3>Reservations</h3>
 		<p>
@@ -73,7 +73,7 @@ translation: index
 
 <div class="row">
 	<div class="container">
-		<h3>Want to help?</h3>
+<!-- 		<h3>Want to help?</h3>
 		<p>
 			De Sering is being run by volunteers, and for furniture and decoration
 			we are dependent on donations. Would you like to contribute too? On
@@ -84,7 +84,7 @@ translation: index
 
 		<a class="button" href="contributing.html"
 			>Contribute to the De Sering</a
-		>
+		> -->
 
 		<img src="/img/sering.png" />
 
@@ -92,8 +92,5 @@ translation: index
 
 		<p><a href="mailto:info@desering.org">info@desering.org</a></p>
 
-		<p>+31 6 – 17 64 27 91</p>
-
-		<p>Middenweg 22, 1097 BN Amsterdam</p>
 	</div>
 </div>
