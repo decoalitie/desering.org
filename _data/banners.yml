@@ -5,7 +5,7 @@
 #   link-nl: ''
 #   link-en: ''
 
-- text-nl: 'Help ons de rebellie te voeden!'
-  text-en: 'Help us feed the rebellion!'
+- text-nl: '🍲 ⏲️ Help ons de rebellie te voeden! ⏲️ 🍲'
+  text-en: '🍲 ⏲️ Help us feed the rebellion! ⏲️ 🍲'
   color: 'glow'
-  link-nl: ''
+  # link-nl: ''
