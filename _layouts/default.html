@@ -44,18 +44,19 @@
 
     {% endif %}
 
-      <div class="row red">
-        <div class="container">
-          <p style="width: 80%; text-align: center; margin-left: auto; margin-right: auto; font-size: 1.2rem"><strong>
-            {% if page.language == 'en' %}
-              Due to the corona virus, all events and dinners at de Sering are canceled until further notice
-            {% else %}
-              In verband met het coronavirus zijn alle evenementen en diners van de Sering tot nader orde afgelast
-            {% endif %}
-          </strong></p>
-          </p>
-        </div>
+    <div class="row red">
+      <div class="container">
+        <p style="width: 80%; text-align: center; margin-left: auto; margin-right: auto; font-size: 1.2rem"><strong>
+          {% if page.language == 'en' %}
+            Due to the corona virus, all events and dinners at de Sering are canceled until further notice
+          {% else %}
+            In verband met het coronavirus zijn alle evenementen en diners van de Sering tot nader orde afgelast
+          {% endif %}
+        </strong></p>
+        </p>
       </div>
+    </div>
+
     {{ content }}
 
   </body>
