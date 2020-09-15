@@ -26,9 +26,11 @@
 
   <body lang="{{ page.language }}" class="purple">
 
+
+    <!-- TRANSLATION MENU -->
     {% if page.translation %}
 
-      <div class="row purple">
+      <div class="row purple-dark">
         <div class="container">
           <p style="float:right">
 
@@ -44,18 +46,36 @@
 
     {% endif %}
 
-     <!-- <div class="row red">
+
+    <!-- BANNERS -->
+    {% for banner in site.data.banners %}
+
+     <div class="row banner {{ banner.color }}">
       <div class="container">
-        <p style="width: 80%; text-align: center; margin-left: auto; margin-right: auto; font-size: 1.2rem"><strong>
+        <p>
           {% if page.language == 'en' %}
-            Due to the corona virus, all events and dinners at de Sering are canceled until further notice
+
+            {% if banner.link-en %}
+              <a href="{{ banner.link-en }}">{{ banner.text-en }}</a>
+            {% else %}
+              {{ banner.text-en }}
+            {% endif %}
+
           {% else %}
-            In verband met het coronavirus zijn alle evenementen en diners van de Sering tot nader orde afgelast
+
+            {% if banner.link-nl %}
+              <a href="{{ banner.link-nl }}">{{ banner.text-nl }}</a>
+            {% else %}
+              {{ banner.text-nl }}
+            {% endif %}
+
           {% endif %}
-        </strong></p>
         </p>
       </div>
-    </div> -->
+    </div>
+
+    {% endfor %}
+
 
     {{ content }}
 

@@ -1,0 +1,11 @@
+# template
+# - text-nl: ''
+#   text-en: ''
+#   color: '' (available are: 'purple', 'red', 'purple-light', 'purple-dark', 'flash', 'glow' or leave blank for transparent)
+#   link-nl: ''
+#   link-en: ''
+
+- text-nl: 'Help ons de rebellie te voeden!'
+  text-en: 'Help us feed the rebellion!'
+  color: 'glow'
+  link-nl: ''

@@ -1,16 +1,22 @@
 /* converted from De Coalitie v3.ase */
+/* with manual modifications */
 :root {
 	/* De Coalitie */
+	/* red */
 	--red-white-bg: RGBA(255, 245, 245, 0.3);
 	--red-white: RGB(255, 245, 245);
 	--red-light: RGB(255, 173, 123);
 	--red-regular: RGB(229, 84, 32);
+	--red: var(--red-regular);
 	--red-accent: RGB(184, 55, 9);
 	--red-dark: RGB(117, 31, 0);
 	--red-black: RGB(26, 7, 0);
+	/* purple */
 	--purple-white: RGB(255, 240, 249);
 	--purple-light: RGB(224, 72, 162);
+	--pink: var(--purple-light);
 	--purple-regular: RGB(173, 12, 107);
+	--purple: var(--purple-regular);
 	--purple-accent: RGB(130, 0, 77);
 	--purple-dark: RGB(82, 0, 48);
 	--purple-black: RGB(33, 0, 20);
