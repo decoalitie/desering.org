@@ -369,3 +369,7 @@ li ul li {
 	font-size: 1.4rem;
 	font-weight: bold;
 }
+
+.hidden {
+	display: none;
+}
