@@ -51,7 +51,6 @@
     {% for banner in site.data.banners %}
 
      <div class="row banner {{ banner.color }}">
-      <div class="container">
         <p>
           {% if page.language == 'en' %}
 
@@ -71,7 +70,6 @@
 
           {% endif %}
         </p>
-      </div>
     </div>
 
     {% endfor %}
