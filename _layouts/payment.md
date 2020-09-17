@@ -103,7 +103,7 @@ function redirectTo(tikkie_link) {
 }
 
 }
-// document.addEventListener("DOMContentLoaded", redirect);
+document.addEventListener("DOMContentLoaded", redirect);
 </script>
 
 {{ content }}
