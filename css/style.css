@@ -168,9 +168,6 @@ a.button:hover {
 	background: var(--red-regular);
 	color: var(--red-white);
 }
-a.button:first-of-type {
-	margin-top: 3rem;
-}
 
 img {
 	max-width: 100%;
@@ -281,6 +278,15 @@ body.purple {
 .purple a.button:hover {
 	background: var(--purple-regular);
 	color: var(--purple-white);
+}
+a.button.filled {
+	border: 3px solid var(--purple-accent);
+	color: var(--purple-white);
+	background: var(--purple);
+}
+a.button.filled:hover {
+	border: 3px solid var(--purple-dark);
+	background: var(--purple-accent);
 }
 
 

@@ -21,7 +21,7 @@ language: nl
 			{% endif %}
 
 				Duurt het te lang?
-				Klik op <a class="tikkie-link" data-date="{{ tikkie.date }}" data-valid-until="{{ tikkie.valid-until }}" href="https://tikkie.me/pay/{{ tikkie.link-slug }}">deze link.</a>
+				<a class="button filled tikkie-link" data-date="{{ tikkie.date }}" data-valid-until="{{ tikkie.valid-until }}" href="https://tikkie.me/pay/{{ tikkie.link-slug }}">direct naar Tikkie</a>
 
 			</p>
 
