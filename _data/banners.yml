@@ -4,9 +4,3 @@
 #   color: '' (available are: 'purple', 'red', 'purple-light', 'purple-dark', 'flash', 'glow' or leave blank for transparent)
 #   link-nl: ''
 #   link-en: ''
-
-- text-nl: '🍲 ⏲️ Help ons de rebellie te voeden! ⏲️ 🍲 (klik om je aan te melden)'
-  text-en: '🍲 ⏲️ Help us feed the rebellion! ⏲️ 🍲 (click to sign up)'
-  color: 'glow'
-  link-nl: 'https://docs.google.com/forms/d/e/1FAIpQLSf-zhkTbqil34e4zVU0pGTO5gn1lFTP2eu-04Ob-GOY07g1Pg/viewform'
-  link-en: 'https://docs.google.com/forms/d/e/1FAIpQLSf-zhkTbqil34e4zVU0pGTO5gn1lFTP2eu-04Ob-GOY07g1Pg/viewform'
