@@ -1,8 +1,8 @@
 ---
-title: De Sering - Contributing
+title: De Sering
 layout: default
 language: en
-translation: index
+translation: home
 ---
 
 <div class="row">
