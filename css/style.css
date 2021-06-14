@@ -406,7 +406,6 @@ html.landing body {
 	flex-direction: column;
 	justify-content: stretch;
 	align-items: center;
-	margin-bottom: /* footer image dimensions: */ calc(246 / 800%);
 }
 
 .landing .logo {
@@ -430,11 +429,6 @@ html.landing body {
 	padding: 0 3rem;
 }
 
-/* .landing p {
-	word-break: keep-all;
-	hyphens: none;
-} */
-
 .landing .sering {
 	margin-right: 6rem;
 }
@@ -443,12 +437,6 @@ html.landing body {
 	flex: 0 0 50%;
 	max-width: 28rem;
 }
-
-/* .landing .home-links li:before {
-	content: '>';
-	display: inline-block;
-	margin-right: 1rem;
-} */
 
 .landing .footer {
 	background: var(--purple-dark);
