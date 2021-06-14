@@ -22,7 +22,7 @@ translation: testtafel
 
 <div class="row">
 	<div class="container">
-		<h3>Prijzen</h3>
+		<h3>Prices</h3>
 
     <p>
       Because we know that it is quite likely our audience doesn't have that much money to spare, we try to keep the food and drinks as cheap as possible. The menu is therefore only 15 euros. The drinks we try to keep are about two or three times as cheap as at a normal restaurant.
@@ -38,7 +38,7 @@ translation: testtafel
 <div class="row">
 	<div class="container">
 		<div class="agenda">
-			<h3>Opkomende TestTafels</h3>
+			<h3>Upcoming TestTafels</h3>
 
 			{% for event in site.data.events %}
 
