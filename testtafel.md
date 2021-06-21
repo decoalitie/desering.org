@@ -37,42 +37,16 @@ translation: testtafel
 
 <div class="row">
 	<div class="container">
-		<div class="agenda">
-			<h3>Opkomende TestTafels</h3>
+		<div class="purple-box">
+			<h3>Reserveren</h3>
 
-			{% for event in site.data.events %}
+			<p>
+				Op ons aanmeldformulier kan je zien welke data beschikbaar zijn en een plek reserveren voor jezelf of een groep mensen. Nieuw data worden wekelijks toegevoegd.
+			</p>
 
-				{% unless prev.date == event.date %}
-
-					{% assign weekday = event.date | date: "%u" | minus: 1 %}
-					{% assign day = event.date | date: "%e" %}
-					{% assign month = event.date | date: "%-m" | minus: 1 %}
-					{% assign year = event.date | date: "%Y" %}
-
-					<h4>{{ site.data.i18n.weekdays-nl[weekday] | capitalize }} {{ day }} {{ site.data.i18n.months-nl[month] }} {{ year }}</h4>
-
-				{% endunless %}
-
-				<div class="event">
-					<span class="event-desc">
-						{{ event.description-nl }}
-						{% if event.xr %}
-							<a href="https://extinctionrebellion.nl">(Extinction Rebellion)</a>
-						{% endif %}
-						{% if event.signup-nl %}
-							<a href="{{event.signup-nl}}" target="_blank">Reserveren</a>
-						{% endif %}
-					</span>
-					<span class="event-details">
-						{% if event.fb-url %}
-						<a class="event-fb" href="{{ event.fb-url }}"></a>
-						{% endif %}
-						<span class="event-time">{{ event.time }}</span>
-					</span>
-				</div>
-
-			{% assign prev = event %}
-			{% endfor %}
+			<a href="https://forms.gle/NuRewrZuxN4f1ZJd8" target="_blank">
+				Klik hier om naar het aanmeldformulier te gaan
+			</a>
 
 		</div>
 
@@ -85,7 +59,7 @@ translation: testtafel
 		<h3>Contact</h3>
 
 		<p>
-      Om te reserveren kan je terecht bij het formulier van een van de TestTafels hierboven. Voor overige vragen kan je ons mailen op <a href="mailto:testtafel@desering.org">testtafel@desering.org</a> 
+      Om te reserveren kan je terecht bij <a href="https://forms.gle/NuRewrZuxN4f1ZJd8" target="_blank">ons aanmeldformulier</a>. Voor overige vragen kan je ons mailen op <a href="mailto:testtafel@desering.org">testtafel@desering.org</a> 
     </p>
     
     <p>

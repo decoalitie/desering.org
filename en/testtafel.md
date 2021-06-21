@@ -35,37 +35,20 @@ translation: testtafel
 	</div>
 </div>
 
+
+
 <div class="row">
 	<div class="container">
-		<div class="agenda">
-			<h3>Upcoming TestTafels</h3>
+		<div class="purple-box">
+			<h3>Reservations</h3>
 
-			{% for event in site.data.events %}
+			<p>
+				You can view avaible dates and reserve a spot for yourself or a group of people through our reservation form. This form will be updated with new dates each week.
+			</p>
 
-				{% unless prev.date == event.date %}
-			    <h4>{{ event.date | date: "%A %e %B %Y" }}</h4>
-				{% endunless %}
-
-				<div class="event">
-					<span class="event-desc">
-						{{ event.description-en }}
-						{% if event.xr %}
-							<a href="https://extinctionrebellion.nl">(Extinction Rebellion)</a>
-						{% endif %}
-						{% if event.signup-en %}
-							<a href="{{event.signup-en}}" target="_blank">Reservation form</a>
-						{% endif %}
-					</span>
-					<span class="event-details">
-						{% if event.fb-url %}
-						<a class="event-fb" href="{{ event.fb-url }}"></a>
-						{% endif %}
-						<span class="event-time">{{ event.time }}</span>
-					</span>
-				</div>
-
-			{% assign prev = event %}
-			{% endfor %}
+			<a href="https://forms.gle/TeX1BLrY88k3dHG77" target="_blank">
+				Click here to go to the reservation form
+			</a>
 
 		</div>
 
@@ -78,7 +61,7 @@ translation: testtafel
 		<h3>Contact</h3>
 
 		<p>
-      You can place a reservation through the forms of the TestTafels listed above. For any other questions you can reach us at <a href="mailto:testtafel@desering.org">testtafel@desering.org</a> 
+      You can place a reservation through <a href="https://forms.gle/TeX1BLrY88k3dHG77" target="_blank">our reservation form</a>. For any other questions you can reach us at <a href="mailto:testtafel@desering.org">testtafel@desering.org</a> 
     </p>
     
     <p>
