@@ -10,7 +10,7 @@ translation: testtafel
 		<h1>TestTafel</h1>
 
     <p>
-    TestTafel is a restaurant that pops up every Friday to serve a four course meal (plus amuses, bread, and coffee bites) for just €15. Our menu is an eclectic collection of recipes we have been wanting to make for years, dishes stolen from our favourite chefs, and recipes found in obscure cookbooks. 
+    TestTafel is a restaurant that pops up every Friday to serve a 7 course meal (including amuses, bread, and coffee bites) for just €20. Our menu is an eclectic collection of recipes we have been wanting to make for years, dishes stolen from our favourite chefs, and recipes found in obscure cookbooks. 
     </p>
 
     <p>
@@ -25,7 +25,7 @@ translation: testtafel
 		<h3>Prices</h3>
 
     <p>
-      Because we know that it is quite likely our audience doesn't have that much money to spare, we try to keep the food and drinks as cheap as possible. The menu is therefore only 15 euros. The drinks we try to keep are about two or three times as cheap as at a normal restaurant.
+      Because we know that it is quite likely our audience doesn't have that much money to spare, we try to keep the food and drinks as cheap as possible. The menu is therefore only 20 euros. The drinks we try to keep are about two or three times as cheap as at a normal restaurant.
     </p>
 
     <p>
