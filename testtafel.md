@@ -10,7 +10,7 @@ translation: testtafel
 		<h1>TestTafel</h1>
 
     <p>
-      TestTafel is een pop-up restaurant dat elke vrijdag een wisselend menu van vier gangen (plus brood, amuses en koffie hapje) serveert. Het menu is een eclectische verzameling van recepten die we altijd al een keer hebben willen maken, gerechten goed gejat van onze  favoriete chefs en recepten die we uit obscure kookboeken hebben gevist. 
+      TestTafel is een pop-up restaurant dat elke vrijdag een wisselend menu van 7 gangen (inclusief brood, amuses en koffie hapje) serveert. Het menu is een eclectische verzameling van recepten die we altijd al een keer hebben willen maken, gerechten goed gejat van onze  favoriete chefs en recepten die we uit obscure kookboeken hebben gevist. 
     </p>
 
     <p>
@@ -25,7 +25,7 @@ translation: testtafel
 		<h3>Prijzen</h3>
 
     <p>
-      Omdat we weten dat ons publiek over het algemeen niet al te veel cash reserve heeft proberen we het eten en drinken zo goedkoop mogelijk te houden. Het eten kost daarom slechts €15. Ook het drinken proberen we twee of drie keer zo goedkoop te serveren als in een normaal restaurant. 
+      Omdat we weten dat ons publiek over het algemeen niet al te veel cash reserve heeft proberen we het eten en drinken zo goedkoop mogelijk te houden. Het eten kost daarom slechts €20. Ook het drinken proberen we twee of drie keer zo goedkoop te serveren als in een normaal restaurant. 
     </p>
 
     <p>
