@@ -9,6 +9,12 @@ translation: home
 	<div class="container">
 		<h1>People's Kitchen De Sering</h1>
 
+		<p>
+		Every Tuesday we serve two vegan courses for a suggested donation of €2.50-€5.00. Everyone is welcome between 18:30 and 21:30 at NieuwLand (Pieter Nieuwlandstraat 93). To ensure that we have enough space to have a corona safe meetup we ask you to make a reservation using the form linked below.
+		</p>
+
+		<a class="button" href="https://forms.gle/HJBKGvFofTQFezu99">Make a reservation</a>
+		
 <!-- 		<p>
 			Coming together for dinner every Tuesdays and Thursdays, for €2,50.
 			Everyone is welcome starting from 18:30 and the kitchen stays open
@@ -37,7 +43,7 @@ translation: home
 	</div>
 </div>
 
-<div class="row">
+<!-- <div class="row">
 	<div class="container-wide">
 		<div class="agenda">
 			<h3>Agenda</h3>
@@ -69,22 +75,17 @@ translation: home
 		</div>
 
 	</div>
-</div>
+</div> -->
 
 <div class="row">
 	<div class="container">
-<!-- 		<h3>Want to help?</h3>
+
+        <h3>Want to help?</h3>
 		<p>
-			De Sering is being run by volunteers, and for furniture and decoration
-			we are dependent on donations. Would you like to contribute too? On
-			<a href="contributing.html">this page about contributing</a> you can
-			sign up as a volunteer, and you can find out which things we can make
-			good use of. We'd be very grateful for it!
+			We are always in need of more help with cooking, building and cleaning. We are also looking for a new long term location, and we can use all the help we can get. For more information, visit our contributing page: 
 		</p>
 
-		<a class="button" href="contributing.html"
-			>Contribute to the De Sering</a
-		> -->
+		<a class="button" href="contributing.html">Help create De Sering</a>
 
 		<img src="/img/sering.png" />
 
