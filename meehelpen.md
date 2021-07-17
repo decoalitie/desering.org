@@ -27,7 +27,7 @@ translation: contributing
 		</p>
 
 		<p style="margin-top: 3rem">
-		<a href="index.html">Terug naar de beginpagina</a>
+		<a href="/home">Terug naar de beginpagina</a>
 		</p>
 
 	</div>

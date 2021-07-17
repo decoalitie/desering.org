@@ -8,64 +8,27 @@ translation: bijdragen
 <div class="row">
 
 	<div class="container">
+		<h1>Contributing to De Sering</h1>
 
-		<h1>Contribute to De Sering</h1>
+		<h3>We're looking for a new home!</h3>
 
-		<h3>Looking for volunteers!</h3>
+		<p>
+			We are looking for help with finding our own long-term location. If you 
+			have experience with for example local government, real estate, the law or finance, we could really use your support. If you want to help us out in any way, please let us know you're interested by filling in the form below or sending a message to <a href="tel:0031616870053">0616870053</a>.
+		</p>
 
-		<p>Our kitchen is run by volunteers. We can't keep running without extra manpower, so we need your help! Every Sunday between 10:00 – 16:00 we do the preparation for the dinners the following week. Everyone can help – with or without cooking experience. You can also join us for a few hours if that suits you better. Please fill in the form below and we will contact you.
+		<a class="button" href="https://forms.gle/URREGqQxTfNBsdii6">Open contact form</a>
 
-		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSddtJL5h3w6tY2kRbaIT2IY7SFfQJDbjIf3NU4IN0pRPJOCpw/viewform?embedded=true" frameborder="0">Loading...</iframe>
+		<h3>Cooking and the weekly open meeting</h3>
 
-		<h3>Donating things</h3>
+		<p>
+		Every Sunday between 13:00 and 17:30 we cook the food for the upcoming week. At 17:00 you can join us for a short talk about De Sering and our future plans. At 17:30 we serve free food for anyone present. At 18:00 we hold our weekly open meeting where we decide on the future of De Sering and all related projects. The cooking, talk and meeting all take place at our office at stadhouderskade 141. You can always come by if you wish. If you have any questions you can email or call us at <a href="tel:0031616870053">0616870053</a>.
+		</p>
 
-		<p>We don't make a profit and unfortunately we don't have any money left over for professional equipment and furnishings. We are therefore dependent on every small thing that comes to us to make De Sering run. Do you have a chair left? A pan that you no longer use? A stove that is collecting dust? We'd be really glad to have it! Here's a wish list with all the stuff we can make good use of</p>
+		<p style="margin-top: 3rem">
+		<a href="/en/home">Back to homepage</a>
+		</p>
 
-		<h4 id="wishlist">Wish list</h4>
-
-		<ul>
-			<li>decoration
-				<ul>
-					<li>curtains</li>
-					<li>carpets / rugs</li>
-					<li>small (standing) lamps</li>
-					<li>chairs</li>
-				</ul>
-			</li>
-
-			<li>kitchen
-				<ul>
-					<li>(gas)stove</li>
-					<li>(gas)oven</li>
-					<li>fridge</li>
-					<li>rice cooker</li>
-					<li>(gastronorm) containers</li>
-				</ul>
-			</li>
-
-			<li>heating
-				<ul>
-					<li>electric heater</li>
-				</ul>
-			</li>
-
-			<li>tableware
-				<ul>
-					<li>tea mugs</li>
-					<li>water pitchers</li>
-				</ul>
-			</li>
-
-			<li>miscellaneous
-				<ul>
-					<li>sound system</li>
-					<li>cash register</li>
-				</ul>
-			</li>
-
-		</ul>
-
-		<center style="margin-top: 3rem"><a href="index.html">Back to the home page</a></center>
 
 	</div>
 
