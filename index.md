@@ -2,26 +2,31 @@
 title: De Sering
 layout: landing
 language: nl
-description: 'Buurtkeuken De Sering in Amsterdam: Elke dinsdag en donderdag samen eten, voor €2,50.'
+description: 'Buurtkeuken De Sering in Amsterdam'
 landing: true
+translation: index
 ---
 
 <div class="sering">
   <h1>Buurtkeuken De Sering</h1>
 
   <p>
-    De Sering is weer begonnen! Vanaf drie augustus elke dinsdag bij Nieuwland.
+    De Sering is weer begonnen! Vanaf drie augustus kan je elke dinsdag terecht bij NieuwLand.
   </p>
+
+  <a href="/home.html" class="button">Ga verder naar De Sering</a>
+
+  <a href="/en/home.html" class="button">De Sering in English</a>
 </div>
 
 <div class="test-tafel">
   <h1>TestTafel</h1>
   
   <p>
-    TestTafel is een pop-up restaurant dat elke vrijdag een wisselend menu van vier gangen (plus brood, amuses en koffie hapje) serveert. Het menu is een eclectische verzameling van recepten die we altijd al een keer hebben willen maken, gerechten goed gejat van onze  favoriete chefs en recepten die we uit obscure kookboeken hebben gevist. 
+    TestTafel is een pop-up restaurant dat elke vrijdag een wisselend menu van 7 gangen serveert. Het menu is een eclectische verzameling van recepten die we altijd al een keer hebben willen maken, gerechten goed gejat van onze  favoriete chefs en recepten die we uit obscure kookboeken hebben gevist. 
   </p>
 
-  <a href="/testtafel.html" class="button">Meer informatie</a>
+  <a href="/testtafel.html" class="button">Bezoek TestTafel</a>
 
-  <a href="/en/testtafel.html" class="button">English website</a>
+  <a href="/en/testtafel.html" class="button">TestTafel in English</a>
 </div>

@@ -69,13 +69,18 @@ translation: home
 
 		<a class="button" href="meehelpen.html">Help De Sering mogelijk maken</a>
 
+		<img src="/img/sering.png" />
+
+		<h3>TestTafel</h3>
+		
+		<p>
+			Ga naar <a href="/testtafel.html">deze pagina</a> voor informatie over ons pop-up restaurant TestTafel.
+		</p>
 
 		<h3>Contact</h3>
 
 		<p><a href="mailto:info@desering.org">info@desering.org</a></p>
 
 		<p><a href="tel:0031616870053">0616870053</a></p>
-
-		<img src="/img/sering.png" />
 	</div>
 </div>

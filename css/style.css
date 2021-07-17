@@ -507,7 +507,7 @@ html.landing body {
 	.landing .sering {
 		margin-right: 0;
 		margin-bottom: 1rem;
-		order: 2;
+		/* order: 2; */
 	}
 
 	.landing .button {
