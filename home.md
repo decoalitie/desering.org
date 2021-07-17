@@ -2,7 +2,7 @@
 title: De Sering
 layout: default
 language: nl
-description: 'Buurtkeuken De Sering in Amsterdam: Elke dinsdag en donderdag samen eten, voor €2,50.'
+description: 'Buurtkeuken De Sering in Amsterdam: Elke dinsdag samen eten, voor €2,50'
 translation: home
 ---
 
@@ -11,16 +11,15 @@ translation: home
 	<div class="container">
 		<h1>Buurtkeuken De Sering</h1>
 
-<!-- 		<p>
-			Het eten is vegetarisch,
-			met een veganistisch optie.
-			€2,50
-		</p> -->
+		<p>
+			Elke dinsdag serveren we twee veganistische gangen voor een gesuggereerde donatie van €2.50-€5.00. Iedereen is tussen 18:30 en 21:30 welkom bij NieuwLand (Pieter Nieuwlandstraat 93). Om zeker te zijn dat we genoeg plek hebben om corona veilig samen te komen vragen we iedereen een reservering te maken.
+		</p>
 
+		<a class="button" href="https://forms.gle/9KQGSmziqSEBLao77">Maak een reservering</a>
 	</div>
 </div>
 
-<div class="row">
+<!-- <div class="row">
 	<div class="container-wide">
 		<div class="agenda">
 			<h3>Agenda</h3>
@@ -59,29 +58,24 @@ translation: home
 		</div>
 
 	</div>
-</div>
+</div> -->
 
 <div class="row">
 	<div class="container">
-<!-- 		<h3>Meehelpen?</h3>
+        <h3>Meehelpen?</h3>
 		<p>
-			De Sering draait op vrijwilligers, en voor meubels en inrichting zijn
-			we afhankelijk van donaties. Wil je ook bijdragen? Op
-			<a href="bijdragen.html">de pagina over bijdragen</a> kan je je
-			inschrijven als vrijwilliger, en zie je welke spullen we goed kunnen
-			gebruiken. Hartelijk dank!
+			Wil je De Sering helpen? We hebben altijd meer hulp nodig met koken, bouwen en schoonmaken. Ook kunnen we alle hulp gebruiken bij onze zoektocht naar een eigen locatie. Voor meer informatie, zie de onderstaande link.
 		</p>
 
-		<a class="button" href="bijdragen.html">Bijdragen aan De Sering</a> -->
+		<a class="button" href="meehelpen.html">Help De Sering mogelijk maken</a>
 
 
 		<h3>Contact</h3>
 
 		<p><a href="mailto:info@desering.org">info@desering.org</a></p>
 
-		<!-- <p>06 – 17 64 27 91</p> -->
+		<p><a href="tel:0031616870053">0616870053</a></p>
 
 		<img src="/img/sering.png" />
-
 	</div>
 </div>

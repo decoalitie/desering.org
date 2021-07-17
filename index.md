@@ -10,7 +10,7 @@ landing: true
   <h1>Buurtkeuken De Sering</h1>
 
   <p>
-    De Sering is druk bezig met opnieuw opstarten. Ondertussen kan je ons steunen met een bezoek aan ons pop-up restaurant TestTafel.
+    De Sering is weer begonnen! Vanaf drie augustus elke dinsdag bij Nieuwland.
   </p>
 </div>
 
