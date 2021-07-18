@@ -30,6 +30,10 @@
 
     {{ content }}
 
+    {% for script in page.scripts %}
+      <script type="text/javascript" src="/js/{{ script }}.js"></script>
+    {% endfor %}
+
   </body>
 
 
