@@ -71,6 +71,11 @@ async function main() {
         range: updateValueRange.range,
         requestBody: updateValueRange
     });
+
+    await sheets.spreadsheets.values.clear({
+        spreadsheetId: EVENT_SHEET_ID,
+        range: 'Edities!H5'
+    });
 }
 
 main();
