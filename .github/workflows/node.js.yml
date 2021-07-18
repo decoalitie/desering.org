@@ -15,3 +15,6 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm run get-sheets-data
+      env: 
+        GOOGLE_SHEETS_KEY: ${{ secrets.GOOGLE_SHEETS_KEY }}
+        EVENT_SHEET_ID: ${{ secrets.EVENT_SHEET_ID }}
