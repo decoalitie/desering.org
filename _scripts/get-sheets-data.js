@@ -41,7 +41,7 @@ async function getTabularData(spreadsheetId, sheetName, mapHeaders, headerRow = 
 async function main() {
     const { rawValues, data } = await getTabularData(EVENT_SHEET_ID, 'Edities', (head) => ({
         'Datum': 'date',
-        'Status': 'status',
+        'Volgeboekt': 'fullyBooked',
         'Publiceer op website': 'public',
         'Website status': 'websiteStatus',
     }[head]));
@@ -53,28 +53,22 @@ async function main() {
 
     const result = data
         .filter(event => event.date && event.public)
-        .map(({ date, status }) => ({
+        .map(({ date, fullyBooked }) => ({
             date,
-            status: !!status
+            fullyBooked
         }));
 
-    // await fs.writeFile(
-    //     path.join(__dirname, '../_data/testtafels.yml'),
-    //     stringify(result),
-    //     { encoding: 'utf8' }
-    // );
-    console.log(result);
+    await fs.writeFile(
+        path.join(__dirname, '../_data/testtafels.yml'),
+        stringify(result),
+        { encoding: 'utf8' }
+    );
 
     await sheets.spreadsheets.values.update({
         spreadsheetId: EVENT_SHEET_ID,
         valueInputOption: 'USER_ENTERED',
         range: updateValueRange.range,
         requestBody: updateValueRange
-    });
-
-    await sheets.spreadsheets.values.clear({
-        spreadsheetId: EVENT_SHEET_ID,
-        range: 'Edities!H5'
     });
 }
 
