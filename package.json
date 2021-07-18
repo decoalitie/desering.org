@@ -5,6 +5,7 @@
     "get-sheets-data": "node _scripts/get-sheets-data.js"
   },
   "dependencies": {
-    "googleapis": "^82.0.0"
+    "googleapis": "^82.0.0",
+    "yaml": "^1.10.2"
   }
 }
