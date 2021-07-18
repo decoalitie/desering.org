@@ -74,7 +74,7 @@ translation: home
 		<h3>TestTafel</h3>
 		
 		<p>
-			Ga naar <a href="/testtafel.html">deze pagina</a> voor informatie over ons pop-up restaurant TestTafel.
+			Ga naar <a href="/testtafel">deze pagina</a> voor informatie over ons pop-up restaurant TestTafel.
 		</p>
 
 		<h3>Contact</h3>

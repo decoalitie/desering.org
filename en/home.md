@@ -33,7 +33,7 @@ translation: home
 		<h3>TestTafel</h3>
 		
 		<p>
-			Visit <a href="./testtafel.html">this page</a> for information about our pop-up restaurant TestTafel.
+			Visit <a href="./testtafel">this page</a> for information about our pop-up restaurant TestTafel.
 		</p>
 
 		<h3>Contact</h3>
