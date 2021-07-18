@@ -6,10 +6,6 @@ jobs:
   sync-with-sheets:
 
     runs-on: ubuntu-latest
-    
-    defaults:
-      run:
-        working-directory: ./_scripts
 
     steps:
     - uses: actions/checkout@v2

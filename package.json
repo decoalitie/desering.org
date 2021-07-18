@@ -2,7 +2,7 @@
   "name": "desering-org-scripts",
   "version": "1.0.0",
   "scripts": {
-    "get-sheets-data": "node get-sheets-data.js"
+    "get-sheets-data": "node _scripts/get-sheets-data.js"
   },
   "dependencies": {
     "googleapis": "^82.0.0"
