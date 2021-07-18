@@ -40,13 +40,18 @@ translation: testtafel
 		<div class="purple-box">
 			<h3>Reserveren</h3>
 
-			<p>
+			<!--<p>
 				Op ons aanmeldformulier kan je zien welke data beschikbaar zijn en een plek reserveren voor jezelf of een groep mensen. Nieuw data worden wekelijks toegevoegd.
+			</p>-->
+
+     
+			<p>
+				We zijn momenteel op een korte pauze. Vanaf augustus is er weer elke vrijdag een editie van TestTafel. Reserveren is vanaf een week van tevoren mogelijk op deze pagina.
 			</p>
 
-			<a href="https://forms.gle/NuRewrZuxN4f1ZJd8" target="_blank">
+			<!-- <a href="https://forms.gle/NuRewrZuxN4f1ZJd8" target="_blank">
 				Klik hier om naar het aanmeldformulier te gaan
-			</a>
+			</a> -->
 
 		</div>
 
