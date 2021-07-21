@@ -15,24 +15,81 @@ stylesheets:
 	</p>
 </template>
 
+<template id="fully-booked">
+	<p class="warning">
+		<strong>Let op:</strong> Deze datum is volgeboekt. Je kan nog steeds een reservering plaatsen, dan zetten we je op de reservelijst.
+	</p>
+</template>
+
 <div class="row">
 	<div class="container">
 		<h1>Reserveren voor TestTafel</h1>
 
 		<div id="main-content">
 			<form id="reservation">
-				<select id="select-date" class="cloak" name="date">
-					{% for event in site.data.testtafels %}
-						{% assign weekday = event.date | date: "%u" | minus: 1 %}
-						{% assign day = event.date | date: "%e" %}
-						{% assign month = event.date | date: "%-m" | minus: 1 %}
-						{% assign year = event.date | date: "%Y" %}
+				<fieldset id="section-select-date">
+					<legend>Kies een datum</legend>
+					<select id="select-date" class="cloak" name="date">
+						{% for event in site.data.testtafels %}
+							{% assign weekday = event.date | date: "%u" | minus: 1 %}
+							{% assign day = event.date | date: "%e" %}
+							{% assign month = event.date | date: "%-m" | minus: 1 %}
+							{% assign year = event.date | date: "%Y" %}
 
-						<option value="{{ event.date }}"{% unless event.fullyBooked %} data-allow-default{% endunless %}>
-							{{ site.data.i18n.weekdays-nl[weekday] | capitalize }} {{ day }} {{ site.data.i18n.months-nl[month] }}{% if event.fullyBooked %} (volgeboekt){% endif %}
-						</option>
-					{% endfor %}
-				</select>
+							<option value="{{ event.date }}" {% if event.fullyBooked %}data-fully-booked{% else %}data-allow-default{% endif %}>
+								{{ site.data.i18n.weekdays-nl[weekday] | capitalize }} {{ day }} {{ site.data.i18n.months-nl[month] }}{% if event.fullyBooked %} (volgeboekt){% endif %}
+							</option>
+						{% endfor %}
+					</select>
+				</fieldset>
+
+				<fieldset id="section-personal-details">
+					<label for="input-reservation-name">Onder welke naam wil je reserveren?</label>
+					
+					<input type="text" name="reservation-name" id="input-reservation-name" placeholder="Naam">
+
+					<label for="input-reservation-name">Voor hoeveel mensen wil je reserven?</label>
+					
+					<input type="number" name="reservation-amount" id="input-reservation-amount" value="1" step="1" min="1" max="20">
+				</fieldset>
+
+				<fieldset id="section-select-table">
+					<legend>Wil je een eigen tafel?</legend>
+					
+					<p>
+						Vanaf 5 personen kan je ervoor kiezen om voor je groep een eigen tafel te reserveren. Kleinere groepen kunnen aanschuiven bij onze grote gedeelde tafel.
+					</p>
+				</fieldset>
+
+				<fieldset id="section-select-start-time">
+					<legend>Hoe laat wil je aanschuiven?</legend>
+					<select id="select-start-time" name="start-time">
+						<option value="19:00">19:00</option>
+						<option value="19:30">19:30</option>
+						<option value="20:00">20:00</option>
+					</select>
+				</fieldset>
+
+				<fieldset id="section-select-start-time">
+					<legend>Dieetvoorkeuren</legend>
+
+					<label>
+						Wil je vegetarisch, vegan of met vlees eten?
+					</label>
+
+					<div style="height: 100px; background: #ccc; margin: 1rem 0"> </div>
+					
+					<label>
+						Heeft iemand in je groep nog andere allergieën of dieetvoorkeuren?
+					</label>
+
+					<p>
+						We horen ook graag of speciaal eten voldoende is of dat er nog andere voorzorgsmaatregelen noodzakelijk zijn.
+					</p>
+					
+					<textarea>
+					</textarea>
+				</fieldset>
 			</form>
 		</div>
     </div>
