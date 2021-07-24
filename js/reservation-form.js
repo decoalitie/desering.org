@@ -26,10 +26,13 @@ class SelectRadioList extends EventTarget {
       this.handleSelectChange.bind(this)
     );
 
-    const defaultOption = this.optionElements.find(
-      (el) => el.dataset.allowDefault !== undefined
-    );
-    this.value = (defaultOption || this.optionElements[0]).value;
+    if (this.optionElements.length) {
+
+      const defaultOption = this.optionElements.find(
+        (el) => el.dataset.allowDefault !== undefined
+      );
+      this.value = (defaultOption || this.optionElements[0]).value;
+    }
   }
 
   generateRadioInputs() {
@@ -99,6 +102,68 @@ class SelectRadioList extends EventTarget {
   }
 }
 
+class FeedbackMessage {
+  constructor (parent, templateElement) {
+    this.messageElement = templateElement.content.firstElementChild.cloneNode(true);
+    this.wrapperElement = document.createElement('div');
+    this.wrapperElement.classList.add('appear-expand-height');
+    
+    this.wrapperElement.appendChild(this.messageElement);
+    parent.appendChild(this.wrapperElement);
+
+    this.visible = false;
+    this.reducedMotion = (() => {
+      const query = window.matchMedia("(prefers-reduced-motion: reduce)");
+      return !query || query.matches;
+    })();
+  }
+
+  show() {
+    if (this.visible) { 
+      return;
+    }
+    this.visible = true;
+
+    this.clearCollapseCompleteHandler();
+    this.wrapperElement.style.display = "block";
+    this.wrapperElement.style.maxHeight = `${this.wrapperElement.scrollHeight}px`;
+  }
+
+  hide() {
+    if (!this.visible) { 
+      return;
+    }
+    this.visible = false;
+
+    if (this.reducedMotion) {
+      this.wrapperElement.style.display = "none";
+      return;
+    }
+
+    this.wrapperElement.style.maxHeight = 0;
+
+    this.collapseCompleteHandler = () => {
+      this.wrapperElement.style.display = "none";
+      this.clearCollapseCompleteHandler();
+    };
+    
+    this.wrapperElement.addEventListener('transitionend', this.collapseCompleteHandler);
+    setTimeout(() => {
+      this.clearCollapseCompleteHandler();
+      if (!this.visible) {
+        this.wrapperElement.style.display = "none";
+      }
+    }, 600);
+  }
+
+  clearCollapseCompleteHandler() {
+    if (this.collapseCompleteHandler) {
+      this.wrapperElement.removeEventListener('transitionend', this.collapseCompleteHandler);
+      this.collapseCompleteHandler = null;
+    }
+  }
+}
+
 const FieldHandlers = { SelectRadioList };
 
 /**
@@ -114,6 +179,11 @@ function setupForm() {
     ])
   );
 
+  if (!fields.date.optionElements.length) {
+    switchPageToTemplate('no-dates');
+    return;
+  }
+
   fields.date.addEventListener("change", () => {
     showFeedbackMessage(
       "date",
@@ -123,41 +193,38 @@ function setupForm() {
   });
 }
 
-function showFeedbackMessage(fieldName, messageTemplateId, show = true) {
-  const feedbackElement = reservationForm.querySelector(
-    `[data-field-feedback-for="${fieldName}"]`
-  );
-  const messageTemplate = feedbackElement.querySelector(
-    `template[data-message="${messageTemplateId}"]`
-  );
+const showFeedbackMessage = (function() {
+  const messages = {};
 
-  const currentMessages = Object.fromEntries(
-    Array.from(feedbackElement.querySelectorAll("[data-from-template]")).map((element) => [
-      element.dataset.fromTemplate,
-      element,
-    ])
-  );
+  return function (fieldName, messageTemplateId, show = true) {
+    const feedbackElement = reservationForm.querySelector(
+      `[data-field-feedback-for="${fieldName}"]`
+    );
+    const messageTemplate = feedbackElement.querySelector(
+      `template[data-message="${messageTemplateId}"]`
+    );
 
-  if (show) {
-    if (!currentMessages[messageTemplateId]) {
-      const messageElement = messageTemplate.content.firstElementChild.cloneNode(true);
-      messageElement.dataset.fromTemplate = messageTemplateId;
-      feedbackElement.appendChild(messageElement);
-    } else {
-      currentMessages[messageTemplateId].style.display = "block";
+    if (!messages[fieldName]) {
+      messages[fieldName] = {};
     }
-  } else if (currentMessages[messageTemplateId]) {
-    currentMessages[messageTemplateId].style.display = "none";
+
+    if (show && !messages[fieldName][messageTemplateId]) {
+      messages[fieldName][messageTemplateId] = new FeedbackMessage(feedbackElement, messageTemplate);
+    }
+
+    if (show) {
+      messages[fieldName][messageTemplateId].show();
+    } else if (messages[fieldName][messageTemplateId]) {
+      messages[fieldName][messageTemplateId].hide();
+    }
   }
-}
+})();
 
 function switchPageToTemplate(templateId) {
   const template = document.querySelector(`#template-${templateId}`);
-  while (mainContentWrapper.firstChild) {
-    mainContentWrapper.removeChild(mainContentWrapper.firstChild);
-  }
+  reservationForm.style.display = 'none';
 
-  mainContentWrapper.appendChild(template.content.cloneNode(true));
+  mainContentWrapper.appendChild(template.content.firstElementChild.cloneNode(true));
 }
 
 // function handleReservationSubmit(e) {

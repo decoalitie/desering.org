@@ -15,6 +15,7 @@ form p {
 form .warning {
   padding: 0.5rem;
   border: 1px solid var(--purple-dark);
+  margin-bottom: 0;
 }
 
 .select-radio-list {
@@ -77,11 +78,17 @@ form .warning {
   font-weight: bold;
 }
 
-.transition-height {
+.appear-expand-height {
   overflow: hidden;
   max-height: 0;
 
   transition: max-height 0.3s ease-out;
+}
+
+@media (prefers-reduced-motion) {
+  .appear-expand-height {
+    transition: none;
+  }
 }
 
 fieldset {
