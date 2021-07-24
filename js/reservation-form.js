@@ -2,148 +2,157 @@
 const ENDPOINT =
   "https://script.google.com/macros/s/AKfycbxmEwTD9e9XPo50RJhBDTMUZQqGVmdsROFmESKCT_fmM911JM6CKnNjoBwTqKhdPKtL/exec";
 
-const DEFAULT_EVENT_TIME = "15:00:00";
+const REMOVE_SAME_DAY_EVENT_AFTER = "15:00:00";
 
-const mainContentWrapper = document.querySelector("#main-content");
-const reservationForm = document.querySelector("#reservation");
-const dateSelector = reservationForm.querySelector("#select-date");
-const startTimeSelector = reservationForm.querySelector("#select-start-time");
+const mainContentWrapper = document.querySelector("#wrapper-main-content");
+const reservationForm = document.querySelector("#form-reservation");
 
-const sections = {
-  selectDate: reservationForm.querySelector("#section-select-date"),
-};
+/**
+ * Manages a <select> input element.
+ * For destop, converts the <option> to separate <input type="radio"> and <label>.
+ */
+class SelectRadioList extends EventTarget {
+  // todo: event-target-shim
+  constructor(selectElement) {
+    super();
+    this.selectElement = selectElement;
+    this.name = selectElement.getAttribute("name");
 
-function setupForm() {
-  removePastDates();
-  const dateRadioInputs = selectToRadioList(dateSelector);
-  dateSelector.addEventListener("change", handleDateChange);
-  for (const input of dateRadioInputs) {
-    input.addEventListener('change', handleDateChange);
-  }
-  handleDateChange();
-  selectToRadioList(startTimeSelector);
+    this.optionElements = Array.from(selectElement.querySelectorAll("option"));
+    this.radioInputs = this.generateRadioInputs();
 
-  reservationForm.addEventListener("submit", handleReservationSubmit);
-}
+    selectElement.addEventListener(
+      "change",
+      this.handleSelectChange.bind(this)
+    );
 
-function handleDateChange() {
-  const option = dateSelector.querySelector(`[value="${dateSelector.value}"]`);
-
-  toggleFormSectionMessage(
-    "selectDate",
-    "fully-booked",
-    option && typeof option.dataset.fullyBooked !== 'undefined'
-  );
-}
-
-function toggleFormSectionMessage(section, messageTemplateId, toggle) {
-  const sectionElement = sections[section];
-  let messageElement = sectionElement.querySelector(".form-section-message");
-
-  if (toggle) {
-    if (!messageElement) {
-      messageElement = document.createElement('div');
-      messageElement.classList = 'form-section-message';
-      sectionElement.appendChild(messageElement);
-  
-      const template = document.querySelector(`#${messageTemplateId}`);
-      messageElement.appendChild(template.content.cloneNode(true));
-    } else if (messageElement.dataset.messageTemplate !== messageTemplateId) {
-      while (messageElement.firstChild) {
-        messageElement.removeChild(messageElement.firstChild);
-      }
-  
-      const template = document.querySelector(`#${messageTemplateId}`);
-      messageElement.appendChild(template.content.cloneNode(true));
-    }
-
-    messageElement.dataset.messageTemplate = messageTemplateId;
-    let newHeight = 500;
-    try {
-      newHeight = messageElement.scrollHeight || 500;
-    } catch (e) {
-      // ignore, fallback to default height
-    }
-    messageElement.style.maxHeight = `${newHeight}px`;
-  } else {
-    if (messageElement) {
-      messageElement.style.maxHeight = 0;
-    }
-  }
-}
-
-function removePastDates() {
-  for (const option of dateSelector.querySelectorAll("option")) {
-    const optionValue = option.getAttribute("value");
-    const optionDate = Date.parse(`${optionValue}T${DEFAULT_EVENT_TIME}`);
-
-    if (optionDate < Date.now()) {
-      dateSelector.removeChild(option);
-    }
+    const defaultOption = this.optionElements.find(
+      (el) => el.dataset.allowDefault !== undefined
+    );
+    this.value = (defaultOption || this.optionElements[0]).value;
   }
 
-  if (!dateSelector.querySelectorAll("option").length) {
-    switchTemplate("no-dates");
-    return;
-  }
+  generateRadioInputs() {
+    const radioList = document.createElement("div");
+    radioList.className = "select-radio-list";
+    this.selectElement.parentElement.insertBefore(
+      radioList,
+      this.selectElement.nextSibling
+    );
 
-  const defaultOption = dateSelector.querySelector(
-    "option[data-allow-default]"
-  );
-  if (defaultOption) {
-    dateSelector.value = defaultOption.getAttribute("value");
-  }
-
-  dateSelector.classList.remove("cloak");
-}
-
-function selectToRadioList(selectInput) {
-  const selectName = selectInput.getAttribute("name");
-  const radioList = document.createElement("div");
-  radioList.className = "select-radio-list";
-  selectInput.parentElement.insertBefore(radioList, selectInput.nextSibling);
-
-  const radioInputs = Array.from(selectInput.querySelectorAll("option")).map(
-    (option) => {
+    return this.optionElements.map((option, index) => {
       const optionValue = option.getAttribute("value");
-      const label = document.createElement("label");
-      label.innerHTML = option.innerHTML;
-      label.setAttribute("for", `${selectName}-${optionValue}`);
+      const optionId = `${this.name}-option-${index}`;
+
       const radioInput = document.createElement("input");
       radioInput.setAttribute("type", "radio");
       radioInput.setAttribute("value", optionValue);
-      radioInput.setAttribute("name", `${selectName}-radio`);
-      radioInput.setAttribute("id", `${selectName}-${optionValue}`);
+      radioInput.setAttribute("name", `${this.name}-radio`);
+      radioInput.setAttribute("id", optionId);
+      radioInput.addEventListener("change", this.handleRadioChange.bind(this));
       radioList.appendChild(radioInput);
+
+      const label = document.createElement("label");
+      label.innerHTML = option.innerHTML;
+      label.setAttribute("for", optionId);
       radioList.appendChild(label);
-      radioInput.addEventListener("change", handleRadioChange);
+
+      if (option.dataset.tag) {
+        option.innerText += ` (${option.dataset.tag})`;
+        const tagElement = document.createElement("span");
+        tagElement.className = "tag";
+        tagElement.innerText = option.dataset.tag;
+        label.appendChild(tagElement);
+      }
+
       return radioInput;
+    });
+  }
+
+  get value() {
+    return this.selectElement.value;
+  }
+
+  set value(newValue) {
+    this.selectElement.value = newValue;
+    this.updateRadioButtonChecked();
+  }
+
+  get selectedOptionElement() {
+    return this.optionElements.find((el) => el.value === this.value);
+  }
+
+  updateRadioButtonChecked() {
+    for (const radioInput of this.radioInputs) {
+      radioInput.checked = radioInput.value === this.value;
     }
-  );
-
-  function updateSelected() {
-    for (const radioInput of radioInputs) {
-      radioInput.checked = radioInput.value === selectInput.value;
-    }
   }
 
-  function handleRadioChange(e) {
-    selectInput.value = e.currentTarget.value;
+  handleRadioChange(e) {
+    this.selectElement.value = e.currentTarget.value;
+    this.dispatchEvent(new Event("change"));
   }
 
-  function handleSelectChange() {
-    updateSelected();
+  handleSelectChange() {
+    this.updateRadioButtonChecked();
+    this.dispatchEvent(new Event("change"));
   }
-
-  selectInput.addEventListener("change", handleSelectChange);
-
-  updateSelected();
-
-  return radioInputs;
 }
 
-function switchTemplate(templateId) {
-  const template = document.querySelector(`#${templateId}`);
+const FieldHandlers = { SelectRadioList };
+
+/**
+ * This is the first function called (bottom of this file) that triggers setup
+ */
+function setupForm() {
+  const fields = Object.fromEntries(
+    Array.from(reservationForm.elements).map((element) => [
+      element.name,
+      element.dataset.fieldHandler
+        ? new FieldHandlers[element.dataset.fieldHandler](element)
+        : element,
+    ])
+  );
+
+  fields.date.addEventListener("change", () => {
+    showFeedbackMessage(
+      "date",
+      "fully-booked",
+      fields.date.selectedOptionElement.dataset.fullyBooked !== undefined
+    );
+  });
+}
+
+function showFeedbackMessage(fieldName, messageTemplateId, show = true) {
+  const feedbackElement = reservationForm.querySelector(
+    `[data-field-feedback-for="${fieldName}"]`
+  );
+  const messageTemplate = feedbackElement.querySelector(
+    `template[data-message="${messageTemplateId}"]`
+  );
+
+  const currentMessages = Object.fromEntries(
+    Array.from(feedbackElement.querySelectorAll("[data-from-template]")).map((element) => [
+      element.dataset.fromTemplate,
+      element,
+    ])
+  );
+
+  if (show) {
+    if (!currentMessages[messageTemplateId]) {
+      const messageElement = messageTemplate.content.firstElementChild.cloneNode(true);
+      messageElement.dataset.fromTemplate = messageTemplateId;
+      feedbackElement.appendChild(messageElement);
+    } else {
+      currentMessages[messageTemplateId].style.display = "block";
+    }
+  } else if (currentMessages[messageTemplateId]) {
+    currentMessages[messageTemplateId].style.display = "none";
+  }
+}
+
+function switchPageToTemplate(templateId) {
+  const template = document.querySelector(`#template-${templateId}`);
   while (mainContentWrapper.firstChild) {
     mainContentWrapper.removeChild(mainContentWrapper.firstChild);
   }
@@ -151,24 +160,24 @@ function switchTemplate(templateId) {
   mainContentWrapper.appendChild(template.content.cloneNode(true));
 }
 
-function handleReservationSubmit(e) {
-  e.preventDefault();
+// function handleReservationSubmit(e) {
+//   e.preventDefault();
 
-  const data = {
-    foo: "bar",
-  };
+//   const data = {
+//     foo: "bar",
+//   };
 
-  fetch(ENDPOINT, {
-    method: "post",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: JSON.stringify(data),
-  })
-    .then((resp) => resp.json())
-    .then((data) => {
-      console.log(data);
-    });
-}
+//   fetch(ENDPOINT, {
+//     method: "post",
+//     headers: {
+//       "Content-Type": "application/x-www-form-urlencoded",
+//     },
+//     body: JSON.stringify(data),
+//   })
+//     .then((resp) => resp.json())
+//     .then((data) => {
+//       console.log(data);
+//     });
+// }
 
 setupForm();

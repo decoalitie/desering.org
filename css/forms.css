@@ -1,13 +1,15 @@
-form .cloak {
-  visibility: hidden;
+select {
+  /* set to display: block on mobile */
+  display: none;
+}
+
+template {
+  /* just in case older browsers don't understand <template> */
+  display: none;
 }
 
 form p {
   hyphens: none;
-}
-
-select {
-  display: none;
 }
 
 form .warning {
@@ -33,9 +35,10 @@ form .warning {
 .select-radio-list label {
   display: block;
   cursor: pointer;
-  padding: 0.5rem 0 0.5rem 2.5rem;
+  padding: 0 0 0 2.5rem;
   overflow: hidden;
   position: relative;
+  line-height: 3rem;
 }
 
 .select-radio-list label:before {
@@ -64,7 +67,17 @@ form .warning {
   border-bottom: 1px solid var(--purple-white);
 }
 
-.form-section-message {
+.select-radio-list .tag {
+  display: inline-block;
+  margin: 0 1rem;
+  line-height: 2rem;
+  padding: 0 0.5rem;
+  background: var(--purple-white);
+  color: var(--purple-dark);
+  font-weight: bold;
+}
+
+.transition-height {
   overflow: hidden;
   max-height: 0;
 
