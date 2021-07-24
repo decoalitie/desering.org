@@ -2,7 +2,7 @@
 const ENDPOINT =
   "https://script.google.com/macros/s/AKfycbxmEwTD9e9XPo50RJhBDTMUZQqGVmdsROFmESKCT_fmM911JM6CKnNjoBwTqKhdPKtL/exec";
 
-const REMOVE_SAME_DAY_EVENT_AFTER = "15:00:00";
+const MIN_PEOPLE_OWN_TABLE = 5;
 
 const mainContentWrapper = document.querySelector("#wrapper-main-content");
 const reservationForm = document.querySelector("#form-reservation");
@@ -27,7 +27,6 @@ class SelectRadioList extends EventTarget {
     );
 
     if (this.optionElements.length) {
-
       const defaultOption = this.optionElements.find(
         (el) => el.dataset.allowDefault !== undefined
       );
@@ -70,6 +69,24 @@ class SelectRadioList extends EventTarget {
 
       return radioInput;
     });
+  }
+
+  get disabled() {
+    return this.selectElement.disabled;
+  }
+
+  set disabled(isDisabled) {
+    this.selectElement.disabled = isDisabled;
+
+    if (isDisabled) {
+      for (const radio of this.radioInputs) {
+        radio.disabled = radio.value !== this.selectElement.value;
+      }
+    } else {
+      this.radioInputs.forEach(radio => {
+        radio.disabled = false;
+      });
+    }
   }
 
   get value() {
@@ -164,12 +181,69 @@ class FeedbackMessage {
   }
 }
 
-const FieldHandlers = { SelectRadioList };
+class NumberWithSteppers extends EventTarget {
+  constructor(inputElement) {
+    super();
+    this.inputElement = inputElement;
+
+    this.inputElement.addEventListener('change', () => {
+      this.dispatchEvent(new Event('change'));
+    });
+
+    this.inputElement.addEventListener('animationend', () => {
+      this.inputElement.classList.remove('changed');
+    });
+
+    const wrapper = this.inputElement.parentElement;
+    
+    const minButton = document.createElement('button');
+    minButton.className = 'number-step number-step-remove';
+    wrapper.appendChild(minButton);
+    minButton.addEventListener('click', this.handleMinClick.bind(this));
+
+    const plusButton = document.createElement('button');
+    plusButton.className = 'number-step number-step-add';
+    plusButton.addEventListener('click', this.handePlusClick.bind(this));
+    wrapper.appendChild(plusButton);
+  }
+
+  handleMinClick(e) {
+    e.preventDefault();
+    this.inputElement.stepDown();
+    this.dispatchEvent(new Event('change'));
+    this.inputElement.classList.add('changed');
+  }
+
+  handePlusClick(e) {
+    e.preventDefault();
+    this.inputElement.stepUp();
+    this.dispatchEvent(new Event('change'));
+    this.inputElement.classList.add('changed');
+  }
+
+  get value() {
+    const parsed = parseInt(this.inputElement.value, 10);
+    if (isNaN(parsed)) {
+      const fallback = this.inputElement.min ? parseInt(this.inputElement.min, 10) : 0;
+      this.inputElement.value = fallback;
+      return fallback;
+    }
+    return parsed;
+  }
+
+  set value(value) {
+    this.inputElement.value = value;
+  }
+}
+
+const FieldHandlers = { SelectRadioList, NumberWithSteppers };
 
 /**
  * This is the first function called (bottom of this file) that triggers setup
  */
 function setupForm() {
+  renderFeedbackMessage('table', 'start-time-fieldset', false);
+
   const fields = Object.fromEntries(
     Array.from(reservationForm.elements).map((element) => [
       element.name,
@@ -184,17 +258,84 @@ function setupForm() {
     return;
   }
 
-  fields.date.addEventListener("change", () => {
-    showFeedbackMessage(
+  function handleDateChange() {
+    renderFeedbackMessage(
       "date",
       "fully-booked",
       fields.date.selectedOptionElement.dataset.fullyBooked !== undefined
     );
-  });
+  }
+  fields.date.addEventListener("change", handleDateChange);
+  handleDateChange();
+
+  function handleReservationAmountChange() {
+    const amount = fields['reservation-amount'].value;
+    const sufficient = amount >= MIN_PEOPLE_OWN_TABLE;
+
+    if (!sufficient) {
+      fields.table.value = 'shared';
+      handleTableChange();
+    }
+    fields.table.disabled = !sufficient;
+
+    updateDietCounts();
+  }
+  fields['reservation-amount'].addEventListener("change", handleReservationAmountChange);
+  handleReservationAmountChange();
+
+  renderFeedbackMessage('table', 'shared-table-start-time', fields.table.value === 'shared');
+  function handleTableChange() {
+    renderFeedbackMessage('table', 'start-time-fieldset', fields.table.value !== 'shared');
+    renderFeedbackMessage('table', 'shared-table-start-time', fields.table.value === 'shared');
+  }
+  fields.table.addEventListener("change", handleTableChange);
+
+  function updateDietCounts() {
+    const reservationAmount = fields['reservation-amount'].value;
+    if (isNaN(reservationAmount)) {
+      return;
+    }
+
+    let vegan = fields['vegan-amount'].value;
+    let vegetarian = fields['vegetarian-amount'].value;
+    let remainder = reservationAmount - vegan - vegetarian;
+
+    if (remainder < 0) {
+      vegan = 0;
+      vegetarian = 0;
+      fields['vegan-amount'].value = 0;
+      fields['vegetarian-amount'].value = 0;
+      remainder = reservationAmount;
+    }
+
+    fields['vegan-amount'].inputElement.max = vegan + remainder;
+    fields['vegetarian-amount'].inputElement.max = vegetarian + remainder;
+
+    fields['nopref-amount'].value = reservationAmount - fields['vegan-amount'].value - fields['vegetarian-amount'].value;
+  }
+  fields['vegan-amount'].addEventListener("change", updateDietCounts);
+  fields['vegetarian-amount'].addEventListener("change", updateDietCounts);
+  updateDietCounts();
+
+  setTimeout(() => {
+    document.body.classList.add('enable-appear-transitions');
+  }, 300);
 }
 
-const showFeedbackMessage = (function() {
+const renderFeedbackMessage = (function() {
   const messages = {};
+
+  const defaultMessages = document.querySelectorAll(
+    '[data-field-feedback-for] > div[data-message]'
+  );
+  for (const messageElement of defaultMessages) {
+    const fieldName = messageElement.parentElement.dataset.fieldFeedbackFor;
+    if (!messages[fieldName]) {
+      messages[fieldName] = {};
+    }
+    messageElement.classList.add('appear-expand-height');
+    messages[fieldName][messageElement.dataset.message] = new FeedbackMessage(messageElement);
+  }
 
   return function (fieldName, messageTemplateId, show = true) {
     const feedbackElement = reservationForm.querySelector(
@@ -208,7 +349,7 @@ const showFeedbackMessage = (function() {
       messages[fieldName] = {};
     }
 
-    if (show && !messages[fieldName][messageTemplateId]) {
+    if (!messages[fieldName][messageTemplateId]) {
       messages[fieldName][messageTemplateId] = new FeedbackMessage(feedbackElement, messageTemplate);
     }
 
