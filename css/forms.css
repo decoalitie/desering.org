@@ -91,10 +91,6 @@ form .warning strong {
   background: var(--purple-white);
 }
 
-/* .select-radio-list label:not(:last-child) { */
-  /* border-bottom: 1px solid var(--purple-dark); */
-/* } */
-
 .radio-list-dark-container .select-radio-list label:not(:last-child) {
   border-bottom: 1px solid var(--purple-white);
 }
@@ -107,6 +103,40 @@ form .warning strong {
   background: var(--purple-white);
   color: var(--purple-dark);
   font-weight: bold;
+}
+
+input[type="checkbox"] {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  display: block;
+}
+
+input[type="checkbox"] + label {
+  cursor: pointer;
+  padding: 0 0 0 2rem;
+  overflow: hidden;
+  position: relative;
+  line-height: 3rem;
+}
+
+input[type="checkbox"] + label:before {
+  box-sizing: border-box;
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1.3rem;
+  height: 1.3rem;
+  transform: translate(0, -50%);
+  border: 2px solid var(--purple-dark);
+  background: var(--purple-white);
+  transition: background 0.3s ease-out;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background: var(--purple-dark);
 }
 
 .appear-expand-height {
