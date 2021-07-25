@@ -9,6 +9,14 @@ stylesheets:
 - forms
 ---
 
+<template id="template-success">
+  <div> 
+    <p>
+      Bedankt voor je reservering. 
+    </p>
+  </div>
+</template>
+
 <template id="template-no-dates">
   <p>
     Er zijn momenteel geen TestTafel edities waarvoor je kan reserveren. Probeer het later nog eens!
@@ -20,7 +28,7 @@ stylesheets:
     <h1>Reserveren voor TestTafel</h1>
 
     <div id="wrapper-main-content">
-      <form id="form-reservation">
+      <form id="form-reservation" data-form-lang="nl">
         <fieldset class="radio-list-dark-container">
           <legend class="field-header">Kies een datum</legend>
           <select name="date" data-field-handler="SelectRadioList">
@@ -58,17 +66,17 @@ stylesheets:
 
         <label class="field-header" for="input-reservation-name">Onder welke naam wil je reserveren?</label>
 
-        <input type="text" name="reservation-name" id="input-reservation-name" placeholder="Naam">
+        <input type="text" name="reservation-name" id="input-reservation-name" placeholder="Naam" required>
 
         <label class="field-header" for="input-reservation-amount">Voor hoeveel mensen wil je reserven?</label>
 
         <div class="number-input-wrapper">
           <input type="number" name="reservation-amount" id="input-reservation-amount" value="1" step="1" min="1"
-            max="20" size="3" data-field-handler="NumberWithSteppers">
+            max="20" size="3" data-field-handler="NumberWithSteppers" required>
         </div>
 
         <fieldset>
-          <legend class="field-header">Wil je een eigen tafel?</legend>
+          <legend class="field-header">Bij welke tafel wil je aanschuiven?</legend>
 
           <p>
             Vanaf 5 personen kan je ervoor kiezen om voor je groep een eigen tafel te reserveren. Kleinere
@@ -90,7 +98,7 @@ stylesheets:
 
           <template data-message="start-time-fieldset">
             <fieldset class="space-top">
-              <legend class="field-header">Hoe laat wil je aanschuiven?</legend>
+              <legend class="field-header">Hoe laat kunnen we je verwelkomen?</legend>
 
               <select name="start-time" data-field-handler="SelectRadioList">
                 <option value="19:00">19:00</option>
@@ -114,19 +122,19 @@ stylesheets:
           <div class="number-input-wrapper">
             <label for="input-vegan-amount">Vegan</label>
             <input type="number" name="vegan-amount" id="input-vegan-amount" value="0" step="1" min="0" max="20"
-              size="2" data-field-handler="NumberWithSteppers">
+              size="2" data-field-handler="NumberWithSteppers" required>
           </div>
 
           <div class="number-input-wrapper">
             <label for="input-vegetarian-amount">Vegetarisch</label>
             <input type="number" name="vegetarian-amount" id="input-vegetarian-amount" value="0" step="1" min="0"
-              max="20" size="2" data-field-handler="NumberWithSteppers">
+              max="20" size="2" data-field-handler="NumberWithSteppers" required>
           </div>
 
           <div class="number-input-wrapper">
-            <label for="input-noveg-amount">Geen voorkeur</label>
+            <label for="input-nopref-amount">Geen voorkeur</label>
             <input disabled type="number" name="nopref-amount" id="input-nopref-amount" value="0" step="1" min="0"
-              max="99" size="2" data-field-handler="NumberWithSteppers">
+              max="99" size="2" data-field-handler="NumberWithSteppers" required>
           </div>
 
           <label for="input-additional-diet" class="fieldset-question">
@@ -141,6 +149,9 @@ stylesheets:
           <textarea name="additional-diet" id="input-additional-diet" maxlength="300"
             placeholder="Beschrijf hier bijzondere dieetvoorkeuren"></textarea>
         </fieldset>
+
+
+        <button class="button" type="submit">plaats reservering</button>
       </form>
     </div>
   </div>
