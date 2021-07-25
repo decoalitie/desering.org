@@ -148,10 +148,11 @@ fieldset:not(:first-child) {
 .fieldset-question {
   display: block;
   font-weight: bold;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
-.fieldset-question + p {
+.fieldset-question + p,
+.fieldset-question + input {
   margin-top: 0.5rem;
 }
 
@@ -159,7 +160,8 @@ fieldset:not(:first-child) {
   margin-top: 0;
 }
 
-.field-header + p {
+.field-header + p, 
+.field-header + .fieldset-question {
   margin-top: 0;
 }
 
@@ -177,7 +179,9 @@ input + .field-header {
   margin-top: 2rem;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
   width: 100%;
   display: block;
   border: 2px solid transparent;
@@ -186,6 +190,8 @@ input[type="text"] {
 }
 
 input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
 input[type="number"]:focus {
   outline: none;
   border-color: var(--pink);
@@ -203,6 +209,10 @@ input[type="number"]:focus {
   max-width: 10rem;
   font-size: 1.1rem;
   padding: 0.5rem 0;
+}
+
+.number-input-wrapper label.wide {
+  max-width: 25rem;
 }
 
 input[type="number"] {

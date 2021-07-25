@@ -10,9 +10,9 @@ stylesheets:
 ---
 
 <template id="template-success">
-  <div> 
+  <div>
     <p>
-      Bedankt voor je reservering. 
+      Bedankt voor je reservering.
     </p>
   </div>
 </template>
@@ -148,6 +148,66 @@ stylesheets:
 
           <textarea name="additional-diet" id="input-additional-diet" maxlength="300"
             placeholder="Beschrijf hier bijzondere dieetvoorkeuren"></textarea>
+        </fieldset>
+
+
+        <fieldset>
+          <legend class="field-header">COVID-19 testen</legend>
+
+          <p>
+            Elke bezoeker van TestTafel moet een <a href="https://coronacheck.nl/nl/" target="_blank">officieel
+              coronabewijs van de CoronaCheck app</a> of een <strong>fysieke</strong> negatieve test zelf meenemen.
+            Wij verkopen ook testen aan de deur voor 2 euro per stuk.
+          </p>
+
+          <p class="fieldset-question">
+            Voor hoeveel personen wil je een test kopen?
+          </p>
+
+          <div class="number-input-wrapper">
+            <label for="input-test-amount" class="wide">Test kopen aan de deur</label>
+            <input type="number" name="test-amount" id="input-test-amount" value="0" step="1" min="0" max="20"
+              size="2" data-field-handler="NumberWithSteppers" required>
+          </div>
+
+          <div class="number-input-wrapper">
+            <label for="input-notest-amount" class="wide">Fysieke zelftest of <a href="https://coronacheck.nl/nl/" target="_blank">CoronaCheck bewijs</a> mee</label>
+            <input disabled type="number" name="notest-amount" id="input-notest-amount" value="0" step="1" min="0"
+              max="20" size="2" data-field-handler="NumberWithSteppers" required>
+          </div>
+        </fieldset>
+
+
+        <fieldset>
+          <legend class="field-header">Contactinformatie</legend>
+
+          <label class="fieldset-question" for="input-email">Wat is je email? (op dit adres sturen we je een
+            bevestigingsmailtje)</label>
+
+          <input type="email" name="email" id="input-email" placeholder="Email" required>
+
+          <label class="fieldset-question" for="input-phone-number">Wat is je telefoonnummer?</label>
+
+          <p>
+            We gebruiken je telefoonnummer om contact op te nemen als er onduidelijkheden zijn omtrent de reservering
+            (bv. mbt. allergieën) en om je te berichten als er een plek vrij komt op de reservelijst.
+          </p>
+
+          <input type="tel" name="phone-number" id="input-phone-number" placeholder="Telefoonnummer">
+
+          <p class="fieldset-question">
+            Wil je op de hoogte blijven van TestTafel en andere projecten van De Sering?
+          </p>
+
+          <p>
+            Selecteer deze optie als je onze maandelijkse nieuwsbrief per e-mail wilt ontvangen. Je kunt ook op de
+            hoogte blijven via <a href="https://instagram.com/testtafel" target="_blank">@testtafel</a> op Instagram of
+            onze <a href="https://chat.whatsapp.com/C2fIG6POV8FH0nVQcW3hKs" target="_blank">WhatsApp broadcast groep</a>
+          </p>
+
+          <input type="checkbox" name="consent-email-contact" id="checkbox-consent-email-contact">
+
+          <label for="checkbox-consent-email-contact">Ja, hou me op de hoogte via email</label>
         </fieldset>
 
 
