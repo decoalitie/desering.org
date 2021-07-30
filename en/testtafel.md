@@ -42,14 +42,13 @@ translation: testtafel
 		<div class="purple-box">
 			<h3>Reservations</h3>
 
-			<!--<p>
+			<p>
 				You can view avaible dates and reserve a spot for yourself or a group of people through our reservation form. This form will be updated with new dates each week.
-			</p>-->
+			</p>
       
-      <p>
-        We are currently on a short break. There will be new editions of TestTafel from the beginning of August. Reservations are possible on this page starting one week in advance. Please check back later!
-      </p>
-
+      <a href="https://forms.gle/BEJh5xt1wCtzfm2q7" target="_blank">
+				Click here to go to the reservation form
+			</a>
 		</div>
 
 	</div>
