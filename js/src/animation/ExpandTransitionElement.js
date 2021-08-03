@@ -1,14 +1,14 @@
-import { appearTransitionsEnabled } from "../animation/appearTransitions";
-import nextFrame from "../animation/nextFrame";
-import prefersReducedMotion from "../animation/prefersReducedMotion";
+import { appearTransitionsEnabled } from "./appearTransitions";
+import nextFrame from "./nextFrame";
+import prefersReducedMotion from "./prefersReducedMotion";
 
 /**
  * Element that shows/hides with an expand/collapse animation
  */
-export default class ToggleElement {
+export default class ExpandTransitionElement {
     constructor() {
         this.element = document.createElement('div');
-        this.element.classList.add('ToggleElement');
+        this.element.classList.add('ExpandTransitionElement');
 
         this._visible = false;
         this.display = 'none';
