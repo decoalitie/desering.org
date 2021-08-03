@@ -295,6 +295,12 @@
     }
   }
 
+  const ENABLE_APPEAR_AFTER = 1000;
+
+  setTimeout(() => {
+      document.body.classList.add('appear-transitions-enabled');
+  }, ENABLE_APPEAR_AFTER);
+
   const ENDPOINT =
     "https://script.google.com/macros/s/AKfycbwqk5ZIQYZ3dT00uiIk7E5x4yJQnfzO1gsIXS4HJ5xJD8EyAWpWEWTKSVbxBHQ4svDM/exec";
 
@@ -351,22 +357,22 @@
   );
   handleReservationAmountChange();
 
-  renderFeedbackMessage(
-    "table",
-    "shared-table-start-time",
-    fields.table.value === "shared"
-  );
+  // renderFeedbackMessage(
+  //   "table",
+  //   "shared-table-start-time",
+  //   fields.table.value === "shared"
+  // );
   function handleTableChange() {
     renderFeedbackMessage(
       "table",
       "start-time-fieldset",
       fields.table.value !== "shared"
     );
-    renderFeedbackMessage(
-      "table",
-      "shared-table-start-time",
-      fields.table.value === "shared"
-    );
+    // renderFeedbackMessage(
+    //   "table",
+    //   "shared-table-start-time",
+    //   fields.table.value === "shared"
+    // );
 
     if (fields.table.value === "shared") {
       fields["start-time"].value = SHARED_TABLE_START_TIME;
