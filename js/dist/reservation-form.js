@@ -36,7 +36,7 @@
 
       generateRadioInputs() {
         const radioList = document.createElement("div");
-        radioList.className = 'select-radio-list';
+        radioList.className = `select-radio-list ${this.element.className}`;
         this.element.parentElement.insertBefore(
           radioList,
           this.element.nextSibling

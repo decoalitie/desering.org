@@ -1,15 +1,49 @@
-[data-component="SelectRadioList"] {
+[data-input-controller="SelectRadioList"] {
   /* set to display: block on mobile */
   display: none;
 }
 
 .select-radio-list {
-  .boxed + & {
-    background: var(--color-dark-bg);
-    color: var(--color-dark-text);
+  label {
+    display: block;
+    cursor: pointer;
+    padding: 0 0 0 2.2rem;
+    overflow: hidden;
+    position: relative;
+    line-height: 2.3rem;
 
-    padding: 0.4rem 1rem;
-    margin-bottom: 1rem;
+    &:before {
+      box-sizing: border-box;
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0.2rem;
+      width: 1.3rem;
+      height: 1.3rem;
+      transform: translate(0, -50%);
+      border: 2px solid var(--purple-dark);
+      background: var(--purple-white);
+      transition: background 0.3s ease-out;
+    }
+  }
+
+  input:checked + label {
+    font-weight: bold;
+
+    &:before {
+      background: var(--purple-dark);
+    }
+  }
+
+  input:disabled + label {
+    color: #666;
+    text-decoration: line-through;
+
+    &:before {
+      border-color: #ddd;
+      background: var(--purple-white);
+    }
   }
 
   input[type="radio"] {
@@ -18,10 +52,45 @@
     width: 0;
     height: 0;
   }
+
+  .tag {
+    display: inline-block;
+    margin: 0 1rem;
+    line-height: 2rem;
+    padding: 0 0.5rem;
+    background: var(--purple-white);
+    color: var(--purple-dark);
+    font-weight: bold;
+  }
+
+  &.boxed {
+    background: var(--color-dark-bg);
+    color: var(--color-dark-text);
+
+    padding: 0.4rem 1rem;
+    margin-bottom: 1rem;
+
+    label {
+      line-height: 3rem;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--purple-white);
+      }
+
+      &:before {
+        border: 2px solid var(--purple-white);
+        background: var(--purple-dark);
+      }
+    }
+
+    input:checked + label:before {
+      background: var(--purple-white);
+    }
+  }
 }
 
 @media only screen and (max-width: 62rem) {
-  [data-component="SelectRadioList"] {
+  [data-input-controller="SelectRadioList"] {
     display: block;
 
     width: 100%;
