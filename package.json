@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build-js": "rollup -c rollup.config.js",
-    "dev": "concurrently \"npm run build-js -- -w\" \"jekyll serve\"",
+    "dev": "concurrently \"npm run build-js -- -w\" \"bundle exec jekyll serve\"",
     "get-sheets-data": "node _scripts/get-sheets-data.js"
   },
   "dependencies": {
