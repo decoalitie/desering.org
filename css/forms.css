@@ -21,21 +21,6 @@ form .warning strong {
   color: var(--purple);
 }
 
-.radio-list-dark-container .select-radio-list {
-  background: var(--purple-dark);
-  color: var(--purple-white);
-
-  padding: 0.4rem 1rem;
-  margin-bottom: 1rem;
-}
-
-.select-radio-list input {
-  display: block;
-  visibility: hidden;
-  width: 0;
-  height: 0;
-}
-
 .select-radio-list label {
   display: block;
   cursor: pointer;

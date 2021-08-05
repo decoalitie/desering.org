@@ -1,462 +1,293 @@
 (function () {
-  'use strict';
+    'use strict';
 
-  /**
-   * Manages a <select> input element.
-   * For destop, converts the <option> to separate <input type="radio"> and <label>.
-   */
-  class SelectRadioList extends EventTarget {
-    // todo: event-target-shim
-    constructor(selectElement) {
-      super();
-      this.selectElement = selectElement;
-      this.name = selectElement.getAttribute("name");
+    class InputController extends EventTarget {
+        constructor(element) {
+            super();
 
-      this.optionElements = Array.from(selectElement.querySelectorAll("option"));
-      this.radioInputs = this.generateRadioInputs();
+            this.element = element;
+            this.name = element.name;
+        }
+    }
 
-      selectElement.addEventListener(
-        "change",
-        this.handleSelectChange.bind(this)
-      );
+    /**
+     * Manages a <select> input element.
+     * For destop, converts the <option> to separate <input type="radio"> and <label>.
+     */
+    class SelectRadioList extends InputController {
+      constructor(element) {
+        super(element);
 
-      if (this.optionElements.length) {
-        const defaultOption = this.optionElements.find(
-          (el) => el.dataset.allowDefault !== undefined
+        this.optionElements = Array.from(element.querySelectorAll("option"));
+        this.radioInputs = this.generateRadioInputs();
+
+        element.addEventListener(
+          "change",
+          this.handleSelectChange.bind(this)
         );
-        this.value = (defaultOption || this.optionElements[0]).value;
+
+        if (this.optionElements.length) {
+          const defaultOption = this.optionElements.find(
+            (el) => el.dataset.allowDefault !== undefined
+          );
+          this.value = (defaultOption || this.optionElements[0]).value;
+        }
       }
-    }
 
-    generateRadioInputs() {
-      const radioList = document.createElement("div");
-      radioList.className = "select-radio-list";
-      this.selectElement.parentElement.insertBefore(
-        radioList,
-        this.selectElement.nextSibling
-      );
+      generateRadioInputs() {
+        const radioList = document.createElement("div");
+        radioList.className = 'select-radio-list';
+        this.element.parentElement.insertBefore(
+          radioList,
+          this.element.nextSibling
+        );
 
-      return this.optionElements.map((option, index) => {
-        const optionValue = option.getAttribute("value");
-        const optionId = `${this.name}-option-${index}`;
+        return this.optionElements.map((option, index) => {
+          const optionValue = option.getAttribute("value");
+          const optionId = `${this.name}-option-${index}`;
 
-        const radioInput = document.createElement("input");
-        radioInput.setAttribute("type", "radio");
-        radioInput.setAttribute("value", optionValue);
-        radioInput.setAttribute("name", `${this.name}-radio`);
-        radioInput.setAttribute("id", optionId);
-        radioInput.addEventListener("change", this.handleRadioChange.bind(this));
-        radioList.appendChild(radioInput);
+          const radioInput = document.createElement("input");
+          radioInput.setAttribute("type", "radio");
+          radioInput.setAttribute("value", optionValue);
+          radioInput.setAttribute("name", `${this.name}-radio`);
+          radioInput.setAttribute("id", optionId);
+          radioInput.addEventListener("change", this.handleRadioChange.bind(this));
+          radioList.appendChild(radioInput);
 
-        const label = document.createElement("label");
-        label.innerHTML = option.innerHTML;
-        label.setAttribute("for", optionId);
-        radioList.appendChild(label);
+          const label = document.createElement("label");
+          label.innerHTML = option.innerHTML;
+          label.setAttribute("for", optionId);
+          radioList.appendChild(label);
 
-        if (option.dataset.tag) {
-          option.innerText += ` (${option.dataset.tag})`;
-          const tagElement = document.createElement("span");
-          tagElement.className = "tag";
-          tagElement.innerText = option.dataset.tag;
-          label.appendChild(tagElement);
-        }
+          if (option.dataset.tag) {
+            option.innerText += ` (${option.dataset.tag})`;
+            const tagElement = document.createElement("span");
+            tagElement.className = "tag";
+            tagElement.innerText = option.dataset.tag;
+            label.appendChild(tagElement);
+          }
 
-        return radioInput;
-      });
-    }
-
-    get disabled() {
-      return this.selectElement.disabled;
-    }
-
-    set disabled(isDisabled) {
-      this.selectElement.disabled = isDisabled;
-
-      if (isDisabled) {
-        for (const radio of this.radioInputs) {
-          radio.disabled = radio.value !== this.selectElement.value;
-        }
-      } else {
-        this.radioInputs.forEach((radio) => {
-          radio.disabled = false;
+          return radioInput;
         });
       }
-    }
 
-    get value() {
-      return this.selectElement.value;
-    }
-
-    set value(newValue) {
-      this.selectElement.value = newValue;
-      this.updateRadioButtonChecked();
-    }
-
-    get selectedOptionElement() {
-      return this.optionElements.find((el) => el.value === this.value);
-    }
-
-    updateRadioButtonChecked() {
-      for (const radioInput of this.radioInputs) {
-        radioInput.checked = radioInput.value === this.value;
-      }
-    }
-
-    handleRadioChange(e) {
-      this.selectElement.value = e.currentTarget.value;
-      this.dispatchEvent(new Event("change"));
-    }
-
-    handleSelectChange() {
-      this.updateRadioButtonChecked();
-      this.dispatchEvent(new Event("change"));
-    }
-  }
-
-  class NumberWithSteppers extends EventTarget {
-    constructor(inputElement) {
-      super();
-      this.inputElement = inputElement;
-
-      this.inputElement.addEventListener("change", () => {
-        this.dispatchEvent(new Event("change"));
-      });
-
-      this.inputElement.addEventListener("animationend", () => {
-        this.inputElement.classList.remove("changed");
-      });
-
-      const wrapper = this.inputElement.parentElement;
-
-      const minButton = document.createElement("button");
-      minButton.className = "number-step number-step-remove";
-      wrapper.appendChild(minButton);
-      minButton.addEventListener("click", this.handleMinClick.bind(this));
-
-      const plusButton = document.createElement("button");
-      plusButton.className = "number-step number-step-add";
-      plusButton.addEventListener("click", this.handePlusClick.bind(this));
-      wrapper.appendChild(plusButton);
-    }
-
-    handleMinClick(e) {
-      e.preventDefault();
-      this.inputElement.stepDown();
-      this.dispatchEvent(new Event("change"));
-      this.inputElement.classList.add("changed");
-    }
-
-    handePlusClick(e) {
-      e.preventDefault();
-      this.inputElement.stepUp();
-      this.dispatchEvent(new Event("change"));
-      this.inputElement.classList.add("changed");
-    }
-
-    get value() {
-      return this.inputElement.value === undefined
-        ? this.inputElement.value
-        : parseInt(this.inputElement.value, 10);
-    }
-
-    get safeValue() {
-      const parsed = this.value;
-
-      if (isNaN(parsed) || parsed === undefined) {
-        const fallback = this.inputElement.min
-          ? parseInt(this.inputElement.min, 10)
-          : 0;
-
-        this.inputElement.value = fallback;
-        return fallback;
-      }
-      return parsed;
-    }
-
-    set value(value) {
-      this.inputElement.value = value;
-    }
-  }
-
-  class FeedbackMessage {
-    constructor(parent, templateElement) {
-      this.messageElement =
-        templateElement.content.firstElementChild.cloneNode(true);
-      this.wrapperElement = document.createElement("div");
-      this.wrapperElement.classList.add("appear-expand-height");
-
-      this.wrapperElement.appendChild(this.messageElement);
-      parent.appendChild(this.wrapperElement);
-
-      this.visible = false;
-      this.reducedMotion = (() => {
-        const query = window.matchMedia("(prefers-reduced-motion: reduce)");
-        return !query || query.matches;
-      })();
-    }
-
-    show() {
-      if (this.visible) {
-        return;
-      }
-      this.visible = true;
-
-      this.clearCollapseCompleteHandler();
-      this.wrapperElement.style.display = "block";
-      this.wrapperElement.style.maxHeight = `${this.wrapperElement.scrollHeight}px`;
-    }
-
-    hide() {
-      if (!this.visible) {
-        return;
-      }
-      this.visible = false;
-
-      if (this.reducedMotion) {
-        this.wrapperElement.style.display = "none";
-        return;
+      get disabled() {
+        return this.element.disabled;
       }
 
-      this.wrapperElement.style.maxHeight = 0;
+      set disabled(isDisabled) {
+        this.element.disabled = isDisabled;
 
-      this.collapseCompleteHandler = () => {
-        this.wrapperElement.style.display = "none";
-        this.clearCollapseCompleteHandler();
-      };
-
-      this.wrapperElement.addEventListener(
-        "transitionend",
-        this.collapseCompleteHandler
-      );
-      setTimeout(() => {
-        this.clearCollapseCompleteHandler();
-        if (!this.visible) {
-          this.wrapperElement.style.display = "none";
+        if (isDisabled) {
+          for (const radio of this.radioInputs) {
+            radio.disabled = radio.value !== this.element.value;
+          }
+        } else {
+          this.radioInputs.forEach((radio) => {
+            radio.disabled = false;
+          });
         }
-      }, 600);
-    }
+      }
 
-    clearCollapseCompleteHandler() {
-      if (this.collapseCompleteHandler) {
-        this.wrapperElement.removeEventListener(
-          "transitionend",
-          this.collapseCompleteHandler
-        );
-        this.collapseCompleteHandler = null;
+      get value() {
+        return this.element.value;
+      }
+
+      set value(newValue) {
+        this.element.value = newValue;
+        this.updateRadioButtonChecked();
+      }
+
+      get selectedOptionElement() {
+        return this.optionElements.find((el) => el.value === this.value);
+      }
+
+      updateRadioButtonChecked() {
+        for (const radioInput of this.radioInputs) {
+          radioInput.checked = radioInput.value === this.value;
+        }
+      }
+
+      handleRadioChange(e) {
+        this.element.value = e.currentTarget.value;
+        this.dispatchEvent(new Event("change"));
+      }
+
+      handleSelectChange() {
+        this.updateRadioButtonChecked();
+        this.dispatchEvent(new Event("change"));
       }
     }
-  }
 
-  const reservationForm$1 = document.querySelector("#form-reservation");
+    var inputControllers = /*#__PURE__*/Object.freeze({
+        __proto__: null,
+        SelectRadioList: SelectRadioList
+    });
 
-  const messages = {};
+    const reservationForm = document.querySelector("#reservation-form");
 
-  const defaultMessages = document.querySelectorAll(
-    "[data-field-feedback-for] > div[data-message]"
-  );
-  for (const messageElement of defaultMessages) {
-    const fieldName = messageElement.parentElement.dataset.fieldFeedbackFor;
-    if (!messages[fieldName]) {
-      messages[fieldName] = {};
-    }
-    messageElement.classList.add("appear-expand-height");
-    messages[fieldName][messageElement.dataset.message] = new FeedbackMessage(
-      messageElement
-    );
-  }
-
-  function renderFeedbackMessage(
-    fieldName,
-    messageTemplateId,
-    show = true
-  ) {
-    const feedbackElement = reservationForm$1.querySelector(
-      `[data-field-feedback-for="${fieldName}"]`
-    );
-    const messageTemplate = feedbackElement.querySelector(
-      `template[data-message="${messageTemplateId}"]`
+    Object.fromEntries(
+      Array.from(reservationForm.elements)
+        .filter((element) => element.name)
+        .map((element) => [
+          element.name,
+          element.dataset.inputController
+            ? new inputControllers[element.dataset.inputController](element)
+            : element,
+        ])
     );
 
-    if (!messages[fieldName]) {
-      messages[fieldName] = {};
-    }
+    // import SelectRadioList from "../forms/SelectRadioList";
+    // import NumberWithSteppers from "../forms/NumberWithSteppers";
+    // import { renderFeedbackMessage } from "../forms/FeedbackMessage";
 
-    if (!messages[fieldName][messageTemplateId]) {
-      messages[fieldName][messageTemplateId] = new FeedbackMessage(
-        feedbackElement,
-        messageTemplate
-      );
-    }
+    // const ENDPOINT =
+    //   "https://script.google.com/macros/s/AKfycbwqk5ZIQYZ3dT00uiIk7E5x4yJQnfzO1gsIXS4HJ5xJD8EyAWpWEWTKSVbxBHQ4svDM/exec";
 
-    if (show) {
-      messages[fieldName][messageTemplateId].show();
-    } else if (messages[fieldName][messageTemplateId]) {
-      messages[fieldName][messageTemplateId].hide();
-    }
-  }
+    // const MIN_PEOPLE_OWN_TABLE = 5;
+    // const SHARED_TABLE_START_TIME = "19:00";
 
-  const ENABLE_APPEAR_AFTER = 1000;
+    // const mainContentWrapper = document.querySelector("#wrapper-main-content");
+    // const reservationForm = document.querySelector("#form-reservation");
 
-  setTimeout(() => {
-      document.body.classList.add('appear-transitions-enabled');
-  }, ENABLE_APPEAR_AFTER);
+    // const FieldHandlers = { SelectRadioList, NumberWithSteppers };
 
-  const ENDPOINT =
-    "https://script.google.com/macros/s/AKfycbwqk5ZIQYZ3dT00uiIk7E5x4yJQnfzO1gsIXS4HJ5xJD8EyAWpWEWTKSVbxBHQ4svDM/exec";
+    // renderFeedbackMessage("table", "start-time-fieldset", false);
 
-  const MIN_PEOPLE_OWN_TABLE = 5;
-  const SHARED_TABLE_START_TIME = "19:00";
 
-  const mainContentWrapper = document.querySelector("#wrapper-main-content");
-  const reservationForm = document.querySelector("#form-reservation");
 
-  const FieldHandlers = { SelectRadioList, NumberWithSteppers };
+    // if (!fields.date.optionElements.length) {
+    //   switchPageToTemplate("no-dates");
+    // }
 
-  renderFeedbackMessage("table", "start-time-fieldset", false);
+    // function handleDateChange() {
+    //   renderFeedbackMessage(
+    //     "date",
+    //     "fully-booked",
+    //     fields.date.selectedOptionElement.dataset.fullyBooked !== undefined
+    //   );
+    // }
+    // fields.date.addEventListener("change", handleDateChange);
+    // handleDateChange();
 
-  const fields = Object.fromEntries(
-    Array.from(reservationForm.elements)
-      .filter((element) => element.name)
-      .map((element) => [
-        element.name,
-        element.dataset.fieldHandler
-          ? new FieldHandlers[element.dataset.fieldHandler](element)
-          : element,
-      ])
-  );
+    // function handleReservationAmountChange() {
+    //   const amount = fields["reservation-amount"].value;
+    //   const sufficient = amount >= MIN_PEOPLE_OWN_TABLE;
 
-  if (!fields.date.optionElements.length) {
-    switchPageToTemplate("no-dates");
-  }
+    //   if (!sufficient) {
+    //     fields.table.value = "shared";
+    //     handleTableChange();
+    //   }
+    //   fields.table.disabled = !sufficient;
 
-  function handleDateChange() {
-    renderFeedbackMessage(
-      "date",
-      "fully-booked",
-      fields.date.selectedOptionElement.dataset.fullyBooked !== undefined
-    );
-  }
-  fields.date.addEventListener("change", handleDateChange);
-  handleDateChange();
+    //   updateDietCounts();
+    // }
+    // fields["reservation-amount"].addEventListener(
+    //   "change",
+    //   handleReservationAmountChange
+    // );
+    // handleReservationAmountChange();
 
-  function handleReservationAmountChange() {
-    const amount = fields["reservation-amount"].value;
-    const sufficient = amount >= MIN_PEOPLE_OWN_TABLE;
-
-    if (!sufficient) {
-      fields.table.value = "shared";
-      handleTableChange();
-    }
-    fields.table.disabled = !sufficient;
-
-    updateDietCounts();
-  }
-  fields["reservation-amount"].addEventListener(
-    "change",
-    handleReservationAmountChange
-  );
-  handleReservationAmountChange();
-
-  // renderFeedbackMessage(
-  //   "table",
-  //   "shared-table-start-time",
-  //   fields.table.value === "shared"
-  // );
-  function handleTableChange() {
-    renderFeedbackMessage(
-      "table",
-      "start-time-fieldset",
-      fields.table.value !== "shared"
-    );
     // renderFeedbackMessage(
     //   "table",
     //   "shared-table-start-time",
     //   fields.table.value === "shared"
     // );
+    // function handleTableChange() {
+    //   renderFeedbackMessage(
+    //     "table",
+    //     "start-time-fieldset",
+    //     fields.table.value !== "shared"
+    //   );
+    //   renderFeedbackMessage(
+    //     "table",
+    //     "shared-table-start-time",
+    //     fields.table.value === "shared"
+    //   );
 
-    if (fields.table.value === "shared") {
-      fields["start-time"].value = SHARED_TABLE_START_TIME;
-    }
-  }
-  fields.table.addEventListener("change", handleTableChange);
+    //   if (fields.table.value === "shared") {
+    //     fields["start-time"].value = SHARED_TABLE_START_TIME;
+    //   }
+    // }
+    // fields.table.addEventListener("change", handleTableChange);
 
-  function updateDietCounts() {
-    const reservationAmount = fields["reservation-amount"].value;
-    if (isNaN(reservationAmount)) {
-      return;
-    }
+    // function updateDietCounts() {
+    //   const reservationAmount = fields["reservation-amount"].value;
+    //   if (isNaN(reservationAmount)) {
+    //     return;
+    //   }
 
-    let vegan = fields["vegan-amount"].safeValue;
-    let vegetarian = fields["vegetarian-amount"].safeValue;
-    let remainder = reservationAmount - vegan - vegetarian;
+    //   let vegan = fields["vegan-amount"].safeValue;
+    //   let vegetarian = fields["vegetarian-amount"].safeValue;
+    //   let remainder = reservationAmount - vegan - vegetarian;
 
-    if (remainder < 0) {
-      vegan = 0;
-      vegetarian = 0;
-      fields["vegan-amount"].value = 0;
-      fields["vegetarian-amount"].value = 0;
-      remainder = reservationAmount;
-    }
+    //   if (remainder < 0) {
+    //     vegan = 0;
+    //     vegetarian = 0;
+    //     fields["vegan-amount"].value = 0;
+    //     fields["vegetarian-amount"].value = 0;
+    //     remainder = reservationAmount;
+    //   }
 
-    fields["vegan-amount"].inputElement.max = vegan + remainder;
-    fields["vegetarian-amount"].inputElement.max = vegetarian + remainder;
+    //   fields["vegan-amount"].inputElement.max = vegan + remainder;
+    //   fields["vegetarian-amount"].inputElement.max = vegetarian + remainder;
 
-    fields["nopref-amount"].value =
-      reservationAmount -
-      fields["vegan-amount"].value -
-      fields["vegetarian-amount"].value;
-  }
-  fields["vegan-amount"].addEventListener("change", updateDietCounts);
-  fields["vegetarian-amount"].addEventListener("change", updateDietCounts);
-  updateDietCounts();
+    //   fields["nopref-amount"].value =
+    //     reservationAmount -
+    //     fields["vegan-amount"].value -
+    //     fields["vegetarian-amount"].value;
+    // }
+    // fields["vegan-amount"].addEventListener("change", updateDietCounts);
+    // fields["vegetarian-amount"].addEventListener("change", updateDietCounts);
+    // updateDietCounts();
 
-  reservationForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+    // reservationForm.addEventListener("submit", function (e) {
+    //   e.preventDefault();
 
-    const data = Object.fromEntries(
-      Object.entries(fields).map(([fieldName, field]) => [fieldName, field.value])
-    );
-    submitReservation({
-      ...data,
-      lang: reservationForm.dataset.formLang,
-    });
-  });
+    //   const data = Object.fromEntries(
+    //     Object.entries(fields).map(([fieldName, field]) => [fieldName, field.value])
+    //   );
+    //   submitReservation({
+    //     ...data,
+    //     lang: reservationForm.dataset.formLang,
+    //   });
+    // });
 
-  setTimeout(() => {
-    document.body.classList.add("enable-appear-transitions");
-  }, 300);
+    // setTimeout(() => {
+    //   document.body.classList.add("enable-appear-transitions");
+    // }, 300);
 
-  function switchPageToTemplate(templateId) {
-    const template = document.querySelector(`#template-${templateId}`);
-    reservationForm.style.display = "none";
+    // function switchPageToTemplate(templateId) {
+    //   const template = document.querySelector(`#template-${templateId}`);
+    //   reservationForm.style.display = "none";
 
-    mainContentWrapper.appendChild(
-      template.content.firstElementChild.cloneNode(true)
-    );
-  }
+    //   mainContentWrapper.appendChild(
+    //     template.content.firstElementChild.cloneNode(true)
+    //   );
+    // }
 
-  function submitReservation(data) {
-    const submitButton = reservationForm.querySelector('button[type="submit"]');
+    // function submitReservation(data) {
+    //   const submitButton = reservationForm.querySelector('button[type="submit"]');
 
-    if (submitButton.classList.contains("loading")) {
-      return;
-    }
-    submitButton.classList.add("loading");
+    //   if (submitButton.classList.contains("loading")) {
+    //     return;
+    //   }
+    //   submitButton.classList.add("loading");
 
-    fetch(ENDPOINT, {
-      method: "post",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .finally(() => {
-        submitButton.classList.remove("loading");
-      });
-  }
+    //   fetch(ENDPOINT, {
+    //     method: "post",
+    //     headers: {
+    //       "Content-Type": "application/x-www-form-urlencoded",
+    //     },
+    //     body: JSON.stringify(data),
+    //   })
+    //     .then((resp) => resp.json())
+    //     .then((data) => {
+    //       console.log(data);
+    //     })
+    //     .finally(() => {
+    //       submitButton.classList.remove("loading");
+    //     });
+    // }
 
 }());

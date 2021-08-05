@@ -6,33 +6,18 @@ translation: testtafel
 scripts:
 - reservation-form
 stylesheets:
-- forms
 - reservation-form
 ---
-
-<template id="template-success">
-  <div>
-    <p>
-      Bedankt voor je reservering.
-    </p>
-  </div>
-</template>
-
-<template id="template-no-dates">
-  <p>
-    Er zijn momenteel geen TestTafel edities waarvoor je kan reserveren. Probeer het later nog eens!
-  </p>
-</template>
 
 <div class="row">
   <div class="container">
     <h1>Reserveren voor TestTafel</h1>
 
-    <div id="wrapper-main-content">
-      <form id="form-reservation" data-form-lang="nl">
-        <fieldset class="radio-list-dark-container">
+    <div>
+      <form id="reservation-form" data-form-lang="nl">
+        <fieldset>
           <legend class="field-header">Kies een datum</legend>
-          <select name="date" data-field-handler="SelectRadioList">
+          <select name="date" class="boxed" data-input-controller="SelectRadioList">
             {% for event in site.data.testtafels %}
 
             {% assign unix_event = event.date | date: "%s" %}
@@ -167,12 +152,13 @@ stylesheets:
 
           <div class="number-input-wrapper">
             <label for="input-test-amount" class="wide">Test kopen aan de deur</label>
-            <input type="number" name="test-amount" id="input-test-amount" value="0" step="1" min="0" max="20"
-              size="2" data-field-handler="NumberWithSteppers" required>
+            <input type="number" name="test-amount" id="input-test-amount" value="0" step="1" min="0" max="20" size="2"
+              data-field-handler="NumberWithSteppers" required>
           </div>
 
           <div class="number-input-wrapper">
-            <label for="input-notest-amount" class="wide">Fysieke zelftest of <a href="https://coronacheck.nl/nl/" target="_blank">CoronaCheck bewijs</a> mee</label>
+            <label for="input-notest-amount" class="wide">Fysieke zelftest of <a href="https://coronacheck.nl/nl/"
+                target="_blank">CoronaCheck bewijs</a> mee</label>
             <input disabled type="number" name="notest-amount" id="input-notest-amount" value="0" step="1" min="0"
               max="20" size="2" data-field-handler="NumberWithSteppers" required>
           </div>
@@ -214,6 +200,20 @@ stylesheets:
 
         <button class="button" type="submit">plaats reservering</button>
       </form>
+
+      <template data-template-id="success">
+        <div>
+          <p>
+            Bedankt voor je reservering.
+          </p>
+        </div>
+      </template>
+
+      <template data-template-id="no-dates">
+        <p>
+          Er zijn momenteel geen TestTafel edities waarvoor je kan reserveren. Probeer het later nog eens!
+        </p>
+      </template>
     </div>
   </div>
 </div>

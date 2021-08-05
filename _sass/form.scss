@@ -1,0 +1,19 @@
+form {
+    --row-spacing: 1rem;
+    --input-padding: 0.5rem;
+
+    --color-dark-bg: var(--purple-dark);
+    --color-dark-text: var(--purple-white);
+}
+
+fieldset {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form-row {
+    overflow: hidden;
+    margin: 0 0 0 var(--row-spacing);
+}

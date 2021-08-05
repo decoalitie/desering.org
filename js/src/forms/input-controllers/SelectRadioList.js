@@ -1,18 +1,17 @@
+import InputController from "./InputController";
+
 /**
  * Manages a <select> input element.
  * For destop, converts the <option> to separate <input type="radio"> and <label>.
  */
-class SelectRadioList extends EventTarget {
-  // todo: event-target-shim
-  constructor(selectElement) {
-    super();
-    this.selectElement = selectElement;
-    this.name = selectElement.getAttribute("name");
+class SelectRadioList extends InputController {
+  constructor(element) {
+    super(element);
 
-    this.optionElements = Array.from(selectElement.querySelectorAll("option"));
+    this.optionElements = Array.from(element.querySelectorAll("option"));
     this.radioInputs = this.generateRadioInputs();
 
-    selectElement.addEventListener(
+    element.addEventListener(
       "change",
       this.handleSelectChange.bind(this)
     );
@@ -27,10 +26,10 @@ class SelectRadioList extends EventTarget {
 
   generateRadioInputs() {
     const radioList = document.createElement("div");
-    radioList.className = "select-radio-list";
-    this.selectElement.parentElement.insertBefore(
+    radioList.className = 'select-radio-list';
+    this.element.parentElement.insertBefore(
       radioList,
-      this.selectElement.nextSibling
+      this.element.nextSibling
     );
 
     return this.optionElements.map((option, index) => {
@@ -63,15 +62,15 @@ class SelectRadioList extends EventTarget {
   }
 
   get disabled() {
-    return this.selectElement.disabled;
+    return this.element.disabled;
   }
 
   set disabled(isDisabled) {
-    this.selectElement.disabled = isDisabled;
+    this.element.disabled = isDisabled;
 
     if (isDisabled) {
       for (const radio of this.radioInputs) {
-        radio.disabled = radio.value !== this.selectElement.value;
+        radio.disabled = radio.value !== this.element.value;
       }
     } else {
       this.radioInputs.forEach((radio) => {
@@ -81,11 +80,11 @@ class SelectRadioList extends EventTarget {
   }
 
   get value() {
-    return this.selectElement.value;
+    return this.element.value;
   }
 
   set value(newValue) {
-    this.selectElement.value = newValue;
+    this.element.value = newValue;
     this.updateRadioButtonChecked();
   }
 
@@ -100,7 +99,7 @@ class SelectRadioList extends EventTarget {
   }
 
   handleRadioChange(e) {
-    this.selectElement.value = e.currentTarget.value;
+    this.element.value = e.currentTarget.value;
     this.dispatchEvent(new Event("change"));
   }
 
