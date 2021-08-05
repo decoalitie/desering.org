@@ -1,5 +1,5 @@
 form {
-    --row-spacing: 1rem;
+    --step-spacing: 1rem;
     --input-padding: 0.5rem;
 
     --color-dark-bg: var(--purple-dark);
@@ -13,7 +13,35 @@ fieldset {
   border: none;
 }
 
-.form-row {
-    overflow: hidden;
-    margin: 0 0 0 var(--row-spacing);
+.form-step-header {
+  display: block;
+  margin: var(--step-spacing) 0;
+
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.4rem;
+}
+
+.form-step-subheader {
+  display: block;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  display: block;
+  border: 2px solid transparent;
+  border-bottom: 2px solid var(--purple);
+  padding: var(--input-padding);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: var(--pink);
 }

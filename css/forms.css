@@ -77,15 +77,6 @@ fieldset:not(:first-child) {
   margin-top: 2rem;
 }
 
-.field-header {
-  display: block;
-  margin: 1rem 0;
-
-  font-size: 1.3rem;
-  font-weight: bold;
-  line-height: 1.4rem;
-}
-
 .fieldset-question {
   display: block;
   font-weight: bold;

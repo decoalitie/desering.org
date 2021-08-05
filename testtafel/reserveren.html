@@ -16,7 +16,7 @@ stylesheets:
     <div>
       <form id="reservation-form" data-form-lang="nl">
         <fieldset>
-          <legend class="field-header">Kies een datum</legend>
+          <legend class="form-step-header">Kies een datum</legend>
           <select name="date" class="boxed" data-input-controller="SelectRadioList">
             {% for event in site.data.testtafels %}
 
@@ -50,11 +50,15 @@ stylesheets:
           </template>
         </div>
 
-        <label class="field-header" for="input-reservation-name">Onder welke naam wil je reserveren?</label>
+        <label class="form-step-header" for="input-reservation-name">
+          Onder welke naam wil je reserveren?
+        </label>
 
         <input type="text" name="reservation-name" id="input-reservation-name" placeholder="Naam" required>
 
-        <label class="field-header" for="input-reservation-amount">Voor hoeveel mensen wil je reserven?</label>
+        <label class="form-step-header" for="input-reservation-amount">
+          Voor hoeveel mensen wil je reserven?
+        </label>
 
         <div class="number-input-wrapper">
           <input type="number" name="reservation-amount" id="input-reservation-amount" value="1" step="1" min="1"
@@ -62,7 +66,7 @@ stylesheets:
         </div>
 
         <fieldset>
-          <legend class="field-header">Bij welke tafel wil je aanschuiven?</legend>
+          <legend class="form-step-header">Bij welke tafel wil je aanschuiven?</legend>
 
           <p>
             Vanaf 5 personen kan je ervoor kiezen om voor je groep een eigen tafel te reserveren. Kleinere
@@ -84,7 +88,7 @@ stylesheets:
 
           <template data-message="start-time-fieldset">
             <fieldset class="space-top">
-              <legend class="field-header">Hoe laat kunnen we je verwelkomen?</legend>
+              <legend class="form-step-header">Hoe laat kunnen we je verwelkomen?</legend>
 
               <select name="start-time" data-field-handler="SelectRadioList">
                 <option value="19:00">19:00</option>
@@ -99,9 +103,9 @@ stylesheets:
         </div>
 
         <fieldset>
-          <legend class="field-header">Dieetvoorkeuren</legend>
+          <legend class="form-step-header">Dieetvoorkeuren</legend>
 
-          <p class="fieldset-question">
+          <p class="form-step-subheader">
             Hoeveel personen hebben een vegetarisch of vegan dieet?
           </p>
 
@@ -123,7 +127,7 @@ stylesheets:
               max="99" size="2" data-field-handler="NumberWithSteppers" required>
           </div>
 
-          <label for="input-additional-diet" class="fieldset-question">
+          <label for="input-additional-diet" class="form-step-subheader">
             Heeft iemand in je groep nog andere allergieën of dieetvoorkeuren?
           </label>
 
@@ -138,7 +142,7 @@ stylesheets:
 
 
         <fieldset>
-          <legend class="field-header">COVID-19 testen</legend>
+          <legend class="form-step-header">COVID-19 testen</legend>
 
           <p>
             Elke bezoeker van TestTafel moet een <a href="https://coronacheck.nl/nl/" target="_blank">officieel
@@ -146,7 +150,7 @@ stylesheets:
             Wij verkopen ook testen aan de deur voor 2 euro per stuk.
           </p>
 
-          <p class="fieldset-question">
+          <p class="form-step-subheader">
             Voor hoeveel personen wil je een test kopen?
           </p>
 
@@ -166,14 +170,14 @@ stylesheets:
 
 
         <fieldset>
-          <legend class="field-header">Contactinformatie</legend>
+          <legend class="form-step-header">Contactinformatie</legend>
 
-          <label class="fieldset-question" for="input-email">Wat is je email? (op dit adres sturen we je een
+          <label class="form-step-subheader" for="input-email">Wat is je email? (op dit adres sturen we je een
             bevestigingsmailtje)</label>
 
           <input type="email" name="email" id="input-email" placeholder="Email" required>
 
-          <label class="fieldset-question" for="input-phone-number">Wat is je telefoonnummer?</label>
+          <label class="form-step-subheader" for="input-phone-number">Wat is je telefoonnummer?</label>
 
           <p>
             We gebruiken je telefoonnummer om contact op te nemen als er onduidelijkheden zijn omtrent de reservering
@@ -182,7 +186,7 @@ stylesheets:
 
           <input type="tel" name="phone-number" id="input-phone-number" placeholder="Telefoonnummer">
 
-          <p class="fieldset-question">
+          <p class="form-step-subheader">
             Wil je op de hoogte blijven van TestTafel en andere projecten van De Sering?
           </p>
 
