@@ -9,3 +9,5 @@ exclude:
   - package-lock.json
   - js/src
   - node_modules
+theme: null
+remote-theme: null
