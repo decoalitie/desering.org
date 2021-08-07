@@ -60,9 +60,9 @@ stylesheets:
           Voor hoeveel mensen wil je reserven?
         </label>
 
-        <div class="number-input-wrapper">
-          <input type="number" name="reservation-amount" id="input-reservation-amount" value="1" step="1" min="1"
-            max="20" size="3" data-field-handler="NumberWithSteppers" required>
+        <div class="number-with-steppers-wrapper">
+          <input data-input-controller="NumberWithSteppers" type="number" name="reservation-amount"
+            id="input-reservation-amount" value="1" step="1" min="1" max="20" size="3" required>
         </div>
 
         <fieldset>
@@ -73,7 +73,7 @@ stylesheets:
             groepen kunnen aanschuiven bij onze grote gedeelde tafel.
           </p>
 
-          <select name="table" data-field-handler="SelectRadioList">
+          <select name="table" data-input-controller="SelectRadioList">
             <option value="shared" selected>Grote gedeelde tafel</option>
             <option value="own" data-tag="vanaf 5 personen">Eigen tafel voor je groep</option>
           </select>
@@ -109,22 +109,22 @@ stylesheets:
             Hoeveel personen hebben een vegetarisch of vegan dieet?
           </p>
 
-          <div class="number-input-wrapper">
+          <div class="number-with-steppers-wrapper">
             <label for="input-vegan-amount">Vegan</label>
             <input type="number" name="vegan-amount" id="input-vegan-amount" value="0" step="1" min="0" max="20"
-              size="2" data-field-handler="NumberWithSteppers" required>
+              size="2" data-input-controller="NumberWithSteppers" required>
           </div>
 
-          <div class="number-input-wrapper">
+          <div class="number-with-steppers-wrapper">
             <label for="input-vegetarian-amount">Vegetarisch</label>
             <input type="number" name="vegetarian-amount" id="input-vegetarian-amount" value="0" step="1" min="0"
-              max="20" size="2" data-field-handler="NumberWithSteppers" required>
+              max="20" size="2" data-input-controller="NumberWithSteppers" required>
           </div>
 
-          <div class="number-input-wrapper">
+          <div class="number-with-steppers-wrapper">
             <label for="input-nopref-amount">Geen voorkeur</label>
             <input disabled type="number" name="nopref-amount" id="input-nopref-amount" value="0" step="1" min="0"
-              max="99" size="2" data-field-handler="NumberWithSteppers" required>
+              max="99" size="2" data-input-controller="NumberWithSteppers" required>
           </div>
 
           <label for="input-additional-diet" class="form-step-subheader">
@@ -154,17 +154,17 @@ stylesheets:
             Voor hoeveel personen wil je een test kopen?
           </p>
 
-          <div class="number-input-wrapper">
+          <div class="number-with-steppers-wrapper">
             <label for="input-test-amount" class="wide">Test kopen aan de deur</label>
             <input type="number" name="test-amount" id="input-test-amount" value="0" step="1" min="0" max="20" size="2"
-              data-field-handler="NumberWithSteppers" required>
+              data-input-controller="NumberWithSteppers" required>
           </div>
 
-          <div class="number-input-wrapper">
+          <div class="number-with-steppers-wrapper">
             <label for="input-notest-amount" class="wide">Fysieke zelftest of <a href="https://coronacheck.nl/nl/"
                 target="_blank">CoronaCheck bewijs</a> mee</label>
             <input disabled type="number" name="notest-amount" id="input-notest-amount" value="0" step="1" min="0"
-              max="20" size="2" data-field-handler="NumberWithSteppers" required>
+              max="20" size="2" data-input-controller="NumberWithSteppers" required>
           </div>
         </fieldset>
 

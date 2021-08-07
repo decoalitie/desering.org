@@ -1,9 +1,22 @@
 form {
-    --step-spacing: 1rem;
-    --input-padding: 0.5rem;
+  --step-spacing: 2rem;
+  --input-padding: 0.5rem;
 
-    --color-dark-bg: var(--purple-dark);
-    --color-dark-text: var(--purple-white);
+  --color-dark-bg: var(--purple-dark);
+  --color-dark-text: var(--purple-white);
+
+  p {
+    hyphens: none;
+  }
+
+  .warning {
+    padding: 0.5rem;
+    border: 1px solid var(--purple);
+
+    strong {
+      color: var(--purple);
+    }
+  }
 }
 
 fieldset {
@@ -15,17 +28,25 @@ fieldset {
 
 .form-step-header {
   display: block;
-  margin: var(--step-spacing) 0;
+  margin: var(--step-spacing) 0 calc(var(--step-spacing) / 2) 0;
 
   font-size: 1.3rem;
   font-weight: bold;
   line-height: 1.4rem;
+
+  & + p {
+    margin-top: 0;
+  }
 }
 
 .form-step-subheader {
   display: block;
   font-weight: bold;
-  margin-top: 2rem;
+  margin: var(--step-spacing) 0 calc(var(--step-spacing) / 2) 0;
+}
+
+.form-step-header + .form-step-subheader {
+  margin-top: 0;
 }
 
 input[type="text"],
@@ -44,4 +65,48 @@ input[type="tel"]:focus,
 input[type="number"]:focus {
   outline: none;
   border-color: var(--pink);
+}
+
+input[type="checkbox"] {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  display: block;
+
+  & + label {
+    cursor: pointer;
+    padding: 0 0 0 2rem;
+    overflow: hidden;
+    position: relative;
+    line-height: 3rem;
+  }
+
+  & + label:before {
+    box-sizing: border-box;
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1.3rem;
+    height: 1.3rem;
+    transform: translate(0, -50%);
+    border: 2px solid var(--purple-dark);
+    background: var(--purple-white);
+    transition: background 0.3s ease-out;
+  }
+
+  &:checked + label:before {
+    background: var(--purple-dark);
+  }
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  padding: 1rem;
+  border: 2px solid var(--purple);
+  border-radius: 5px;
+  outline: none;
+  color: var(--purple-dark);
 }

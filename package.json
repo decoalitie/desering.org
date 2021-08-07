@@ -2,9 +2,12 @@
   "name": "desering-org-scripts",
   "version": "1.0.0",
   "scripts": {
-    "build-js": "rollup -c rollup.config.js",
-    "dev": "concurrently \"npm run build-js -- -w\" \"bundle exec jekyll serve\"",
-    "get-sheets-data": "node _scripts/get-sheets-data.js"
+    "build": "npm run build:js && npm run build:jekyll",
+    "build:jekyll": "bundle exec jekyll build",
+    "build:js": "rollup -c rollup.config.js",
+    "dev": "concurrently \"npm run build:js -- -w\" \"npm run serve\"",
+    "get-sheets-data": "node _scripts/get-sheets-data.js",
+    "serve": "bundle exec jekyll serve"
   },
   "dependencies": {
     "googleapis": "^82.0.0",
