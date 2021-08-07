@@ -1,6 +1,9 @@
 import * as inputControllers from '../forms/input-controllers';
+import { getTemplateRender, swapFormWithTemplate } from './templates';
 
 const reservationForm = document.querySelector("#reservation-form");
+
+const startTimeInput = getTemplateRender('start-time-input');
 
 const fields = Object.fromEntries(
   Array.from(reservationForm.elements)
@@ -13,15 +16,14 @@ const fields = Object.fromEntries(
     ])
 );
 
+if (!fields.date.optionElements.length) {
+  swapFormWithTemplate("no-dates");
+}
+
 // import SelectRadioList from "../forms/SelectRadioList";
 // import NumberWithSteppers from "../forms/NumberWithSteppers";
 // import { renderFeedbackMessage } from "../forms/FeedbackMessage";
 
-// const ENDPOINT =
-//   "https://script.google.com/macros/s/AKfycbwqk5ZIQYZ3dT00uiIk7E5x4yJQnfzO1gsIXS4HJ5xJD8EyAWpWEWTKSVbxBHQ4svDM/exec";
-
-// const MIN_PEOPLE_OWN_TABLE = 5;
-// const SHARED_TABLE_START_TIME = "19:00";
 
 // const mainContentWrapper = document.querySelector("#wrapper-main-content");
 // const reservationForm = document.querySelector("#form-reservation");
@@ -32,9 +34,7 @@ const fields = Object.fromEntries(
 
 
 
-// if (!fields.date.optionElements.length) {
-//   switchPageToTemplate("no-dates");
-// }
+
 
 // function handleDateChange() {
 //   renderFeedbackMessage(

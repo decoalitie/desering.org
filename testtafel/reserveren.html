@@ -13,212 +13,216 @@ stylesheets:
   <div class="container">
     <h1>Reserveren voor TestTafel</h1>
 
-    <div>
-      <form id="reservation-form" data-form-lang="nl">
+    <form id="reservation-form" data-form-lang="nl">
+      <fieldset>
+        <legend class="form-step-header">Kies een datum</legend>
+        <select name="date" class="boxed" data-input-controller="SelectRadioList">
+          {% for event in site.data.testtafels %}
+
+          {% comment %} 68400 = 19 hours (for 19:00 start time) {% endcomment %}
+          {% assign unix_event = event.date | date: "%s" | plus: 68400 %}
+          {% assign unix_now = "now" | date: "%s" | times: 1 %}
+
+          {% if unix_event > unix_now %}
+
+          {% assign weekday = event.date | date: "%u" | minus: 1 %}
+          {% assign day = event.date | date: "%e" %}
+          {% assign month = event.date | date: "%-m" | minus: 1 %}
+          {% assign year = event.date | date: "%Y" %}
+
+          <option value="{{ event.date }}" {% if event.fullyBooked %}data-fully-booked data-tag="volgeboekt" {% else
+            %}data-allow-default{% endif %}>
+            {{ site.data.i18n.weekdays-nl[weekday] | capitalize }} {{ day }}
+            {{ site.data.i18n.months-nl[month] }}
+          </option>
+          {% endif %}
+
+          {% endfor %}
+        </select>
+      </fieldset>
+
+      <div data-field-feedback-for="date">
+        <template data-template-id="fully-booked">
+          <p class="warning">
+            <strong>Let op:</strong> Deze datum is volgeboekt. Je kan nog steeds een reservering plaatsen, dan zetten
+            we je op de reservelijst.
+          </p>
+        </template>
+      </div>
+
+      <label class="form-step-header" for="input-reservation-name">
+        Onder welke naam wil je reserveren?
+      </label>
+
+      <input type="text" name="reservation-name" id="input-reservation-name" placeholder="Naam" required>
+
+      <div data-field-feedback-for="reservation-name">
+      </div>
+
+      <label class="form-step-header" for="input-reservation-amount">
+        Voor hoeveel mensen wil je reserven?
+      </label>
+
+      <div class="number-with-steppers-wrapper">
+        <input data-input-controller="NumberWithSteppers" type="number" name="reservation-amount"
+          id="input-reservation-amount" value="1" step="1" min="1" max="20" size="3" required>
+      </div>
+
+      <div data-field-feedback-for="reservation-amount">
+      </div>
+
+      <fieldset>
+        <legend class="form-step-header">Bij welke tafel wil je aanschuiven?</legend>
+
+        <p>
+          Vanaf 5 personen kan je ervoor kiezen om voor je groep een eigen tafel te reserveren. Kleinere
+          groepen kunnen aanschuiven bij onze grote gedeelde tafel.
+        </p>
+
+        <select name="table" data-input-controller="SelectRadioList">
+          <option value="shared" selected>Grote gedeelde tafel</option>
+          <option value="own" data-tag="vanaf 5 personen">Eigen tafel voor je groep</option>
+        </select>
+      </fieldset>
+
+      <div data-field-feedback-for="table">
+        <template data-template-id="shared-table-start-time">
+          <p class="warning">
+            <string>Let op:</string> de aanvang voor de gedeelde tafel is 19:00!
+          </p>
+        </template>
+      </div>
+
+      <template data-template-id="start-time-input">
         <fieldset>
-          <legend class="form-step-header">Kies een datum</legend>
-          <select name="date" class="boxed" data-input-controller="SelectRadioList">
-            {% for event in site.data.testtafels %}
+          <legend class="form-step-header">Hoe laat kunnen we je verwelkomen?</legend>
 
-            {% comment %} 68400 = 19 hours (for 19:00 start time) {% endcomment %}
-            {% assign unix_event = event.date | date: "%s" | plus: 68400 %}
-            {% assign unix_now = "now" | date: "%s" | times: 1 %}
-
-            {% if unix_event > unix_now %}
-
-            {% assign weekday = event.date | date: "%u" | minus: 1 %}
-            {% assign day = event.date | date: "%e" %}
-            {% assign month = event.date | date: "%-m" | minus: 1 %}
-            {% assign year = event.date | date: "%Y" %}
-
-            <option value="{{ event.date }}" {% if event.fullyBooked %}data-fully-booked data-tag="volgeboekt" {% else
-              %}data-allow-default{% endif %}>
-              {{ site.data.i18n.weekdays-nl[weekday] | capitalize }} {{ day }}
-              {{ site.data.i18n.months-nl[month] }}
-            </option>
-            {% endif %}
-
-            {% endfor %}
+          <select name="start-time" data-input-controller="SelectRadioList">
+            <option value="19:00">19:00</option>
+            <option value="19:30">19:30</option>
+            <option value="20:00">20:00</option>
           </select>
         </fieldset>
+      </template>
 
-        <div data-field-feedback-for="date">
-          <template data-message="fully-booked">
-            <p class="warning">
-              <strong>Let op:</strong> Deze datum is volgeboekt. Je kan nog steeds een reservering plaatsen, dan zetten
-              we je op de reservelijst.
-            </p>
-          </template>
-        </div>
+      <div data-field-feedback-for="start-time">
+      </div>
 
-        <label class="form-step-header" for="input-reservation-name">
-          Onder welke naam wil je reserveren?
-        </label>
+      <fieldset>
+        <legend class="form-step-header">Dieetvoorkeuren</legend>
 
-        <input type="text" name="reservation-name" id="input-reservation-name" placeholder="Naam" required>
-
-        <label class="form-step-header" for="input-reservation-amount">
-          Voor hoeveel mensen wil je reserven?
-        </label>
+        <p class="form-step-subheader">
+          Hoeveel personen hebben een vegetarisch of vegan dieet?
+        </p>
 
         <div class="number-with-steppers-wrapper">
-          <input data-input-controller="NumberWithSteppers" type="number" name="reservation-amount"
-            id="input-reservation-amount" value="1" step="1" min="1" max="20" size="3" required>
+          <label for="input-vegan-amount">Vegan</label>
+          <input type="number" name="vegan-amount" id="input-vegan-amount" value="0" step="1" min="0" max="20" size="2"
+            data-input-controller="NumberWithSteppers" required>
         </div>
 
-        <fieldset>
-          <legend class="form-step-header">Bij welke tafel wil je aanschuiven?</legend>
-
-          <p>
-            Vanaf 5 personen kan je ervoor kiezen om voor je groep een eigen tafel te reserveren. Kleinere
-            groepen kunnen aanschuiven bij onze grote gedeelde tafel.
-          </p>
-
-          <select name="table" data-input-controller="SelectRadioList">
-            <option value="shared" selected>Grote gedeelde tafel</option>
-            <option value="own" data-tag="vanaf 5 personen">Eigen tafel voor je groep</option>
-          </select>
-        </fieldset>
-
-        <div data-field-feedback-for="table">
-          <template data-message="shared-table-start-time">
-            <p class="warning">
-              <string>Let op:</string> de aanvang voor de gedeelde tafel is 19:00!
-            </p>
-          </template>
-
-          <template data-message="start-time-fieldset">
-            <fieldset class="space-top">
-              <legend class="form-step-header">Hoe laat kunnen we je verwelkomen?</legend>
-
-              <select name="start-time" data-field-handler="SelectRadioList">
-                <option value="19:00">19:00</option>
-                <option value="19:30">19:30</option>
-                <option value="20:00">20:00</option>
-              </select>
-            </fieldset>
-          </template>
+        <div class="number-with-steppers-wrapper">
+          <label for="input-vegetarian-amount">Vegetarisch</label>
+          <input type="number" name="vegetarian-amount" id="input-vegetarian-amount" value="0" step="1" min="0" max="20"
+            size="2" data-input-controller="NumberWithSteppers" required>
         </div>
 
-        <div data-field-feedback-for="start-time">
+        <div class="number-with-steppers-wrapper">
+          <label for="input-nopref-amount">Geen voorkeur</label>
+          <input disabled type="number" name="nopref-amount" id="input-nopref-amount" value="0" step="1" min="0"
+            max="99" size="2" data-input-controller="NumberWithSteppers" required>
         </div>
 
-        <fieldset>
-          <legend class="form-step-header">Dieetvoorkeuren</legend>
+        <label for="input-additional-diet" class="form-step-subheader">
+          Heeft iemand in je groep nog andere allergieën of dieetvoorkeuren?
+        </label>
 
-          <p class="form-step-subheader">
-            Hoeveel personen hebben een vegetarisch of vegan dieet?
-          </p>
-
-          <div class="number-with-steppers-wrapper">
-            <label for="input-vegan-amount">Vegan</label>
-            <input type="number" name="vegan-amount" id="input-vegan-amount" value="0" step="1" min="0" max="20"
-              size="2" data-input-controller="NumberWithSteppers" required>
-          </div>
-
-          <div class="number-with-steppers-wrapper">
-            <label for="input-vegetarian-amount">Vegetarisch</label>
-            <input type="number" name="vegetarian-amount" id="input-vegetarian-amount" value="0" step="1" min="0"
-              max="20" size="2" data-input-controller="NumberWithSteppers" required>
-          </div>
-
-          <div class="number-with-steppers-wrapper">
-            <label for="input-nopref-amount">Geen voorkeur</label>
-            <input disabled type="number" name="nopref-amount" id="input-nopref-amount" value="0" step="1" min="0"
-              max="99" size="2" data-input-controller="NumberWithSteppers" required>
-          </div>
-
-          <label for="input-additional-diet" class="form-step-subheader">
-            Heeft iemand in je groep nog andere allergieën of dieetvoorkeuren?
-          </label>
-
-          <p>
-            We horen ook graag of speciaal eten voldoende is of dat er nog andere voorzorgsmaatregelen
-            noodzakelijk zijn.
-          </p>
-
-          <textarea name="additional-diet" id="input-additional-diet" maxlength="300"
-            placeholder="Beschrijf hier bijzondere dieetvoorkeuren"></textarea>
-        </fieldset>
-
-
-        <fieldset>
-          <legend class="form-step-header">COVID-19 testen</legend>
-
-          <p>
-            Elke bezoeker van TestTafel moet een <a href="https://coronacheck.nl/nl/" target="_blank">officieel
-              coronabewijs van de CoronaCheck app</a> of een <strong>fysieke</strong> negatieve test zelf meenemen.
-            Wij verkopen ook testen aan de deur voor 2 euro per stuk.
-          </p>
-
-          <p class="form-step-subheader">
-            Voor hoeveel personen wil je een test kopen?
-          </p>
-
-          <div class="number-with-steppers-wrapper">
-            <label for="input-test-amount" class="wide">Test kopen aan de deur</label>
-            <input type="number" name="test-amount" id="input-test-amount" value="0" step="1" min="0" max="20" size="2"
-              data-input-controller="NumberWithSteppers" required>
-          </div>
-
-          <div class="number-with-steppers-wrapper">
-            <label for="input-notest-amount" class="wide">Fysieke zelftest of <a href="https://coronacheck.nl/nl/"
-                target="_blank">CoronaCheck bewijs</a> mee</label>
-            <input disabled type="number" name="notest-amount" id="input-notest-amount" value="0" step="1" min="0"
-              max="20" size="2" data-input-controller="NumberWithSteppers" required>
-          </div>
-        </fieldset>
-
-
-        <fieldset>
-          <legend class="form-step-header">Contactinformatie</legend>
-
-          <label class="form-step-subheader" for="input-email">Wat is je email? (op dit adres sturen we je een
-            bevestigingsmailtje)</label>
-
-          <input type="email" name="email" id="input-email" placeholder="Email" required>
-
-          <label class="form-step-subheader" for="input-phone-number">Wat is je telefoonnummer?</label>
-
-          <p>
-            We gebruiken je telefoonnummer om contact op te nemen als er onduidelijkheden zijn omtrent de reservering
-            (bv. mbt. allergieën) en om je te berichten als er een plek vrij komt op de reservelijst.
-          </p>
-
-          <input type="tel" name="phone-number" id="input-phone-number" placeholder="Telefoonnummer">
-
-          <p class="form-step-subheader">
-            Wil je op de hoogte blijven van TestTafel en andere projecten van De Sering?
-          </p>
-
-          <p>
-            Selecteer deze optie als je onze maandelijkse nieuwsbrief per e-mail wilt ontvangen. Je kunt ook op de
-            hoogte blijven via <a href="https://instagram.com/testtafel" target="_blank">@testtafel</a> op Instagram of
-            onze <a href="https://chat.whatsapp.com/C2fIG6POV8FH0nVQcW3hKs" target="_blank">WhatsApp broadcast groep</a>
-          </p>
-
-          <input type="checkbox" name="consent-email-contact" id="checkbox-consent-email-contact">
-
-          <label for="checkbox-consent-email-contact">Ja, hou me op de hoogte via email</label>
-        </fieldset>
-
-
-        <button class="button" type="submit">plaats reservering</button>
-      </form>
-
-      <template data-template-id="success">
-        <div>
-          <p>
-            Bedankt voor je reservering.
-          </p>
-        </div>
-      </template>
-
-      <template data-template-id="no-dates">
         <p>
-          Er zijn momenteel geen TestTafel edities waarvoor je kan reserveren. Probeer het later nog eens!
+          We horen ook graag of speciaal eten voldoende is of dat er nog andere voorzorgsmaatregelen
+          noodzakelijk zijn.
         </p>
-      </template>
-    </div>
+
+        <textarea name="additional-diet" id="input-additional-diet" maxlength="300"
+          placeholder="Beschrijf hier bijzondere dieetvoorkeuren"></textarea>
+      </fieldset>
+
+
+      <fieldset>
+        <legend class="form-step-header">COVID-19 testen</legend>
+
+        <p>
+          Elke bezoeker van TestTafel moet een <a href="https://coronacheck.nl/nl/" target="_blank">officieel
+            coronabewijs van de CoronaCheck app</a> of een <strong>fysieke</strong> negatieve test zelf meenemen.
+          Wij verkopen ook testen aan de deur voor 2 euro per stuk.
+        </p>
+
+        <p class="form-step-subheader">
+          Voor hoeveel personen wil je een test kopen?
+        </p>
+
+        <div class="number-with-steppers-wrapper">
+          <label for="input-test-amount" class="wide">Test kopen aan de deur</label>
+          <input type="number" name="test-amount" id="input-test-amount" value="0" step="1" min="0" max="20" size="2"
+            data-input-controller="NumberWithSteppers" required>
+        </div>
+
+        <div class="number-with-steppers-wrapper">
+          <label for="input-notest-amount" class="wide">Fysieke zelftest of <a href="https://coronacheck.nl/nl/"
+              target="_blank">CoronaCheck bewijs</a> mee</label>
+          <input disabled type="number" name="notest-amount" id="input-notest-amount" value="0" step="1" min="0"
+            max="20" size="2" data-input-controller="NumberWithSteppers" required>
+        </div>
+      </fieldset>
+
+
+      <fieldset>
+        <legend class="form-step-header">Contactinformatie</legend>
+
+        <label class="form-step-subheader" for="input-email">Wat is je email? (op dit adres sturen we je een
+          bevestigingsmailtje)</label>
+
+        <input type="email" name="email" id="input-email" placeholder="Email" required>
+
+        <label class="form-step-subheader" for="input-phone-number">Wat is je telefoonnummer?</label>
+
+        <p>
+          We gebruiken je telefoonnummer om contact op te nemen als er onduidelijkheden zijn omtrent de reservering
+          (bv. mbt. allergieën) en om je te berichten als er een plek vrij komt op de reservelijst.
+        </p>
+
+        <input type="tel" name="phone-number" id="input-phone-number" placeholder="Telefoonnummer">
+
+        <p class="form-step-subheader">
+          Wil je op de hoogte blijven van TestTafel en andere projecten van De Sering?
+        </p>
+
+        <p>
+          Selecteer deze optie als je onze maandelijkse nieuwsbrief per e-mail wilt ontvangen. Je kunt ook op de
+          hoogte blijven via <a href="https://instagram.com/testtafel" target="_blank">@testtafel</a> op Instagram of
+          onze <a href="https://chat.whatsapp.com/C2fIG6POV8FH0nVQcW3hKs" target="_blank">WhatsApp broadcast groep</a>
+        </p>
+
+        <input type="checkbox" name="consent-email-contact" id="checkbox-consent-email-contact">
+
+        <label for="checkbox-consent-email-contact">Ja, hou me op de hoogte via email</label>
+      </fieldset>
+
+
+      <button class="button" type="submit">plaats reservering</button>
+    </form>
+
+    <template data-template-id="success">
+      <div>
+        <p>
+          Bedankt voor je reservering.
+        </p>
+      </div>
+    </template>
+
+    <template data-template-id="no-dates">
+      <p>
+        Er zijn momenteel geen TestTafel edities waarvoor je kan reserveren. Probeer het later nog eens!
+      </p>
+    </template>
   </div>
 </div>

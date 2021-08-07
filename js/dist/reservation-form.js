@@ -189,9 +189,137 @@
         NumberWithSteppers: NumberWithSteppers
     });
 
+    const ENABLE_APPEAR_AFTER = 1000;
+
+    let enabled = false;
+
+    setTimeout(() => {
+        enabled = true;
+        document.body.classList.add('appear-transitions-enabled');
+    }, ENABLE_APPEAR_AFTER);
+
+    function appearTransitionsEnabled() {
+        return enabled;
+    }
+
+    function nextFrame(fn) {
+        requestAnimationFrame(() => requestAnimationFrame(fn));
+    }
+
+    function prefersReducedMotion() {
+        const query = window.matchMedia("(prefers-reduced-motion: reduce)");
+        return !query || query.matches;
+    }
+
+    /**
+     * Element that shows/hides with an expand/collapse animation
+     */
+    class ExpandTransitionElement {
+        constructor() {
+            this.element = document.createElement('div');
+            this.element.classList.add('ExpandTransitionElement');
+
+            this._visible = false;
+            this.display = 'none';
+
+            this.activeTransitionCount = 0;
+
+            this.element.addEventListener('transitionrun', this.handleTransitionRun.bind(this));
+            this.element.addEventListener('transitioncancel', this.handleTransitionCancel.bind(this));
+            this.element.addEventListener('transitionend', this.handleTransitionEnd.bind(this));
+        }
+
+        handleTransitionCancel() {
+            this.activeTransitionCount--;
+        }
+
+        handleTransitionEnd() {
+            this.activeTransitionCount--;
+
+            if (!this.activeTransitionCount) {
+                this.display = this._visible ? 'block' : 'none';
+            }
+        }
+
+        handleTransitionRun() {
+            this.activeTransitionCount++;
+        }
+
+        get display() {
+            return this._display;
+        }
+
+        set display(display) {
+            if (display !== this._display) {
+                this.element.style.display = display;
+                this._display = display;
+            }
+        }
+
+        get visible() {
+            return this._visible;
+        }
+
+        set visible(visible) {
+            if (this._visible === !!visible) {
+                return;
+            }
+
+            const reducedMotion = prefersReducedMotion();
+            if (visible) {
+                const transitionEnabled = !reducedMotion && this.display !== 'block' && appearTransitionsEnabled();
+                const delay = transitionEnabled ? nextFrame : (fn => fn());
+                this.display = 'block';
+
+                delay(() => {
+                    this.element.style.maxHeight = `${this.element.scrollHeight}px`;
+                });
+            } else {
+                const transitionEnabled = !reducedMotion && this.display === 'block' && appearTransitionsEnabled();
+                this.element.style.maxHeight = 0;
+
+                if (!transitionEnabled && !this.activeTransitionCount) {
+                    this.display = 'none';
+                }
+            }
+
+            this._visible = !!visible;
+        }
+    }
+
+    const renderedTemplates = {};
+
+    function getTemplateElement(id) {
+        return document.querySelector(`[data-template-id="${id}"]`);
+    }
+
+    function getTemplateRender(id) {
+        if (renderedTemplates[id]) {
+            return renderedTemplates[id];
+        }
+
+        const template = getTemplateElement(id);
+        const render = new ExpandTransitionElement();
+
+        template.parentElement.insertBefore(render.element, template);
+        render.element.appendChild(template.content.firstElementChild.cloneNode(true));
+
+        renderedTemplates[id] = render;
+        return render;
+    }
+
+    function swapFormWithTemplate(id) {
+        const render = getTemplateRender(id);
+
+        document.querySelector("#reservation-form").style.display = 'none'; 
+        render.visible = true;
+    }
+
     const reservationForm = document.querySelector("#reservation-form");
 
-    Object.fromEntries(
+    getTemplateRender('start-time-input');
+
+    const fields = Object.fromEntries(
       Array.from(reservationForm.elements)
         .filter((element) => element.name)
         .map((element) => [
@@ -202,15 +330,14 @@
         ])
     );
 
+    if (!fields.date.optionElements.length) {
+      swapFormWithTemplate("no-dates");
+    }
+
     // import SelectRadioList from "../forms/SelectRadioList";
     // import NumberWithSteppers from "../forms/NumberWithSteppers";
     // import { renderFeedbackMessage } from "../forms/FeedbackMessage";
 
-    // const ENDPOINT =
-    //   "https://script.google.com/macros/s/AKfycbwqk5ZIQYZ3dT00uiIk7E5x4yJQnfzO1gsIXS4HJ5xJD8EyAWpWEWTKSVbxBHQ4svDM/exec";
-
-    // const MIN_PEOPLE_OWN_TABLE = 5;
-    // const SHARED_TABLE_START_TIME = "19:00";
 
     // const mainContentWrapper = document.querySelector("#wrapper-main-content");
     // const reservationForm = document.querySelector("#form-reservation");
@@ -221,9 +348,7 @@
 
 
 
-    // if (!fields.date.optionElements.length) {
-    //   switchPageToTemplate("no-dates");
-    // }
+
 
     // function handleDateChange() {
     //   renderFeedbackMessage(
