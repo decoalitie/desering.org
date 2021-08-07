@@ -20,8 +20,9 @@ stylesheets:
           <select name="date" class="boxed" data-input-controller="SelectRadioList">
             {% for event in site.data.testtafels %}
 
-            {% assign unix_event = event.date | date: "%s" %}
-            {% assign unix_now = "now" | date: "%s" %}
+            {% comment %} 68400 = 19 hours (for 19:00 start time) {% endcomment %}
+            {% assign unix_event = event.date | date: "%s" | plus: 68400 %}
+            {% assign unix_now = "now" | date: "%s" | times: 1 %}
 
             {% if unix_event > unix_now %}
 
