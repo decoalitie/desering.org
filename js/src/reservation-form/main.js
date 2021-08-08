@@ -27,9 +27,10 @@ function main() {
   }
 
   watchFields('date', handleDateChange);
-  watchFields('reservation-amount', handleReservationAmountChange);
   watchFields('table', handleTableChange);
-  watchFields(['vegan-amount', 'vegetarian-amount'], handleDietCountsChange);
+  watchFields('reservation-amount', handleReservationAmountChange);
+  watchFields(['vegan-amount', 'vegetarian-amount'], handleDietCountsChange, false);
+  watchFields('test-amount', handleTestAmountChange, false);
 
   reservationForm.style.display = 'block';
 }
@@ -57,11 +58,16 @@ function handleReservationAmountChange() {
   }
   fields.table.disabled = !sufficient;
 
-  updateDietCounts();
+  updateAmountInputs(["vegan-amount", "vegetarian-amount"], "nopref-amount");
+  updateAmountInputs(["test-amount"], "notest-amount");
 }
 
 function handleDietCountsChange() {
-  updateDietCounts();
+  updateAmountInputs(["vegan-amount", "vegetarian-amount"], "nopref-amount");
+}
+
+function handleTestAmountChange() {
+  updateAmountInputs(["test-amount"], "notest-amount");
 }
 
 function handleTableChange() {
@@ -74,13 +80,11 @@ function handleTableChange() {
   }
 }
 
-function updateDietCounts() {
+function updateAmountInputs(inputFields, remainderField) {
     const reservationAmount = fields["reservation-amount"].value;
     if (isNaN(reservationAmount)) {
       throw new Error('Cannot read reservation amount');
     }
-
-    const inputFields = ["vegan-amount", "vegetarian-amount"];
 
     let remainder;
     let inputValues;
@@ -102,12 +106,16 @@ function updateDietCounts() {
     }
 
     inputFields.forEach((fieldName, index) => {
-      const otherInputValues = [...inputValues];
-      otherInputValues.splice(index, 1);
-      fields[fieldName].max = reservationAmount - otherInputValues.reduce((sum, current) => sum + current);
+      if (inputValues.length > 1) {
+        const otherInputValues = [...inputValues];
+        otherInputValues.splice(index, 1);
+        fields[fieldName].max = reservationAmount - otherInputValues.reduce((sum, current) => sum + current);
+      } else {
+        fields[fieldName].max = reservationAmount;
+      }
     });
   
-    fields["nopref-amount"].value = remainder;
+    fields[remainderField].value = remainder;
 }
 
 function showMessageOnCatch(fn) {
