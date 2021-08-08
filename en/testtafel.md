@@ -10,7 +10,7 @@ translation: testtafel
 		<h1>TestTafel</h1>
 
     <p>
-    TestTafel is a restaurant that pops up every Friday to serve a 7 course meal (including amuses, bread, and coffee bites) for just €20. Our menu is an eclectic collection of recipes we have been wanting to make for years, dishes stolen from our favourite chefs, and recipes found in obscure cookbooks. 
+    TestTafel is a restaurant that pops up every Friday and Saturday to serve a 7 course meal (including amuses, bread, and coffee bites) for just €20. Our menu is an eclectic collection of recipes we have been wanting to make for years, dishes stolen from our favourite chefs, and recipes found in obscure cookbooks. 
     </p>
 
     <p>

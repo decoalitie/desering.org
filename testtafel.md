@@ -10,7 +10,7 @@ translation: testtafel
 		<h1>TestTafel</h1>
 
     <p>
-      TestTafel is een pop-up restaurant dat elke vrijdag een wisselend menu van 7 gangen (inclusief brood, amuses en koffie hapje) serveert. Het menu is een eclectische verzameling van recepten die we altijd al een keer hebben willen maken, gerechten goed gejat van onze  favoriete chefs en recepten die we uit obscure kookboeken hebben gevist. 
+      TestTafel is een pop-up restaurant dat elke vrijdag en zaterdag een wisselend menu van 7 gangen (inclusief brood, amuses en koffie hapje) serveert. Het menu is een eclectische verzameling van recepten die we altijd al een keer hebben willen maken, gerechten goed gejat van onze  favoriete chefs en recepten die we uit obscure kookboeken hebben gevist. 
     </p>
 
     <p>
