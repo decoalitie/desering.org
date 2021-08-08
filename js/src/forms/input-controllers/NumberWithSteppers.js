@@ -49,9 +49,7 @@ export default class NumberWithSteppers extends InputController {
     const parsed = this.value;
 
     if (isNaN(parsed) || parsed === undefined) {
-      const fallback = this.element.min
-        ? parseInt(this.element.min, 10)
-        : 0;
+      const fallback = this.element.min || 0;
 
       this.element.value = fallback;
       return fallback;
@@ -61,5 +59,21 @@ export default class NumberWithSteppers extends InputController {
 
   set value(value) {
     this.element.value = value;
+  }
+
+  get max() {
+    return this.element.max;
+  }
+
+  set max(value) {
+    this.element.max = value;
+  }
+
+  get min() {
+    return this.element.min;
+  }
+
+  set min(value) {
+    this.element.min = value;
   }
 }

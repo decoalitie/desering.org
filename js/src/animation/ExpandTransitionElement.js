@@ -58,12 +58,11 @@ export default class ExpandTransitionElement {
 
         const reducedMotion = prefersReducedMotion();
         if (visible) {
-            const transitionEnabled = !reducedMotion && this.display !== 'block' && appearTransitionsEnabled();
-            const delay = transitionEnabled ? nextFrame : (fn => fn());
             this.display = 'block';
 
-            delay(() => {
-                this.element.style.maxHeight = `${this.element.scrollHeight}px`;
+            nextFrame(() => {
+                const { scrollHeight } = this.element;
+                this.element.style.maxHeight = scrollHeight ? `${this.element.scrollHeight}px` : 'none';
             });
         } else {
             const transitionEnabled = !reducedMotion && this.display === 'block' && appearTransitionsEnabled();

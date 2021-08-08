@@ -6,3 +6,19 @@
 @import "select-radio-list";
 @import "number-with-steppers";
 @import "form-buttons";
+
+#reservation-form {
+    // set to display: block after javascript has initialized form
+    display: none;
+}
+
+#fatal-form-error {
+    // set to display: block on javascript
+    display: none;
+}
+
+.noscript {
+    ul {
+        margin: 1rem 0;
+    }
+}

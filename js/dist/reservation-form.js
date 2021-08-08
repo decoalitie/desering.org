@@ -2,34 +2,28 @@
     'use strict';
 
     class InputController extends EventTarget {
-        constructor(element) {
-            super();
+      constructor(element) {
+        super();
+        this.element = element;
+        this.name = element.name;
+      }
 
-            this.element = element;
-            this.name = element.name;
-        }
     }
 
     /**
      * Manages a <select> input element.
      * For destop, converts the <option> to separate <input type="radio"> and <label>.
      */
+
     class SelectRadioList extends InputController {
       constructor(element) {
         super(element);
-
         this.optionElements = Array.from(element.querySelectorAll("option"));
         this.radioInputs = this.generateRadioInputs();
-
-        element.addEventListener(
-          "change",
-          this.handleSelectChange.bind(this)
-        );
+        element.addEventListener("change", this.handleSelectChange.bind(this));
 
         if (this.optionElements.length) {
-          const defaultOption = this.optionElements.find(
-            (el) => el.dataset.allowDefault !== undefined
-          );
+          const defaultOption = this.optionElements.find(el => el.dataset.allowDefault !== undefined);
           this.value = (defaultOption || this.optionElements[0]).value;
         }
       }
@@ -37,15 +31,10 @@
       generateRadioInputs() {
         const radioList = document.createElement("div");
         radioList.className = `select-radio-list ${this.element.className}`;
-        this.element.parentElement.insertBefore(
-          radioList,
-          this.element.nextSibling
-        );
-
+        this.element.parentElement.insertBefore(radioList, this.element.nextSibling);
         return this.optionElements.map((option, index) => {
           const optionValue = option.getAttribute("value");
           const optionId = `${this.name}-option-${index}`;
-
           const radioInput = document.createElement("input");
           radioInput.setAttribute("type", "radio");
           radioInput.setAttribute("value", optionValue);
@@ -53,7 +42,6 @@
           radioInput.setAttribute("id", optionId);
           radioInput.addEventListener("change", this.handleRadioChange.bind(this));
           radioList.appendChild(radioInput);
-
           const label = document.createElement("label");
           label.innerHTML = option.innerHTML;
           label.setAttribute("for", optionId);
@@ -83,7 +71,7 @@
             radio.disabled = radio.value !== this.element.value;
           }
         } else {
-          this.radioInputs.forEach((radio) => {
+          this.radioInputs.forEach(radio => {
             radio.disabled = false;
           });
         }
@@ -99,7 +87,7 @@
       }
 
       get selectedOptionElement() {
-        return this.optionElements.find((el) => el.value === this.value);
+        return this.optionElements.find(el => el.value === this.value);
       }
 
       updateRadioButtonChecked() {
@@ -117,27 +105,23 @@
         this.updateRadioButtonChecked();
         this.dispatchEvent(new Event("change"));
       }
+
     }
 
     class NumberWithSteppers extends InputController {
       constructor(inputElement) {
         super(inputElement);
-
         const wrapper = this.element.parentElement;
-
         this.element.addEventListener("change", () => {
           this.dispatchEvent(new Event("change"));
         });
-
         this.element.addEventListener("animationend", () => {
           this.element.classList.remove("changed");
         });
-
         const minButton = document.createElement("button");
         minButton.className = "stepper remove";
         wrapper.appendChild(minButton);
         minButton.addEventListener("click", this.handleMinClick.bind(this));
-
         const plusButton = document.createElement("button");
         plusButton.className = "stepper add";
         plusButton.addEventListener("click", this.handePlusClick.bind(this));
@@ -159,28 +143,41 @@
       }
 
       get value() {
-        return this.element.value === undefined
-          ? this.element.value
-          : parseInt(this.element.value, 10);
+        return this.element.value === undefined ? this.element.value : parseInt(this.element.value, 10);
       }
 
       get safeValue() {
         const parsed = this.value;
 
         if (isNaN(parsed) || parsed === undefined) {
-          const fallback = this.element.min
-            ? parseInt(this.element.min, 10)
-            : 0;
-
+          const fallback = this.element.min || 0;
           this.element.value = fallback;
           return fallback;
         }
+
         return parsed;
       }
 
       set value(value) {
         this.element.value = value;
       }
+
+      get max() {
+        return this.element.max;
+      }
+
+      set max(value) {
+        this.element.max = value;
+      }
+
+      get min() {
+        return this.element.min;
+      }
+
+      set min(value) {
+        this.element.min = value;
+      }
+
     }
 
     var inputControllers = /*#__PURE__*/Object.freeze({
@@ -190,250 +187,236 @@
     });
 
     const ENABLE_APPEAR_AFTER = 1000;
-
     let enabled = false;
-
     setTimeout(() => {
-        enabled = true;
-        document.body.classList.add('appear-transitions-enabled');
+      enabled = true;
+      document.body.classList.add('appear-transitions-enabled');
     }, ENABLE_APPEAR_AFTER);
-
     function appearTransitionsEnabled() {
-        return enabled;
+      return enabled;
     }
 
     function nextFrame(fn) {
-        requestAnimationFrame(() => requestAnimationFrame(fn));
+      requestAnimationFrame(() => requestAnimationFrame(fn));
     }
 
     function prefersReducedMotion() {
-        const query = window.matchMedia("(prefers-reduced-motion: reduce)");
-        return !query || query.matches;
+      const query = window.matchMedia("(prefers-reduced-motion: reduce)");
+      return !query || query.matches;
     }
 
     /**
      * Element that shows/hides with an expand/collapse animation
      */
+
     class ExpandTransitionElement {
-        constructor() {
-            this.element = document.createElement('div');
-            this.element.classList.add('ExpandTransitionElement');
+      constructor() {
+        this.element = document.createElement('div');
+        this.element.classList.add('ExpandTransitionElement');
+        this._visible = false;
+        this.display = 'none';
+        this.activeTransitionCount = 0;
+        this.element.addEventListener('transitionrun', this.handleTransitionRun.bind(this));
+        this.element.addEventListener('transitioncancel', this.handleTransitionCancel.bind(this));
+        this.element.addEventListener('transitionend', this.handleTransitionEnd.bind(this));
+      }
 
-            this._visible = false;
+      handleTransitionCancel() {
+        this.activeTransitionCount--;
+      }
+
+      handleTransitionEnd() {
+        this.activeTransitionCount--;
+
+        if (!this.activeTransitionCount) {
+          this.display = this._visible ? 'block' : 'none';
+        }
+      }
+
+      handleTransitionRun() {
+        this.activeTransitionCount++;
+      }
+
+      get display() {
+        return this._display;
+      }
+
+      set display(display) {
+        if (display !== this._display) {
+          this.element.style.display = display;
+          this._display = display;
+        }
+      }
+
+      get visible() {
+        return this._visible;
+      }
+
+      set visible(visible) {
+        if (this._visible === !!visible) {
+          return;
+        }
+
+        const reducedMotion = prefersReducedMotion();
+
+        if (visible) {
+          this.display = 'block';
+          nextFrame(() => {
+            const {
+              scrollHeight
+            } = this.element;
+            this.element.style.maxHeight = scrollHeight ? `${this.element.scrollHeight}px` : 'none';
+          });
+        } else {
+          const transitionEnabled = !reducedMotion && this.display === 'block' && appearTransitionsEnabled();
+          this.element.style.maxHeight = 0;
+
+          if (!transitionEnabled && !this.activeTransitionCount) {
             this.display = 'none';
-
-            this.activeTransitionCount = 0;
-
-            this.element.addEventListener('transitionrun', this.handleTransitionRun.bind(this));
-            this.element.addEventListener('transitioncancel', this.handleTransitionCancel.bind(this));
-            this.element.addEventListener('transitionend', this.handleTransitionEnd.bind(this));
+          }
         }
 
-        handleTransitionCancel() {
-            this.activeTransitionCount--;
-        }
+        this._visible = !!visible;
+      }
 
-        handleTransitionEnd() {
-            this.activeTransitionCount--;
-
-            if (!this.activeTransitionCount) {
-                this.display = this._visible ? 'block' : 'none';
-            }
-        }
-
-        handleTransitionRun() {
-            this.activeTransitionCount++;
-        }
-
-        get display() {
-            return this._display;
-        }
-
-        set display(display) {
-            if (display !== this._display) {
-                this.element.style.display = display;
-                this._display = display;
-            }
-        }
-
-        get visible() {
-            return this._visible;
-        }
-
-        set visible(visible) {
-            if (this._visible === !!visible) {
-                return;
-            }
-
-            const reducedMotion = prefersReducedMotion();
-            if (visible) {
-                const transitionEnabled = !reducedMotion && this.display !== 'block' && appearTransitionsEnabled();
-                const delay = transitionEnabled ? nextFrame : (fn => fn());
-                this.display = 'block';
-
-                delay(() => {
-                    this.element.style.maxHeight = `${this.element.scrollHeight}px`;
-                });
-            } else {
-                const transitionEnabled = !reducedMotion && this.display === 'block' && appearTransitionsEnabled();
-                this.element.style.maxHeight = 0;
-
-                if (!transitionEnabled && !this.activeTransitionCount) {
-                    this.display = 'none';
-                }
-            }
-
-            this._visible = !!visible;
-        }
     }
 
     const renderedTemplates = {};
-
     function getTemplateElement(id) {
-        return document.querySelector(`[data-template-id="${id}"]`);
+      return document.querySelector(`[data-template-id="${id}"]`);
     }
-
     function getTemplateRender(id) {
-        if (renderedTemplates[id]) {
-            return renderedTemplates[id];
-        }
+      if (renderedTemplates[id]) {
+        return renderedTemplates[id];
+      }
 
-        const template = getTemplateElement(id);
-        const render = new ExpandTransitionElement();
-
-        template.parentElement.insertBefore(render.element, template);
-        render.element.appendChild(template.content.firstElementChild.cloneNode(true));
-
-        renderedTemplates[id] = render;
-        return render;
+      const template = getTemplateElement(id);
+      const render = new ExpandTransitionElement();
+      template.parentElement.insertBefore(render.element, template);
+      render.element.appendChild(template.content.firstElementChild.cloneNode(true));
+      renderedTemplates[id] = render;
+      return render;
     }
-
     function swapFormWithTemplate(id) {
-        const render = getTemplateRender(id);
-
-        document.querySelector("#reservation-form").style.display = 'none'; 
-        render.visible = true;
+      const render = getTemplateRender(id);
+      document.querySelector("#reservation-form").style.display = 'none';
+      render.visible = true;
     }
+
+    const MIN_PEOPLE_OWN_TABLE = 5;
+    const SHARED_TABLE_START_TIME = "19:00";
 
     const reservationForm = document.querySelector("#reservation-form");
+    let fields;
 
-    getTemplateRender('start-time-input');
+    function main() {
+      // render the start-time-input template (not visible) to make sure the field is initialized
+      getTemplateRender('start-time-input'); // initialize all fields
 
-    const fields = Object.fromEntries(
-      Array.from(reservationForm.elements)
-        .filter((element) => element.name)
-        .map((element) => [
-          element.name,
-          element.dataset.inputController
-            ? new inputControllers[element.dataset.inputController](element)
-            : element,
-        ])
-    );
+      fields = Object.fromEntries(Array.from(reservationForm.elements).filter(element => element.name).map(element => [element.name, element.dataset.inputController ? new inputControllers[element.dataset.inputController](element) : element]));
 
-    if (!fields.date.optionElements.length) {
-      swapFormWithTemplate("no-dates");
+      if (!fields.date.optionElements.length) {
+        swapFormWithTemplate("no-dates");
+        return;
+      }
+
+      watchFields('date', handleDateChange);
+      watchFields('reservation-amount', handleReservationAmountChange);
+      watchFields('table', handleTableChange);
+      watchFields(['vegan-amount', 'vegetarian-amount'], handleDietCountsChange);
+      reservationForm.style.display = 'block';
     }
 
-    // import SelectRadioList from "../forms/SelectRadioList";
-    // import NumberWithSteppers from "../forms/NumberWithSteppers";
-    // import { renderFeedbackMessage } from "../forms/FeedbackMessage";
+    function watchFields(fieldNames, onChange, immediate = true) {
+      [].concat(fieldNames).forEach(fieldName => {
+        fields[fieldName].addEventListener("change", () => showMessageOnCatch(onChange));
+      });
 
+      if (immediate) {
+        onChange();
+      }
+    }
 
-    // const mainContentWrapper = document.querySelector("#wrapper-main-content");
-    // const reservationForm = document.querySelector("#form-reservation");
+    function handleDateChange() {
+      getTemplateRender('fully-booked').visible = fields.date.selectedOptionElement.dataset.fullyBooked !== undefined;
+    }
 
-    // const FieldHandlers = { SelectRadioList, NumberWithSteppers };
+    function handleReservationAmountChange() {
+      const amount = fields["reservation-amount"].safeValue;
+      const sufficient = amount >= MIN_PEOPLE_OWN_TABLE;
 
-    // renderFeedbackMessage("table", "start-time-fieldset", false);
+      if (!sufficient) {
+        fields.table.value = "shared";
+        handleTableChange();
+      }
 
+      fields.table.disabled = !sufficient;
+      updateDietCounts();
+    }
 
+    function handleDietCountsChange() {
+      updateDietCounts();
+    }
 
+    function handleTableChange() {
+      const sharedTableSelected = fields.table.value === "shared";
+      getTemplateRender('start-time-input').visible = !sharedTableSelected;
+      getTemplateRender('shared-table-start-time').visible = sharedTableSelected;
 
+      if (sharedTableSelected) {
+        fields["start-time"].value = SHARED_TABLE_START_TIME;
+      }
+    }
 
-    // function handleDateChange() {
-    //   renderFeedbackMessage(
-    //     "date",
-    //     "fully-booked",
-    //     fields.date.selectedOptionElement.dataset.fullyBooked !== undefined
-    //   );
-    // }
-    // fields.date.addEventListener("change", handleDateChange);
-    // handleDateChange();
+    function updateDietCounts() {
+      const reservationAmount = fields["reservation-amount"].value;
 
-    // function handleReservationAmountChange() {
-    //   const amount = fields["reservation-amount"].value;
-    //   const sufficient = amount >= MIN_PEOPLE_OWN_TABLE;
+      if (isNaN(reservationAmount)) {
+        throw new Error('Cannot read reservation amount');
+      }
 
-    //   if (!sufficient) {
-    //     fields.table.value = "shared";
-    //     handleTableChange();
-    //   }
-    //   fields.table.disabled = !sufficient;
+      const inputFields = ["vegan-amount", "vegetarian-amount"];
+      let remainder;
+      let inputValues;
 
-    //   updateDietCounts();
-    // }
-    // fields["reservation-amount"].addEventListener(
-    //   "change",
-    //   handleReservationAmountChange
-    // );
-    // handleReservationAmountChange();
+      const countValues = () => {
+        inputValues = inputFields.map(fieldName => fields[fieldName].safeValue);
+        remainder = reservationAmount - inputValues.reduce((sum, current) => sum + current);
+      };
 
-    // renderFeedbackMessage(
-    //   "table",
-    //   "shared-table-start-time",
-    //   fields.table.value === "shared"
-    // );
-    // function handleTableChange() {
-    //   renderFeedbackMessage(
-    //     "table",
-    //     "start-time-fieldset",
-    //     fields.table.value !== "shared"
-    //   );
-    //   renderFeedbackMessage(
-    //     "table",
-    //     "shared-table-start-time",
-    //     fields.table.value === "shared"
-    //   );
+      countValues();
 
-    //   if (fields.table.value === "shared") {
-    //     fields["start-time"].value = SHARED_TABLE_START_TIME;
-    //   }
-    // }
-    // fields.table.addEventListener("change", handleTableChange);
+      while (remainder < 0) {
+        const firstFieldWithValue = inputFields.find((field, index) => inputValues[index] > 0);
 
-    // function updateDietCounts() {
-    //   const reservationAmount = fields["reservation-amount"].value;
-    //   if (isNaN(reservationAmount)) {
-    //     return;
-    //   }
+        if (!firstFieldWithValue) {
+          throw new Error('Expected fields with non-negative values');
+        }
 
-    //   let vegan = fields["vegan-amount"].safeValue;
-    //   let vegetarian = fields["vegetarian-amount"].safeValue;
-    //   let remainder = reservationAmount - vegan - vegetarian;
+        fields[firstFieldWithValue].value = Math.max(0, fields[firstFieldWithValue].value + remainder);
+        countValues();
+      }
 
-    //   if (remainder < 0) {
-    //     vegan = 0;
-    //     vegetarian = 0;
-    //     fields["vegan-amount"].value = 0;
-    //     fields["vegetarian-amount"].value = 0;
-    //     remainder = reservationAmount;
-    //   }
+      inputFields.forEach((fieldName, index) => {
+        const otherInputValues = [...inputValues];
+        otherInputValues.splice(index, 1);
+        fields[fieldName].max = reservationAmount - otherInputValues.reduce((sum, current) => sum + current);
+      });
+      fields["nopref-amount"].value = remainder;
+    }
 
-    //   fields["vegan-amount"].inputElement.max = vegan + remainder;
-    //   fields["vegetarian-amount"].inputElement.max = vegetarian + remainder;
+    function showMessageOnCatch(fn) {
+      try {
+        fn();
+      } catch (e) {
+        const fatalErrorElement = document.getElementById('fatal-form-error');
+        fatalErrorElement.style.display = 'block';
+        throw e;
+      }
+    }
 
-    //   fields["nopref-amount"].value =
-    //     reservationAmount -
-    //     fields["vegan-amount"].value -
-    //     fields["vegetarian-amount"].value;
-    // }
-    // fields["vegan-amount"].addEventListener("change", updateDietCounts);
-    // fields["vegetarian-amount"].addEventListener("change", updateDietCounts);
-    // updateDietCounts();
-
-    // reservationForm.addEventListener("submit", function (e) {
+    showMessageOnCatch(main); // reservationForm.addEventListener("submit", function (e) {
     //   e.preventDefault();
-
     //   const data = Object.fromEntries(
     //     Object.entries(fields).map(([fieldName, field]) => [fieldName, field.value])
     //   );
@@ -442,28 +425,12 @@
     //     lang: reservationForm.dataset.formLang,
     //   });
     // });
-
-    // setTimeout(() => {
-    //   document.body.classList.add("enable-appear-transitions");
-    // }, 300);
-
-    // function switchPageToTemplate(templateId) {
-    //   const template = document.querySelector(`#template-${templateId}`);
-    //   reservationForm.style.display = "none";
-
-    //   mainContentWrapper.appendChild(
-    //     template.content.firstElementChild.cloneNode(true)
-    //   );
-    // }
-
     // function submitReservation(data) {
     //   const submitButton = reservationForm.querySelector('button[type="submit"]');
-
     //   if (submitButton.classList.contains("loading")) {
     //     return;
     //   }
     //   submitButton.classList.add("loading");
-
     //   fetch(ENDPOINT, {
     //     method: "post",
     //     headers: {

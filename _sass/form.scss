@@ -39,6 +39,11 @@ fieldset {
   }
 }
 
+form > .form-step.header:first-child,
+form > :first-child .form-step-header {
+  margin-top: 0;
+}
+
 .form-step-subheader {
   display: block;
   font-weight: bold;
