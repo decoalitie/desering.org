@@ -303,6 +303,7 @@
       render.visible = true;
     }
 
+    const ENDPOINT = "https://script.google.com/macros/s/AKfycbzqyDxgRy5J1AcDPcPAQHv_4uDGedzSOeHmqOH37Oxq-rzp3DrswfEdSA03YUIX4AZG/exec";
     const MIN_PEOPLE_OWN_TABLE = 5;
     const SHARED_TABLE_START_TIME = "19:00";
 
@@ -325,6 +326,12 @@
       watchFields('reservation-amount', handleReservationAmountChange);
       watchFields(['vegan-amount', 'vegetarian-amount'], handleDietCountsChange, false);
       watchFields('test-amount', handleTestAmountChange, false);
+      reservationForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        submitReservation({ ...Object.fromEntries(Object.entries(fields).map(([fieldName, field]) => [fieldName, field.value])),
+          ['consent-email-contact']: !!fields['consent-email-contact'].checked
+        });
+      });
       reservationForm.style.display = 'block';
     }
 
@@ -414,46 +421,95 @@
       fields[remainderField].value = remainder;
     }
 
+    function showFatalErrorMessage() {
+      const fatalErrorElement = document.getElementById('fatal-form-error');
+      fatalErrorElement.style.display = 'block';
+      reservationForm.style.display = 'none';
+    }
+
     function showMessageOnCatch(fn) {
       try {
         fn();
       } catch (e) {
-        const fatalErrorElement = document.getElementById('fatal-form-error');
-        fatalErrorElement.style.display = 'block';
+        showFatalErrorMessage();
         throw e;
       }
     }
 
-    showMessageOnCatch(main); // reservationForm.addEventListener("submit", function (e) {
-    //   e.preventDefault();
-    //   const data = Object.fromEntries(
-    //     Object.entries(fields).map(([fieldName, field]) => [fieldName, field.value])
-    //   );
-    //   submitReservation({
-    //     ...data,
-    //     lang: reservationForm.dataset.formLang,
-    //   });
-    // });
-    // function submitReservation(data) {
-    //   const submitButton = reservationForm.querySelector('button[type="submit"]');
-    //   if (submitButton.classList.contains("loading")) {
-    //     return;
-    //   }
-    //   submitButton.classList.add("loading");
-    //   fetch(ENDPOINT, {
-    //     method: "post",
-    //     headers: {
-    //       "Content-Type": "application/x-www-form-urlencoded",
-    //     },
-    //     body: JSON.stringify(data),
-    //   })
-    //     .then((resp) => resp.json())
-    //     .then((data) => {
-    //       console.log(data);
-    //     })
-    //     .finally(() => {
-    //       submitButton.classList.remove("loading");
-    //     });
-    // }
+    function submitReservation(data) {
+      const submitButton = reservationForm.querySelector('button[type="submit"]');
+
+      if (submitButton.classList.contains("loading")) {
+        return;
+      }
+
+      submitButton.classList.add("loading");
+      fetch(ENDPOINT, {
+        method: "post",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: JSON.stringify(data)
+      }).then(resp => resp.json()).then(({
+        success,
+        error
+      }) => {
+        if (success) {
+          swapFormWithTemplate('success');
+        } else {
+          const {
+            description,
+            fields
+          } = error;
+
+          if (fields && fields.length) {
+            if (fields.some(field => field.fatal)) {
+              showFatalErrorMessage();
+            } else {
+              const feedbackElements = document.querySelectorAll('[data-field-feedback-for]');
+              let scrollToElement = null;
+
+              for (const element of feedbackElements) {
+                var _element$dataset;
+
+                const targetField = (_element$dataset = element.dataset) === null || _element$dataset === void 0 ? void 0 : _element$dataset.fieldFeedbackFor;
+                const fieldError = fields.find(({
+                  field
+                }) => field === targetField);
+
+                if (fieldError) {
+                  const errorElement = document.createElement('div');
+                  errorElement.classList.add('field-error');
+                  errorElement.innerText = fieldError.error;
+                  element.appendChild(errorElement);
+
+                  if (!scrollToElement) {
+                    scrollToElement = element;
+                  }
+                } else {
+                  while (element.firstChild) {
+                    element.removeChild(element.firstChild);
+                  }
+                }
+              }
+
+              if (scrollToElement) {
+                scrollToElement.scrollIntoView();
+              }
+            }
+          } else {
+            showFatalErrorMessage();
+          }
+        }
+      }).catch(e => {
+        const fatalErrorElement = document.getElementById('fatal-form-error');
+        fatalErrorElement.style.display = 'block';
+        reservationForm.style.display = 'none';
+      }).finally(() => {
+        submitButton.classList.remove("loading");
+      });
+    }
+
+    showMessageOnCatch(main);
 
 }());

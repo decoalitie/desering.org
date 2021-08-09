@@ -9,13 +9,25 @@ form {
     hyphens: none;
   }
 
-  .warning {
+  .field-error {
+    color: var(--red);
     padding: 0.5rem;
-    border: 1px solid var(--purple);
+    border: 1px solid var(--red);
+    font-weight: bold;
+    margin-top: 1rem;
+  }
 
-    strong {
-      color: var(--purple);
-    }
+  .submit-section {
+    margin-top: 3rem;
+  }
+}
+
+.warning {
+  padding: 0.5rem;
+  border: 1px solid var(--purple);
+
+  strong {
+    color: var(--purple);
   }
 }
 

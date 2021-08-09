@@ -41,19 +41,19 @@
 
   .stepper {
     --size: 2.3rem;
-  
+
     flex: 0 0 var(--size);
     height: var(--size);
     margin: 0 0.3rem;
     padding: 0;
     border-radius: 50%;
-  
+
     overflow: hidden;
     appearance: none;
     cursor: pointer;
     border: none;
     background: var(--purple);
-  
+
     position: relative;
     transform-origin: 50% 50%;
     transform: scale(1);
@@ -62,7 +62,7 @@
     &:hover {
       transform: scale(1.1);
     }
-    
+
     &:focus-visible {
       border: 2px solid var(--purple-white);
       outline: 2px solid var(--purple);
@@ -106,6 +106,21 @@
 
     & ~ .stepper {
       --size: 1.9rem;
+    }
+  }
+
+  @media only screen and (max-width: 62rem) {
+    & {
+      min-height: 3.2rem;
+    }
+    label {
+      font-size: 1rem;
+      max-width: 50%;
+    }
+
+    label.wide {
+      font-size: 1rem;
+      max-width: 50%;
     }
   }
 }

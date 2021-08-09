@@ -13,7 +13,8 @@ stylesheets:
   <div class="container">
     <h1>Reserveren voor TestTafel</h1>
 
-    <form data-form-lang="nl" id="reservation-form">
+    <form id="reservation-form">
+      <input type="hidden" name="lang" value="nl" />
       <fieldset>
         <legend class="form-step-header">Kies een datum</legend>
         <select class="boxed" data-input-controller="SelectRadioList" name="date">
@@ -42,20 +43,21 @@ stylesheets:
       </fieldset>
 
       <div data-field-feedback-for="date">
-        <template data-template-id="fully-booked">
-          <p class="warning">
-            <strong>Let op:</strong>
-            Deze datum is volgeboekt. Je kan nog steeds een reservering plaatsen, dan zetten
-            we je op de reservelijst.
-          </p>
-        </template>
       </div>
+
+      <template data-template-id="fully-booked">
+        <p class="warning">
+          <strong>Let op:</strong>
+          Deze datum is volgeboekt. Je kan nog steeds een reservering plaatsen, dan zetten
+          we je op de reservelijst.
+        </p>
+      </template>
 
       <label class="form-step-header" for="input-reservation-name">
         Onder welke naam wil je reserveren?
       </label>
 
-      <input id="input-reservation-name" name="reservation-name" placeholder="Naam" required type="text">
+      <input id="input-reservation-name" name="reservation-name" placeholder="Naam" required type="text" maxlength="200">
 
       <div data-field-feedback-for="reservation-name"></div>
 
@@ -84,8 +86,7 @@ stylesheets:
         </select>
       </fieldset>
 
-      <div data-field-feedback-for="table">
-      </div>
+      <div data-field-feedback-for="table"></div>
 
       <template data-template-id="shared-table-start-time">
         <p class="warning">
@@ -133,6 +134,10 @@ stylesheets:
             name="nopref-amount" required size="2" step="1" type="number" value="0">
         </div>
 
+        <div data-field-feedback-for="vegan-amount"></div>
+        <div data-field-feedback-for="vegetarian-amount"></div>
+        <div data-field-feedback-for="nopref-amount"></div>
+
         <label class="form-step-subheader" for="input-additional-diet">
           Heeft iemand in je groep nog andere allergieën of dieetvoorkeuren?
         </label>
@@ -144,6 +149,8 @@ stylesheets:
 
         <textarea id="input-additional-diet" maxlength="300" name="additional-diet"
           placeholder="Beschrijf hier bijzondere dieetvoorkeuren"></textarea>
+
+        <div data-field-feedback-for="additional-diet"></div>
       </fieldset>
 
       <fieldset>
@@ -178,13 +185,18 @@ stylesheets:
         </div>
       </fieldset>
 
+      <div data-field-feedback-for="test-amount"></div>
+      <div data-field-feedback-for="notest-amount"></div>
+
       <fieldset>
         <legend class="form-step-header">Contactinformatie</legend>
 
         <label class="form-step-subheader" for="input-email">Wat is je email? (op dit adres sturen we je een
           bevestigingsmailtje)</label>
 
-        <input id="input-email" name="email" placeholder="Email" required type="email">
+        <input id="input-email" name="email" placeholder="Email" required type="email" maxlength="200">
+
+        <div data-field-feedback-for="email"></div>
 
         <label class="form-step-subheader" for="input-phone-number">Wat is je telefoonnummer?</label>
 
@@ -195,6 +207,8 @@ stylesheets:
         </p>
 
         <input id="input-phone-number" name="phone-number" placeholder="Telefoonnummer" type="tel">
+
+        <div data-field-feedback-for="phone-number"></div>
 
         <p class="form-step-subheader">
           Wil je op de hoogte blijven van TestTafel en andere projecten van De Sering?
@@ -214,9 +228,16 @@ stylesheets:
         <input id="checkbox-consent-email-contact" name="consent-email-contact" type="checkbox">
 
         <label for="checkbox-consent-email-contact">Ja, hou me op de hoogte via email</label>
+
+        <div data-field-feedback-for="consent-email-contact"></div>
       </fieldset>
 
-      <button class="button" type="submit">plaats reservering</button>
+      <fieldset class="submit-section">
+        <p class="warning">
+          <strong>Let op!</strong> Je reservering is pas geldig na een bevesting per email.
+        </p>
+        <button class="button" type="submit">plaats reservering</button>
+      </fieldset>
     </form>
     
     {% capture contact_info %}
@@ -282,7 +303,10 @@ stylesheets:
     <template data-template-id="success">
       <div>
         <p>
-          Bedankt voor je reservering.
+          Bedankt voor je reservering. Je hoort zo snel mogelijk van ons via mail.
+        </p>
+        <p class="warning">
+          <strong>Let op!</strong> Je reservering is pas geldig na een bevesting per email.
         </p>
       </div>
     </template>
