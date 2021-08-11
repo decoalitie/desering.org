@@ -18,3 +18,9 @@ jobs:
       env: 
         GOOGLE_SHEETS_KEY: ${{ secrets.GOOGLE_SHEETS_KEY }}
         EVENT_SHEET_ID: ${{ secrets.EVENT_SHEET_ID }}
+    - run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add _data
+        git commit -m "add new data from Google Sheets"
+        git push
