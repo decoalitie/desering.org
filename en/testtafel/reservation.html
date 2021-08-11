@@ -1,8 +1,8 @@
 ---
-title: TestTafel - Reserveren
+title: TestTafel - Reservation form
 layout: default
-language: nl
-translation: testtafel/reservation
+language: en
+translation: ../testtafel/reserveren
 scripts:
 - reservation-form
 stylesheets:
@@ -12,20 +12,20 @@ permalink: :path/:basename
 
 <div class="row">
   <div class="container">
-    <h1>Reserveren voor TestTafel</h1>
+    <h1>Reservation for TestTafel</h1>
 
     <div id="under-construction">
       <p>
-        Dit is een testversie van het reserveringsformulier. Je kan hier nog niet een reservering plaatsen
+        This is a test version of the reservation form. You cannot place actual reservations here.
       </p>
 
-      <button type="button" id="confirm-under-construction">Ik begrijp het</button>
+      <button type="button" id="confirm-under-construction">Ok, I understand</button>
     </div>
 
     <form id="reservation-form">
-      <input type="hidden" name="lang" value="nl" />
+      <input type="hidden" name="lang" value="en" />
       <fieldset>
-        <legend class="form-step-header">Kies een datum</legend>
+        <legend class="form-step-header">Choose a date</legend>
         <select class="boxed" data-input-controller="SelectRadioList" name="date">
           {% for event in site.data.testtafels %}
           {% comment %}
@@ -35,16 +35,10 @@ permalink: :path/:basename
           {% assign unix_now = "now" | date: "%s" | times: 1 %}
 
           {% if unix_event > unix_now %}
-          {% assign weekday = event.date | date: "%u" | minus: 1 %}
-          {% assign day = event.date | date: "%e" %}
-          {% assign month = event.date | date: "%-m" | minus: 1 %}
-          {% assign year = event.date | date: "%Y" %}
 
-          <option value="{{ event.date }}" {% if event.fullyBooked %} data-fully-booked data-tag="volgeboekt" {% else %}
-            data-allow-default {% endif %}>
-            {{ site.data.i18n.weekdays-nl[weekday] | capitalize }}
-            {{ day }}
-            {{ site.data.i18n.months-nl[month] }}
+          <option value="{{ event.date }}" {% if event.fullyBooked %} data-fully-booked data-tag="fully booked" {% else
+            %} data-allow-default {% endif %}>
+            {{ event.date | date: "%A, %B %e %Y" }}
           </option>
           {% endif %}
           {% endfor %}
@@ -56,14 +50,15 @@ permalink: :path/:basename
 
       <template data-template-id="fully-booked">
         <p class="warning">
-          <strong>Let op:</strong>
-          Deze datum is volgeboekt. Je kan nog steeds een reservering plaatsen, dan zetten
-          we je op de reservelijst. We berichten je als er iemand annuleert en er een plek vrijkomt.
+          <strong>Please note:</strong>
+          This date has been fully booked. You can still place a reservation, which will be added to our waiting list.
+          We
+          will message you if others cancel and a spot becomes available.
         </p>
       </template>
 
       <label class="form-step-header" for="input-reservation-name">
-        Onder welke naam wil je reserveren?
+        Under which name would you like to place a reservation?
       </label>
 
       <input id="input-reservation-name" name="reservation-name" placeholder="Naam" required type="text"
@@ -72,7 +67,7 @@ permalink: :path/:basename
       <div data-field-feedback-for="reservation-name"></div>
 
       <label class="form-step-header" for="input-reservation-amount">
-        Voor hoeveel mensen wil je reserven?
+        For how many people would you like to reserve?
       </label>
 
       <div class="number-with-steppers-wrapper">
@@ -83,16 +78,16 @@ permalink: :path/:basename
       <div data-field-feedback-for="reservation-amount"></div>
 
       <fieldset>
-        <legend class="form-step-header">Bij welke tafel wil je aanschuiven?</legend>
+        <legend class="form-step-header">Which table would you like to join?</legend>
 
         <p>
-          Vanaf 5 personen kan je ervoor kiezen om voor je groep een eigen tafel te reserveren. Kleinere
-          groepen kunnen aanschuiven bij onze grote gedeelde tafel.
+          You can reserve a private table if you reserve for 5 or more people. Smaller groups can join our large shared
+          table.
         </p>
 
         <select data-input-controller="SelectRadioList" name="table">
-          <option selected value="shared">Grote gedeelde tafel</option>
-          <option data-tag="vanaf 5 personen" value="own">Eigen tafel voor je groep</option>
+          <option selected value="shared">Large shared table</option>
+          <option data-tag="vanaf 5 personen" value="own">Private table</option>
         </select>
       </fieldset>
 
@@ -100,14 +95,14 @@ permalink: :path/:basename
 
       <template data-template-id="shared-table-start-time">
         <p class="warning">
-          <string>Let op:</string>
-          de aanvang voor de gedeelde tafel is 19:00!
+          <string>Please note:</string>
+          dinner for the shared table starts at 19:00!
         </p>
       </template>
 
       <template data-template-id="start-time-input">
         <fieldset>
-          <legend class="form-step-header">Hoe laat kunnen we je verwelkomen?</legend>
+          <legend class="form-step-header">At what time would you like to start?</legend>
 
           <select data-input-controller="SelectRadioList" name="start-time">
             <option value="19:00">19:00</option>
@@ -120,10 +115,10 @@ permalink: :path/:basename
       <div data-field-feedback-for="start-time"></div>
 
       <fieldset>
-        <legend class="form-step-header">Dieetvoorkeuren</legend>
+        <legend class="form-step-header">Dietary preferences</legend>
 
         <p class="form-step-subheader">
-          Hoeveel personen hebben een vegetarisch of vegan dieet?
+          How many people have a vegetarian or a vegan diet?
         </p>
 
         <div class="number-with-steppers-wrapper">
@@ -133,13 +128,13 @@ permalink: :path/:basename
         </div>
 
         <div class="number-with-steppers-wrapper">
-          <label for="input-vegetarian-amount">Vegetarisch</label>
+          <label for="input-vegetarian-amount">Vegetarian</label>
           <input data-input-controller="NumberWithSteppers" id="input-vegetarian-amount" max="20" min="0"
             name="vegetarian-amount" required size="2" step="1" type="number" value="0">
         </div>
 
         <div class="number-with-steppers-wrapper">
-          <label for="input-nopref-amount">Geen vegan of vegetarisch dieet</label>
+          <label for="input-nopref-amount">No vegan or vegetarian diet</label>
           <input data-input-controller="NumberWithSteppers" disabled id="input-nopref-amount" max="99" min="0"
             name="nopref-amount" required size="2" step="1" type="number" value="0">
         </div>
@@ -149,47 +144,46 @@ permalink: :path/:basename
         <div data-field-feedback-for="nopref-amount"></div>
 
         <label class="form-step-subheader" for="input-additional-diet">
-          Heeft iemand in je groep nog andere allergieën of dieetvoorkeuren?
+          Does anyone in your group have any other allergies or dietery preferences?
         </label>
 
         <p>
-          We horen ook graag of speciaal eten voldoende is of dat er nog andere voorzorgsmaatregelen
-          noodzakelijk zijn.
+          Please also tell us about the severity of your allergies. Is special food enough or are more precautions
+          necessary?
         </p>
 
         <textarea id="input-additional-diet" maxlength="300" name="additional-diet"
-          placeholder="Beschrijf hier bijzondere dieetvoorkeuren"></textarea>
+          placeholder="Describe dietary preferences and allergies here"></textarea>
 
         <div data-field-feedback-for="additional-diet"></div>
       </fieldset>
 
       <fieldset>
-        <legend class="form-step-header">COVID-19 testen</legend>
+        <legend class="form-step-header">COVID-19 tests</legend>
 
         <p>
-          Elke bezoeker van TestTafel moet een
-          <a href="https://coronacheck.nl/nl/" target="_blank">officieel
-            coronabewijs van de CoronaCheck app</a>
-          of een
-          <strong>fysieke</strong>
-          negatieve test zelf meenemen.
-          Wij verkopen ook testen aan de deur voor 2 euro per stuk.
+          Each visitor of TestTafel has to show an
+          <a href="https://coronacheck.nl/en/" target="_blank">official
+            corona proof from the CoronaCheck app</a>
+          or bring a
+          <strong>physical</strong>
+          negative self-test. Alternatively, we sell tests at the door for 2 euros a piece.
         </p>
 
         <p class="form-step-subheader">
-          Voor hoeveel personen wil je een test kopen?
+          For how many people would you like to purchase a self-test?
         </p>
 
         <div class="number-with-steppers-wrapper">
-          <label class="wide" for="input-test-amount">Test kopen aan de deur</label>
+          <label class="wide" for="input-test-amount">Purchase a test at the door</label>
           <input data-input-controller="NumberWithSteppers" id="input-test-amount" max="20" min="0" name="test-amount"
             required size="2" step="1" type="number" value="0">
         </div>
 
         <div class="number-with-steppers-wrapper">
-          <label class="wide" for="input-notest-amount">Fysieke zelftest of
-            <a href="https://coronacheck.nl/nl/" target="_blank">CoronaCheck bewijs</a>
-            mee</label>
+          <label class="wide" for="input-notest-amount">Bring physical self-test or
+            <a href="https://coronacheck.nl/en/" target="_blank">CoronaCheck proof</a>
+          </label>
           <input data-input-controller="NumberWithSteppers" disabled id="input-notest-amount" max="20" min="0"
             name="notest-amount" required size="2" step="1" type="number" value="0">
         </div>
@@ -199,21 +193,20 @@ permalink: :path/:basename
       <div data-field-feedback-for="notest-amount"></div>
 
       <fieldset>
-        <legend class="form-step-header">Contactinformatie</legend>
+        <legend class="form-step-header">Contact info</legend>
 
-        <label class="form-step-subheader" for="input-email">Wat is je email? (op dit adres sturen we je een
-          bevestigingsmailtje)</label>
+        <label class="form-step-subheader" for="input-email">What is your email? (we will send you a confirmation
+          here)</label>
 
         <input id="input-email" name="email" placeholder="Email" required type="email" maxlength="200">
 
         <div data-field-feedback-for="email"></div>
 
-        <label class="form-step-subheader" for="input-phone-number">Wat is je telefoonnummer?</label>
+        <label class="form-step-subheader" for="input-phone-number">What is your phone number?</label>
 
         <p>
-          We gebruiken je telefoonnummer om contact op te nemen als er onduidelijkheden zijn omtrent de
-          reservering
-          (bv. mbt. allergieën) en om je te berichten als er een plek vrij komt op de reservelijst.
+          We will contact you by phone if we have questions about your reservation (for example,
+          about allergies) or to message you when a spot opens up for our waiting list.
         </p>
 
         <input id="input-phone-number" name="phone-number" placeholder="Telefoonnummer" type="tel">
@@ -221,49 +214,47 @@ permalink: :path/:basename
         <div data-field-feedback-for="phone-number"></div>
 
         <p class="form-step-subheader">
-          Wil je op de hoogte blijven van TestTafel en andere projecten van De Sering?
+          Would you like us to update you about TestTafel and other projects of De Sering?
         </p>
 
         <p>
-          Selecteer deze optie als je onze maandelijkse nieuwsbrief per e-mail wilt ontvangen. Je kunt ook op
-          de
-          hoogte blijven via
+          Select this option if you want to receive our monthly email newsletter. Alternatively, you can stay in touch
+          through our Instagram
           <a href="https://instagram.com/testtafel" target="_blank">@testtafel</a>
-          op Instagram of
-          onze
+          or our
           <a href="https://chat.whatsapp.com/C2fIG6POV8FH0nVQcW3hKs" target="_blank">WhatsApp broadcast
-            groep</a>
+            group</a>
         </p>
 
         <input id="checkbox-consent-email-contact" name="consent-email-contact" type="checkbox">
 
-        <label for="checkbox-consent-email-contact">Ja, hou me op de hoogte via email</label>
+        <label for="checkbox-consent-email-contact">Yes, keep me posted through email</label>
 
         <div data-field-feedback-for="consent-email-contact"></div>
       </fieldset>
 
       <fieldset class="submit-section">
         <p class="warning">
-          <strong>Let op!</strong> Je reservering is pas geldig na een bevesting per email.
+          <strong>Please note:</strong> Your reservation is only valid after a confirmation email
         </p>
-        <button class="button" type="submit">plaats reservering</button>
+        <button class="button" type="submit">place reservation</button>
       </fieldset>
     </form>
 
     {% capture contact_info %}
-    contact met ons opnemen door te berichten of bellen met
-    <a href="tel:0031616870053">06-16870053</a>
-    of te mailen naar
+    contact us directly by messaging or calling 
+    <a href="tel:0031616870053">+31616870053</a>
+    or sending an email to
     <a href="mailto:testtafel@desering.org">testtafel@desering.org</a>
     {% endcapture %}
 
     {% capture alternatives %}
     <p>
-      Als het niet lukt met reserveren, kan je ook direct {{ contact_info }}
+      If you are unable to complete the reservation form, you can also {{ contact_info }}
     </p>
 
     <p>
-      Reserveren is momenteel mogelijk voor deze TestTafel edities:
+      Reservations can be made for the following TestTafel editions:
     </p>
     <ul>
       {% for event in site.data.testtafels %}
@@ -275,15 +266,9 @@ permalink: :path/:basename
 
       {% if unix_event > unix_now %}
       {% unless event.fullyBooked %}
-      {% assign weekday = event.date | date: "%u" | minus: 1 %}
-      {% assign day = event.date | date: "%e" %}
-      {% assign month = event.date | date: "%-m" | minus: 1 %}
-      {% assign year = event.date | date: "%Y" %}
 
       <li>
-        {{ site.data.i18n.weekdays-nl[weekday] | capitalize }}
-        {{ day }}
-        {{ site.data.i18n.months-nl[month] }}
+        {{ event.date | date: "%A, %B %e %Y" }}
       </li>
       {% endunless %}
       {% endif %}
@@ -294,8 +279,7 @@ permalink: :path/:basename
     <noscript>
       <div class="noscript">
         <p>
-          Om te reserveren via deze website moet je javascript hebben ingeschakeld in je browser.
-          Schakel javascript in om verder te gaan.
+          To make a reservation through this website you have to enable javascript in your browser. Please enable javascript to continue.
         </p>
 
         {{ alternatives }}
@@ -304,7 +288,7 @@ permalink: :path/:basename
 
     <div id="fatal-form-error">
       <p>
-        Sorry, er is iets mis gegaan met het reserveringsformulier.
+        Sorry, something broke in our reservation form.
       </p>
 
       {{ alternatives }}
@@ -313,10 +297,10 @@ permalink: :path/:basename
     <template data-template-id="success">
       <div>
         <p>
-          Bedankt voor je reservering. Je hoort zo snel mogelijk van ons via mail.
+          Thank you for your reservation. You will hear from us over email as soon as possible.
         </p>
         <p class="warning">
-          <strong>Let op!</strong> Je reservering is pas geldig na een bevesting per email.
+          <strong>Please note:</strong> Your reservation is only valid after a confirmation email!
         </p>
       </div>
     </template>
@@ -324,11 +308,11 @@ permalink: :path/:basename
     <template data-template-id="no-dates">
       <div>
         <p>
-          Er zijn momenteel geen TestTafel edities waarvoor je kan reserveren. Probeer het later nog eens!
+          There are no TestTafel editions that are open for reservations at the moment. Please come back later!
         </p>
 
         <p>
-          Voor vragen kan je {{ contact_info }}
+          For questions you can {{ contact_info }}
         </p>
       </div>
     </template>

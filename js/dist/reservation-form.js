@@ -303,7 +303,7 @@
       render.visible = true;
     }
 
-    const ENDPOINT = "https://script.google.com/macros/s/AKfycbzqyDxgRy5J1AcDPcPAQHv_4uDGedzSOeHmqOH37Oxq-rzp3DrswfEdSA03YUIX4AZG/exec";
+    const ENDPOINT = "https://script.google.com/macros/s/AKfycbwWS-uH1haqSf2Isgj60wSpsWGW6su6-G0_XgHgtu6ZpPLvjXpC0xvfZyyADi3iv7VavQ/exec";
     const MIN_PEOPLE_OWN_TABLE = 5;
     const SHARED_TABLE_START_TIME = "19:00";
 
