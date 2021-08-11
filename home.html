@@ -21,47 +21,6 @@ translation: home
   </div>
 </div>
 
-<!-- <div class="row">
-	<div class="container-wide">
-		<div class="agenda">
-			<h3>Agenda</h3>
-
-			{% for event in site.data.events %}
-
-				{% unless prev.date == event.date %}
-
-					{% assign weekday = event.date | date: "%u" | minus: 1 %}
-					{% assign day = event.date | date: "%e" %}
-					{% assign month = event.date | date: "%-m" | minus: 1 %}
-					{% assign year = event.date | date: "%Y" %}
-
-					<h4>{{ site.data.i18n.weekdays-nl[weekday] | capitalize }} {{ day }} {{ site.data.i18n.months-nl[month] }} {{ year }}</h4>
-
-				{% endunless %}
-
-				<div class="event">
-					<span class="event-desc">
-						{{ event.description-nl }}
-						{% if event.xr %}
-							<a href="https://extinctionrebellion.nl">(Extinction Rebellion)</a>
-						{% endif %}
-					</span>
-					<span class="event-details">
-						{% if event.fb-url %}
-						<a class="event-fb" href="{{ event.fb-url }}"></a>
-						{% endif %}
-						<span class="event-time">{{ event.time }}</span>
-					</span>
-				</div>
-
-			{% assign prev = event %}
-			{% endfor %}
-
-		</div>
-
-	</div>
-</div> -->
-
 <div class="row">
   <div class="container">
     <h3>Meehelpen?</h3>
