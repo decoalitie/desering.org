@@ -1,10 +1,17 @@
 const fs = require('fs/promises');
+const { readFileSync } = require('fs');
 const {google} = require('googleapis');
 const {stringify} = require('yaml');
 const path = require('path');
 
 const { EVENT_SHEET_ID } = process.env;
-const googleCredentials = JSON.parse(process.env.GOOGLE_SHEETS_KEY);
+
+let googleCredentials;
+if (process.env.GOOGLE_SHEETS_KEY) {
+    googleCredentials = JSON.parse(process.env.GOOGLE_SHEETS_KEY);
+} else {
+    googleCredentials = JSON.parse(readFileSync(path.join(__dirname, '../key.json'), { encoding: 'utf8' }))
+}
 
 const auth = new google.auth.GoogleAuth({
     credentials: googleCredentials,
@@ -39,7 +46,7 @@ async function getTabularData(spreadsheetId, sheetName, mapHeaders, headerRow = 
 }
 
 async function main() {
-    const { rawValues, data } = await getTabularData(EVENT_SHEET_ID, 'Edities', (head) => ({
+    const { rawValues, data } = await getTabularData(EVENT_SHEET_ID, 'Agenda - TestTafels', (head) => ({
         'Datum': 'date',
         'Volgeboekt': 'fullyBooked',
         'Publiceer op website': 'public',
@@ -48,7 +55,7 @@ async function main() {
 
     const updateValueRange = {
         ...rawValues,
-        range: rawValues.range.replace('Edities', 'Website')
+        range: rawValues.range.replace('Agenda - TestTafels', '__website')
     };
 
     const result = data
