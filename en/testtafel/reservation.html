@@ -95,14 +95,13 @@ permalink: :path/:basename
 
       <template data-template-id="shared-table-start-time">
         <p class="warning">
-          <string>Please note:</string>
-          dinner for the shared table starts at 19:00!
+          Please arrive between 19:00 and 19:15
         </p>
       </template>
 
       <template data-template-id="start-time-input">
         <fieldset>
-          <legend class="form-step-header">At what time would you like to start?</legend>
+          <legend class="form-step-header">Which time would you like to start?</legend>
 
           <select data-input-controller="SelectRadioList" name="start-time">
             <option value="19:00">19:00</option>
@@ -242,7 +241,7 @@ permalink: :path/:basename
     </form>
 
     {% capture contact_info %}
-    contact us directly by messaging or calling 
+    contact us directly by messaging or calling
     <a href="tel:0031616870053">+31616870053</a>
     or sending an email to
     <a href="mailto:testtafel@desering.org">testtafel@desering.org</a>
@@ -279,7 +278,8 @@ permalink: :path/:basename
     <noscript>
       <div class="noscript">
         <p>
-          To make a reservation through this website you have to enable javascript in your browser. Please enable javascript to continue.
+          To make a reservation through this website you have to enable javascript in your browser. Please enable
+          javascript to continue.
         </p>
 
         {{ alternatives }}
