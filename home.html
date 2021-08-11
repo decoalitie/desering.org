@@ -4,6 +4,7 @@ layout: default
 language: nl
 description: 'Buurtkeuken De Sering in Amsterdam: Elke dinsdag samen eten, voor €2,50'
 translation: home
+permalink: :path/:basename
 ---
 
 
@@ -29,14 +30,14 @@ translation: home
       hulp gebruiken bij onze zoektocht naar een eigen locatie. Voor meer informatie, zie de onderstaande link.
     </p>
 
-    <a class="button" href="meehelpen.html">Help De Sering mogelijk maken</a>
+    <a class="button" href="{% link meehelpen.html %}">Help De Sering mogelijk maken</a>
 
     <img src="/img/sering.png" />
 
     <h3>TestTafel</h3>
 
     <p>
-      Ga naar <a href="/testtafel.html">deze pagina</a> voor informatie over ons pop-up restaurant TestTafel.
+      Ga naar <a href="{% link testtafel.html %}">deze pagina</a> voor informatie over ons pop-up restaurant TestTafel.
     </p>
 
     <h3>Contact</h3>
