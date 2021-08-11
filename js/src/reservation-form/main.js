@@ -36,11 +36,13 @@ function main() {
   reservationForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    submitReservation({
-      ...Object.fromEntries(
-        Object.entries(fields).map(([fieldName, field]) => [fieldName, field.value])
-      ),
-      ['consent-email-contact']: !!fields['consent-email-contact'].checked
+    showMessageOnCatch(() => {
+      submitReservation({
+        ...Object.fromEntries(
+          Object.entries(fields).map(([fieldName, field]) => [fieldName, field.value])
+        ),
+        ['consent-email-contact']: !!fields['consent-email-contact'].checked
+      });
     });
   });
 
