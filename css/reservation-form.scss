@@ -7,8 +7,7 @@
 @import "number-with-steppers";
 @import "form-buttons";
 
-#reservation-form,
-#under-construction {
+#reservation-form {
     // set to display: block after javascript has initialized form
     display: none;
 }

@@ -44,13 +44,7 @@ function main() {
     });
   });
 
-  const underConstruction = document.getElementById('under-construction');
-  const underConstructionConfirm = document.getElementById('confirm-under-construction');
-  underConstructionConfirm.addEventListener('click', () => {
-    underConstruction.style.display = 'none';
-    reservationForm.style.display = 'block';
-  });
-  underConstruction.style.display = 'block';
+  reservationForm.style.display = 'block';
 }
 
 function watchFields(fieldNames, onChange, immediate = true) {
