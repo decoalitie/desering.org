@@ -2,9 +2,24 @@
   "name": "desering-org-scripts",
   "version": "1.0.0",
   "scripts": {
-    "get-sheets-data": "node _scripts/get-sheets-data.js"
+    "build": "npm run build:js && npm run build:jekyll",
+    "build:jekyll": "bundle exec jekyll build",
+    "build:js": "rollup -c rollup.config.js",
+    "dev": "concurrently \"npm run build:js -- -w\" \"npm run serve\"",
+    "get-sheets-data": "node _scripts/get-sheets-data.js",
+    "serve": "bundle exec jekyll serve"
   },
   "dependencies": {
-    "googleapis": "^82.0.0"
+    "googleapis": "^82.0.0",
+    "yaml": "^1.10.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "concurrently": "^6.2.0",
+    "core-js": "^3.16.0",
+    "rollup": "^2.54.0"
   }
 }
