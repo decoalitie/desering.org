@@ -11,3 +11,5 @@ exclude:
   - node_modules
 theme: null
 remote-theme: null
+plugins:
+  - jekyll-redirect-from
