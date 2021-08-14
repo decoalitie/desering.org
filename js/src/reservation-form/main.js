@@ -1,5 +1,3 @@
-import "core-js";
-import "regenerator-runtime/runtime";
 import * as inputControllers from '../forms/input-controllers';
 import { getTemplateRender, swapFormWithTemplate } from './templates';
 import { MIN_PEOPLE_OWN_TABLE, SHARED_TABLE_START_TIME, ENDPOINT } from './config';
