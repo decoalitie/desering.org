@@ -1,6 +1,7 @@
+import { isBefore } from 'date-fns';
 import * as inputControllers from '../forms/input-controllers';
 import { getTemplateRender, swapFormWithTemplate } from './templates';
-import { MIN_PEOPLE_OWN_TABLE, SHARED_TABLE_START_TIME, ENDPOINT } from './config';
+import { MIN_PEOPLE_OWN_TABLE, SHARED_TABLE_START_TIME, ENDPOINT, SHOW_DATE_UNTIL } from './config';
 
 const reservationForm = document.querySelector("#reservation-form");
 let fields, startTimeInput;
@@ -8,6 +9,15 @@ let fields, startTimeInput;
 function main() {
   // render the start-time-input template (not visible) to make sure the field is initialized
   startTimeInput = getTemplateRender('start-time-input');
+
+  // remove dates in past
+  for (const dateOption of reservationForm.elements.date.querySelectorAll('option')) {
+    const optionTime = new Date(`${dateOption.value}${SHOW_DATE_UNTIL}`);
+
+    if (isBefore(optionTime, new Date())) {
+      reservationForm.elements.date.removeChild(dateOption);
+    }
+  }
 
   // initialize all fields
   fields = Object.fromEntries(

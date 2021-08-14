@@ -12,7 +12,7 @@ const config = [
             format: 'iife'
         },
         plugins: [
-            resolve({ resolveOnly: [/^core-js\/.*$/] }),
+            resolve({ resolveOnly: [/^(?!core-js).*$/] }),
             babel({
                 babelHelpers: 'bundled',
                 exclude: ['node_modules/@babel/**', 'node_modules/core-js/**'],

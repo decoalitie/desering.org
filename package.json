@@ -10,6 +10,7 @@
     "serve": "bundle exec jekyll serve"
   },
   "dependencies": {
+    "date-fns": "^2.23.0",
     "googleapis": "^82.0.0",
     "yaml": "^1.10.2"
   },

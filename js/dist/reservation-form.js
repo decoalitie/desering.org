@@ -186,8 +186,6 @@
   function _possibleConstructorReturn(self, call) {
     if (call && (typeof call === "object" || typeof call === "function")) {
       return call;
-    } else if (call !== void 0) {
-      throw new TypeError("Derived constructors may only return object or undefined");
     }
 
     return _assertThisInitialized(self);
@@ -342,6 +340,94 @@
         }
       }
     };
+  }
+
+  function requiredArgs(required, args) {
+    if (args.length < required) {
+      throw new TypeError(required + ' argument' + (required > 1 ? 's' : '') + ' required, but only ' + args.length + ' present');
+    }
+  }
+
+  /**
+   * @name toDate
+   * @category Common Helpers
+   * @summary Convert the given argument to an instance of Date.
+   *
+   * @description
+   * Convert the given argument to an instance of Date.
+   *
+   * If the argument is an instance of Date, the function returns its clone.
+   *
+   * If the argument is a number, it is treated as a timestamp.
+   *
+   * If the argument is none of the above, the function returns Invalid Date.
+   *
+   * **Note**: *all* Date arguments passed to any *date-fns* function is processed by `toDate`.
+   *
+   * @param {Date|Number} argument - the value to convert
+   * @returns {Date} the parsed date in the local time zone
+   * @throws {TypeError} 1 argument required
+   *
+   * @example
+   * // Clone the date:
+   * const result = toDate(new Date(2014, 1, 11, 11, 30, 30))
+   * //=> Tue Feb 11 2014 11:30:30
+   *
+   * @example
+   * // Convert the timestamp to date:
+   * const result = toDate(1392098430000)
+   * //=> Tue Feb 11 2014 11:30:30
+   */
+
+  function toDate(argument) {
+    requiredArgs(1, arguments);
+    var argStr = Object.prototype.toString.call(argument); // Clone the date
+
+    if (argument instanceof Date || typeof argument === 'object' && argStr === '[object Date]') {
+      // Prevent the date to lose the milliseconds when passed to new Date() in IE10
+      return new Date(argument.getTime());
+    } else if (typeof argument === 'number' || argStr === '[object Number]') {
+      return new Date(argument);
+    } else {
+      if ((typeof argument === 'string' || argStr === '[object String]') && typeof console !== 'undefined') {
+        // eslint-disable-next-line no-console
+        console.warn("Starting with v2.0.0-beta.1 date-fns doesn't accept strings as date arguments. Please use `parseISO` to parse strings. See: https://git.io/fjule"); // eslint-disable-next-line no-console
+
+        console.warn(new Error().stack);
+      }
+
+      return new Date(NaN);
+    }
+  }
+
+  /**
+   * @name isBefore
+   * @category Common Helpers
+   * @summary Is the first date before the second one?
+   *
+   * @description
+   * Is the first date before the second one?
+   *
+   * ### v2.0.0 breaking changes:
+   *
+   * - [Changes that are common for the whole library](https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#Common-Changes).
+   *
+   * @param {Date|Number} date - the date that should be before the other one to return true
+   * @param {Date|Number} dateToCompare - the date to compare with
+   * @returns {Boolean} the first date is before the second date
+   * @throws {TypeError} 2 arguments required
+   *
+   * @example
+   * // Is 10 July 1989 before 11 February 1987?
+   * var result = isBefore(new Date(1989, 6, 10), new Date(1987, 1, 11))
+   * //=> false
+   */
+
+  function isBefore(dirtyDate, dirtyDateToCompare) {
+    requiredArgs(2, arguments);
+    var date = toDate(dirtyDate);
+    var dateToCompare = toDate(dirtyDateToCompare);
+    return date.getTime() < dateToCompare.getTime();
   }
 
   var InputController = /*#__PURE__*/function (_EventTarget) {
@@ -734,13 +820,33 @@
   var ENDPOINT = "https://script.google.com/macros/s/AKfycbwRaWuTNOYHVY57WfX6NjPka6J73INEYqcIFc0U3xhLSLs1YNDuALJMbKIseRJeZNe1/exec";
   var MIN_PEOPLE_OWN_TABLE = 5;
   var SHARED_TABLE_START_TIME = "19:00";
+  var SHOW_DATE_UNTIL = 'T19:00:00';
 
   var reservationForm = document.querySelector("#reservation-form");
   var fields;
 
   function main() {
     // render the start-time-input template (not visible) to make sure the field is initialized
-    getTemplateRender('start-time-input'); // initialize all fields
+    getTemplateRender('start-time-input'); // remove dates in past
+
+    var _iterator = _createForOfIteratorHelper(reservationForm.elements.date.querySelectorAll('option')),
+        _step;
+
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var dateOption = _step.value;
+        var optionTime = new Date("".concat(dateOption.value).concat(SHOW_DATE_UNTIL));
+
+        if (isBefore(optionTime, new Date())) {
+          reservationForm.elements.date.removeChild(dateOption);
+        }
+      } // initialize all fields
+
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
+    }
 
     fields = Object.fromEntries(Array.from(reservationForm.elements).filter(function (element) {
       return element.name;
@@ -923,14 +1029,14 @@
             var feedbackElements = document.querySelectorAll('[data-field-feedback-for]');
             var scrollToElement = null;
 
-            var _iterator = _createForOfIteratorHelper(feedbackElements),
-                _step;
+            var _iterator2 = _createForOfIteratorHelper(feedbackElements),
+                _step2;
 
             try {
               var _loop = function _loop() {
                 var _element$dataset;
 
-                var element = _step.value;
+                var element = _step2.value;
                 var targetField = (_element$dataset = element.dataset) === null || _element$dataset === void 0 ? void 0 : _element$dataset.fieldFeedbackFor;
 
                 var fieldError = _fields.find(function (_ref4) {
@@ -954,13 +1060,13 @@
                 }
               };
 
-              for (_iterator.s(); !(_step = _iterator.n()).done;) {
+              for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
                 _loop();
               }
             } catch (err) {
-              _iterator.e(err);
+              _iterator2.e(err);
             } finally {
-              _iterator.f();
+              _iterator2.f();
             }
 
             if (scrollToElement) {
