@@ -50,6 +50,14 @@ class SelectRadioList extends InputController {
       label.setAttribute("for", optionId);
       radioList.appendChild(label);
 
+      if (option.dataset.special) {
+        option.innerText = `${option.innerText.trim()}: ${option.dataset.special}`;
+        const tagElement = document.createElement("span");
+        tagElement.className = "tag special";
+        tagElement.innerText = option.dataset.special;
+        label.appendChild(tagElement);
+      }
+
       if (option.dataset.tag) {
         option.innerText += ` (${option.dataset.tag})`;
         const tagElement = document.createElement("span");

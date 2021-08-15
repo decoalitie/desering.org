@@ -61,6 +61,11 @@
     background: var(--purple-white);
     color: var(--purple-dark);
     font-weight: bold;
+
+    &.special {
+      background: var(--purple-black);
+      color: #e7f427;
+    }
   }
 
   &.boxed {

@@ -32,8 +32,9 @@ permalink: :path/:basename
           {% assign month = event.date | date: "%-m" | minus: 1 %}
           {% assign year = event.date | date: "%Y" %}
 
-          <option value="{{ event.date }}" {% if event.fullyBooked %} data-fully-booked data-tag="volgeboekt" {% else %}
-            data-allow-default {% endif %}>
+          {% assign special = site.data["testtafel-specials"][event.date] %}
+
+          <option value="{{ event.date }}"{% if special %} data-special="{{ special.name }}"{% endif %}{% if event.fullyBooked %} data-fully-booked data-tag="volgeboekt" {% else %} data-allow-default{% endif %}>
             {{ site.data.i18n.weekdays-nl[weekday] | capitalize }}
             {{ day }}
             {{ site.data.i18n.months-nl[month] }}
