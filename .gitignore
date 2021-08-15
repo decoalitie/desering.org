@@ -3,3 +3,4 @@ _site
 node_modules
 .env
 key.json
+js/dist/*-dev.js
