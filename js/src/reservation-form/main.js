@@ -142,17 +142,22 @@ function updateAmountInputs(inputFields, remainderField) {
   fields[remainderField].value = remainder;
 }
 
-function showFatalErrorMessage() {
+function showFatalErrorMessage(e) {
   const fatalErrorElement = document.getElementById('fatal-form-error');
   fatalErrorElement.style.display = 'block';
   reservationForm.style.display = 'none';
+
+  if (e.message) {
+    const errorElement = fatalErrorElement.querySelector('pre');
+    errorElement.innerHTML = e.message;
+  }
 }
 
 function showMessageOnCatch(fn) {
   try {
     fn();
   } catch (e) {
-    showFatalErrorMessage();
+    showFatalErrorMessage(e);
 
     throw e;
   }
