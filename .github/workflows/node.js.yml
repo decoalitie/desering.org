@@ -26,6 +26,6 @@ jobs:
     - name: push commit
       run: |
         if [[ $(git status --porcelain) ]] then
-          git commit -m "add new data from Google Sheets"
-          git push
+        git commit -m "add new data from Google Sheets"
+        git push
         fi
