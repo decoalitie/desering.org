@@ -24,7 +24,8 @@ jobs:
         git config user.email github-actions@github.com
         git add _data
     - name: push commit
-      continue-on-error: true
       run: |
-        git commit -m "add new data from Google Sheets"
-        git push
+        if [[ $(git status --porcelain) ]] then
+          git commit -m "add new data from Google Sheets"
+          git push
+        fi
