@@ -1,3 +1,4 @@
+import { Event } from "event-target-shim";
 import InputController from "./InputController";
 
 /**
