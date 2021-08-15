@@ -2353,6 +2353,61 @@ module.exports = function (O, defaultConstructor) {
 
 /***/ }),
 
+/***/ 6091:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var fails = __webpack_require__(7293);
+var whitespaces = __webpack_require__(1361);
+
+var non = '\u200B\u0085\u180E';
+
+// check that a method works with the correct list
+// of whitespaces and has a correct name
+module.exports = function (METHOD_NAME) {
+  return fails(function () {
+    return !!whitespaces[METHOD_NAME]() || non[METHOD_NAME]() != non || whitespaces[METHOD_NAME].name !== METHOD_NAME;
+  });
+};
+
+
+/***/ }),
+
+/***/ 3111:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var requireObjectCoercible = __webpack_require__(4488);
+var toString = __webpack_require__(1340);
+var whitespaces = __webpack_require__(1361);
+
+var whitespace = '[' + whitespaces + ']';
+var ltrim = RegExp('^' + whitespace + whitespace + '*');
+var rtrim = RegExp(whitespace + whitespace + '*$');
+
+// `String.prototype.{ trim, trimStart, trimEnd, trimLeft, trimRight }` methods implementation
+var createMethod = function (TYPE) {
+  return function ($this) {
+    var string = toString(requireObjectCoercible($this));
+    if (TYPE & 1) string = string.replace(ltrim, '');
+    if (TYPE & 2) string = string.replace(rtrim, '');
+    return string;
+  };
+};
+
+module.exports = {
+  // `String.prototype.{ trimLeft, trimStart }` methods
+  // https://tc39.es/ecma262/#sec-string.prototype.trimstart
+  start: createMethod(1),
+  // `String.prototype.{ trimRight, trimEnd }` methods
+  // https://tc39.es/ecma262/#sec-string.prototype.trimend
+  end: createMethod(2),
+  // `String.prototype.trim` method
+  // https://tc39.es/ecma262/#sec-string.prototype.trim
+  trim: createMethod(3)
+};
+
+
+/***/ }),
+
 /***/ 261:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -2682,6 +2737,16 @@ module.exports = function (name) {
     }
   } return WellKnownSymbolsStore[name];
 };
+
+
+/***/ }),
+
+/***/ 1361:
+/***/ ((module) => {
+
+// a string of all valid unicode whitespaces
+module.exports = '\u0009\u000A\u000B\u000C\u000D\u0020\u00A0\u1680\u2000\u2001\u2002' +
+  '\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF';
 
 
 /***/ }),
@@ -3633,6 +3698,26 @@ $({ target: 'Reflect', stat: true, forced: FORCED, sham: FORCED }, {
 
 /***/ }),
 
+/***/ 3210:
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+var $ = __webpack_require__(2109);
+var $trim = __webpack_require__(3111).trim;
+var forcedStringTrimMethod = __webpack_require__(6091);
+
+// `String.prototype.trim` method
+// https://tc39.es/ecma262/#sec-string.prototype.trim
+$({ target: 'String', proto: true, forced: forcedStringTrimMethod('trim') }, {
+  trim: function trim() {
+    return $trim(this);
+  }
+});
+
+
+/***/ }),
+
 /***/ 1817:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -4275,6 +4360,8 @@ function isBefore(dirtyDate, dirtyDateToCompare) {
   var dateToCompare = toDate(dirtyDateToCompare);
   return date.getTime() < dateToCompare.getTime();
 }
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.trim.js
+var es_string_trim = __webpack_require__(3210);
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.reflect.construct.js
 var es_reflect_construct = __webpack_require__(2419);
 ;// CONCATENATED MODULE: ./node_modules/event-target-shim/index.mjs
@@ -5513,6 +5600,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 
+
 function SelectRadioList_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -5589,12 +5677,22 @@ var SelectRadioList = /*#__PURE__*/function (_InputController) {
         label.setAttribute("for", optionId);
         radioList.appendChild(label);
 
+        if (option.dataset.special) {
+          option.innerText = `${option.innerText.trim()}: ${option.dataset.special}`;
+          var tagElement = document.createElement("span");
+          tagElement.className = "tag special";
+          tagElement.innerText = option.dataset.special;
+          label.appendChild(tagElement);
+        }
+
         if (option.dataset.tag) {
           option.innerText += ` (${option.dataset.tag})`;
-          var tagElement = document.createElement("span");
-          tagElement.className = "tag";
-          tagElement.innerText = option.dataset.tag;
-          label.appendChild(tagElement);
+
+          var _tagElement = document.createElement("span");
+
+          _tagElement.className = "tag";
+          _tagElement.innerText = option.dataset.tag;
+          label.appendChild(_tagElement);
         }
 
         return radioInput;
