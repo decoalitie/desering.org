@@ -75,4 +75,13 @@ export default class ExpandTransitionElement {
 
         this._visible = !!visible;
     }
+
+    refreshHeight() {
+        nextFrame(() => {
+            if (this.visible && this.element.style.maxHeight && this.element.style.maxHeight !== 'none') {
+                const { scrollHeight } = this.element;
+                this.element.style.maxHeight = scrollHeight ? `${this.element.scrollHeight}px` : 'none';
+            }
+        });
+    }
 }

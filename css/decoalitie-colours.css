@@ -20,4 +20,7 @@
 	--purple-accent: RGB(130, 0, 77);
 	--purple-dark: RGB(82, 0, 48);
 	--purple-black: RGB(33, 0, 20);
+
+	/* specials for testtafel events */
+	--color-special: #e7f427;
 }

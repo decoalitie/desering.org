@@ -1,0 +1,21 @@
+.special-description {
+    background: var(--purple-black);
+    // color: var(--purple-white);
+
+    margin: 1rem 0;
+    padding: 1rem;
+
+    h4 {
+        margin: 0 0 1rem 0;
+        font-weight: bold;
+        font-family: 'Syne';
+        color: var(--color-special);
+    }
+
+    p {
+        margin: 0;
+        color: var(--purple-white);
+    }
+}
+
+

@@ -28,14 +28,22 @@ permalink: :path/:basename
 
           {% if unix_event > unix_now %}
 
-          <option value="{{ event.date }}" {% if event.fullyBooked %} data-fully-booked data-tag="fully booked" {% else
-            %} data-allow-default {% endif %}>
-            {{ event.date | date: "%A, %B %e %Y" }}
+          {% assign special = site.data["testtafel-specials"][event.date] %}
+
+          <option value="{{ event.date }}"{% if special %} data-special="{{ special.name }}" data-special-description="{{ special.description.en }}"{% endif %}{% if event.fullyBooked %} data-fully-booked data-tag="fully booked" {% else %} data-allow-default{% endif %}>
+            {{ event.date | date: "%A, %B %e" }}
           </option>
           {% endif %}
           {% endfor %}
         </select>
       </fieldset>
+
+      <template data-template-id="special-description">
+        <section class="special-description">
+          <h4></h4>
+          <p></p>
+        </section>
+      </template>
 
       <div data-field-feedback-for="date">
       </div>

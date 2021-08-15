@@ -36,12 +36,17 @@ function main() {
     return;
   }
 
+  if (fields.date.optionElements.some(el => el.textContent.trim().length > 36)) {
+    for (const dateOption of fields.date.optionElements) {
+      dateOption.textContent = dateOption.textContent.trim().replace(/^\S+/, match => match.substring(0, 2).toUpperCase());
+    }
+  }
+
   watchFields('date', handleDateChange);
   watchFields('table', handleTableChange);
   watchFields('reservation-amount', handleReservationAmountChange);
   watchFields(['vegan-amount', 'vegetarian-amount'], handleDietCountsChange, false);
   watchFields('test-amount', handleTestAmountChange, false);
-
 
   reservationForm.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -69,7 +74,17 @@ function watchFields(fieldNames, onChange, immediate = true) {
 }
 
 function handleDateChange() {
-  getTemplateRender('fully-booked').visible = fields.date.selectedOptionElement.dataset.fullyBooked !== undefined;
+  const { fullyBooked, special, specialDescription } = fields.date.selectedOptionElement.dataset;
+  getTemplateRender('fully-booked').visible = fullyBooked !== undefined;
+  const specialElement = getTemplateRender('special-description');
+  if (specialDescription !== undefined) {
+    specialElement.element.querySelector('h4').innerText = special;
+    specialElement.element.querySelector('p').innerText = specialDescription;
+    if (specialElement.visible) {
+      specialElement.refreshHeight();
+    }
+  }
+  specialElement.visible = specialDescription !== undefined;
 }
 
 function handleReservationAmountChange() {
