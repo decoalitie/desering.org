@@ -13,3 +13,4 @@ theme: null
 remote-theme: null
 plugins:
   - jekyll-redirect-from
+repository: decoalitie/desering.org
