@@ -8,9 +8,12 @@ exclude:
   - package.json
   - package-lock.json
   - js/src
+  - styles/_partials
   - node_modules
 theme: null
 remote-theme: null
 plugins:
   - jekyll-redirect-from
+sass:
+  sass_dir: styles/_partials
 repository: decoalitie/desering.org
