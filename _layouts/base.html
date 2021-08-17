@@ -10,12 +10,12 @@
 
     <title>{{ page.title }}</title>
 
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/decoalitie-colours.css" />
-    <link rel="stylesheet" href="/css/decoalitie-fonts.css" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/styles/normalize.css" />
+    <link rel="stylesheet" href="/styles/decoalitie-colours.css" />
+    <link rel="stylesheet" href="/styles/decoalitie-fonts.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
     {% for stylesheet in page.stylesheets %}
-      <link rel="stylesheet" href="/css/{{ stylesheet }}.css" />
+      <link rel="stylesheet" href="/styles/{{ stylesheet }}.css" />
     {% endfor %}
 
     <!-- generated with realfavicongenerator.net -->
@@ -34,7 +34,7 @@
     {{ content }}
 
     {% for script in page.scripts %}
-      <script type="text/javascript" src="/js/dist/{{ script }}{% if jekyll.environment == "development" %}-dev{% endif %}.js?v=202108152206"></script>
+      <script type="text/javascript" src="/js/dist/{{ script }}{% if jekyll.environment == "watch" %}-dev{% endif %}.js?v=202108152206"></script>
     {% endfor %}
 
   </body>

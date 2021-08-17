@@ -1,12 +1,13 @@
 ---
 # This FrontMatter triggers Jekyll Sass conversion
 ---
-@import "expand-transition-element";
-@import "form";
-@import "select-radio-list";
-@import "number-with-steppers";
-@import "form-buttons";
-@import "specials";
+@import "animation/expand-transition-element";
+@import "forms/form-layout";
+@import "forms/text-inputs";
+@import "forms/select-radio-list";
+@import "forms/number-with-steppers";
+@import "forms/form-buttons";
+@import "testtafel/specials";
 
 #reservation-form {
     // set to display: block after javascript has initialized form

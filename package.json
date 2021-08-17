@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "build": "npm run build:js && npm run build:jekyll",
-    "build:jekyll": "JEKYLL_ENV=production bundle exec jekyll build",
+    "build:jekyll": "bundle exec jekyll build",
     "build:js": "webpack build --mode production",
-    "dev": "concurrently \"webpack watch --mode development\" \"npm run serve\"",
+    "dev": "concurrently \"webpack watch --mode development\" \"JEKYLL_ENV=watch bundle exec jekyll serve\"",
     "get-sheets-data": "node _scripts/get-sheets-data.js",
-    "serve": "JEKYLL_ENV=development bundle exec jekyll serve"
+    "serve": "bundle exec jekyll serve"
   },
   "dependencies": {
     "date-fns": "^2.23.0",
