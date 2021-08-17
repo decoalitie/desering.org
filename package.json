@@ -13,6 +13,7 @@
     "date-fns": "^2.23.0",
     "event-target-shim": "^6.0.2",
     "googleapis": "^82.0.0",
+    "spotify-web-api-node": "^5.0.2",
     "yaml": "^1.10.2"
   },
   "devDependencies": {
