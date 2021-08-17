@@ -7,7 +7,7 @@
 - date: 2021-08-14
   fullyBooked: true
 - date: 2021-08-20
-  fullyBooked: false
+  fullyBooked: true
 - date: 2021-08-26
   fullyBooked: false
 - date: 2021-08-27
