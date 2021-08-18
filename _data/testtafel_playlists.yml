@@ -1,5 +1,61 @@
 - external_urls:
+    spotify: https://open.spotify.com/playlist/37OIHXYRvBtijmT5u0fpAe
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b2734aa8dd5a79b5ff9ffc782c91ab67616d0000b2736bf82de0f5116333cd586642ab67616d0000b27396bc7d5bd0b6488de76598abab67616d0000b2739c111e02e4ae7cc0d1caa91d
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b2734aa8dd5a79b5ff9ffc782c91ab67616d0000b2736bf82de0f5116333cd586642ab67616d0000b27396bc7d5bd0b6488de76598abab67616d0000b2739c111e02e4ae7cc0d1caa91d
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b2734aa8dd5a79b5ff9ffc782c91ab67616d0000b2736bf82de0f5116333cd586642ab67616d0000b27396bc7d5bd0b6488de76598abab67616d0000b2739c111e02e4ae7cc0d1caa91d
+      width: 60
+  name: "TestTafel #7"
+  tracks:
+    href: https://api.spotify.com/v1/playlists/37OIHXYRvBtijmT5u0fpAe/tracks
+    total: 57
+  uri: spotify:playlist:37OIHXYRvBtijmT5u0fpAe
+  newMusicArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/4idG41ELGGRKuiHLc3VLc5
+      id: 4idG41ELGGRKuiHLc3VLc5
+      name: Vanishing Twin
+      uri: spotify:artist:4idG41ELGGRKuiHLc3VLc5
+    - external_urls:
+        spotify: https://open.spotify.com/artist/2mVVjNmdjXZZDvhgQWiakk
+      id: 2mVVjNmdjXZZDvhgQWiakk
+      name: Khruangbin
+      uri: spotify:artist:2mVVjNmdjXZZDvhgQWiakk
+    - external_urls:
+        spotify: https://open.spotify.com/artist/59oA5WbbQvomJz2BuRG071
+      id: 59oA5WbbQvomJz2BuRG071
+      name: Jungle
+      uri: spotify:artist:59oA5WbbQvomJz2BuRG071
+  unpopularArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/0uQyVnX8XxnTxe3JEH33Gl
+      id: 0uQyVnX8XxnTxe3JEH33Gl
+      name: Arthhur
+      uri: spotify:artist:0uQyVnX8XxnTxe3JEH33Gl
+      popularity: 11
+    - external_urls:
+        spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
+      id: 3y4GCYSmf6KyCXUdfmX6aI
+      name: Brief Work
+      uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
+      popularity: 13
+- external_urls:
     spotify: https://open.spotify.com/playlist/16uOvUTQmIPM7UBe4C9Mmv
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b2732d477e33e6172f960783f6b0ab67616d0000b2739c2ccb85534d1b99ddc18e13ab67616d0000b273a82f49b9ff07dce9186fd27fab67616d0000b273bed66f2dd27217272ca4aa5f
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b2732d477e33e6172f960783f6b0ab67616d0000b2739c2ccb85534d1b99ddc18e13ab67616d0000b273a82f49b9ff07dce9186fd27fab67616d0000b273bed66f2dd27217272ca4aa5f
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b2732d477e33e6172f960783f6b0ab67616d0000b2739c2ccb85534d1b99ddc18e13ab67616d0000b273a82f49b9ff07dce9186fd27fab67616d0000b273bed66f2dd27217272ca4aa5f
+      width: 60
   name: "TestTafel #6"
   tracks:
     href: https://api.spotify.com/v1/playlists/16uOvUTQmIPM7UBe4C9Mmv/tracks
@@ -36,6 +92,16 @@
       popularity: 15
 - external_urls:
     spotify: https://open.spotify.com/playlist/3U3JFLNgfoededfhqRGC4G
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b2736bb2bdf7786f04e2dea8bd2fab67616d0000b2738b3693ad38e8aae122b49ea1ab67616d0000b273b9031c2e5ecf3abe9742750aab67616d0000b273c8178b9c2bd346b6d81c811b
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b2736bb2bdf7786f04e2dea8bd2fab67616d0000b2738b3693ad38e8aae122b49ea1ab67616d0000b273b9031c2e5ecf3abe9742750aab67616d0000b273c8178b9c2bd346b6d81c811b
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b2736bb2bdf7786f04e2dea8bd2fab67616d0000b2738b3693ad38e8aae122b49ea1ab67616d0000b273b9031c2e5ecf3abe9742750aab67616d0000b273c8178b9c2bd346b6d81c811b
+      width: 60
   name: "TestTafel #5"
   tracks:
     href: https://api.spotify.com/v1/playlists/3U3JFLNgfoededfhqRGC4G/tracks
@@ -72,6 +138,16 @@
       popularity: 2
 - external_urls:
     spotify: https://open.spotify.com/playlist/6rspKubI2IiJVfteKlQ5al
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b27312cae88350edd90906ef2609ab67616d0000b27343c6467b01944882824e1c50ab67616d0000b2736e28466a704a5e26f93f8260ab67616d0000b273f73ae09b808856ed2b72e442
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b27312cae88350edd90906ef2609ab67616d0000b27343c6467b01944882824e1c50ab67616d0000b2736e28466a704a5e26f93f8260ab67616d0000b273f73ae09b808856ed2b72e442
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b27312cae88350edd90906ef2609ab67616d0000b27343c6467b01944882824e1c50ab67616d0000b2736e28466a704a5e26f93f8260ab67616d0000b273f73ae09b808856ed2b72e442
+      width: 60
   name: "TestTafel #4"
   tracks:
     href: https://api.spotify.com/v1/playlists/6rspKubI2IiJVfteKlQ5al/tracks
@@ -108,6 +184,16 @@
       popularity: 15
 - external_urls:
     spotify: https://open.spotify.com/playlist/4ejWc0OTjYLhN8aZlNSKj8
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b27303779e10dc45b4dc78fb5302ab67616d0000b2733eb9520ac3418fa1f1d43f45ab67616d0000b273a37190d6faa151a638d6c3ceab67616d0000b273ef0bc7eb8d216781b042781b
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b27303779e10dc45b4dc78fb5302ab67616d0000b2733eb9520ac3418fa1f1d43f45ab67616d0000b273a37190d6faa151a638d6c3ceab67616d0000b273ef0bc7eb8d216781b042781b
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b27303779e10dc45b4dc78fb5302ab67616d0000b2733eb9520ac3418fa1f1d43f45ab67616d0000b273a37190d6faa151a638d6c3ceab67616d0000b273ef0bc7eb8d216781b042781b
+      width: 60
   name: "TestTafel #3"
   tracks:
     href: https://api.spotify.com/v1/playlists/4ejWc0OTjYLhN8aZlNSKj8/tracks
@@ -144,6 +230,16 @@
       popularity: 35
 - external_urls:
     spotify: https://open.spotify.com/playlist/7Arw5mPFniRtcw1XmGcdwl
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273bbd97562a9466a1883bc7229ab67616d0000b273d1920e7247e759a9e808802a
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273bbd97562a9466a1883bc7229ab67616d0000b273d1920e7247e759a9e808802a
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273bbd97562a9466a1883bc7229ab67616d0000b273d1920e7247e759a9e808802a
+      width: 60
   name: "TestTafel #2"
   tracks:
     href: https://api.spotify.com/v1/playlists/7Arw5mPFniRtcw1XmGcdwl/tracks
@@ -178,9 +274,19 @@
       id: 07GE1K6KDRuaX4XAtcTawV
       name: Saidêra
       uri: spotify:artist:07GE1K6KDRuaX4XAtcTawV
-      popularity: 18
+      popularity: 17
 - external_urls:
     spotify: https://open.spotify.com/playlist/1rISyS1ipslg42GLaJ4cZ7
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b273107d051e4c35ac3c8fe3470dab67616d0000b2733402d0e7f77d3e63a061baedab67616d0000b273a1f04dcc3c77d161956cb692ab67616d0000b273ebd26123e0c48c9531b9caeb
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b273107d051e4c35ac3c8fe3470dab67616d0000b2733402d0e7f77d3e63a061baedab67616d0000b273a1f04dcc3c77d161956cb692ab67616d0000b273ebd26123e0c48c9531b9caeb
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b273107d051e4c35ac3c8fe3470dab67616d0000b2733402d0e7f77d3e63a061baedab67616d0000b273a1f04dcc3c77d161956cb692ab67616d0000b273ebd26123e0c48c9531b9caeb
+      width: 60
   name: TestTafel
   tracks:
     href: https://api.spotify.com/v1/playlists/1rISyS1ipslg42GLaJ4cZ7/tracks
@@ -214,4 +320,4 @@
       id: 0QLkmmM8acu07MIT5GcSPT
       name: First Beige
       uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
-      popularity: 32
+      popularity: 33

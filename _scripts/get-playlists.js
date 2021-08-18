@@ -126,7 +126,7 @@ async function main() {
         allUnpopulairArtists.push(...unpopularArtists);
 
         return {
-            ...Object.fromEntries(Object.entries(playlist).filter(([key]) => ['external_urls', 'name', 'tracks', 'uri'].includes(key))),
+            ...Object.fromEntries(Object.entries(playlist).filter(([key]) => ['external_urls', 'name', 'tracks', 'uri', 'images'].includes(key))),
             newMusicArtists,
             unpopularArtists
         }
