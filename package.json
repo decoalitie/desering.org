@@ -7,12 +7,14 @@
     "build:js": "webpack build --mode production",
     "dev": "concurrently \"webpack watch --mode development\" \"JEKYLL_ENV=watch bundle exec jekyll serve\"",
     "get-sheets-data": "node _scripts/get-sheets-data.js",
+    "get-playlists": "node _scripts/get-playlists.js",
     "serve": "bundle exec jekyll serve"
   },
   "dependencies": {
     "date-fns": "^2.23.0",
     "event-target-shim": "^6.0.2",
     "googleapis": "^82.0.0",
+    "spotify-web-api-node": "^5.0.2",
     "yaml": "^1.10.2"
   },
   "devDependencies": {

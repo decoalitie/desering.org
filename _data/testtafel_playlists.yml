@@ -1,0 +1,231 @@
+- external_urls:
+    spotify: https://open.spotify.com/playlist/3U3JFLNgfoededfhqRGC4G
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b2736bb2bdf7786f04e2dea8bd2fab67616d0000b2738b3693ad38e8aae122b49ea1ab67616d0000b273b9031c2e5ecf3abe9742750aab67616d0000b273c8178b9c2bd346b6d81c811b
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b2736bb2bdf7786f04e2dea8bd2fab67616d0000b2738b3693ad38e8aae122b49ea1ab67616d0000b273b9031c2e5ecf3abe9742750aab67616d0000b273c8178b9c2bd346b6d81c811b
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b2736bb2bdf7786f04e2dea8bd2fab67616d0000b2738b3693ad38e8aae122b49ea1ab67616d0000b273b9031c2e5ecf3abe9742750aab67616d0000b273c8178b9c2bd346b6d81c811b
+      width: 60
+  name: "TestTafel #5"
+  tracks:
+    href: https://api.spotify.com/v1/playlists/3U3JFLNgfoededfhqRGC4G/tracks
+    total: 89
+  uri: spotify:playlist:3U3JFLNgfoededfhqRGC4G
+  newMusicArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/7eQZTqEMozBcuSubfu52i4
+      id: 7eQZTqEMozBcuSubfu52i4
+      name: The Knife
+      uri: spotify:artist:7eQZTqEMozBcuSubfu52i4
+    - external_urls:
+        spotify: https://open.spotify.com/artist/5d4kdwU7uEHb51W4JIV70e
+      id: 5d4kdwU7uEHb51W4JIV70e
+      name: LV
+      uri: spotify:artist:5d4kdwU7uEHb51W4JIV70e
+    - external_urls:
+        spotify: https://open.spotify.com/artist/0O98jlCaPzvsoei6U5jfEL
+      id: 0O98jlCaPzvsoei6U5jfEL
+      name: Damon Albarn
+      uri: spotify:artist:0O98jlCaPzvsoei6U5jfEL
+  unpopularArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/0O2yKE5Jyx5maooLz70DT3
+      id: 0O2yKE5Jyx5maooLz70DT3
+      name: Kawuku Sound
+      uri: spotify:artist:0O2yKE5Jyx5maooLz70DT3
+      popularity: 1
+    - external_urls:
+        spotify: https://open.spotify.com/artist/1Ptp4nbLolMX9RniidXbbn
+      id: 1Ptp4nbLolMX9RniidXbbn
+      name: Henry Keen
+      uri: spotify:artist:1Ptp4nbLolMX9RniidXbbn
+      popularity: 2
+- external_urls:
+    spotify: https://open.spotify.com/playlist/6rspKubI2IiJVfteKlQ5al
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b27312cae88350edd90906ef2609ab67616d0000b27343c6467b01944882824e1c50ab67616d0000b2736e28466a704a5e26f93f8260ab67616d0000b273f73ae09b808856ed2b72e442
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b27312cae88350edd90906ef2609ab67616d0000b27343c6467b01944882824e1c50ab67616d0000b2736e28466a704a5e26f93f8260ab67616d0000b273f73ae09b808856ed2b72e442
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b27312cae88350edd90906ef2609ab67616d0000b27343c6467b01944882824e1c50ab67616d0000b2736e28466a704a5e26f93f8260ab67616d0000b273f73ae09b808856ed2b72e442
+      width: 60
+  name: "TestTafel #4"
+  tracks:
+    href: https://api.spotify.com/v1/playlists/6rspKubI2IiJVfteKlQ5al/tracks
+    total: 65
+  uri: spotify:playlist:6rspKubI2IiJVfteKlQ5al
+  newMusicArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/5tuiLb6WvAwyKgLmicYS0l
+      id: 5tuiLb6WvAwyKgLmicYS0l
+      name: t-woc
+      uri: spotify:artist:5tuiLb6WvAwyKgLmicYS0l
+    - external_urls:
+        spotify: https://open.spotify.com/artist/2ARO60gI5do88ho6azmzab
+      id: 2ARO60gI5do88ho6azmzab
+      name: Django Django
+      uri: spotify:artist:2ARO60gI5do88ho6azmzab
+    - external_urls:
+        spotify: https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF
+      id: 4V8LLVI7PbaPR0K2TGSxFF
+      name: Tyler, The Creator
+      uri: spotify:artist:4V8LLVI7PbaPR0K2TGSxFF
+  unpopularArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/3Ww9kqkmNqA2Yb4X8HcIgw
+      id: 3Ww9kqkmNqA2Yb4X8HcIgw
+      name: Sorko
+      uri: spotify:artist:3Ww9kqkmNqA2Yb4X8HcIgw
+      popularity: 1
+    - external_urls:
+        spotify: https://open.spotify.com/artist/0A4gPcMJUMuH8wjgMl9Dij
+      id: 0A4gPcMJUMuH8wjgMl9Dij
+      name: Aleisha Lee
+      uri: spotify:artist:0A4gPcMJUMuH8wjgMl9Dij
+      popularity: 15
+- external_urls:
+    spotify: https://open.spotify.com/playlist/4ejWc0OTjYLhN8aZlNSKj8
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b27303779e10dc45b4dc78fb5302ab67616d0000b2733eb9520ac3418fa1f1d43f45ab67616d0000b273a37190d6faa151a638d6c3ceab67616d0000b273ef0bc7eb8d216781b042781b
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b27303779e10dc45b4dc78fb5302ab67616d0000b2733eb9520ac3418fa1f1d43f45ab67616d0000b273a37190d6faa151a638d6c3ceab67616d0000b273ef0bc7eb8d216781b042781b
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b27303779e10dc45b4dc78fb5302ab67616d0000b2733eb9520ac3418fa1f1d43f45ab67616d0000b273a37190d6faa151a638d6c3ceab67616d0000b273ef0bc7eb8d216781b042781b
+      width: 60
+  name: "TestTafel #3"
+  tracks:
+    href: https://api.spotify.com/v1/playlists/4ejWc0OTjYLhN8aZlNSKj8/tracks
+    total: 39
+  uri: spotify:playlist:4ejWc0OTjYLhN8aZlNSKj8
+  newMusicArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/0rH93aHDYyJfMAcPB9OKus
+      id: 0rH93aHDYyJfMAcPB9OKus
+      name: The Murlocs
+      uri: spotify:artist:0rH93aHDYyJfMAcPB9OKus
+    - external_urls:
+        spotify: https://open.spotify.com/artist/7rlAAAiWScpsT1hmgURAmh
+      id: 7rlAAAiWScpsT1hmgURAmh
+      name: Spellling
+      uri: spotify:artist:7rlAAAiWScpsT1hmgURAmh
+    - external_urls:
+        spotify: https://open.spotify.com/artist/77KRcsLbRizUbGjctloC8a
+      id: 77KRcsLbRizUbGjctloC8a
+      name: Janette King
+      uri: spotify:artist:77KRcsLbRizUbGjctloC8a
+  unpopularArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/6uYq0k8pis5LPGzdFRM5FJ
+      id: 6uYq0k8pis5LPGzdFRM5FJ
+      name: Huw Marc Bennett
+      uri: spotify:artist:6uYq0k8pis5LPGzdFRM5FJ
+      popularity: 24
+    - external_urls:
+        spotify: https://open.spotify.com/artist/4zMgFVljBxMaPn1U0SXGOh
+      id: 4zMgFVljBxMaPn1U0SXGOh
+      name: Charles Webster
+      uri: spotify:artist:4zMgFVljBxMaPn1U0SXGOh
+      popularity: 35
+- external_urls:
+    spotify: https://open.spotify.com/playlist/7Arw5mPFniRtcw1XmGcdwl
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273bbd97562a9466a1883bc7229ab67616d0000b273d1920e7247e759a9e808802a
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273bbd97562a9466a1883bc7229ab67616d0000b273d1920e7247e759a9e808802a
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273bbd97562a9466a1883bc7229ab67616d0000b273d1920e7247e759a9e808802a
+      width: 60
+  name: "TestTafel #2"
+  tracks:
+    href: https://api.spotify.com/v1/playlists/7Arw5mPFniRtcw1XmGcdwl/tracks
+    total: 63
+  uri: spotify:playlist:7Arw5mPFniRtcw1XmGcdwl
+  newMusicArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/2UXhlYaVdXWvO950p0wwrU
+      id: 2UXhlYaVdXWvO950p0wwrU
+      name: Brian Jackson
+      uri: spotify:artist:2UXhlYaVdXWvO950p0wwrU
+    - external_urls:
+        spotify: https://open.spotify.com/artist/319DsabKI98EHLP96jq7oo
+      id: 319DsabKI98EHLP96jq7oo
+      name: Bev Lee Harling
+      uri: spotify:artist:319DsabKI98EHLP96jq7oo
+  unpopularArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/5nyhiWT6YJBpWb8rfSHAsx
+      id: 5nyhiWT6YJBpWb8rfSHAsx
+      name: Cru Drums
+      uri: spotify:artist:5nyhiWT6YJBpWb8rfSHAsx
+      popularity: 5
+    - external_urls:
+        spotify: https://open.spotify.com/artist/2n1NhC6PKP4WpUNXFeKzjY
+      id: 2n1NhC6PKP4WpUNXFeKzjY
+      name: JD73
+      uri: spotify:artist:2n1NhC6PKP4WpUNXFeKzjY
+      popularity: 17
+    - external_urls:
+        spotify: https://open.spotify.com/artist/07GE1K6KDRuaX4XAtcTawV
+      id: 07GE1K6KDRuaX4XAtcTawV
+      name: Saidêra
+      uri: spotify:artist:07GE1K6KDRuaX4XAtcTawV
+      popularity: 17
+- external_urls:
+    spotify: https://open.spotify.com/playlist/1rISyS1ipslg42GLaJ4cZ7
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b273107d051e4c35ac3c8fe3470dab67616d0000b2733402d0e7f77d3e63a061baedab67616d0000b273a1f04dcc3c77d161956cb692ab67616d0000b273ebd26123e0c48c9531b9caeb
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b273107d051e4c35ac3c8fe3470dab67616d0000b2733402d0e7f77d3e63a061baedab67616d0000b273a1f04dcc3c77d161956cb692ab67616d0000b273ebd26123e0c48c9531b9caeb
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b273107d051e4c35ac3c8fe3470dab67616d0000b2733402d0e7f77d3e63a061baedab67616d0000b273a1f04dcc3c77d161956cb692ab67616d0000b273ebd26123e0c48c9531b9caeb
+      width: 60
+  name: TestTafel
+  tracks:
+    href: https://api.spotify.com/v1/playlists/1rISyS1ipslg42GLaJ4cZ7/tracks
+    total: 60
+  uri: spotify:playlist:1rISyS1ipslg42GLaJ4cZ7
+  newMusicArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/6XYvaoDGE0VmRt83Jss9Sn
+      id: 6XYvaoDGE0VmRt83Jss9Sn
+      name: King Gizzard & The Lizard Wizard
+      uri: spotify:artist:6XYvaoDGE0VmRt83Jss9Sn
+    - external_urls:
+        spotify: https://open.spotify.com/artist/5nyhiWT6YJBpWb8rfSHAsx
+      id: 5nyhiWT6YJBpWb8rfSHAsx
+      name: Cru Drums
+      uri: spotify:artist:5nyhiWT6YJBpWb8rfSHAsx
+    - external_urls:
+        spotify: https://open.spotify.com/artist/0a5lsotyiCdV0xmceU44oN
+      id: 0a5lsotyiCdV0xmceU44oN
+      name: Rebecca Vasmant
+      uri: spotify:artist:0a5lsotyiCdV0xmceU44oN
+  unpopularArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/255ZPAkvfPjmKwPj4mC48B
+      id: 255ZPAkvfPjmKwPj4mC48B
+      name: Shishani
+      uri: spotify:artist:255ZPAkvfPjmKwPj4mC48B
+      popularity: 24
+    - external_urls:
+        spotify: https://open.spotify.com/artist/0QLkmmM8acu07MIT5GcSPT
+      id: 0QLkmmM8acu07MIT5GcSPT
+      name: First Beige
+      uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
+      popularity: 33
