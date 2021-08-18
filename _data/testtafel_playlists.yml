@@ -1,4 +1,96 @@
 - external_urls:
+    spotify: https://open.spotify.com/playlist/37OIHXYRvBtijmT5u0fpAe
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b2734aa8dd5a79b5ff9ffc782c91ab67616d0000b2736bf82de0f5116333cd586642ab67616d0000b27396bc7d5bd0b6488de76598abab67616d0000b2739c111e02e4ae7cc0d1caa91d
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b2734aa8dd5a79b5ff9ffc782c91ab67616d0000b2736bf82de0f5116333cd586642ab67616d0000b27396bc7d5bd0b6488de76598abab67616d0000b2739c111e02e4ae7cc0d1caa91d
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b2734aa8dd5a79b5ff9ffc782c91ab67616d0000b2736bf82de0f5116333cd586642ab67616d0000b27396bc7d5bd0b6488de76598abab67616d0000b2739c111e02e4ae7cc0d1caa91d
+      width: 60
+  name: "TestTafel #7"
+  tracks:
+    href: https://api.spotify.com/v1/playlists/37OIHXYRvBtijmT5u0fpAe/tracks
+    total: 57
+  uri: spotify:playlist:37OIHXYRvBtijmT5u0fpAe
+  newMusicArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/4idG41ELGGRKuiHLc3VLc5
+      id: 4idG41ELGGRKuiHLc3VLc5
+      name: Vanishing Twin
+      uri: spotify:artist:4idG41ELGGRKuiHLc3VLc5
+    - external_urls:
+        spotify: https://open.spotify.com/artist/2mVVjNmdjXZZDvhgQWiakk
+      id: 2mVVjNmdjXZZDvhgQWiakk
+      name: Khruangbin
+      uri: spotify:artist:2mVVjNmdjXZZDvhgQWiakk
+    - external_urls:
+        spotify: https://open.spotify.com/artist/59oA5WbbQvomJz2BuRG071
+      id: 59oA5WbbQvomJz2BuRG071
+      name: Jungle
+      uri: spotify:artist:59oA5WbbQvomJz2BuRG071
+  unpopularArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/0uQyVnX8XxnTxe3JEH33Gl
+      id: 0uQyVnX8XxnTxe3JEH33Gl
+      name: Arthhur
+      uri: spotify:artist:0uQyVnX8XxnTxe3JEH33Gl
+      popularity: 11
+    - external_urls:
+        spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
+      id: 3y4GCYSmf6KyCXUdfmX6aI
+      name: Brief Work
+      uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
+      popularity: 13
+- external_urls:
+    spotify: https://open.spotify.com/playlist/16uOvUTQmIPM7UBe4C9Mmv
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b2732d477e33e6172f960783f6b0ab67616d0000b2739c2ccb85534d1b99ddc18e13ab67616d0000b273a82f49b9ff07dce9186fd27fab67616d0000b273bed66f2dd27217272ca4aa5f
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b2732d477e33e6172f960783f6b0ab67616d0000b2739c2ccb85534d1b99ddc18e13ab67616d0000b273a82f49b9ff07dce9186fd27fab67616d0000b273bed66f2dd27217272ca4aa5f
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b2732d477e33e6172f960783f6b0ab67616d0000b2739c2ccb85534d1b99ddc18e13ab67616d0000b273a82f49b9ff07dce9186fd27fab67616d0000b273bed66f2dd27217272ca4aa5f
+      width: 60
+  name: "TestTafel #6"
+  tracks:
+    href: https://api.spotify.com/v1/playlists/16uOvUTQmIPM7UBe4C9Mmv/tracks
+    total: 57
+  uri: spotify:playlist:16uOvUTQmIPM7UBe4C9Mmv
+  newMusicArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/12Av6pjGrpX0wfTTyXNsyP
+      id: 12Av6pjGrpX0wfTTyXNsyP
+      name: Dos Santos
+      uri: spotify:artist:12Av6pjGrpX0wfTTyXNsyP
+    - external_urls:
+        spotify: https://open.spotify.com/artist/1LeVJ5GPeYDOVUjxx1y7Rp
+      id: 1LeVJ5GPeYDOVUjxx1y7Rp
+      name: Unknown Mortal Orchestra
+      uri: spotify:artist:1LeVJ5GPeYDOVUjxx1y7Rp
+    - external_urls:
+        spotify: https://open.spotify.com/artist/2StcyX3fmelae5agBHIkDO
+      id: 2StcyX3fmelae5agBHIkDO
+      name: Jungle by Night
+      uri: spotify:artist:2StcyX3fmelae5agBHIkDO
+  unpopularArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/1izAFKIapgqtHzOr4Nk73u
+      id: 1izAFKIapgqtHzOr4Nk73u
+      name: Outfit
+      uri: spotify:artist:1izAFKIapgqtHzOr4Nk73u
+      popularity: 13
+    - external_urls:
+        spotify: https://open.spotify.com/artist/4dYBbLeGUezDO9EdsqCan2
+      id: 4dYBbLeGUezDO9EdsqCan2
+      name: Kenji Omura
+      uri: spotify:artist:4dYBbLeGUezDO9EdsqCan2
+      popularity: 15
+- external_urls:
     spotify: https://open.spotify.com/playlist/3U3JFLNgfoededfhqRGC4G
   images:
     - height: 640
