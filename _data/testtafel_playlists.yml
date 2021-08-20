@@ -1,4 +1,50 @@
 - external_urls:
+    spotify: https://open.spotify.com/playlist/6Y4CziMlnWkxtiMSGxz1Al
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b2733f494abf52947c16112066a2ab67616d0000b273688d7c9f6677da31e3e2b8eaab67616d0000b273bf6ddcf90fd44eb34f009ec4ab67616d0000b273cc7a0a6a1f37eabbc45b7938
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b2733f494abf52947c16112066a2ab67616d0000b273688d7c9f6677da31e3e2b8eaab67616d0000b273bf6ddcf90fd44eb34f009ec4ab67616d0000b273cc7a0a6a1f37eabbc45b7938
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b2733f494abf52947c16112066a2ab67616d0000b273688d7c9f6677da31e3e2b8eaab67616d0000b273bf6ddcf90fd44eb34f009ec4ab67616d0000b273cc7a0a6a1f37eabbc45b7938
+      width: 60
+  name: "TestTafel #8"
+  tracks:
+    href: https://api.spotify.com/v1/playlists/6Y4CziMlnWkxtiMSGxz1Al/tracks
+    total: 57
+  uri: spotify:playlist:6Y4CziMlnWkxtiMSGxz1Al
+  newMusicArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/0AIim12jO78DuyyUYbHfAe
+      id: 0AIim12jO78DuyyUYbHfAe
+      name: Shire T
+      uri: spotify:artist:0AIim12jO78DuyyUYbHfAe
+    - external_urls:
+        spotify: https://open.spotify.com/artist/23NIwARd4vPbxt3wwNnJ6k
+      id: 23NIwARd4vPbxt3wwNnJ6k
+      name: Parquet Courts
+      uri: spotify:artist:23NIwARd4vPbxt3wwNnJ6k
+    - external_urls:
+        spotify: https://open.spotify.com/artist/1WvvwcQx0tj6NdDhZZ2zZz
+      id: 1WvvwcQx0tj6NdDhZZ2zZz
+      name: Future Islands
+      uri: spotify:artist:1WvvwcQx0tj6NdDhZZ2zZz
+  unpopularArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/32IztneRaGHmiRgNki4Mls
+      id: 32IztneRaGHmiRgNki4Mls
+      name: Dominick
+      uri: spotify:artist:32IztneRaGHmiRgNki4Mls
+      popularity: 2
+    - external_urls:
+        spotify: https://open.spotify.com/artist/4vhCl6MBQvO7FZn1SScoNY
+      id: 4vhCl6MBQvO7FZn1SScoNY
+      name: Conjunto Papa Upa
+      uri: spotify:artist:4vhCl6MBQvO7FZn1SScoNY
+      popularity: 5
+- external_urls:
     spotify: https://open.spotify.com/playlist/37OIHXYRvBtijmT5u0fpAe
   images:
     - height: 640
@@ -221,7 +267,7 @@
       id: 6uYq0k8pis5LPGzdFRM5FJ
       name: Huw Marc Bennett
       uri: spotify:artist:6uYq0k8pis5LPGzdFRM5FJ
-      popularity: 24
+      popularity: 23
     - external_urls:
         spotify: https://open.spotify.com/artist/4zMgFVljBxMaPn1U0SXGOh
       id: 4zMgFVljBxMaPn1U0SXGOh
