@@ -31,7 +31,9 @@ permalink: :path/:basename
 
           {% assign special = site.data["testtafel-specials"][event.date] %}
 
-          <option value="{{ event.date }}"{% if special %} data-special="{{ special.name }}" data-special-description="{{ special.description.en }}"{% endif %}{% if event.fullyBooked %} data-fully-booked data-tag="fully booked" {% else %} data-allow-default{% endif %}>
+          <option value="{{ event.date }}" {% if special %} data-special="{{ special.name }}"
+            data-special-description="{{ special.description.en }}" {% endif %}{% if event.fullyBooked %}
+            data-fully-booked data-tag="fully booked" {% else %} data-allow-default{% endif %}>
             {{ event.date | date: "%A, %B %e" }}
           </option>
           {% endif %}
@@ -57,6 +59,16 @@ permalink: :path/:basename
           will message you if others cancel and a spot becomes available.
         </p>
       </template>
+
+      <fieldset class="align-left">
+        <legend class="form-step-header">Opening time</legend>
+        <p>
+          TestTafel opens at 19:00. We kindly ask you to arrive <strong>between 19:00 and 19:15</strong>.
+          If you really cannot make that time, please get in touch with us at <a
+            href="mailto:testtafel@desering.org">testtafel@desering.org</a> after you book a reservation to discuss
+          alternative starting times.
+        </p>
+      </fieldset>
 
       <label class="form-step-header" for="input-reservation-name">
         Under which name would you like to place a reservation?
@@ -94,6 +106,8 @@ permalink: :path/:basename
 
       <div data-field-feedback-for="table"></div>
 
+      <!-- the start time is fixed to 19:00. hide the input -->
+      <!--
       <template data-template-id="shared-table-start-time">
         <p class="warning">
           Please arrive between 19:00 and 19:15
@@ -111,6 +125,8 @@ permalink: :path/:basename
           </select>
         </fieldset>
       </template>
+      -->
+      <input type="hidden" name="start-time" value="19:00" />
 
       <div data-field-feedback-for="start-time"></div>
 

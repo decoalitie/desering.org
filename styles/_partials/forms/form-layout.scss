@@ -11,6 +11,10 @@ form {
     hyphens: none;
   }
 
+  .align-left p {
+    text-align: left;
+  }
+
   .field-error {
     color: var(--red);
     padding: 0.5rem;

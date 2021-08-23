@@ -7,8 +7,9 @@ const reservationForm = document.querySelector("#reservation-form");
 let fields, startTimeInput;
 
 function main() {
+  // disabled because start time is fixed to 19:00
   // render the start-time-input template (not visible) to make sure the field is initialized
-  startTimeInput = getTemplateRender('start-time-input');
+  // startTimeInput = getTemplateRender('start-time-input');
 
   // remove dates in past
   for (const dateOption of reservationForm.elements.date.querySelectorAll('option')) {
@@ -43,7 +44,7 @@ function main() {
   }
 
   watchFields('date', handleDateChange);
-  watchFields('table', handleTableChange);
+  watchFields('table', handleTableChange); 
   watchFields('reservation-amount', handleReservationAmountChange);
   watchFields(['vegan-amount', 'vegetarian-amount'], handleDietCountsChange, false);
   watchFields('test-amount', handleTestAmountChange, false);
@@ -93,7 +94,7 @@ function handleReservationAmountChange() {
 
   if (!sufficient) {
     fields.table.value = "shared";
-    handleTableChange();
+    handleTableChange(); 
   }
   fields.table.disabled = !sufficient;
 
@@ -109,7 +110,10 @@ function handleTestAmountChange() {
   updateAmountInputs(["test-amount"], "notest-amount");
 }
 
+
 function handleTableChange() {
+  // start time fixed to 19:00 -- no longer necessary
+  /* 
   const sharedTableSelected = fields.table.value === "shared";
   getTemplateRender('start-time-input').visible = !sharedTableSelected;
   getTemplateRender('shared-table-start-time').visible = sharedTableSelected;
@@ -117,6 +121,7 @@ function handleTableChange() {
   if (sharedTableSelected) {
     fields["start-time"].value = SHARED_TABLE_START_TIME;
   }
+  */
 }
 
 function updateAmountInputs(inputFields, remainderField) {
