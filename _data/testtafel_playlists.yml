@@ -1,4 +1,50 @@
 - external_urls:
+    spotify: https://open.spotify.com/playlist/3wL7yQoGyIGKS7cDRs3lHs
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b2735379bf5f70b87f736f20a9a0ab67616d0000b273570aed60108d1f3494f99e23ab67616d0000b2739b4a37473d016fe17e665435ab67616d0000b273fb834001d277a6afcfe1c51f
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b2735379bf5f70b87f736f20a9a0ab67616d0000b273570aed60108d1f3494f99e23ab67616d0000b2739b4a37473d016fe17e665435ab67616d0000b273fb834001d277a6afcfe1c51f
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b2735379bf5f70b87f736f20a9a0ab67616d0000b273570aed60108d1f3494f99e23ab67616d0000b2739b4a37473d016fe17e665435ab67616d0000b273fb834001d277a6afcfe1c51f
+      width: 60
+  name: "TestTafel #9 (Cocktail Night)"
+  tracks:
+    href: https://api.spotify.com/v1/playlists/3wL7yQoGyIGKS7cDRs3lHs/tracks
+    total: 74
+  uri: spotify:playlist:3wL7yQoGyIGKS7cDRs3lHs
+  newMusicArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/0yNLKJebCb8Aueb54LYya3
+      id: 0yNLKJebCb8Aueb54LYya3
+      name: New Order
+      uri: spotify:artist:0yNLKJebCb8Aueb54LYya3
+    - external_urls:
+        spotify: https://open.spotify.com/artist/3AA28KZvwAUcZuOKwyblJQ
+      id: 3AA28KZvwAUcZuOKwyblJQ
+      name: Gorillaz
+      uri: spotify:artist:3AA28KZvwAUcZuOKwyblJQ
+    - external_urls:
+        spotify: https://open.spotify.com/artist/2ARO60gI5do88ho6azmzab
+      id: 2ARO60gI5do88ho6azmzab
+      name: Django Django
+      uri: spotify:artist:2ARO60gI5do88ho6azmzab
+  unpopularArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/0054Ye49KrJfOOETeTdRog
+      id: 0054Ye49KrJfOOETeTdRog
+      name: Chris McGregor's Brotherhood Of Breath
+      uri: spotify:artist:0054Ye49KrJfOOETeTdRog
+      popularity: 19
+    - external_urls:
+        spotify: https://open.spotify.com/artist/6ERzNHT215iUO0kYb2Zdyw
+      id: 6ERzNHT215iUO0kYb2Zdyw
+      name: Lay-Far
+      uri: spotify:artist:6ERzNHT215iUO0kYb2Zdyw
+      popularity: 21
+- external_urls:
     spotify: https://open.spotify.com/playlist/6Y4CziMlnWkxtiMSGxz1Al
   images:
     - height: 640
@@ -85,11 +131,11 @@
       uri: spotify:artist:0uQyVnX8XxnTxe3JEH33Gl
       popularity: 11
     - external_urls:
-        spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
-      id: 3y4GCYSmf6KyCXUdfmX6aI
-      name: Brief Work
-      uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
-      popularity: 13
+        spotify: https://open.spotify.com/artist/34MeiToHgg61sYGqDs1GqF
+      id: 34MeiToHgg61sYGqDs1GqF
+      name: Michael Ozone
+      uri: spotify:artist:34MeiToHgg61sYGqDs1GqF
+      popularity: 14
 - external_urls:
     spotify: https://open.spotify.com/playlist/16uOvUTQmIPM7UBe4C9Mmv
   images:
@@ -308,7 +354,7 @@
       id: 5nyhiWT6YJBpWb8rfSHAsx
       name: Cru Drums
       uri: spotify:artist:5nyhiWT6YJBpWb8rfSHAsx
-      popularity: 5
+      popularity: 4
     - external_urls:
         spotify: https://open.spotify.com/artist/2n1NhC6PKP4WpUNXFeKzjY
       id: 2n1NhC6PKP4WpUNXFeKzjY
