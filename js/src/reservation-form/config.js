@@ -1,5 +1,5 @@
 export const ENDPOINT =
-"https://script.google.com/macros/s/AKfycbwRaWuTNOYHVY57WfX6NjPka6J73INEYqcIFc0U3xhLSLs1YNDuALJMbKIseRJeZNe1/exec";
+"https://script.google.com/macros/s/AKfycbwrr4tFxh8-j6lyJg8WpqU1c78Gv6secQiG5APhAHZx7tA0raI5P7ZM81F3R0grTAd_/exec";
 
 export const MIN_PEOPLE_OWN_TABLE = 5;
 export const SHARED_TABLE_START_TIME = "19:00";
