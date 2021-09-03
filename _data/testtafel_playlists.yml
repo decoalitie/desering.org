@@ -33,17 +33,17 @@
       uri: spotify:artist:2ARO60gI5do88ho6azmzab
   unpopularArtists:
     - external_urls:
-        spotify: https://open.spotify.com/artist/0054Ye49KrJfOOETeTdRog
-      id: 0054Ye49KrJfOOETeTdRog
-      name: Chris McGregor's Brotherhood Of Breath
-      uri: spotify:artist:0054Ye49KrJfOOETeTdRog
-      popularity: 19
-    - external_urls:
         spotify: https://open.spotify.com/artist/6ERzNHT215iUO0kYb2Zdyw
       id: 6ERzNHT215iUO0kYb2Zdyw
       name: Lay-Far
       uri: spotify:artist:6ERzNHT215iUO0kYb2Zdyw
       popularity: 21
+    - external_urls:
+        spotify: https://open.spotify.com/artist/2805s9LKfRvmaFi6eK6L0f
+      id: 2805s9LKfRvmaFi6eK6L0f
+      name: Luiz Gabriel Lopes
+      uri: spotify:artist:2805s9LKfRvmaFi6eK6L0f
+      popularity: 26
 - external_urls:
     spotify: https://open.spotify.com/playlist/6Y4CziMlnWkxtiMSGxz1Al
   images:
@@ -89,7 +89,7 @@
       id: 4vhCl6MBQvO7FZn1SScoNY
       name: Conjunto Papa Upa
       uri: spotify:artist:4vhCl6MBQvO7FZn1SScoNY
-      popularity: 5
+      popularity: 6
 - external_urls:
     spotify: https://open.spotify.com/playlist/37OIHXYRvBtijmT5u0fpAe
   images:
