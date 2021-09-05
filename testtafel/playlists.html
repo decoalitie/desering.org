@@ -35,9 +35,15 @@ permalink: :path/:basename
           <div class="playlist">
             <div class="thumbnail">
               <a {{ playlist_anchor_attributes }}>
-                {% assign fallback_image = images | first %}
-                <img src="{{ fallback_image.url }}" alt="Thumbnail image for {{ playlist.name }}"
-                  srcset="{% for image in playlist.images %}{{ image.url }} {{ image.width }}w{% if forloop.rindex0 > 0 %}, {% endif %}{% endfor %}" />
+                {% assign fallback_image = playlist.images | first %}
+                {% assign images_with_dimensions = playlist.images | where: "width" %}
+                {% assign num_images_with_dimensions = images_with_dimensions | size %}
+                <img 
+                  src="{{ fallback_image.url }}" 
+                  alt="Thumbnail image for {{ playlist.name }}"
+                  {% if num_images_with_dimensions > 0 -%}
+                  srcset="{% for image in images_with_dimensions %}{{ image.url }} {{ image.width }}w{% if forloop.rindex0 > 0 %}, {% endif %}{% endfor %}" />
+                  {%- endif %}
               </a>
             </div>
             {% capture playlist_head %}
