@@ -39,9 +39,7 @@ permalink: :path/:basename
                 {% assign num_images_with_dimensions = images_with_dimensions | size %}
                 <img src="{{ fallback_image.url }}" 
                   alt="Thumbnail image for {{ playlist.name }}"
-                  {% if num_images_with_dimensions > 0 -%}
-                  srcset="{% for image in images_with_dimensions %}{{ image.url }} {{ image.width }}w{% if forloop.rindex0 > 0 %}, {% endif %}{% endfor %}"
-                  {%- endif %}
+                  {% if num_images_with_dimensions > 0 -%}srcset="{% for image in images_with_dimensions %}{{ image.url }} {{ image.width }}w{% if forloop.rindex0 > 0 %}, {% endif %}{% endfor %}"{%- endif %}
                   />
               </a>
             </div>
