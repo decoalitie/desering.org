@@ -45,13 +45,13 @@
     spotify: https://open.spotify.com/playlist/3wL7yQoGyIGKS7cDRs3lHs
   images:
     - height: 640
-      url: https://mosaic.scdn.co/640/ab67616d0000b2735379bf5f70b87f736f20a9a0ab67616d0000b273570aed60108d1f3494f99e23ab67616d0000b2739b4a37473d016fe17e665435ab67616d0000b273fb834001d277a6afcfe1c51f
+      url: https://mosaic.scdn.co/640/ab67616d0000b2735379bf5f70b87f736f20a9a0ab67616d0000b273570aed60108d1f3494f99e23ab67616d0000b2739b4a37473d016fe17e665435ab67616d0000b273a1eb647e636834df911ec886
       width: 640
     - height: 300
-      url: https://mosaic.scdn.co/300/ab67616d0000b2735379bf5f70b87f736f20a9a0ab67616d0000b273570aed60108d1f3494f99e23ab67616d0000b2739b4a37473d016fe17e665435ab67616d0000b273fb834001d277a6afcfe1c51f
+      url: https://mosaic.scdn.co/300/ab67616d0000b2735379bf5f70b87f736f20a9a0ab67616d0000b273570aed60108d1f3494f99e23ab67616d0000b2739b4a37473d016fe17e665435ab67616d0000b273a1eb647e636834df911ec886
       width: 300
     - height: 60
-      url: https://mosaic.scdn.co/60/ab67616d0000b2735379bf5f70b87f736f20a9a0ab67616d0000b273570aed60108d1f3494f99e23ab67616d0000b2739b4a37473d016fe17e665435ab67616d0000b273fb834001d277a6afcfe1c51f
+      url: https://mosaic.scdn.co/60/ab67616d0000b2735379bf5f70b87f736f20a9a0ab67616d0000b273570aed60108d1f3494f99e23ab67616d0000b2739b4a37473d016fe17e665435ab67616d0000b273a1eb647e636834df911ec886
       width: 60
   name: "TestTafel #9 (Cocktail Night)"
   tracks:
@@ -178,7 +178,7 @@
       id: 0uQyVnX8XxnTxe3JEH33Gl
       name: Arthhur
       uri: spotify:artist:0uQyVnX8XxnTxe3JEH33Gl
-      popularity: 11
+      popularity: 10
 - external_urls:
     spotify: https://open.spotify.com/playlist/16uOvUTQmIPM7UBe4C9Mmv
   images:
@@ -229,13 +229,13 @@
     spotify: https://open.spotify.com/playlist/3U3JFLNgfoededfhqRGC4G
   images:
     - height: 640
-      url: https://mosaic.scdn.co/640/ab67616d0000b2736bb2bdf7786f04e2dea8bd2fab67616d0000b2738b3693ad38e8aae122b49ea1ab67616d0000b273b9031c2e5ecf3abe9742750aab67616d0000b273c8178b9c2bd346b6d81c811b
+      url: https://mosaic.scdn.co/640/ab67616d0000b27334b2eb96623aff3f296bbb35ab67616d0000b2736bb2bdf7786f04e2dea8bd2fab67616d0000b2738b3693ad38e8aae122b49ea1ab67616d0000b273b9031c2e5ecf3abe9742750a
       width: 640
     - height: 300
-      url: https://mosaic.scdn.co/300/ab67616d0000b2736bb2bdf7786f04e2dea8bd2fab67616d0000b2738b3693ad38e8aae122b49ea1ab67616d0000b273b9031c2e5ecf3abe9742750aab67616d0000b273c8178b9c2bd346b6d81c811b
+      url: https://mosaic.scdn.co/300/ab67616d0000b27334b2eb96623aff3f296bbb35ab67616d0000b2736bb2bdf7786f04e2dea8bd2fab67616d0000b2738b3693ad38e8aae122b49ea1ab67616d0000b273b9031c2e5ecf3abe9742750a
       width: 300
     - height: 60
-      url: https://mosaic.scdn.co/60/ab67616d0000b2736bb2bdf7786f04e2dea8bd2fab67616d0000b2738b3693ad38e8aae122b49ea1ab67616d0000b273b9031c2e5ecf3abe9742750aab67616d0000b273c8178b9c2bd346b6d81c811b
+      url: https://mosaic.scdn.co/60/ab67616d0000b27334b2eb96623aff3f296bbb35ab67616d0000b2736bb2bdf7786f04e2dea8bd2fab67616d0000b2738b3693ad38e8aae122b49ea1ab67616d0000b273b9031c2e5ecf3abe9742750a
       width: 60
   name: "TestTafel #5"
   tracks:
@@ -321,13 +321,13 @@
     spotify: https://open.spotify.com/playlist/4ejWc0OTjYLhN8aZlNSKj8
   images:
     - height: 640
-      url: https://mosaic.scdn.co/640/ab67616d0000b27303779e10dc45b4dc78fb5302ab67616d0000b2733eb9520ac3418fa1f1d43f45ab67616d0000b273a37190d6faa151a638d6c3ceab67616d0000b273ef0bc7eb8d216781b042781b
+      url: https://mosaic.scdn.co/640/ab67616d0000b27303779e10dc45b4dc78fb5302ab67616d0000b2732a0dbc2e0ddf29a6ab9c5347ab67616d0000b273a37190d6faa151a638d6c3ceab67616d0000b273ef0bc7eb8d216781b042781b
       width: 640
     - height: 300
-      url: https://mosaic.scdn.co/300/ab67616d0000b27303779e10dc45b4dc78fb5302ab67616d0000b2733eb9520ac3418fa1f1d43f45ab67616d0000b273a37190d6faa151a638d6c3ceab67616d0000b273ef0bc7eb8d216781b042781b
+      url: https://mosaic.scdn.co/300/ab67616d0000b27303779e10dc45b4dc78fb5302ab67616d0000b2732a0dbc2e0ddf29a6ab9c5347ab67616d0000b273a37190d6faa151a638d6c3ceab67616d0000b273ef0bc7eb8d216781b042781b
       width: 300
     - height: 60
-      url: https://mosaic.scdn.co/60/ab67616d0000b27303779e10dc45b4dc78fb5302ab67616d0000b2733eb9520ac3418fa1f1d43f45ab67616d0000b273a37190d6faa151a638d6c3ceab67616d0000b273ef0bc7eb8d216781b042781b
+      url: https://mosaic.scdn.co/60/ab67616d0000b27303779e10dc45b4dc78fb5302ab67616d0000b2732a0dbc2e0ddf29a6ab9c5347ab67616d0000b273a37190d6faa151a638d6c3ceab67616d0000b273ef0bc7eb8d216781b042781b
       width: 60
   name: "TestTafel #3"
   tracks:
@@ -397,13 +397,13 @@
       id: 5nyhiWT6YJBpWb8rfSHAsx
       name: Cru Drums
       uri: spotify:artist:5nyhiWT6YJBpWb8rfSHAsx
-      popularity: 4
+      popularity: 3
     - external_urls:
         spotify: https://open.spotify.com/artist/07GE1K6KDRuaX4XAtcTawV
       id: 07GE1K6KDRuaX4XAtcTawV
       name: Saidêra
       uri: spotify:artist:07GE1K6KDRuaX4XAtcTawV
-      popularity: 17
+      popularity: 16
     - external_urls:
         spotify: https://open.spotify.com/artist/0QLkmmM8acu07MIT5GcSPT
       id: 0QLkmmM8acu07MIT5GcSPT
