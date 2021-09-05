@@ -28,8 +28,7 @@ permalink: :path/:basename
     <div>
       <ol>
         {% for playlist in site.data.testtafel_playlists %}
-        {% capture playlist_anchor_attributes %}href="{{ playlist.external_urls.spotify }}" target="_blank"{% endcapture
-        %}
+        {% capture playlist_anchor_attributes %}href="{{ playlist.external_urls.spotify }}" target="_blank"{% endcapture %}
 
         <li>
           <div class="playlist">
@@ -38,12 +37,12 @@ permalink: :path/:basename
                 {% assign fallback_image = playlist.images | first %}
                 {% assign images_with_dimensions = playlist.images | where: "width" %}
                 {% assign num_images_with_dimensions = images_with_dimensions | size %}
-                <img 
-                  src="{{ fallback_image.url }}" 
+                <img src="{{ fallback_image.url }}" 
                   alt="Thumbnail image for {{ playlist.name }}"
                   {% if num_images_with_dimensions > 0 -%}
-                  srcset="{% for image in images_with_dimensions %}{{ image.url }} {{ image.width }}w{% if forloop.rindex0 > 0 %}, {% endif %}{% endfor %}" />
+                  srcset="{% for image in images_with_dimensions %}{{ image.url }} {{ image.width }}w{% if forloop.rindex0 > 0 %}, {% endif %}{% endfor %}"
                   {%- endif %}
+                  />
               </a>
             </div>
             {% capture playlist_head %}
