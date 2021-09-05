@@ -55,6 +55,11 @@ permalink: :path/:basename
             <div class="details">
               {{ playlist_head }}
 
+              {% unless playlist.description == empty %}
+              <p>{{playlist.description}}</p>
+              {% endunless %}
+
+              {% if playlist.description == empty %}
               <p class="list-artists">
                 {% assign num_new_music_artists = playlist.newMusicArtists | size %}
                 Featuring
@@ -69,6 +74,7 @@ permalink: :path/:basename
                 {%- endfor -%}
                 {% endif %}
               </p>
+              {% endif %}
             </div>
           </div>
         </li>
