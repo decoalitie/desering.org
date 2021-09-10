@@ -218,19 +218,16 @@ permalink: :path/:basename
       <fieldset>
         <legend class="form-step-header">Contactinformatie</legend>
 
-        <label class="form-step-subheader" for="input-email">Wat is je email? (op dit adres sturen we je een
-          bevestigingsmailtje)</label>
+        <label class="form-step-subheader" for="input-email">Wat is je email?</label>
 
         <input id="input-email" name="email" placeholder="Email" required type="email" maxlength="200">
 
         <div data-field-feedback-for="email"></div>
 
-        <label class="form-step-subheader" for="input-phone-number">Wat is je telefoonnummer?</label>
+        <label class="form-step-subheader" required for="input-phone-number">Wat is je telefoonnummer?</label>
 
         <p>
-          We gebruiken je telefoonnummer om contact op te nemen als er onduidelijkheden zijn omtrent de
-          reservering
-          (bv. mbt. allergieën) en om je te berichten als er een plek vrij komt op de reservelijst.
+          We sturen je via dit telefoonnummer een bevestiging van je reservering.
         </p>
 
         <input id="input-phone-number" name="phone-number" placeholder="Telefoonnummer" type="tel">
@@ -261,7 +258,7 @@ permalink: :path/:basename
 
       <fieldset class="submit-section">
         <p class="warning">
-          <strong>Let op!</strong> Je reservering is pas geldig na een bevesting per email.
+          <strong>Let op!</strong> Je reservering is pas geldig na een bevestigingsbericht.
         </p>
         <button class="button" type="submit">plaats reservering</button>
       </fieldset>
@@ -332,10 +329,10 @@ permalink: :path/:basename
     <template data-template-id="success">
       <div>
         <p>
-          Bedankt voor je reservering. Je hoort zo snel mogelijk van ons via mail.
+          Bedankt voor je reservering. We berchten je zo snel mogelijk per telefoon om je reservering te bevestigen.
         </p>
         <p class="warning">
-          <strong>Let op!</strong> Je reservering is pas geldig na een bevesting per email.
+          <strong>Let op!</strong> Je reservering is pas geldig na een bevestigingsbericht.
         </p>
       </div>
     </template>
