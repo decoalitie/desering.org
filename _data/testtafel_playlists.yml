@@ -225,10 +225,10 @@
       uri: spotify:artist:1izAFKIapgqtHzOr4Nk73u
       popularity: 10
     - external_urls:
-        spotify: https://open.spotify.com/artist/4dYBbLeGUezDO9EdsqCan2
-      id: 4dYBbLeGUezDO9EdsqCan2
-      name: Kenji Omura
-      uri: spotify:artist:4dYBbLeGUezDO9EdsqCan2
+        spotify: https://open.spotify.com/artist/3EDQh3YXwnFIGADDBqNaEu
+      id: 3EDQh3YXwnFIGADDBqNaEu
+      name: Gary Corben
+      uri: spotify:artist:3EDQh3YXwnFIGADDBqNaEu
       popularity: 13
 - description: ""
   external_urls:
@@ -412,7 +412,7 @@
       id: 07GE1K6KDRuaX4XAtcTawV
       name: Saidêra
       uri: spotify:artist:07GE1K6KDRuaX4XAtcTawV
-      popularity: 14
+      popularity: 13
     - external_urls:
         spotify: https://open.spotify.com/artist/0QLkmmM8acu07MIT5GcSPT
       id: 0QLkmmM8acu07MIT5GcSPT
