@@ -4,6 +4,8 @@ layout: default
 language: nl
 translation: testtafel/reservation
 backlink: /testtafel
+scripts:
+- reservation-form
 stylesheets:
 - reservation-form
 permalink: :path/:basename
@@ -11,10 +13,8 @@ permalink: :path/:basename
 
 <div class="row">
   <div class="container">
-    <h1>Reserveren voor TestTafel - onderhoud</h1>
+    <h1>Reserveren voor TestTafel</h1>
 
-    <p>In verband met technische problemen is ons reserveringsformulier kort offline. Onze excuses voor het ongemak. Probeer het later nog eens!</p>
-    <!--
     <form id="reservation-form">
       <input type="hidden" name="lang" value="nl" />
       <fieldset>
@@ -109,7 +109,7 @@ permalink: :path/:basename
         </select>
       </fieldset>
 
-      <div data-field-feedback-for="table"></div>-->
+      <div data-field-feedback-for="table"></div>
 
       <!-- the start time is fixed to 19:00. hide the input -->
       <!--
@@ -132,7 +132,6 @@ permalink: :path/:basename
         </fieldset>
       </template>
       -->
-      <!--
       <input type="hidden" name="start-time" value="19:00" />
 
       <div data-field-feedback-for="start-time"></div>
@@ -349,6 +348,5 @@ permalink: :path/:basename
         </p>
       </div>
     </template>
-    !-->
   </div>
 </div>
