@@ -4,8 +4,6 @@ layout: default
 language: en
 translation: ../testtafel/reserveren
 backlink: /en/testtafel
-scripts:
-- reservation-form
 stylesheets:
 - reservation-form
 permalink: :path/:basename
@@ -13,9 +11,10 @@ permalink: :path/:basename
 
 <div class="row">
   <div class="container">
-    <h1>Reservation for TestTafel</h1>
+    <h1>Reservation for TestTafel - under maintainance</h1>
 
-    <form id="reservation-form">
+    <p>Due to technical issues our reservation form is under maintainance. Sorry for the inconvenience. Please check back later today!</p>
+    <!--<form id="reservation-form">
       <input type="hidden" name="lang" value="en" />
       <fieldset>
         <legend class="form-step-header">Choose a date</legend>
@@ -105,7 +104,7 @@ permalink: :path/:basename
       </fieldset>
 
       <div data-field-feedback-for="table"></div>
-
+    -->
       <!-- the start time is fixed to 19:00. hide the input -->
       <!--
       <template data-template-id="shared-table-start-time">
@@ -126,6 +125,7 @@ permalink: :path/:basename
         </fieldset>
       </template>
       -->
+      <!--
       <input type="hidden" name="start-time" value="19:00" />
 
       <div data-field-feedback-for="start-time"></div>
@@ -333,6 +333,6 @@ permalink: :path/:basename
           For questions you can {{ contact_info }}
         </p>
       </div>
-    </template>
+    </template>-->
   </div>
 </div>
