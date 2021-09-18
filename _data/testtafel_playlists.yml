@@ -17,13 +17,19 @@
       id: 32IztneRaGHmiRgNki4Mls
       name: Dominick
       uri: spotify:artist:32IztneRaGHmiRgNki4Mls
-      popularity: 2
+      popularity: 1
     - external_urls:
         spotify: https://open.spotify.com/artist/5tuiLb6WvAwyKgLmicYS0l
       id: 5tuiLb6WvAwyKgLmicYS0l
       name: t-woc
       uri: spotify:artist:5tuiLb6WvAwyKgLmicYS0l
       popularity: 5
+    - external_urls:
+        spotify: https://open.spotify.com/artist/34MeiToHgg61sYGqDs1GqF
+      id: 34MeiToHgg61sYGqDs1GqF
+      name: Michael Ozone
+      uri: spotify:artist:34MeiToHgg61sYGqDs1GqF
+      popularity: 11
     - external_urls:
         spotify: https://open.spotify.com/artist/0A4gPcMJUMuH8wjgMl9Dij
       id: 0A4gPcMJUMuH8wjgMl9Dij
@@ -35,12 +41,6 @@
       id: 3y4GCYSmf6KyCXUdfmX6aI
       name: Brief Work
       uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
-      popularity: 12
-    - external_urls:
-        spotify: https://open.spotify.com/artist/34MeiToHgg61sYGqDs1GqF
-      id: 34MeiToHgg61sYGqDs1GqF
-      name: Michael Ozone
-      uri: spotify:artist:34MeiToHgg61sYGqDs1GqF
       popularity: 12
 - description: ""
   external_urls:
@@ -129,13 +129,13 @@
       id: 4vhCl6MBQvO7FZn1SScoNY
       name: Conjunto Papa Upa
       uri: spotify:artist:4vhCl6MBQvO7FZn1SScoNY
-      popularity: 5
+      popularity: 4
     - external_urls:
         spotify: https://open.spotify.com/artist/4vhCl6MBQvO7FZn1SScoNY
       id: 4vhCl6MBQvO7FZn1SScoNY
       name: Conjunto Papa Upa
       uri: spotify:artist:4vhCl6MBQvO7FZn1SScoNY
-      popularity: 5
+      popularity: 4
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/37OIHXYRvBtijmT5u0fpAe
@@ -172,17 +172,17 @@
       uri: spotify:artist:59oA5WbbQvomJz2BuRG071
   unpopularArtists:
     - external_urls:
+        spotify: https://open.spotify.com/artist/0uQyVnX8XxnTxe3JEH33Gl
+      id: 0uQyVnX8XxnTxe3JEH33Gl
+      name: Arthhur
+      uri: spotify:artist:0uQyVnX8XxnTxe3JEH33Gl
+      popularity: 7
+    - external_urls:
         spotify: https://open.spotify.com/artist/4DSqP0aMVhUDBzqObhmgxe
       id: 4DSqP0aMVhUDBzqObhmgxe
       name: West Norwood Cassette Library
       uri: spotify:artist:4DSqP0aMVhUDBzqObhmgxe
       popularity: 7
-    - external_urls:
-        spotify: https://open.spotify.com/artist/0uQyVnX8XxnTxe3JEH33Gl
-      id: 0uQyVnX8XxnTxe3JEH33Gl
-      name: Arthhur
-      uri: spotify:artist:0uQyVnX8XxnTxe3JEH33Gl
-      popularity: 8
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/16uOvUTQmIPM7UBe4C9Mmv
@@ -266,16 +266,16 @@
       uri: spotify:artist:0O98jlCaPzvsoei6U5jfEL
   unpopularArtists:
     - external_urls:
-        spotify: https://open.spotify.com/artist/1Ptp4nbLolMX9RniidXbbn
-      id: 1Ptp4nbLolMX9RniidXbbn
-      name: Henry Keen
-      uri: spotify:artist:1Ptp4nbLolMX9RniidXbbn
-      popularity: 1
-    - external_urls:
         spotify: https://open.spotify.com/artist/0O2yKE5Jyx5maooLz70DT3
       id: 0O2yKE5Jyx5maooLz70DT3
       name: Kawuku Sound
       uri: spotify:artist:0O2yKE5Jyx5maooLz70DT3
+      popularity: 0
+    - external_urls:
+        spotify: https://open.spotify.com/artist/1Ptp4nbLolMX9RniidXbbn
+      id: 1Ptp4nbLolMX9RniidXbbn
+      name: Henry Keen
+      uri: spotify:artist:1Ptp4nbLolMX9RniidXbbn
       popularity: 1
 - description: ""
   external_urls:
@@ -364,13 +364,13 @@
       id: 6uYq0k8pis5LPGzdFRM5FJ
       name: Huw Marc Bennett
       uri: spotify:artist:6uYq0k8pis5LPGzdFRM5FJ
-      popularity: 20
+      popularity: 19
     - external_urls:
         spotify: https://open.spotify.com/artist/4zMgFVljBxMaPn1U0SXGOh
       id: 4zMgFVljBxMaPn1U0SXGOh
       name: Charles Webster
       uri: spotify:artist:4zMgFVljBxMaPn1U0SXGOh
-      popularity: 32
+      popularity: 31
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/7Arw5mPFniRtcw1XmGcdwl
@@ -418,7 +418,7 @@
       id: 0QLkmmM8acu07MIT5GcSPT
       name: First Beige
       uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
-      popularity: 30
+      popularity: 29
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/1rISyS1ipslg42GLaJ4cZ7
