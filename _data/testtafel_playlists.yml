@@ -37,11 +37,11 @@
       uri: spotify:artist:0A4gPcMJUMuH8wjgMl9Dij
       popularity: 12
     - external_urls:
-        spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
-      id: 3y4GCYSmf6KyCXUdfmX6aI
-      name: Brief Work
-      uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
-      popularity: 12
+        spotify: https://open.spotify.com/artist/3EDQh3YXwnFIGADDBqNaEu
+      id: 3EDQh3YXwnFIGADDBqNaEu
+      name: Gary Corben
+      uri: spotify:artist:3EDQh3YXwnFIGADDBqNaEu
+      popularity: 13
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/3wL7yQoGyIGKS7cDRs3lHs
@@ -84,11 +84,11 @@
       uri: spotify:artist:6ERzNHT215iUO0kYb2Zdyw
       popularity: 18
     - external_urls:
-        spotify: https://open.spotify.com/artist/2qJTi04qBpG3C0RR62l1Du
-      id: 2qJTi04qBpG3C0RR62l1Du
-      name: SPARKLE DIVISION
-      uri: spotify:artist:2qJTi04qBpG3C0RR62l1Du
-      popularity: 24
+        spotify: https://open.spotify.com/artist/2805s9LKfRvmaFi6eK6L0f
+      id: 2805s9LKfRvmaFi6eK6L0f
+      name: Luiz Gabriel Lopes
+      uri: spotify:artist:2805s9LKfRvmaFi6eK6L0f
+      popularity: 23
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/6Y4CziMlnWkxtiMSGxz1Al
@@ -178,11 +178,11 @@
       uri: spotify:artist:0uQyVnX8XxnTxe3JEH33Gl
       popularity: 7
     - external_urls:
-        spotify: https://open.spotify.com/artist/4DSqP0aMVhUDBzqObhmgxe
-      id: 4DSqP0aMVhUDBzqObhmgxe
-      name: West Norwood Cassette Library
-      uri: spotify:artist:4DSqP0aMVhUDBzqObhmgxe
-      popularity: 7
+        spotify: https://open.spotify.com/artist/7g6rpU4rtKXNDVMxmOGXFY
+      id: 7g6rpU4rtKXNDVMxmOGXFY
+      name: Kayla Painter
+      uri: spotify:artist:7g6rpU4rtKXNDVMxmOGXFY
+      popularity: 9
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/16uOvUTQmIPM7UBe4C9Mmv
@@ -225,10 +225,10 @@
       uri: spotify:artist:1izAFKIapgqtHzOr4Nk73u
       popularity: 10
     - external_urls:
-        spotify: https://open.spotify.com/artist/3EDQh3YXwnFIGADDBqNaEu
-      id: 3EDQh3YXwnFIGADDBqNaEu
-      name: Gary Corben
-      uri: spotify:artist:3EDQh3YXwnFIGADDBqNaEu
+        spotify: https://open.spotify.com/artist/4dYBbLeGUezDO9EdsqCan2
+      id: 4dYBbLeGUezDO9EdsqCan2
+      name: Kenji Omura
+      uri: spotify:artist:4dYBbLeGUezDO9EdsqCan2
       popularity: 13
 - description: ""
   external_urls:
