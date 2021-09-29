@@ -422,6 +422,10 @@ li ul li {
 	display: none;
 }
 
+.covid-policy ol {
+	padding-top: 1rem;
+}
+
 /** 
  *  LANDING
  */
