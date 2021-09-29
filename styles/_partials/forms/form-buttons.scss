@@ -32,8 +32,10 @@ form {
         }
     }
 
-    button[type="submit"] {
+    button[type="submit"],
+    button.continue {
         display: block;
+        cursor: pointer;
         width: 100%;
         font-weight: bold;
         margin: 1rem auto;

@@ -12,6 +12,11 @@
 #reservation-form {
     // set to display: block after javascript has initialized form
     display: none;
+
+
+    &.already-reserved > :not(.content-already-reserved) {
+        display: none;
+    }
 }
 
 #fatal-form-error {

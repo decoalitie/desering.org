@@ -17,7 +17,7 @@ permalink: :path/:basename
 
     <form id="reservation-form">
       <input type="hidden" name="lang" value="nl" />
-      <fieldset>
+      <fieldset class="content-already-reserved">
         <legend class="form-step-header">Kies een datum</legend>
         <select class="boxed" data-input-controller="SelectRadioList" name="date">
           {% for event in site.data.testtafels %}
@@ -46,10 +46,31 @@ permalink: :path/:basename
       </fieldset>
 
       <template data-template-id="special-description">
-        <section class="special-description">
+        <section class="special-description content-already-reserved">
           <h4></h4>
           <p></p>
         </section>
+      </template>
+
+      <template data-template-id="already-reserved">
+        <div class="content-already-reserved">
+          <h3 class="form-step-header">Reservering al geplaatst</h3>
+          <p>
+            Het lijkt er op dat er vanaf deze computer al een reservering is geplaatst voor deze datum. Mocht je nog
+            geen bevestiging hebben ontvangen, hou er rekening mee dat het even kan duren tot onze staff heeft gechecked
+            of er nog genoeg plaatsen zijn.
+          </p>
+          <p>
+            Als je vragen hebt over je reservering of je wilt iets aanpassen, stuur dan even een Whatsapp of SMS naar
+            <a href="tel:0031684292366">0684292366</a>
+          </p>
+          <p>
+            Als je een <strong>nieuwe reservering</strong> wilt maken, klik dan op de knop hieronder.
+          </p>
+          <button type="button" class="continue confirm-already-reserved-button">
+            Plaats nog een reservering
+          </button>
+        </div>
       </template>
 
       <div data-field-feedback-for="date">
@@ -67,7 +88,7 @@ permalink: :path/:basename
         <h3 class="form-step-header">Aanvang</h3>
         <p>
           De aanvang van TestTafel is om 19:00. We verzoeken iedereen vriendelijk om aan te komen <strong>tussen 19:00
-            en 19:15</strong>. 
+            en 19:15</strong>.
         </p>
         <p>
           Mocht dat écht niet uitkomen, stuur dan na het plaatsen van je reservering even een berichtje over

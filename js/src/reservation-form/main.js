@@ -2,9 +2,10 @@ import { isBefore } from 'date-fns';
 import * as inputControllers from '../forms/input-controllers';
 import { getTemplateRender, swapFormWithTemplate } from './templates';
 import { MIN_PEOPLE_OWN_TABLE, SHARED_TABLE_START_TIME, ENDPOINT, SHOW_DATE_UNTIL } from './config';
+import { getReservationsForDate, removeOldReservations, storeReservation } from "./reservations";
 
 const reservationForm = document.querySelector("#reservation-form");
-let fields, startTimeInput;
+let fields, startTimeInput, ignoreAlreadyReservedForDate = null;
 
 function main() {
   // disabled because start time is fixed to 19:00
@@ -63,6 +64,8 @@ function main() {
   });
 
   reservationForm.style.display = 'block';
+
+  removeOldReservations(fields.date.optionElements.map(option => option.value));
 }
 
 function watchFields(fieldNames, onChange, immediate = true) {
@@ -76,7 +79,6 @@ function watchFields(fieldNames, onChange, immediate = true) {
 
 function handleDateChange() {
   const { fullyBooked, special, specialDescription } = fields.date.selectedOptionElement.dataset;
-  getTemplateRender('fully-booked').visible = fullyBooked !== undefined;
   const specialElement = getTemplateRender('special-description');
   if (specialDescription !== undefined) {
     specialElement.element.querySelector('h4').innerText = special;
@@ -86,6 +88,32 @@ function handleDateChange() {
     }
   }
   specialElement.visible = specialDescription !== undefined;
+  getTemplateRender('fully-booked').visible = fullyBooked !== undefined;
+
+  if (ignoreAlreadyReservedForDate && ignoreAlreadyReservedForDate !== fields.date.value) {
+    ignoreAlreadyReservedForDate = null;
+  }
+
+  const previousReservations = getReservationsForDate(fields.date.value);
+  if (previousReservations.length && !ignoreAlreadyReservedForDate) {
+    getTemplateRender('already-reserved').visible = true;
+    reservationForm.classList.add('already-reserved');
+    document.querySelector('.confirm-already-reserved-button').addEventListener('click', handleConfirmAlreadyReservedClick)
+  } else {
+    const confirmButton = document.querySelector('.confirm-already-reserved-button');
+
+    if (confirmButton) {
+      confirmButton.removeEventListener('click', handleConfirmAlreadyReservedClick);
+    }
+    getTemplateRender('already-reserved').visible = false;
+    reservationForm.classList.remove('already-reserved');
+  }
+}
+
+function handleConfirmAlreadyReservedClick(e) {
+  e.preventDefault();
+  ignoreAlreadyReservedForDate = fields.date.value;
+  handleDateChange();
 }
 
 function handleReservationAmountChange() {
@@ -199,9 +227,10 @@ function submitReservation(data) {
     body: JSON.stringify(data),
   })
     .then((resp) => resp.json())
-    .then(({ success, error }) => {
+    .then(({ success, error, values }) => {
       if (success) {
         swapFormWithTemplate('success');
+        storeReservation(values);
       } else {
         const { description, fields } = error;
 

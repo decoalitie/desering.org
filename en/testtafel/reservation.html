@@ -17,7 +17,7 @@ permalink: :path/:basename
 
     <form id="reservation-form">
       <input type="hidden" name="lang" value="en" />
-      <fieldset>
+      <fieldset class="content-already-reserved">
         <legend class="form-step-header">Choose a date</legend>
         <select class="boxed" data-input-controller="SelectRadioList" name="date">
           {% for event in site.data.testtafels %}
@@ -42,11 +42,33 @@ permalink: :path/:basename
       </fieldset>
 
       <template data-template-id="special-description">
-        <section class="special-description">
+        <section class="special-description content-already-reserved">
           <h4></h4>
           <p></p>
         </section>
       </template>
+
+      <template data-template-id="already-reserved">
+        <div class="content-already-reserved">
+          <h3 class="form-step-header">Reservation already submitted</h3>
+          <p>
+            It seems like a reservation for this date has already been placed from this computer. If you have yet to
+            recieve a confirmation message, please be aware that it can take some time before our staff has verified
+            that enough seats are available.
+          </p>
+          <p>
+            For questions about your reservation or if you would like to change something, please drop us a Whatsapp or
+            text message on <a href="tel:0031684292366">+31684292366</a>
+          </p>
+          <p>
+            To place <strong>a new reservation</strong>, use the button below.
+          </p>
+          <button type="button" class="continue confirm-already-reserved-button">
+            Create another reservation
+          </button>
+        </div>
+      </template>
+
 
       <div data-field-feedback-for="date">
       </div>
