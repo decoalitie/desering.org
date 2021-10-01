@@ -5,6 +5,9 @@ language: en
 stylesheets:
 - playlists
 permalink: :path/:basename
+redirect_from:
+- /PLAY
+- /play
 ---
 
 
@@ -28,17 +31,16 @@ permalink: :path/:basename
     <div>
       <ol>
         {% for playlist in site.data.testtafel_playlists %}
-        {% capture playlist_anchor_attributes %}href="{{ playlist.external_urls.spotify }}" target="_blank"{% endcapture %}
+        {% capture playlist_anchor_attributes %}href="{{ playlist.external_urls.spotify }}" target="_blank"{% endcapture
+        %}
 
         <li>
           <div class="playlist">
             <div class="thumbnail">
               <a {{ playlist_anchor_attributes }}>
-                {% assign fallback_image = playlist.images | first %}
-                <img src="{{ fallback_image.url }}" 
-                  alt="Thumbnail image for {{ playlist.name }}"
-                  {% if fallback_image.width -%}srcset="{% for image in playlist.images %}{{ image.url }} {{ image.width }}w{% if forloop.rindex0 > 0 %}, {% endif %}{% endfor %}"{%- endif %}
-                  />
+                {% assign fallback_image = images | first %}
+                <img src="{{ fallback_image.url }}" alt="Thumbnail image for {{ playlist.name }}"
+                  srcset="{% for image in playlist.images %}{{ image.url }} {{ image.width }}w{% if forloop.rindex0 > 0 %}, {% endif %}{% endfor %}" />
               </a>
             </div>
             {% capture playlist_head %}
@@ -55,11 +57,6 @@ permalink: :path/:basename
             <div class="details">
               {{ playlist_head }}
 
-              {% unless playlist.description == empty %}
-              <p>{{playlist.description}}</p>
-              {% endunless %}
-
-              {% if playlist.description == empty %}
               <p class="list-artists">
                 {% assign num_new_music_artists = playlist.newMusicArtists | size %}
                 Featuring
@@ -74,7 +71,6 @@ permalink: :path/:basename
                 {%- endfor -%}
                 {% endif %}
               </p>
-              {% endif %}
             </div>
           </div>
         </li>
