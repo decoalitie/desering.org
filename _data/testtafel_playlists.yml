@@ -1,3 +1,50 @@
+- description: ""
+  external_urls:
+    spotify: https://open.spotify.com/playlist/0tumviHtG40G82DcZIgFR6
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b2732553559ad4ce171ee293d716ab67616d0000b273ada6d1514b122bf533b9f272ab67616d0000b273ee033999d947ab38074c9e5eab67616d0000b273f8b4df8c9b56ceee28b9447f
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b2732553559ad4ce171ee293d716ab67616d0000b273ada6d1514b122bf533b9f272ab67616d0000b273ee033999d947ab38074c9e5eab67616d0000b273f8b4df8c9b56ceee28b9447f
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b2732553559ad4ce171ee293d716ab67616d0000b273ada6d1514b122bf533b9f272ab67616d0000b273ee033999d947ab38074c9e5eab67616d0000b273f8b4df8c9b56ceee28b9447f
+      width: 60
+  name: "TestTafel #11"
+  tracks:
+    href: https://api.spotify.com/v1/playlists/0tumviHtG40G82DcZIgFR6/tracks
+    total: 66
+  uri: spotify:playlist:0tumviHtG40G82DcZIgFR6
+  newMusicArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/5GSILaXo4yN4umwJK8eBBY
+      id: 5GSILaXo4yN4umwJK8eBBY
+      name: Kit Sebastian
+      uri: spotify:artist:5GSILaXo4yN4umwJK8eBBY
+    - external_urls:
+        spotify: https://open.spotify.com/artist/3I3Fz1DeUY0icXFvOjbXm7
+      id: 3I3Fz1DeUY0icXFvOjbXm7
+      name: Methyl Ethel
+      uri: spotify:artist:3I3Fz1DeUY0icXFvOjbXm7
+    - external_urls:
+        spotify: https://open.spotify.com/artist/1FVo44KTXqxo3JxXADWTd9
+      id: 1FVo44KTXqxo3JxXADWTd9
+      name: Call Super
+      uri: spotify:artist:1FVo44KTXqxo3JxXADWTd9
+  unpopularArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/33rkBSmVJY21R0Hi251lnf
+      id: 33rkBSmVJY21R0Hi251lnf
+      name: RobbieN4HC
+      uri: spotify:artist:33rkBSmVJY21R0Hi251lnf
+      popularity: 0
+    - external_urls:
+        spotify: https://open.spotify.com/artist/4IJTjZQVrOffnN6NXX00DG
+      id: 4IJTjZQVrOffnN6NXX00DG
+      name: Khus Fir
+      uri: spotify:artist:4IJTjZQVrOffnN6NXX00DG
+      popularity: 1
 - description: Combining some of the best tracks of the first 9 TestTafel playlists
   external_urls:
     spotify: https://open.spotify.com/playlist/7y59LwHDEvuMd6JQH4W8jC
@@ -17,7 +64,7 @@
       id: 32IztneRaGHmiRgNki4Mls
       name: Dominick
       uri: spotify:artist:32IztneRaGHmiRgNki4Mls
-      popularity: 3
+      popularity: 4
     - external_urls:
         spotify: https://open.spotify.com/artist/5tuiLb6WvAwyKgLmicYS0l
       id: 5tuiLb6WvAwyKgLmicYS0l
@@ -78,17 +125,17 @@
       uri: spotify:artist:2ARO60gI5do88ho6azmzab
   unpopularArtists:
     - external_urls:
+        spotify: https://open.spotify.com/artist/0054Ye49KrJfOOETeTdRog
+      id: 0054Ye49KrJfOOETeTdRog
+      name: Chris McGregor's Brotherhood Of Breath
+      uri: spotify:artist:0054Ye49KrJfOOETeTdRog
+      popularity: 17
+    - external_urls:
         spotify: https://open.spotify.com/artist/6ERzNHT215iUO0kYb2Zdyw
       id: 6ERzNHT215iUO0kYb2Zdyw
       name: Lay-Far
       uri: spotify:artist:6ERzNHT215iUO0kYb2Zdyw
       popularity: 18
-    - external_urls:
-        spotify: https://open.spotify.com/artist/2qJTi04qBpG3C0RR62l1Du
-      id: 2qJTi04qBpG3C0RR62l1Du
-      name: SPARKLE DIVISION
-      uri: spotify:artist:2qJTi04qBpG3C0RR62l1Du
-      popularity: 23
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/6Y4CziMlnWkxtiMSGxz1Al
@@ -176,13 +223,13 @@
       id: 0uQyVnX8XxnTxe3JEH33Gl
       name: Arthhur
       uri: spotify:artist:0uQyVnX8XxnTxe3JEH33Gl
-      popularity: 7
+      popularity: 6
     - external_urls:
-        spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
-      id: 3y4GCYSmf6KyCXUdfmX6aI
-      name: Brief Work
-      uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
-      popularity: 14
+        spotify: https://open.spotify.com/artist/7g6rpU4rtKXNDVMxmOGXFY
+      id: 7g6rpU4rtKXNDVMxmOGXFY
+      name: Kayla Painter
+      uri: spotify:artist:7g6rpU4rtKXNDVMxmOGXFY
+      popularity: 9
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/16uOvUTQmIPM7UBe4C9Mmv
@@ -418,7 +465,7 @@
       id: 0QLkmmM8acu07MIT5GcSPT
       name: First Beige
       uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
-      popularity: 29
+      popularity: 30
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/1rISyS1ipslg42GLaJ4cZ7
@@ -459,7 +506,7 @@
       id: 255ZPAkvfPjmKwPj4mC48B
       name: Shishani
       uri: spotify:artist:255ZPAkvfPjmKwPj4mC48B
-      popularity: 24
+      popularity: 26
     - external_urls:
         spotify: https://open.spotify.com/artist/4KewrgdzmKzWiJT3Znotp3
       id: 4KewrgdzmKzWiJT3Znotp3
