@@ -3,18 +3,18 @@
     spotify: https://open.spotify.com/playlist/0tumviHtG40G82DcZIgFR6
   images:
     - height: 640
-      url: https://mosaic.scdn.co/640/ab67616d0000b2732553559ad4ce171ee293d716ab67616d0000b273ada6d1514b122bf533b9f272ab67616d0000b273ee033999d947ab38074c9e5eab67616d0000b273f8b4df8c9b56ceee28b9447f
+      url: https://mosaic.scdn.co/640/ab67616d0000b2732553559ad4ce171ee293d716ab67616d0000b2739c05cf12b3a90998d81dc818ab67616d0000b273ada6d1514b122bf533b9f272ab67616d0000b273ee033999d947ab38074c9e5e
       width: 640
     - height: 300
-      url: https://mosaic.scdn.co/300/ab67616d0000b2732553559ad4ce171ee293d716ab67616d0000b273ada6d1514b122bf533b9f272ab67616d0000b273ee033999d947ab38074c9e5eab67616d0000b273f8b4df8c9b56ceee28b9447f
+      url: https://mosaic.scdn.co/300/ab67616d0000b2732553559ad4ce171ee293d716ab67616d0000b2739c05cf12b3a90998d81dc818ab67616d0000b273ada6d1514b122bf533b9f272ab67616d0000b273ee033999d947ab38074c9e5e
       width: 300
     - height: 60
-      url: https://mosaic.scdn.co/60/ab67616d0000b2732553559ad4ce171ee293d716ab67616d0000b273ada6d1514b122bf533b9f272ab67616d0000b273ee033999d947ab38074c9e5eab67616d0000b273f8b4df8c9b56ceee28b9447f
+      url: https://mosaic.scdn.co/60/ab67616d0000b2732553559ad4ce171ee293d716ab67616d0000b2739c05cf12b3a90998d81dc818ab67616d0000b273ada6d1514b122bf533b9f272ab67616d0000b273ee033999d947ab38074c9e5e
       width: 60
   name: "TestTafel #11"
   tracks:
     href: https://api.spotify.com/v1/playlists/0tumviHtG40G82DcZIgFR6/tracks
-    total: 66
+    total: 68
   uri: spotify:playlist:0tumviHtG40G82DcZIgFR6
   newMusicArtists:
     - external_urls:
