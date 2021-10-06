@@ -25,7 +25,7 @@
 - date: 2021-10-02
   fullyBooked: true
 - date: 2021-10-08
-  fullyBooked: false
+  fullyBooked: true
 - date: 2021-10-09
   fullyBooked: false
 - date: 2021-10-15
