@@ -1,5 +1,52 @@
 - description: ""
   external_urls:
+    spotify: https://open.spotify.com/playlist/0WnofhUoqfHl3wD9V6nNt4
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b2739a9c90cdcb653efba0fb56ecab67616d0000b273ab3f09670fd6fcd362af54f9ab67616d0000b273b746f162c97d38e8d04d9eadab67616d0000b273eabe4b2f23fb64c5d72ceb0e
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b2739a9c90cdcb653efba0fb56ecab67616d0000b273ab3f09670fd6fcd362af54f9ab67616d0000b273b746f162c97d38e8d04d9eadab67616d0000b273eabe4b2f23fb64c5d72ceb0e
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b2739a9c90cdcb653efba0fb56ecab67616d0000b273ab3f09670fd6fcd362af54f9ab67616d0000b273b746f162c97d38e8d04d9eadab67616d0000b273eabe4b2f23fb64c5d72ceb0e
+      width: 60
+  name: "TestTafel #12"
+  tracks:
+    href: https://api.spotify.com/v1/playlists/0WnofhUoqfHl3wD9V6nNt4/tracks
+    total: 67
+  uri: spotify:playlist:0WnofhUoqfHl3wD9V6nNt4
+  newMusicArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/0oj4QK4zH3lghS2Oa418zZ
+      id: 0oj4QK4zH3lghS2Oa418zZ
+      name: Loure
+      uri: spotify:artist:0oj4QK4zH3lghS2Oa418zZ
+    - external_urls:
+        spotify: https://open.spotify.com/artist/7c6lSDa6VuPYjMAV5KLMqv
+      id: 7c6lSDa6VuPYjMAV5KLMqv
+      name: Sarah Williams White
+      uri: spotify:artist:7c6lSDa6VuPYjMAV5KLMqv
+    - external_urls:
+        spotify: https://open.spotify.com/artist/5h5gnysIprQOTY2HoM5ge0
+      id: 5h5gnysIprQOTY2HoM5ge0
+      name: Secret Night Gang
+      uri: spotify:artist:5h5gnysIprQOTY2HoM5ge0
+  unpopularArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/18PVzmZUhAeyk8YWw2oBo3
+      id: 18PVzmZUhAeyk8YWw2oBo3
+      name: Jonny Wildey
+      uri: spotify:artist:18PVzmZUhAeyk8YWw2oBo3
+      popularity: 1
+    - external_urls:
+        spotify: https://open.spotify.com/artist/18PVzmZUhAeyk8YWw2oBo3
+      id: 18PVzmZUhAeyk8YWw2oBo3
+      name: Jonny Wildey
+      uri: spotify:artist:18PVzmZUhAeyk8YWw2oBo3
+      popularity: 1
+- description: ""
+  external_urls:
     spotify: https://open.spotify.com/playlist/0tumviHtG40G82DcZIgFR6
   images:
     - height: 640
@@ -44,7 +91,7 @@
       id: 4IJTjZQVrOffnN6NXX00DG
       name: Khus Fir
       uri: spotify:artist:4IJTjZQVrOffnN6NXX00DG
-      popularity: 1
+      popularity: 2
 - description: Combining some of the best tracks of the first 9 TestTafel playlists
   external_urls:
     spotify: https://open.spotify.com/playlist/7y59LwHDEvuMd6JQH4W8jC
@@ -64,7 +111,7 @@
       id: 32IztneRaGHmiRgNki4Mls
       name: Dominick
       uri: spotify:artist:32IztneRaGHmiRgNki4Mls
-      popularity: 4
+      popularity: 3
     - external_urls:
         spotify: https://open.spotify.com/artist/5tuiLb6WvAwyKgLmicYS0l
       id: 5tuiLb6WvAwyKgLmicYS0l
@@ -172,11 +219,11 @@
       uri: spotify:artist:1WvvwcQx0tj6NdDhZZ2zZz
   unpopularArtists:
     - external_urls:
-        spotify: https://open.spotify.com/artist/4vhCl6MBQvO7FZn1SScoNY
-      id: 4vhCl6MBQvO7FZn1SScoNY
-      name: Conjunto Papa Upa
-      uri: spotify:artist:4vhCl6MBQvO7FZn1SScoNY
-      popularity: 5
+        spotify: https://open.spotify.com/artist/1zLGovNOH14O6ULkA5sxzU
+      id: 1zLGovNOH14O6ULkA5sxzU
+      name: Deep Blue
+      uri: spotify:artist:1zLGovNOH14O6ULkA5sxzU
+      popularity: 4
     - external_urls:
         spotify: https://open.spotify.com/artist/4vhCl6MBQvO7FZn1SScoNY
       id: 4vhCl6MBQvO7FZn1SScoNY
@@ -266,17 +313,17 @@
       uri: spotify:artist:2StcyX3fmelae5agBHIkDO
   unpopularArtists:
     - external_urls:
-        spotify: https://open.spotify.com/artist/2gH0kSs7X35Iigni2wpxeB
-      id: 2gH0kSs7X35Iigni2wpxeB
-      name: Tsepo
-      uri: spotify:artist:2gH0kSs7X35Iigni2wpxeB
-      popularity: 2
-    - external_urls:
         spotify: https://open.spotify.com/artist/1izAFKIapgqtHzOr4Nk73u
       id: 1izAFKIapgqtHzOr4Nk73u
       name: Outfit
       uri: spotify:artist:1izAFKIapgqtHzOr4Nk73u
-      popularity: 10
+      popularity: 11
+    - external_urls:
+        spotify: https://open.spotify.com/artist/4dYBbLeGUezDO9EdsqCan2
+      id: 4dYBbLeGUezDO9EdsqCan2
+      name: Kenji Omura
+      uri: spotify:artist:4dYBbLeGUezDO9EdsqCan2
+      popularity: 14
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/3U3JFLNgfoededfhqRGC4G
@@ -370,7 +417,7 @@
       id: 2n1NhC6PKP4WpUNXFeKzjY
       name: JD73
       uri: spotify:artist:2n1NhC6PKP4WpUNXFeKzjY
-      popularity: 14
+      popularity: 15
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/4ejWc0OTjYLhN8aZlNSKj8
@@ -506,10 +553,10 @@
       id: 255ZPAkvfPjmKwPj4mC48B
       name: Shishani
       uri: spotify:artist:255ZPAkvfPjmKwPj4mC48B
-      popularity: 26
+      popularity: 29
     - external_urls:
-        spotify: https://open.spotify.com/artist/4KewrgdzmKzWiJT3Znotp3
-      id: 4KewrgdzmKzWiJT3Znotp3
-      name: Me and My Friends
-      uri: spotify:artist:4KewrgdzmKzWiJT3Znotp3
-      popularity: 34
+        spotify: https://open.spotify.com/artist/5NPL2jGG32a4LCnu4koPL7
+      id: 5NPL2jGG32a4LCnu4koPL7
+      name: Bruxas
+      uri: spotify:artist:5NPL2jGG32a4LCnu4koPL7
+      popularity: 35
