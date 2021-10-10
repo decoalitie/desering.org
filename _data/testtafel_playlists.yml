@@ -188,13 +188,13 @@
     spotify: https://open.spotify.com/playlist/6Y4CziMlnWkxtiMSGxz1Al
   images:
     - height: 640
-      url: https://mosaic.scdn.co/640/ab67616d0000b2733f494abf52947c16112066a2ab67616d0000b273bf6ddcf90fd44eb34f009ec4ab67616d0000b273cc7a0a6a1f37eabbc45b7938ab67616d0000b273d399298508c2f8a5aa0a5afc
+      url: https://mosaic.scdn.co/640/ab67616d0000b2733f494abf52947c16112066a2ab67616d0000b273bf6ddcf90fd44eb34f009ec4ab67616d0000b273cc7a0a6a1f37eabbc45b7938ab67616d0000b273d08b93f031adc8efc7ab1bec
       width: 640
     - height: 300
-      url: https://mosaic.scdn.co/300/ab67616d0000b2733f494abf52947c16112066a2ab67616d0000b273bf6ddcf90fd44eb34f009ec4ab67616d0000b273cc7a0a6a1f37eabbc45b7938ab67616d0000b273d399298508c2f8a5aa0a5afc
+      url: https://mosaic.scdn.co/300/ab67616d0000b2733f494abf52947c16112066a2ab67616d0000b273bf6ddcf90fd44eb34f009ec4ab67616d0000b273cc7a0a6a1f37eabbc45b7938ab67616d0000b273d08b93f031adc8efc7ab1bec
       width: 300
     - height: 60
-      url: https://mosaic.scdn.co/60/ab67616d0000b2733f494abf52947c16112066a2ab67616d0000b273bf6ddcf90fd44eb34f009ec4ab67616d0000b273cc7a0a6a1f37eabbc45b7938ab67616d0000b273d399298508c2f8a5aa0a5afc
+      url: https://mosaic.scdn.co/60/ab67616d0000b2733f494abf52947c16112066a2ab67616d0000b273bf6ddcf90fd44eb34f009ec4ab67616d0000b273cc7a0a6a1f37eabbc45b7938ab67616d0000b273d08b93f031adc8efc7ab1bec
       width: 60
   name: "TestTafel #8"
   tracks:
@@ -272,11 +272,11 @@
       uri: spotify:artist:0uQyVnX8XxnTxe3JEH33Gl
       popularity: 6
     - external_urls:
-        spotify: https://open.spotify.com/artist/7g6rpU4rtKXNDVMxmOGXFY
-      id: 7g6rpU4rtKXNDVMxmOGXFY
-      name: Kayla Painter
-      uri: spotify:artist:7g6rpU4rtKXNDVMxmOGXFY
-      popularity: 9
+        spotify: https://open.spotify.com/artist/5CBExRDyPqIbBpWdriEqWz
+      id: 5CBExRDyPqIbBpWdriEqWz
+      name: David Versace
+      uri: spotify:artist:5CBExRDyPqIbBpWdriEqWz
+      popularity: 16
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/16uOvUTQmIPM7UBe4C9Mmv
@@ -500,7 +500,7 @@
       id: 5nyhiWT6YJBpWb8rfSHAsx
       name: Cru Drums
       uri: spotify:artist:5nyhiWT6YJBpWb8rfSHAsx
-      popularity: 1
+      popularity: 0
     - external_urls:
         spotify: https://open.spotify.com/artist/07GE1K6KDRuaX4XAtcTawV
       id: 07GE1K6KDRuaX4XAtcTawV
@@ -553,10 +553,10 @@
       id: 255ZPAkvfPjmKwPj4mC48B
       name: Shishani
       uri: spotify:artist:255ZPAkvfPjmKwPj4mC48B
-      popularity: 29
+      popularity: 30
     - external_urls:
         spotify: https://open.spotify.com/artist/5NPL2jGG32a4LCnu4koPL7
       id: 5NPL2jGG32a4LCnu4koPL7
       name: Bruxas
       uri: spotify:artist:5NPL2jGG32a4LCnu4koPL7
-      popularity: 35
+      popularity: 34
