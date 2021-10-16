@@ -119,17 +119,17 @@
       uri: spotify:artist:5tuiLb6WvAwyKgLmicYS0l
       popularity: 5
     - external_urls:
-        spotify: https://open.spotify.com/artist/0A4gPcMJUMuH8wjgMl9Dij
-      id: 0A4gPcMJUMuH8wjgMl9Dij
-      name: Aleisha Lee
-      uri: spotify:artist:0A4gPcMJUMuH8wjgMl9Dij
-      popularity: 12
-    - external_urls:
         spotify: https://open.spotify.com/artist/34MeiToHgg61sYGqDs1GqF
       id: 34MeiToHgg61sYGqDs1GqF
       name: Michael Ozone
       uri: spotify:artist:34MeiToHgg61sYGqDs1GqF
       popularity: 12
+    - external_urls:
+        spotify: https://open.spotify.com/artist/0A4gPcMJUMuH8wjgMl9Dij
+      id: 0A4gPcMJUMuH8wjgMl9Dij
+      name: Aleisha Lee
+      uri: spotify:artist:0A4gPcMJUMuH8wjgMl9Dij
+      popularity: 13
     - external_urls:
         spotify: https://open.spotify.com/artist/3EDQh3YXwnFIGADDBqNaEu
       id: 3EDQh3YXwnFIGADDBqNaEu
@@ -172,17 +172,17 @@
       uri: spotify:artist:2ARO60gI5do88ho6azmzab
   unpopularArtists:
     - external_urls:
-        spotify: https://open.spotify.com/artist/0054Ye49KrJfOOETeTdRog
-      id: 0054Ye49KrJfOOETeTdRog
-      name: Chris McGregor's Brotherhood Of Breath
-      uri: spotify:artist:0054Ye49KrJfOOETeTdRog
-      popularity: 17
-    - external_urls:
         spotify: https://open.spotify.com/artist/6ERzNHT215iUO0kYb2Zdyw
       id: 6ERzNHT215iUO0kYb2Zdyw
       name: Lay-Far
       uri: spotify:artist:6ERzNHT215iUO0kYb2Zdyw
-      popularity: 18
+      popularity: 20
+    - external_urls:
+        spotify: https://open.spotify.com/artist/2805s9LKfRvmaFi6eK6L0f
+      id: 2805s9LKfRvmaFi6eK6L0f
+      name: Luiz Gabriel Lopes
+      uri: spotify:artist:2805s9LKfRvmaFi6eK6L0f
+      popularity: 25
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/6Y4CziMlnWkxtiMSGxz1Al
@@ -223,13 +223,13 @@
       id: 1zLGovNOH14O6ULkA5sxzU
       name: Deep Blue
       uri: spotify:artist:1zLGovNOH14O6ULkA5sxzU
-      popularity: 4
+      popularity: 5
     - external_urls:
         spotify: https://open.spotify.com/artist/4vhCl6MBQvO7FZn1SScoNY
       id: 4vhCl6MBQvO7FZn1SScoNY
       name: Conjunto Papa Upa
       uri: spotify:artist:4vhCl6MBQvO7FZn1SScoNY
-      popularity: 5
+      popularity: 6
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/37OIHXYRvBtijmT5u0fpAe
@@ -272,11 +272,11 @@
       uri: spotify:artist:0uQyVnX8XxnTxe3JEH33Gl
       popularity: 6
     - external_urls:
-        spotify: https://open.spotify.com/artist/5CBExRDyPqIbBpWdriEqWz
-      id: 5CBExRDyPqIbBpWdriEqWz
-      name: David Versace
-      uri: spotify:artist:5CBExRDyPqIbBpWdriEqWz
-      popularity: 16
+        spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
+      id: 3y4GCYSmf6KyCXUdfmX6aI
+      name: Brief Work
+      uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
+      popularity: 17
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/16uOvUTQmIPM7UBe4C9Mmv
@@ -364,13 +364,13 @@
       id: 0O2yKE5Jyx5maooLz70DT3
       name: Kawuku Sound
       uri: spotify:artist:0O2yKE5Jyx5maooLz70DT3
-      popularity: 0
+      popularity: 1
     - external_urls:
         spotify: https://open.spotify.com/artist/1Ptp4nbLolMX9RniidXbbn
       id: 1Ptp4nbLolMX9RniidXbbn
       name: Henry Keen
       uri: spotify:artist:1Ptp4nbLolMX9RniidXbbn
-      popularity: 1
+      popularity: 2
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/6rspKubI2IiJVfteKlQ5al
@@ -464,7 +464,7 @@
       id: 4zMgFVljBxMaPn1U0SXGOh
       name: Charles Webster
       uri: spotify:artist:4zMgFVljBxMaPn1U0SXGOh
-      popularity: 32
+      popularity: 33
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/7Arw5mPFniRtcw1XmGcdwl
@@ -512,7 +512,7 @@
       id: 0QLkmmM8acu07MIT5GcSPT
       name: First Beige
       uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
-      popularity: 30
+      popularity: 31
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/1rISyS1ipslg42GLaJ4cZ7
@@ -553,10 +553,10 @@
       id: 255ZPAkvfPjmKwPj4mC48B
       name: Shishani
       uri: spotify:artist:255ZPAkvfPjmKwPj4mC48B
-      popularity: 30
+      popularity: 32
     - external_urls:
         spotify: https://open.spotify.com/artist/5NPL2jGG32a4LCnu4koPL7
       id: 5NPL2jGG32a4LCnu4koPL7
       name: Bruxas
       uri: spotify:artist:5NPL2jGG32a4LCnu4koPL7
-      popularity: 34
+      popularity: 35
