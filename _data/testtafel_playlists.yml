@@ -34,17 +34,17 @@
       uri: spotify:artist:5h5gnysIprQOTY2HoM5ge0
   unpopularArtists:
     - external_urls:
-        spotify: https://open.spotify.com/artist/18PVzmZUhAeyk8YWw2oBo3
-      id: 18PVzmZUhAeyk8YWw2oBo3
-      name: Jonny Wildey
-      uri: spotify:artist:18PVzmZUhAeyk8YWw2oBo3
+        spotify: https://open.spotify.com/artist/6ThoEADmVnFqh92lOx2YCC
+      id: 6ThoEADmVnFqh92lOx2YCC
+      name: Jack Stephenson-Oliver
+      uri: spotify:artist:6ThoEADmVnFqh92lOx2YCC
       popularity: 1
     - external_urls:
         spotify: https://open.spotify.com/artist/18PVzmZUhAeyk8YWw2oBo3
       id: 18PVzmZUhAeyk8YWw2oBo3
       name: Jonny Wildey
       uri: spotify:artist:18PVzmZUhAeyk8YWw2oBo3
-      popularity: 1
+      popularity: 5
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/0tumviHtG40G82DcZIgFR6
@@ -91,7 +91,7 @@
       id: 4IJTjZQVrOffnN6NXX00DG
       name: Khus Fir
       uri: spotify:artist:4IJTjZQVrOffnN6NXX00DG
-      popularity: 2
+      popularity: 1
 - description: Combining some of the best tracks of the first 9 TestTafel playlists
   external_urls:
     spotify: https://open.spotify.com/playlist/7y59LwHDEvuMd6JQH4W8jC
@@ -111,13 +111,7 @@
       id: 32IztneRaGHmiRgNki4Mls
       name: Dominick
       uri: spotify:artist:32IztneRaGHmiRgNki4Mls
-      popularity: 3
-    - external_urls:
-        spotify: https://open.spotify.com/artist/5tuiLb6WvAwyKgLmicYS0l
-      id: 5tuiLb6WvAwyKgLmicYS0l
-      name: t-woc
-      uri: spotify:artist:5tuiLb6WvAwyKgLmicYS0l
-      popularity: 5
+      popularity: 2
     - external_urls:
         spotify: https://open.spotify.com/artist/34MeiToHgg61sYGqDs1GqF
       id: 34MeiToHgg61sYGqDs1GqF
@@ -135,7 +129,13 @@
       id: 3EDQh3YXwnFIGADDBqNaEu
       name: Gary Corben
       uri: spotify:artist:3EDQh3YXwnFIGADDBqNaEu
-      popularity: 13
+      popularity: 14
+    - external_urls:
+        spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
+      id: 3y4GCYSmf6KyCXUdfmX6aI
+      name: Brief Work
+      uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
+      popularity: 17
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/3wL7yQoGyIGKS7cDRs3lHs
@@ -272,11 +272,11 @@
       uri: spotify:artist:0uQyVnX8XxnTxe3JEH33Gl
       popularity: 6
     - external_urls:
-        spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
-      id: 3y4GCYSmf6KyCXUdfmX6aI
-      name: Brief Work
-      uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
-      popularity: 17
+        spotify: https://open.spotify.com/artist/7g6rpU4rtKXNDVMxmOGXFY
+      id: 7g6rpU4rtKXNDVMxmOGXFY
+      name: Kayla Painter
+      uri: spotify:artist:7g6rpU4rtKXNDVMxmOGXFY
+      popularity: 12
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/16uOvUTQmIPM7UBe4C9Mmv
@@ -553,10 +553,10 @@
       id: 255ZPAkvfPjmKwPj4mC48B
       name: Shishani
       uri: spotify:artist:255ZPAkvfPjmKwPj4mC48B
-      popularity: 32
+      popularity: 33
     - external_urls:
         spotify: https://open.spotify.com/artist/5NPL2jGG32a4LCnu4koPL7
       id: 5NPL2jGG32a4LCnu4koPL7
       name: Bruxas
       uri: spotify:artist:5NPL2jGG32a4LCnu4koPL7
-      popularity: 35
+      popularity: 34
