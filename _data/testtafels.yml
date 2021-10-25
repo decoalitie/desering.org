@@ -36,3 +36,7 @@
   fullyBooked: true
 - date: 2021-10-29
   fullyBooked: false
+- date: 2021-11-05
+  fullyBooked: false
+- date: 2021-11-06
+  fullyBooked: false
