@@ -113,12 +113,6 @@
       uri: spotify:artist:32IztneRaGHmiRgNki4Mls
       popularity: 2
     - external_urls:
-        spotify: https://open.spotify.com/artist/3NGl2LLSZh4VUz2EaBZSUZ
-      id: 3NGl2LLSZh4VUz2EaBZSUZ
-      name: Roseane Santos
-      uri: spotify:artist:3NGl2LLSZh4VUz2EaBZSUZ
-      popularity: 8
-    - external_urls:
         spotify: https://open.spotify.com/artist/34MeiToHgg61sYGqDs1GqF
       id: 34MeiToHgg61sYGqDs1GqF
       name: Michael Ozone
@@ -136,6 +130,12 @@
       name: Gary Corben
       uri: spotify:artist:3EDQh3YXwnFIGADDBqNaEu
       popularity: 14
+    - external_urls:
+        spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
+      id: 3y4GCYSmf6KyCXUdfmX6aI
+      name: Brief Work
+      uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
+      popularity: 16
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/3wL7yQoGyIGKS7cDRs3lHs
@@ -188,13 +188,13 @@
     spotify: https://open.spotify.com/playlist/6Y4CziMlnWkxtiMSGxz1Al
   images:
     - height: 640
-      url: https://mosaic.scdn.co/640/ab67616d0000b2733f494abf52947c16112066a2ab67616d0000b273bf6ddcf90fd44eb34f009ec4ab67616d0000b273cc7a0a6a1f37eabbc45b7938ab67616d0000b273d08b93f031adc8efc7ab1bec
+      url: https://mosaic.scdn.co/640/ab67616d0000b2733f494abf52947c16112066a2ab67616d0000b2736f56e72a9d036e50a3f07554ab67616d0000b273bf6ddcf90fd44eb34f009ec4ab67616d0000b273cc7a0a6a1f37eabbc45b7938
       width: 640
     - height: 300
-      url: https://mosaic.scdn.co/300/ab67616d0000b2733f494abf52947c16112066a2ab67616d0000b273bf6ddcf90fd44eb34f009ec4ab67616d0000b273cc7a0a6a1f37eabbc45b7938ab67616d0000b273d08b93f031adc8efc7ab1bec
+      url: https://mosaic.scdn.co/300/ab67616d0000b2733f494abf52947c16112066a2ab67616d0000b2736f56e72a9d036e50a3f07554ab67616d0000b273bf6ddcf90fd44eb34f009ec4ab67616d0000b273cc7a0a6a1f37eabbc45b7938
       width: 300
     - height: 60
-      url: https://mosaic.scdn.co/60/ab67616d0000b2733f494abf52947c16112066a2ab67616d0000b273bf6ddcf90fd44eb34f009ec4ab67616d0000b273cc7a0a6a1f37eabbc45b7938ab67616d0000b273d08b93f031adc8efc7ab1bec
+      url: https://mosaic.scdn.co/60/ab67616d0000b2733f494abf52947c16112066a2ab67616d0000b2736f56e72a9d036e50a3f07554ab67616d0000b273bf6ddcf90fd44eb34f009ec4ab67616d0000b273cc7a0a6a1f37eabbc45b7938
       width: 60
   name: "TestTafel #8"
   tracks:
@@ -272,11 +272,11 @@
       uri: spotify:artist:0uQyVnX8XxnTxe3JEH33Gl
       popularity: 6
     - external_urls:
-        spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
-      id: 3y4GCYSmf6KyCXUdfmX6aI
-      name: Brief Work
-      uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
-      popularity: 16
+        spotify: https://open.spotify.com/artist/7g6rpU4rtKXNDVMxmOGXFY
+      id: 7g6rpU4rtKXNDVMxmOGXFY
+      name: Kayla Painter
+      uri: spotify:artist:7g6rpU4rtKXNDVMxmOGXFY
+      popularity: 12
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/16uOvUTQmIPM7UBe4C9Mmv
@@ -500,7 +500,7 @@
       id: 5nyhiWT6YJBpWb8rfSHAsx
       name: Cru Drums
       uri: spotify:artist:5nyhiWT6YJBpWb8rfSHAsx
-      popularity: 0
+      popularity: 1
     - external_urls:
         spotify: https://open.spotify.com/artist/07GE1K6KDRuaX4XAtcTawV
       id: 07GE1K6KDRuaX4XAtcTawV
