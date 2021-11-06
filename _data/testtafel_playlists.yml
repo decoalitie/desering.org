@@ -40,10 +40,10 @@
       uri: spotify:artist:6ThoEADmVnFqh92lOx2YCC
       popularity: 1
     - external_urls:
-        spotify: https://open.spotify.com/artist/18PVzmZUhAeyk8YWw2oBo3
-      id: 18PVzmZUhAeyk8YWw2oBo3
-      name: Jonny Wildey
-      uri: spotify:artist:18PVzmZUhAeyk8YWw2oBo3
+        spotify: https://open.spotify.com/artist/3QtmYxRatv51FbpBQJ5SDJ
+      id: 3QtmYxRatv51FbpBQJ5SDJ
+      name: Manuka Honey
+      uri: spotify:artist:3QtmYxRatv51FbpBQJ5SDJ
       popularity: 6
 - description: ""
   external_urls:
@@ -113,11 +113,17 @@
       uri: spotify:artist:32IztneRaGHmiRgNki4Mls
       popularity: 2
     - external_urls:
+        spotify: https://open.spotify.com/artist/3NGl2LLSZh4VUz2EaBZSUZ
+      id: 3NGl2LLSZh4VUz2EaBZSUZ
+      name: Roseane Santos
+      uri: spotify:artist:3NGl2LLSZh4VUz2EaBZSUZ
+      popularity: 8
+    - external_urls:
         spotify: https://open.spotify.com/artist/34MeiToHgg61sYGqDs1GqF
       id: 34MeiToHgg61sYGqDs1GqF
       name: Michael Ozone
       uri: spotify:artist:34MeiToHgg61sYGqDs1GqF
-      popularity: 12
+      popularity: 13
     - external_urls:
         spotify: https://open.spotify.com/artist/0A4gPcMJUMuH8wjgMl9Dij
       id: 0A4gPcMJUMuH8wjgMl9Dij
@@ -130,12 +136,6 @@
       name: Gary Corben
       uri: spotify:artist:3EDQh3YXwnFIGADDBqNaEu
       popularity: 14
-    - external_urls:
-        spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
-      id: 3y4GCYSmf6KyCXUdfmX6aI
-      name: Brief Work
-      uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
-      popularity: 16
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/3wL7yQoGyIGKS7cDRs3lHs
@@ -178,11 +178,11 @@
       uri: spotify:artist:6ERzNHT215iUO0kYb2Zdyw
       popularity: 21
     - external_urls:
-        spotify: https://open.spotify.com/artist/2qJTi04qBpG3C0RR62l1Du
-      id: 2qJTi04qBpG3C0RR62l1Du
-      name: SPARKLE DIVISION
-      uri: spotify:artist:2qJTi04qBpG3C0RR62l1Du
-      popularity: 25
+        spotify: https://open.spotify.com/artist/2805s9LKfRvmaFi6eK6L0f
+      id: 2805s9LKfRvmaFi6eK6L0f
+      name: Luiz Gabriel Lopes
+      uri: spotify:artist:2805s9LKfRvmaFi6eK6L0f
+      popularity: 26
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/6Y4CziMlnWkxtiMSGxz1Al
@@ -272,11 +272,11 @@
       uri: spotify:artist:0uQyVnX8XxnTxe3JEH33Gl
       popularity: 6
     - external_urls:
-        spotify: https://open.spotify.com/artist/7g6rpU4rtKXNDVMxmOGXFY
-      id: 7g6rpU4rtKXNDVMxmOGXFY
-      name: Kayla Painter
-      uri: spotify:artist:7g6rpU4rtKXNDVMxmOGXFY
-      popularity: 12
+        spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
+      id: 3y4GCYSmf6KyCXUdfmX6aI
+      name: Brief Work
+      uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
+      popularity: 15
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/16uOvUTQmIPM7UBe4C9Mmv
@@ -317,7 +317,7 @@
       id: 1izAFKIapgqtHzOr4Nk73u
       name: Outfit
       uri: spotify:artist:1izAFKIapgqtHzOr4Nk73u
-      popularity: 11
+      popularity: 12
     - external_urls:
         spotify: https://open.spotify.com/artist/4dYBbLeGUezDO9EdsqCan2
       id: 4dYBbLeGUezDO9EdsqCan2
@@ -549,14 +549,14 @@
       uri: spotify:artist:0a5lsotyiCdV0xmceU44oN
   unpopularArtists:
     - external_urls:
-        spotify: https://open.spotify.com/artist/255ZPAkvfPjmKwPj4mC48B
-      id: 255ZPAkvfPjmKwPj4mC48B
-      name: Shishani
-      uri: spotify:artist:255ZPAkvfPjmKwPj4mC48B
-      popularity: 34
-    - external_urls:
         spotify: https://open.spotify.com/artist/5NPL2jGG32a4LCnu4koPL7
       id: 5NPL2jGG32a4LCnu4koPL7
       name: Bruxas
       uri: spotify:artist:5NPL2jGG32a4LCnu4koPL7
       popularity: 34
+    - external_urls:
+        spotify: https://open.spotify.com/artist/255ZPAkvfPjmKwPj4mC48B
+      id: 255ZPAkvfPjmKwPj4mC48B
+      name: Shishani
+      uri: spotify:artist:255ZPAkvfPjmKwPj4mC48B
+      popularity: 35
