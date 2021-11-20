@@ -22,10 +22,6 @@ form {
     font-weight: bold;
     margin-top: 1rem;
   }
-
-  .submit-section {
-    margin-top: 3rem;
-  }
 }
 
 .warning {
@@ -72,3 +68,10 @@ form > :first-child .form-step-header {
   margin-top: 0;
 }
 
+.requirements-list {
+  margin-top: 1rem;
+
+  li {
+    margin-bottom: 0;
+  }
+}

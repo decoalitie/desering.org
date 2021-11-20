@@ -51,6 +51,12 @@ form {
             border: 3px solid var(--purple-accent);
             background: var(--purple);
         }
+
+        &:disabled {
+            background: #DDD;
+            color: #444;
+            border-color: #444;
+        }
     }
 }
 

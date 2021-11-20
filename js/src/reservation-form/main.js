@@ -48,7 +48,8 @@ function main() {
   watchFields('table', handleTableChange); 
   watchFields('reservation-amount', handleReservationAmountChange);
   watchFields(['vegan-amount', 'vegetarian-amount'], handleDietCountsChange, false);
-  watchFields('test-amount', handleTestAmountChange, false);
+  watchFields('verify-corona-check', handleCoronaCheckChange); 
+  // watchFields('test-amount', handleTestAmountChange, false);
 
   reservationForm.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -58,7 +59,9 @@ function main() {
         ...Object.fromEntries(
           Object.entries(fields).map(([fieldName, field]) => [fieldName, field.value])
         ),
-        ['consent-email-contact']: !!fields['consent-email-contact'].checked
+        ['consent-email-contact']: !!fields['consent-email-contact'].checked,
+        ['notest-amount']: fields['reservation-amount'].value,
+        ['test-amount']: 0,
       });
     });
   });
@@ -75,6 +78,11 @@ function watchFields(fieldNames, onChange, immediate = true) {
   if (immediate) {
     onChange();
   }
+}
+
+function handleCoronaCheckChange() {
+  const submitButton = reservationForm.querySelector('button[type="submit"]');
+  submitButton.disabled = !fields['verify-corona-check'].checked;
 }
 
 function handleDateChange() {
@@ -127,16 +135,16 @@ function handleReservationAmountChange() {
   fields.table.disabled = !sufficient;
 
   updateAmountInputs(["vegan-amount", "vegetarian-amount"], "nopref-amount");
-  updateAmountInputs(["test-amount"], "notest-amount");
+  // updateAmountInputs(["test-amount"], "notest-amount");
 }
 
 function handleDietCountsChange() {
   updateAmountInputs(["vegan-amount", "vegetarian-amount"], "nopref-amount");
 }
 
-function handleTestAmountChange() {
-  updateAmountInputs(["test-amount"], "notest-amount");
-}
+// function handleTestAmountChange() {
+//   updateAmountInputs(["test-amount"], "notest-amount");
+// }
 
 
 function handleTableChange() {
