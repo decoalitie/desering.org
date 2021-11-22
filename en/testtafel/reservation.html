@@ -83,12 +83,10 @@ permalink: :path/:basename
       </template>
 
       <fieldset class="align-left">
-        <legend class="form-step-header">Opening time</legend>
+        <legend class="form-step-header">Adjusted opening time</legend>
         <p>
-          TestTafel opens at 19:00. We kindly ask you to arrive <strong>between 19:00 and 19:15</strong>.
-          If you really cannot make that time, please get in touch with us through a Whatsapp or SMS message to <a
-            href="tel:0031684292366">+31684292366</a> after you book your reservation to discuss
-          alternative starting times.
+          <strong>Please note:</strong> we kindly ask you to <strong>arrive between 16:30 and 17:00</strong>. Due to
+          government coronavirus policy we have to <strong>close at 20:00</strong>.
         </p>
       </fieldset>
 
@@ -294,7 +292,8 @@ permalink: :path/:basename
 
         <input id="checkbox-verify-corona-check" name="verify-corona-check" type="checkbox">
 
-        <label for="checkbox-verify-corona-check">I understand that I will need to both bring an official CoronaCheck QR and perform a
+        <label for="checkbox-verify-corona-check">I understand that I will need to both bring an official CoronaCheck QR
+          and perform a
           self-test</label>
       </fieldset>
 
@@ -325,8 +324,9 @@ permalink: :path/:basename
       {% for event in site.data.testtafels %}
       {% comment %}
       68400 = 19 hours (for 19:00 start time)
+      59400 = 16.5 hours (for 16:30 start time)
       {% endcomment %}
-      {% assign unix_event = event.date | date: "%s" | plus: 68400 %}
+      {% assign unix_event = event.date | date: "%s" | plus: 59400 %}
       {% assign unix_now = "now" | date: "%s" | times: 1 %}
 
       {% if unix_event > unix_now %}

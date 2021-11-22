@@ -23,8 +23,9 @@ permalink: :path/:basename
           {% for event in site.data.testtafels %}
           {% comment %}
           68400 = 19 hours (for 19:00 start time)
+          59400 = 16.5 hours (for 16:30 start time)
           {% endcomment %}
-          {% assign unix_event = event.date | date: "%s" | plus: 68400 %}
+          {% assign unix_event = event.date | date: "%s" | plus: 59400 %}
           {% assign unix_now = "now" | date: "%s" | times: 1 %}
 
           {% if unix_event > unix_now %}
@@ -85,14 +86,10 @@ permalink: :path/:basename
       </template>
 
       <div class="align-left">
-        <h3 class="form-step-header">Aanvang</h3>
+        <h3 class="form-step-header">Aangepaste aanvang</h3>
         <p>
-          De aanvang van TestTafel is om 19:00. We verzoeken iedereen vriendelijk om aan te komen <strong>tussen 19:00
-            en 19:15</strong>.
-        </p>
-        <p>
-          Mocht dat écht niet uitkomen, stuur dan na het plaatsen van je reservering even een berichtje over
-          Whatsapp of SMS naar <a href="tel:0031684292366">+31684292366</a> om te overleggen.
+          <strong>Let op:</strong> de inlooptijd van TestTafel is veranderd naar <strong>tussen 16:30 en 17:00</strong>.
+          We verzoeken iedereen vriendelijk om op tijd te komen. Om 20:00 moeten wij weer sluiten.
         </p>
       </div>
 
@@ -286,7 +283,8 @@ permalink: :path/:basename
         </p>
 
         <ol class="requirements-list">
-          <li>Een offici&euml;le <a href="https://coronacheck.nl/nl/">CoronaCheck</a> QR code in combinatie met geldig identiteitsbewijs
+          <li>Een offici&euml;le <a href="https://coronacheck.nl/nl/">CoronaCheck</a> QR code in combinatie met geldig
+            identiteitsbewijs
             <br /><strong>‌&#233;n</strong>
           </li>
           <li>Een fysieke zelftest met negatief resultaat</li>
@@ -300,7 +298,8 @@ permalink: :path/:basename
 
         <input id="checkbox-verify-corona-check" name="verify-corona-check" type="checkbox">
 
-        <label for="checkbox-verify-corona-check">Ik begrijp dat ik zowel een CoronaCheck QR als een zelftest nodig heb</label>
+        <label for="checkbox-verify-corona-check">Ik begrijp dat ik zowel een CoronaCheck QR als een zelftest nodig
+          heb</label>
       </fieldset>
 
       <fieldset class="submit-section">
