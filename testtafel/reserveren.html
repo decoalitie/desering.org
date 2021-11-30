@@ -34,7 +34,11 @@ permalink: :path/:basename
           {% assign month = event.date | date: "%-m" | minus: 1 %}
           {% assign year = event.date | date: "%Y" %}
 
+          {% comment %}
+          tijdelijk hard-code lunch
           {% assign special = site.data["testtafel-specials"][event.date] %}
+          {% endcomment %}
+          {% assign special = site.data["testtafel-specials"]["lunch"] %}
 
           <option value="{{ event.date }}" {% if special %} data-special="{{ special.name }}"
             data-special-description="{{ special.description.nl }}" {% endif %}{% if event.fullyBooked %}
@@ -85,13 +89,13 @@ permalink: :path/:basename
         </p>
       </template>
 
-      <div class="align-left">
+      <!-- <div class="align-left">
         <h3 class="form-step-header">Aangepaste aanvang</h3>
         <p>
           <strong>Let op:</strong> de inlooptijd van TestTafel is veranderd naar <strong>tussen 16:30 en 17:00</strong>.
           We verzoeken iedereen vriendelijk om op tijd te komen. Om 20:00 moeten wij weer sluiten.
         </p>
-      </div>
+      </div> -->
 
       <label class="form-step-header" for="input-reservation-name">
         Onder welke naam wil je reserveren?

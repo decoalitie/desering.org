@@ -29,7 +29,11 @@ permalink: :path/:basename
 
           {% if unix_event > unix_now %}
 
+          {% comment %}
+          temorarily hardcode lunch special
           {% assign special = site.data["testtafel-specials"][event.date] %}
+          {% endcomment %}
+          {% assign special = site.data["testtafel-specials"]["lunch"] %}
 
           <option value="{{ event.date }}" {% if special %} data-special="{{ special.name }}"
             data-special-description="{{ special.description.en }}" {% endif %}{% if event.fullyBooked %}
@@ -82,13 +86,13 @@ permalink: :path/:basename
         </p>
       </template>
 
-      <fieldset class="align-left">
+     <!--  <fieldset class="align-left">
         <legend class="form-step-header">Adjusted opening time</legend>
         <p>
           <strong>Please note:</strong> we kindly ask you to <strong>arrive between 16:30 and 17:00</strong>. Due to
           government coronavirus policy we have to <strong>close at 20:00</strong>.
         </p>
-      </fieldset>
+      </fieldset> -->
 
       <label class="form-step-header" for="input-reservation-name">
         Under which name would you like to place a reservation?
