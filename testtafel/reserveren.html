@@ -111,13 +111,15 @@ permalink: :path/:basename
       </label>
 
       <div class="number-with-steppers-wrapper">
-        <input data-input-controller="NumberWithSteppers" id="input-reservation-amount" max="20" min="1"
-          name="reservation-amount" required size="3" step="1" type="number" value="1">
+        <!-- <input data-input-controller="NumberWithSteppers" id="input-reservation-amount" max="20" min="1"
+          name="reservation-amount" required size="3" step="1" type="number" value="1"> -->
+        <input data-input-controller="NumberWithSteppers" id="input-reservation-amount" max="20" min="4"
+          name="reservation-amount" required size="3" step="1" type="number" value="4">
       </div>
 
       <div data-field-feedback-for="reservation-amount"></div>
 
-      <fieldset>
+      <!-- <fieldset>
         <legend class="form-step-header">Bij welke tafel wil je aanschuiven?</legend>
 
         <p>
@@ -129,7 +131,9 @@ permalink: :path/:basename
           <option selected value="shared">Grote gedeelde tafel</option>
           <option data-tag="vanaf 5 personen" value="own">Eigen tafel voor je groep</option>
         </select>
-      </fieldset>
+      </fieldset> -->
+
+      <input type="hidden" name="table" value="own" />
 
       <div data-field-feedback-for="table"></div>
 

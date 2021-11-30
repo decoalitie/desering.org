@@ -45,7 +45,7 @@ function main() {
   }
 
   watchFields('date', handleDateChange);
-  watchFields('table', handleTableChange); 
+  // watchFields('table', handleTableChange); 
   watchFields('reservation-amount', handleReservationAmountChange);
   watchFields(['vegan-amount', 'vegetarian-amount'], handleDietCountsChange, false);
   watchFields('verify-corona-check', handleCoronaCheckChange); 
@@ -125,14 +125,14 @@ function handleConfirmAlreadyReservedClick(e) {
 }
 
 function handleReservationAmountChange() {
-  const amount = fields["reservation-amount"].safeValue;
-  const sufficient = amount >= MIN_PEOPLE_OWN_TABLE;
+  // const amount = fields["reservation-amount"].safeValue;
+  // const sufficient = amount >= MIN_PEOPLE_OWN_TABLE;
 
-  if (!sufficient) {
-    fields.table.value = "shared";
-    handleTableChange(); 
-  }
-  fields.table.disabled = !sufficient;
+  // if (!sufficient) {
+  //   fields.table.value = "shared";
+  //   handleTableChange(); 
+  // }
+  // fields.table.disabled = !sufficient;
 
   updateAmountInputs(["vegan-amount", "vegetarian-amount"], "nopref-amount");
   // updateAmountInputs(["test-amount"], "notest-amount");

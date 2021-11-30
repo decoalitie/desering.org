@@ -108,13 +108,15 @@ permalink: :path/:basename
       </label>
 
       <div class="number-with-steppers-wrapper">
-        <input data-input-controller="NumberWithSteppers" id="input-reservation-amount" max="20" min="1"
-          name="reservation-amount" required size="3" step="1" type="number" value="1">
+        <!-- <input data-input-controller="NumberWithSteppers" id="input-reservation-amount" max="20" min="1"
+          name="reservation-amount" required size="3" step="1" type="number" value="1"> -->
+        <input data-input-controller="NumberWithSteppers" id="input-reservation-amount" max="20" min="4"
+          name="reservation-amount" required size="3" step="1" type="number" value="4">
       </div>
 
       <div data-field-feedback-for="reservation-amount"></div>
 
-      <fieldset>
+      <!-- <fieldset>
         <legend class="form-step-header">Which table would you like to join?</legend>
 
         <p>
@@ -126,7 +128,9 @@ permalink: :path/:basename
           <option selected value="shared">Large shared table</option>
           <option data-tag="5 or more people" value="own">Private table</option>
         </select>
-      </fieldset>
+      </fieldset> -->
+
+      <input type="hidden" name="table" value="own" />
 
       <div data-field-feedback-for="table"></div>
 
