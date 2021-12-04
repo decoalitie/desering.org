@@ -366,10 +366,10 @@
       uri: spotify:artist:1Ptp4nbLolMX9RniidXbbn
       popularity: 2
     - external_urls:
-        spotify: https://open.spotify.com/artist/0O2yKE5Jyx5maooLz70DT3
-      id: 0O2yKE5Jyx5maooLz70DT3
-      name: Kawuku Sound
-      uri: spotify:artist:0O2yKE5Jyx5maooLz70DT3
+        spotify: https://open.spotify.com/artist/6qkUvfdDxPrjNJNgY2KzE5
+      id: 6qkUvfdDxPrjNJNgY2KzE5
+      name: Lamont Butler
+      uri: spotify:artist:6qkUvfdDxPrjNJNgY2KzE5
       popularity: 2
 - description: ""
   external_urls:
@@ -512,7 +512,7 @@
       id: 0QLkmmM8acu07MIT5GcSPT
       name: First Beige
       uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
-      popularity: 29
+      popularity: 30
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/1rISyS1ipslg42GLaJ4cZ7
