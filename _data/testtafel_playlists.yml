@@ -123,7 +123,7 @@
       id: 3y4GCYSmf6KyCXUdfmX6aI
       name: Brief Work
       uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
-      popularity: 11
+      popularity: 10
     - external_urls:
         spotify: https://open.spotify.com/artist/0A4gPcMJUMuH8wjgMl9Dij
       id: 0A4gPcMJUMuH8wjgMl9Dij
@@ -172,16 +172,16 @@
       uri: spotify:artist:2ARO60gI5do88ho6azmzab
   unpopularArtists:
     - external_urls:
-        spotify: https://open.spotify.com/artist/2805s9LKfRvmaFi6eK6L0f
-      id: 2805s9LKfRvmaFi6eK6L0f
-      name: Luiz Gabriel Lopes
-      uri: spotify:artist:2805s9LKfRvmaFi6eK6L0f
-      popularity: 25
-    - external_urls:
         spotify: https://open.spotify.com/artist/2qJTi04qBpG3C0RR62l1Du
       id: 2qJTi04qBpG3C0RR62l1Du
       name: SPARKLE DIVISION
       uri: spotify:artist:2qJTi04qBpG3C0RR62l1Du
+      popularity: 26
+    - external_urls:
+        spotify: https://open.spotify.com/artist/2805s9LKfRvmaFi6eK6L0f
+      id: 2805s9LKfRvmaFi6eK6L0f
+      name: Luiz Gabriel Lopes
+      uri: spotify:artist:2805s9LKfRvmaFi6eK6L0f
       popularity: 26
 - description: ""
   external_urls:
@@ -319,11 +319,11 @@
       uri: spotify:artist:1izAFKIapgqtHzOr4Nk73u
       popularity: 11
     - external_urls:
-        spotify: https://open.spotify.com/artist/5yRBDiQxiBWgaUHdLnIMCi
-      id: 5yRBDiQxiBWgaUHdLnIMCi
-      name: Nick Höppner
-      uri: spotify:artist:5yRBDiQxiBWgaUHdLnIMCi
-      popularity: 17
+        spotify: https://open.spotify.com/artist/4dYBbLeGUezDO9EdsqCan2
+      id: 4dYBbLeGUezDO9EdsqCan2
+      name: Kenji Omura
+      uri: spotify:artist:4dYBbLeGUezDO9EdsqCan2
+      popularity: 14
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/3U3JFLNgfoededfhqRGC4G
@@ -464,7 +464,7 @@
       id: 4zMgFVljBxMaPn1U0SXGOh
       name: Charles Webster
       uri: spotify:artist:4zMgFVljBxMaPn1U0SXGOh
-      popularity: 34
+      popularity: 35
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/7Arw5mPFniRtcw1XmGcdwl
@@ -512,7 +512,7 @@
       id: 0QLkmmM8acu07MIT5GcSPT
       name: First Beige
       uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
-      popularity: 30
+      popularity: 31
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/1rISyS1ipslg42GLaJ4cZ7
