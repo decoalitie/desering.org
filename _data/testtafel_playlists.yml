@@ -83,7 +83,7 @@
     - external_urls:
         spotify: https://open.spotify.com/artist/33rkBSmVJY21R0Hi251lnf
       id: 33rkBSmVJY21R0Hi251lnf
-      name: RobbieN4HC
+      name: Robbie N4HC
       uri: spotify:artist:33rkBSmVJY21R0Hi251lnf
       popularity: 0
     - external_urls:
@@ -129,13 +129,13 @@
       id: 0A4gPcMJUMuH8wjgMl9Dij
       name: Aleisha Lee
       uri: spotify:artist:0A4gPcMJUMuH8wjgMl9Dij
-      popularity: 13
+      popularity: 14
     - external_urls:
         spotify: https://open.spotify.com/artist/3EDQh3YXwnFIGADDBqNaEu
       id: 3EDQh3YXwnFIGADDBqNaEu
       name: Gary Corben
       uri: spotify:artist:3EDQh3YXwnFIGADDBqNaEu
-      popularity: 14
+      popularity: 15
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/3wL7yQoGyIGKS7cDRs3lHs
@@ -276,7 +276,7 @@
       id: 34MeiToHgg61sYGqDs1GqF
       name: Michael Ozone
       uri: spotify:artist:34MeiToHgg61sYGqDs1GqF
-      popularity: 12
+      popularity: 13
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/16uOvUTQmIPM7UBe4C9Mmv
@@ -319,11 +319,11 @@
       uri: spotify:artist:1izAFKIapgqtHzOr4Nk73u
       popularity: 11
     - external_urls:
-        spotify: https://open.spotify.com/artist/4dYBbLeGUezDO9EdsqCan2
-      id: 4dYBbLeGUezDO9EdsqCan2
-      name: Kenji Omura
-      uri: spotify:artist:4dYBbLeGUezDO9EdsqCan2
-      popularity: 14
+        spotify: https://open.spotify.com/artist/5yRBDiQxiBWgaUHdLnIMCi
+      id: 5yRBDiQxiBWgaUHdLnIMCi
+      name: Nick Höppner
+      uri: spotify:artist:5yRBDiQxiBWgaUHdLnIMCi
+      popularity: 17
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/3U3JFLNgfoededfhqRGC4G
@@ -506,7 +506,7 @@
       id: 07GE1K6KDRuaX4XAtcTawV
       name: Saidêra
       uri: spotify:artist:07GE1K6KDRuaX4XAtcTawV
-      popularity: 12
+      popularity: 13
     - external_urls:
         spotify: https://open.spotify.com/artist/0QLkmmM8acu07MIT5GcSPT
       id: 0QLkmmM8acu07MIT5GcSPT
@@ -553,7 +553,7 @@
       id: 5NPL2jGG32a4LCnu4koPL7
       name: Bruxas
       uri: spotify:artist:5NPL2jGG32a4LCnu4koPL7
-      popularity: 32
+      popularity: 33
     - external_urls:
         spotify: https://open.spotify.com/artist/255ZPAkvfPjmKwPj4mC48B
       id: 255ZPAkvfPjmKwPj4mC48B
