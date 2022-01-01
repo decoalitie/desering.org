@@ -81,16 +81,16 @@
       uri: spotify:artist:1FVo44KTXqxo3JxXADWTd9
   unpopularArtists:
     - external_urls:
-        spotify: https://open.spotify.com/artist/33rkBSmVJY21R0Hi251lnf
-      id: 33rkBSmVJY21R0Hi251lnf
-      name: Robbie N4HC
-      uri: spotify:artist:33rkBSmVJY21R0Hi251lnf
-      popularity: 0
-    - external_urls:
         spotify: https://open.spotify.com/artist/4IJTjZQVrOffnN6NXX00DG
       id: 4IJTjZQVrOffnN6NXX00DG
       name: Khus Fir
       uri: spotify:artist:4IJTjZQVrOffnN6NXX00DG
+      popularity: 0
+    - external_urls:
+        spotify: https://open.spotify.com/artist/33rkBSmVJY21R0Hi251lnf
+      id: 33rkBSmVJY21R0Hi251lnf
+      name: Robbie N4HC
+      uri: spotify:artist:33rkBSmVJY21R0Hi251lnf
       popularity: 0
 - description: Combining some of the best tracks of the first 9 TestTafel playlists
   external_urls:
