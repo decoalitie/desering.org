@@ -44,7 +44,7 @@
       id: 18PVzmZUhAeyk8YWw2oBo3
       name: Jonny Wildey
       uri: spotify:artist:18PVzmZUhAeyk8YWw2oBo3
-      popularity: 4
+      popularity: 3
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/0tumviHtG40G82DcZIgFR6
@@ -272,11 +272,11 @@
       uri: spotify:artist:0uQyVnX8XxnTxe3JEH33Gl
       popularity: 5
     - external_urls:
-        spotify: https://open.spotify.com/artist/34MeiToHgg61sYGqDs1GqF
-      id: 34MeiToHgg61sYGqDs1GqF
-      name: Michael Ozone
-      uri: spotify:artist:34MeiToHgg61sYGqDs1GqF
-      popularity: 13
+        spotify: https://open.spotify.com/artist/7g6rpU4rtKXNDVMxmOGXFY
+      id: 7g6rpU4rtKXNDVMxmOGXFY
+      name: Kayla Painter
+      uri: spotify:artist:7g6rpU4rtKXNDVMxmOGXFY
+      popularity: 8
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/16uOvUTQmIPM7UBe4C9Mmv
