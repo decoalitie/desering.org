@@ -91,7 +91,7 @@
       id: 33rkBSmVJY21R0Hi251lnf
       name: Robbie N4HC
       uri: spotify:artist:33rkBSmVJY21R0Hi251lnf
-      popularity: 0
+      popularity: 1
 - description: Combining some of the best tracks of the first 9 TestTafel playlists
   external_urls:
     spotify: https://open.spotify.com/playlist/7y59LwHDEvuMd6JQH4W8jC
@@ -123,7 +123,7 @@
       id: 3y4GCYSmf6KyCXUdfmX6aI
       name: Brief Work
       uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
-      popularity: 10
+      popularity: 9
     - external_urls:
         spotify: https://open.spotify.com/artist/0A4gPcMJUMuH8wjgMl9Dij
       id: 0A4gPcMJUMuH8wjgMl9Dij
@@ -270,7 +270,7 @@
       id: 0uQyVnX8XxnTxe3JEH33Gl
       name: Arthhur
       uri: spotify:artist:0uQyVnX8XxnTxe3JEH33Gl
-      popularity: 5
+      popularity: 6
     - external_urls:
         spotify: https://open.spotify.com/artist/7g6rpU4rtKXNDVMxmOGXFY
       id: 7g6rpU4rtKXNDVMxmOGXFY
@@ -417,7 +417,7 @@
       id: 2n1NhC6PKP4WpUNXFeKzjY
       name: JD73
       uri: spotify:artist:2n1NhC6PKP4WpUNXFeKzjY
-      popularity: 14
+      popularity: 15
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/4ejWc0OTjYLhN8aZlNSKj8
@@ -470,13 +470,13 @@
     spotify: https://open.spotify.com/playlist/7Arw5mPFniRtcw1XmGcdwl
   images:
     - height: 640
-      url: https://mosaic.scdn.co/640/ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273bbd97562a9466a1883bc7229ab67616d0000b273d1920e7247e759a9e808802a
+      url: https://mosaic.scdn.co/640/ab67616d0000b273087255518781845b84bc8f92ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273d1920e7247e759a9e808802a
       width: 640
     - height: 300
-      url: https://mosaic.scdn.co/300/ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273bbd97562a9466a1883bc7229ab67616d0000b273d1920e7247e759a9e808802a
+      url: https://mosaic.scdn.co/300/ab67616d0000b273087255518781845b84bc8f92ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273d1920e7247e759a9e808802a
       width: 300
     - height: 60
-      url: https://mosaic.scdn.co/60/ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273bbd97562a9466a1883bc7229ab67616d0000b273d1920e7247e759a9e808802a
+      url: https://mosaic.scdn.co/60/ab67616d0000b273087255518781845b84bc8f92ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273d1920e7247e759a9e808802a
       width: 60
   name: "TestTafel #2"
   tracks:
@@ -500,7 +500,7 @@
       id: 5nyhiWT6YJBpWb8rfSHAsx
       name: Cru Drums
       uri: spotify:artist:5nyhiWT6YJBpWb8rfSHAsx
-      popularity: 1
+      popularity: 0
     - external_urls:
         spotify: https://open.spotify.com/artist/07GE1K6KDRuaX4XAtcTawV
       id: 07GE1K6KDRuaX4XAtcTawV
@@ -512,7 +512,7 @@
       id: 0QLkmmM8acu07MIT5GcSPT
       name: First Beige
       uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
-      popularity: 31
+      popularity: 32
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/1rISyS1ipslg42GLaJ4cZ7
