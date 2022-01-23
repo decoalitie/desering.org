@@ -91,7 +91,7 @@
       id: 33rkBSmVJY21R0Hi251lnf
       name: Robbie N4HC
       uri: spotify:artist:33rkBSmVJY21R0Hi251lnf
-      popularity: 2
+      popularity: 1
 - description: Combining some of the best tracks of the first 9 TestTafel playlists
   external_urls:
     spotify: https://open.spotify.com/playlist/7y59LwHDEvuMd6JQH4W8jC
@@ -117,25 +117,25 @@
       id: 3NGl2LLSZh4VUz2EaBZSUZ
       name: Roseane Santos
       uri: spotify:artist:3NGl2LLSZh4VUz2EaBZSUZ
-      popularity: 7
+      popularity: 6
     - external_urls:
         spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
       id: 3y4GCYSmf6KyCXUdfmX6aI
       name: Brief Work
       uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
-      popularity: 8
+      popularity: 7
+    - external_urls:
+        spotify: https://open.spotify.com/artist/3EDQh3YXwnFIGADDBqNaEu
+      id: 3EDQh3YXwnFIGADDBqNaEu
+      name: Gary Corben
+      uri: spotify:artist:3EDQh3YXwnFIGADDBqNaEu
+      popularity: 14
     - external_urls:
         spotify: https://open.spotify.com/artist/0A4gPcMJUMuH8wjgMl9Dij
       id: 0A4gPcMJUMuH8wjgMl9Dij
       name: Aleisha Lee
       uri: spotify:artist:0A4gPcMJUMuH8wjgMl9Dij
       popularity: 14
-    - external_urls:
-        spotify: https://open.spotify.com/artist/3EDQh3YXwnFIGADDBqNaEu
-      id: 3EDQh3YXwnFIGADDBqNaEu
-      name: Gary Corben
-      uri: spotify:artist:3EDQh3YXwnFIGADDBqNaEu
-      popularity: 15
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/3wL7yQoGyIGKS7cDRs3lHs
@@ -176,13 +176,13 @@
       id: 2qJTi04qBpG3C0RR62l1Du
       name: SPARKLE DIVISION
       uri: spotify:artist:2qJTi04qBpG3C0RR62l1Du
-      popularity: 26
+      popularity: 25
     - external_urls:
         spotify: https://open.spotify.com/artist/2805s9LKfRvmaFi6eK6L0f
       id: 2805s9LKfRvmaFi6eK6L0f
       name: Luiz Gabriel Lopes
       uri: spotify:artist:2805s9LKfRvmaFi6eK6L0f
-      popularity: 26
+      popularity: 25
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/6Y4CziMlnWkxtiMSGxz1Al
@@ -323,7 +323,7 @@
       id: 5yRBDiQxiBWgaUHdLnIMCi
       name: Nick Höppner
       uri: spotify:artist:5yRBDiQxiBWgaUHdLnIMCi
-      popularity: 17
+      popularity: 16
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/3U3JFLNgfoededfhqRGC4G
@@ -417,7 +417,7 @@
       id: 2n1NhC6PKP4WpUNXFeKzjY
       name: JD73
       uri: spotify:artist:2n1NhC6PKP4WpUNXFeKzjY
-      popularity: 15
+      popularity: 14
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/4ejWc0OTjYLhN8aZlNSKj8
@@ -464,7 +464,7 @@
       id: 4zMgFVljBxMaPn1U0SXGOh
       name: Charles Webster
       uri: spotify:artist:4zMgFVljBxMaPn1U0SXGOh
-      popularity: 35
+      popularity: 34
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/7Arw5mPFniRtcw1XmGcdwl
@@ -500,13 +500,13 @@
       id: 5nyhiWT6YJBpWb8rfSHAsx
       name: Cru Drums
       uri: spotify:artist:5nyhiWT6YJBpWb8rfSHAsx
-      popularity: 1
+      popularity: 0
     - external_urls:
         spotify: https://open.spotify.com/artist/07GE1K6KDRuaX4XAtcTawV
       id: 07GE1K6KDRuaX4XAtcTawV
       name: Saidêra
       uri: spotify:artist:07GE1K6KDRuaX4XAtcTawV
-      popularity: 13
+      popularity: 12
     - external_urls:
         spotify: https://open.spotify.com/artist/0QLkmmM8acu07MIT5GcSPT
       id: 0QLkmmM8acu07MIT5GcSPT
