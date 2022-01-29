@@ -113,29 +113,29 @@
       uri: spotify:artist:32IztneRaGHmiRgNki4Mls
       popularity: 1
     - external_urls:
-        spotify: https://open.spotify.com/artist/3NGl2LLSZh4VUz2EaBZSUZ
-      id: 3NGl2LLSZh4VUz2EaBZSUZ
-      name: Roseane Santos
-      uri: spotify:artist:3NGl2LLSZh4VUz2EaBZSUZ
-      popularity: 6
-    - external_urls:
         spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
       id: 3y4GCYSmf6KyCXUdfmX6aI
       name: Brief Work
       uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
       popularity: 7
     - external_urls:
-        spotify: https://open.spotify.com/artist/3EDQh3YXwnFIGADDBqNaEu
-      id: 3EDQh3YXwnFIGADDBqNaEu
-      name: Gary Corben
-      uri: spotify:artist:3EDQh3YXwnFIGADDBqNaEu
-      popularity: 14
+        spotify: https://open.spotify.com/artist/3NGl2LLSZh4VUz2EaBZSUZ
+      id: 3NGl2LLSZh4VUz2EaBZSUZ
+      name: Roseane Santos
+      uri: spotify:artist:3NGl2LLSZh4VUz2EaBZSUZ
+      popularity: 8
+    - external_urls:
+        spotify: https://open.spotify.com/artist/34MeiToHgg61sYGqDs1GqF
+      id: 34MeiToHgg61sYGqDs1GqF
+      name: Michael Ozone
+      uri: spotify:artist:34MeiToHgg61sYGqDs1GqF
+      popularity: 12
     - external_urls:
         spotify: https://open.spotify.com/artist/0A4gPcMJUMuH8wjgMl9Dij
       id: 0A4gPcMJUMuH8wjgMl9Dij
       name: Aleisha Lee
       uri: spotify:artist:0A4gPcMJUMuH8wjgMl9Dij
-      popularity: 14
+      popularity: 13
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/3wL7yQoGyIGKS7cDRs3lHs
@@ -172,17 +172,17 @@
       uri: spotify:artist:2ARO60gI5do88ho6azmzab
   unpopularArtists:
     - external_urls:
-        spotify: https://open.spotify.com/artist/2qJTi04qBpG3C0RR62l1Du
-      id: 2qJTi04qBpG3C0RR62l1Du
-      name: SPARKLE DIVISION
-      uri: spotify:artist:2qJTi04qBpG3C0RR62l1Du
-      popularity: 25
-    - external_urls:
         spotify: https://open.spotify.com/artist/2805s9LKfRvmaFi6eK6L0f
       id: 2805s9LKfRvmaFi6eK6L0f
       name: Luiz Gabriel Lopes
       uri: spotify:artist:2805s9LKfRvmaFi6eK6L0f
       popularity: 25
+    - external_urls:
+        spotify: https://open.spotify.com/artist/2qJTi04qBpG3C0RR62l1Du
+      id: 2qJTi04qBpG3C0RR62l1Du
+      name: SPARKLE DIVISION
+      uri: spotify:artist:2qJTi04qBpG3C0RR62l1Du
+      popularity: 26
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/6Y4CziMlnWkxtiMSGxz1Al
@@ -272,11 +272,11 @@
       uri: spotify:artist:0uQyVnX8XxnTxe3JEH33Gl
       popularity: 5
     - external_urls:
-        spotify: https://open.spotify.com/artist/7g6rpU4rtKXNDVMxmOGXFY
-      id: 7g6rpU4rtKXNDVMxmOGXFY
-      name: Kayla Painter
-      uri: spotify:artist:7g6rpU4rtKXNDVMxmOGXFY
-      popularity: 8
+        spotify: https://open.spotify.com/artist/1dOXNoHa9mhmXRPnhJ6D7U
+      id: 1dOXNoHa9mhmXRPnhJ6D7U
+      name: Dj Kush Boogie
+      uri: spotify:artist:1dOXNoHa9mhmXRPnhJ6D7U
+      popularity: 18
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/16uOvUTQmIPM7UBe4C9Mmv
@@ -317,13 +317,13 @@
       id: 1izAFKIapgqtHzOr4Nk73u
       name: Outfit
       uri: spotify:artist:1izAFKIapgqtHzOr4Nk73u
-      popularity: 11
+      popularity: 12
     - external_urls:
-        spotify: https://open.spotify.com/artist/5yRBDiQxiBWgaUHdLnIMCi
-      id: 5yRBDiQxiBWgaUHdLnIMCi
-      name: Nick Höppner
-      uri: spotify:artist:5yRBDiQxiBWgaUHdLnIMCi
-      popularity: 16
+        spotify: https://open.spotify.com/artist/3EDQh3YXwnFIGADDBqNaEu
+      id: 3EDQh3YXwnFIGADDBqNaEu
+      name: Gary Corben
+      uri: spotify:artist:3EDQh3YXwnFIGADDBqNaEu
+      popularity: 14
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/3U3JFLNgfoededfhqRGC4G
@@ -364,13 +364,13 @@
       id: 1Ptp4nbLolMX9RniidXbbn
       name: Henry Keen
       uri: spotify:artist:1Ptp4nbLolMX9RniidXbbn
-      popularity: 2
+      popularity: 1
     - external_urls:
         spotify: https://open.spotify.com/artist/0O2yKE5Jyx5maooLz70DT3
       id: 0O2yKE5Jyx5maooLz70DT3
       name: Kawuku Sound
       uri: spotify:artist:0O2yKE5Jyx5maooLz70DT3
-      popularity: 2
+      popularity: 1
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/6rspKubI2IiJVfteKlQ5al
@@ -458,13 +458,13 @@
       id: 6uYq0k8pis5LPGzdFRM5FJ
       name: Huw Marc Bennett
       uri: spotify:artist:6uYq0k8pis5LPGzdFRM5FJ
-      popularity: 20
+      popularity: 21
     - external_urls:
         spotify: https://open.spotify.com/artist/4zMgFVljBxMaPn1U0SXGOh
       id: 4zMgFVljBxMaPn1U0SXGOh
       name: Charles Webster
       uri: spotify:artist:4zMgFVljBxMaPn1U0SXGOh
-      popularity: 34
+      popularity: 35
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/7Arw5mPFniRtcw1XmGcdwl
@@ -512,7 +512,7 @@
       id: 0QLkmmM8acu07MIT5GcSPT
       name: First Beige
       uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
-      popularity: 31
+      popularity: 32
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/1rISyS1ipslg42GLaJ4cZ7
@@ -559,4 +559,4 @@
       id: 255ZPAkvfPjmKwPj4mC48B
       name: Shishani
       uri: spotify:artist:255ZPAkvfPjmKwPj4mC48B
-      popularity: 34
+      popularity: 35
