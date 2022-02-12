@@ -87,10 +87,10 @@
       uri: spotify:artist:4IJTjZQVrOffnN6NXX00DG
       popularity: 0
     - external_urls:
-        spotify: https://open.spotify.com/artist/33rkBSmVJY21R0Hi251lnf
-      id: 33rkBSmVJY21R0Hi251lnf
-      name: Robbie N4HC
-      uri: spotify:artist:33rkBSmVJY21R0Hi251lnf
+        spotify: https://open.spotify.com/artist/6mQWJFacmbGY4YrI8izaEb
+      id: 6mQWJFacmbGY4YrI8izaEb
+      name: Jos Ma
+      uri: spotify:artist:6mQWJFacmbGY4YrI8izaEb
       popularity: 2
 - description: Combining some of the best tracks of the first 9 TestTafel playlists
   external_urls:
@@ -113,16 +113,16 @@
       uri: spotify:artist:32IztneRaGHmiRgNki4Mls
       popularity: 1
     - external_urls:
-        spotify: https://open.spotify.com/artist/3NGl2LLSZh4VUz2EaBZSUZ
-      id: 3NGl2LLSZh4VUz2EaBZSUZ
-      name: Roseane Santos
-      uri: spotify:artist:3NGl2LLSZh4VUz2EaBZSUZ
-      popularity: 7
-    - external_urls:
         spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
       id: 3y4GCYSmf6KyCXUdfmX6aI
       name: Brief Work
       uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
+      popularity: 6
+    - external_urls:
+        spotify: https://open.spotify.com/artist/3NGl2LLSZh4VUz2EaBZSUZ
+      id: 3NGl2LLSZh4VUz2EaBZSUZ
+      name: Roseane Santos
+      uri: spotify:artist:3NGl2LLSZh4VUz2EaBZSUZ
       popularity: 7
     - external_urls:
         spotify: https://open.spotify.com/artist/3EDQh3YXwnFIGADDBqNaEu
@@ -176,13 +176,13 @@
       id: 2805s9LKfRvmaFi6eK6L0f
       name: Luiz Gabriel Lopes
       uri: spotify:artist:2805s9LKfRvmaFi6eK6L0f
-      popularity: 25
+      popularity: 26
     - external_urls:
         spotify: https://open.spotify.com/artist/2qJTi04qBpG3C0RR62l1Du
       id: 2qJTi04qBpG3C0RR62l1Du
       name: SPARKLE DIVISION
       uri: spotify:artist:2qJTi04qBpG3C0RR62l1Du
-      popularity: 26
+      popularity: 27
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/6Y4CziMlnWkxtiMSGxz1Al
@@ -276,7 +276,7 @@
       id: 34MeiToHgg61sYGqDs1GqF
       name: Michael Ozone
       uri: spotify:artist:34MeiToHgg61sYGqDs1GqF
-      popularity: 12
+      popularity: 13
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/16uOvUTQmIPM7UBe4C9Mmv
@@ -413,11 +413,11 @@
       uri: spotify:artist:3Ww9kqkmNqA2Yb4X8HcIgw
       popularity: 0
     - external_urls:
-        spotify: https://open.spotify.com/artist/6SgZMqeGPjqdYPvtlQgFWM
-      id: 6SgZMqeGPjqdYPvtlQgFWM
-      name: Myron Glasper
-      uri: spotify:artist:6SgZMqeGPjqdYPvtlQgFWM
-      popularity: 23
+        spotify: https://open.spotify.com/artist/2n1NhC6PKP4WpUNXFeKzjY
+      id: 2n1NhC6PKP4WpUNXFeKzjY
+      name: JD73
+      uri: spotify:artist:2n1NhC6PKP4WpUNXFeKzjY
+      popularity: 14
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/4ejWc0OTjYLhN8aZlNSKj8
@@ -508,11 +508,11 @@
       uri: spotify:artist:07GE1K6KDRuaX4XAtcTawV
       popularity: 13
     - external_urls:
-        spotify: https://open.spotify.com/artist/2n1NhC6PKP4WpUNXFeKzjY
-      id: 2n1NhC6PKP4WpUNXFeKzjY
-      name: JD73
-      uri: spotify:artist:2n1NhC6PKP4WpUNXFeKzjY
-      popularity: 14
+        spotify: https://open.spotify.com/artist/0QLkmmM8acu07MIT5GcSPT
+      id: 0QLkmmM8acu07MIT5GcSPT
+      name: First Beige
+      uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
+      popularity: 32
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/1rISyS1ipslg42GLaJ4cZ7
@@ -549,14 +549,14 @@
       uri: spotify:artist:0a5lsotyiCdV0xmceU44oN
   unpopularArtists:
     - external_urls:
-        spotify: https://open.spotify.com/artist/0QLkmmM8acu07MIT5GcSPT
-      id: 0QLkmmM8acu07MIT5GcSPT
-      name: First Beige
-      uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
-      popularity: 32
-    - external_urls:
         spotify: https://open.spotify.com/artist/5NPL2jGG32a4LCnu4koPL7
       id: 5NPL2jGG32a4LCnu4koPL7
       name: Bruxas
       uri: spotify:artist:5NPL2jGG32a4LCnu4koPL7
-      popularity: 33
+      popularity: 34
+    - external_urls:
+        spotify: https://open.spotify.com/artist/255ZPAkvfPjmKwPj4mC48B
+      id: 255ZPAkvfPjmKwPj4mC48B
+      name: Shishani
+      uri: spotify:artist:255ZPAkvfPjmKwPj4mC48B
+      popularity: 35
