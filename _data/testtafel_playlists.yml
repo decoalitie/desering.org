@@ -38,7 +38,7 @@
       id: 6ThoEADmVnFqh92lOx2YCC
       name: Jack Stephenson-Oliver
       uri: spotify:artist:6ThoEADmVnFqh92lOx2YCC
-      popularity: 1
+      popularity: 0
     - external_urls:
         spotify: https://open.spotify.com/artist/18PVzmZUhAeyk8YWw2oBo3
       id: 18PVzmZUhAeyk8YWw2oBo3
@@ -111,7 +111,7 @@
       id: 32IztneRaGHmiRgNki4Mls
       name: Dominick
       uri: spotify:artist:32IztneRaGHmiRgNki4Mls
-      popularity: 1
+      popularity: 0
     - external_urls:
         spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
       id: 3y4GCYSmf6KyCXUdfmX6aI
@@ -125,16 +125,16 @@
       uri: spotify:artist:3NGl2LLSZh4VUz2EaBZSUZ
       popularity: 7
     - external_urls:
-        spotify: https://open.spotify.com/artist/3EDQh3YXwnFIGADDBqNaEu
-      id: 3EDQh3YXwnFIGADDBqNaEu
-      name: Gary Corben
-      uri: spotify:artist:3EDQh3YXwnFIGADDBqNaEu
-      popularity: 14
-    - external_urls:
         spotify: https://open.spotify.com/artist/0A4gPcMJUMuH8wjgMl9Dij
       id: 0A4gPcMJUMuH8wjgMl9Dij
       name: Aleisha Lee
       uri: spotify:artist:0A4gPcMJUMuH8wjgMl9Dij
+      popularity: 13
+    - external_urls:
+        spotify: https://open.spotify.com/artist/3EDQh3YXwnFIGADDBqNaEu
+      id: 3EDQh3YXwnFIGADDBqNaEu
+      name: Gary Corben
+      uri: spotify:artist:3EDQh3YXwnFIGADDBqNaEu
       popularity: 14
 - description: ""
   external_urls:
@@ -182,19 +182,19 @@
       id: 2qJTi04qBpG3C0RR62l1Du
       name: SPARKLE DIVISION
       uri: spotify:artist:2qJTi04qBpG3C0RR62l1Du
-      popularity: 27
+      popularity: 28
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/6Y4CziMlnWkxtiMSGxz1Al
   images:
     - height: 640
-      url: https://mosaic.scdn.co/640/ab67616d0000b2733f494abf52947c16112066a2ab67616d0000b2736f56e72a9d036e50a3f07554ab67616d0000b273bf6ddcf90fd44eb34f009ec4ab67616d0000b273cc7a0a6a1f37eabbc45b7938
+      url: https://mosaic.scdn.co/640/ab67616d0000b2733f494abf52947c16112066a2ab67616d0000b27375669aa642969ec8dc9a5fc4ab67616d0000b273bf6ddcf90fd44eb34f009ec4ab67616d0000b273cc7a0a6a1f37eabbc45b7938
       width: 640
     - height: 300
-      url: https://mosaic.scdn.co/300/ab67616d0000b2733f494abf52947c16112066a2ab67616d0000b2736f56e72a9d036e50a3f07554ab67616d0000b273bf6ddcf90fd44eb34f009ec4ab67616d0000b273cc7a0a6a1f37eabbc45b7938
+      url: https://mosaic.scdn.co/300/ab67616d0000b2733f494abf52947c16112066a2ab67616d0000b27375669aa642969ec8dc9a5fc4ab67616d0000b273bf6ddcf90fd44eb34f009ec4ab67616d0000b273cc7a0a6a1f37eabbc45b7938
       width: 300
     - height: 60
-      url: https://mosaic.scdn.co/60/ab67616d0000b2733f494abf52947c16112066a2ab67616d0000b2736f56e72a9d036e50a3f07554ab67616d0000b273bf6ddcf90fd44eb34f009ec4ab67616d0000b273cc7a0a6a1f37eabbc45b7938
+      url: https://mosaic.scdn.co/60/ab67616d0000b2733f494abf52947c16112066a2ab67616d0000b27375669aa642969ec8dc9a5fc4ab67616d0000b273bf6ddcf90fd44eb34f009ec4ab67616d0000b273cc7a0a6a1f37eabbc45b7938
       width: 60
   name: "TestTafel #8"
   tracks:
@@ -270,7 +270,7 @@
       id: 0uQyVnX8XxnTxe3JEH33Gl
       name: Arthhur
       uri: spotify:artist:0uQyVnX8XxnTxe3JEH33Gl
-      popularity: 5
+      popularity: 4
     - external_urls:
         spotify: https://open.spotify.com/artist/34MeiToHgg61sYGqDs1GqF
       id: 34MeiToHgg61sYGqDs1GqF
@@ -323,7 +323,7 @@
       id: 5yRBDiQxiBWgaUHdLnIMCi
       name: Nick Höppner
       uri: spotify:artist:5yRBDiQxiBWgaUHdLnIMCi
-      popularity: 17
+      popularity: 16
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/3U3JFLNgfoededfhqRGC4G
@@ -458,7 +458,7 @@
       id: 6uYq0k8pis5LPGzdFRM5FJ
       name: Huw Marc Bennett
       uri: spotify:artist:6uYq0k8pis5LPGzdFRM5FJ
-      popularity: 22
+      popularity: 21
     - external_urls:
         spotify: https://open.spotify.com/artist/4zMgFVljBxMaPn1U0SXGOh
       id: 4zMgFVljBxMaPn1U0SXGOh
@@ -506,7 +506,7 @@
       id: 07GE1K6KDRuaX4XAtcTawV
       name: Saidêra
       uri: spotify:artist:07GE1K6KDRuaX4XAtcTawV
-      popularity: 13
+      popularity: 12
     - external_urls:
         spotify: https://open.spotify.com/artist/0QLkmmM8acu07MIT5GcSPT
       id: 0QLkmmM8acu07MIT5GcSPT
