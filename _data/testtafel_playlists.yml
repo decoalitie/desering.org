@@ -91,7 +91,7 @@
       id: 6mQWJFacmbGY4YrI8izaEb
       name: Jos Ma
       uri: spotify:artist:6mQWJFacmbGY4YrI8izaEb
-      popularity: 2
+      popularity: 1
 - description: Combining some of the best tracks of the first 9 TestTafel playlists
   external_urls:
     spotify: https://open.spotify.com/playlist/7y59LwHDEvuMd6JQH4W8jC
@@ -117,7 +117,7 @@
       id: 3y4GCYSmf6KyCXUdfmX6aI
       name: Brief Work
       uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
-      popularity: 6
+      popularity: 5
     - external_urls:
         spotify: https://open.spotify.com/artist/3NGl2LLSZh4VUz2EaBZSUZ
       id: 3NGl2LLSZh4VUz2EaBZSUZ
@@ -182,7 +182,7 @@
       id: 2qJTi04qBpG3C0RR62l1Du
       name: SPARKLE DIVISION
       uri: spotify:artist:2qJTi04qBpG3C0RR62l1Du
-      popularity: 28
+      popularity: 27
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/6Y4CziMlnWkxtiMSGxz1Al
@@ -319,11 +319,11 @@
       uri: spotify:artist:1izAFKIapgqtHzOr4Nk73u
       popularity: 12
     - external_urls:
-        spotify: https://open.spotify.com/artist/5yRBDiQxiBWgaUHdLnIMCi
-      id: 5yRBDiQxiBWgaUHdLnIMCi
-      name: Nick Höppner
-      uri: spotify:artist:5yRBDiQxiBWgaUHdLnIMCi
-      popularity: 16
+        spotify: https://open.spotify.com/artist/4gjrK1MHgJnPCESuzMtWXg
+      id: 4gjrK1MHgJnPCESuzMtWXg
+      name: Ineffekt
+      uri: spotify:artist:4gjrK1MHgJnPCESuzMtWXg
+      popularity: 21
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/3U3JFLNgfoededfhqRGC4G
@@ -417,7 +417,7 @@
       id: 2n1NhC6PKP4WpUNXFeKzjY
       name: JD73
       uri: spotify:artist:2n1NhC6PKP4WpUNXFeKzjY
-      popularity: 14
+      popularity: 13
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/4ejWc0OTjYLhN8aZlNSKj8
@@ -458,25 +458,25 @@
       id: 6uYq0k8pis5LPGzdFRM5FJ
       name: Huw Marc Bennett
       uri: spotify:artist:6uYq0k8pis5LPGzdFRM5FJ
-      popularity: 21
+      popularity: 20
     - external_urls:
         spotify: https://open.spotify.com/artist/4zMgFVljBxMaPn1U0SXGOh
       id: 4zMgFVljBxMaPn1U0SXGOh
       name: Charles Webster
       uri: spotify:artist:4zMgFVljBxMaPn1U0SXGOh
-      popularity: 35
+      popularity: 34
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/7Arw5mPFniRtcw1XmGcdwl
   images:
     - height: 640
-      url: https://mosaic.scdn.co/640/ab67616d0000b273087255518781845b84bc8f92ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273d1920e7247e759a9e808802a
+      url: https://mosaic.scdn.co/640/ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273bbd97562a9466a1883bc7229ab67616d0000b273d1920e7247e759a9e808802a
       width: 640
     - height: 300
-      url: https://mosaic.scdn.co/300/ab67616d0000b273087255518781845b84bc8f92ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273d1920e7247e759a9e808802a
+      url: https://mosaic.scdn.co/300/ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273bbd97562a9466a1883bc7229ab67616d0000b273d1920e7247e759a9e808802a
       width: 300
     - height: 60
-      url: https://mosaic.scdn.co/60/ab67616d0000b273087255518781845b84bc8f92ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273d1920e7247e759a9e808802a
+      url: https://mosaic.scdn.co/60/ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273bbd97562a9466a1883bc7229ab67616d0000b273d1920e7247e759a9e808802a
       width: 60
   name: "TestTafel #2"
   tracks:
@@ -512,7 +512,7 @@
       id: 0QLkmmM8acu07MIT5GcSPT
       name: First Beige
       uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
-      popularity: 32
+      popularity: 31
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/1rISyS1ipslg42GLaJ4cZ7
