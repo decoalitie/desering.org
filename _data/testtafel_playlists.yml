@@ -125,17 +125,17 @@
       uri: spotify:artist:3NGl2LLSZh4VUz2EaBZSUZ
       popularity: 7
     - external_urls:
+        spotify: https://open.spotify.com/artist/3EDQh3YXwnFIGADDBqNaEu
+      id: 3EDQh3YXwnFIGADDBqNaEu
+      name: Gary Corben
+      uri: spotify:artist:3EDQh3YXwnFIGADDBqNaEu
+      popularity: 13
+    - external_urls:
         spotify: https://open.spotify.com/artist/0A4gPcMJUMuH8wjgMl9Dij
       id: 0A4gPcMJUMuH8wjgMl9Dij
       name: Aleisha Lee
       uri: spotify:artist:0A4gPcMJUMuH8wjgMl9Dij
       popularity: 13
-    - external_urls:
-        spotify: https://open.spotify.com/artist/3EDQh3YXwnFIGADDBqNaEu
-      id: 3EDQh3YXwnFIGADDBqNaEu
-      name: Gary Corben
-      uri: spotify:artist:3EDQh3YXwnFIGADDBqNaEu
-      popularity: 14
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/3wL7yQoGyIGKS7cDRs3lHs
@@ -317,7 +317,7 @@
       id: 1izAFKIapgqtHzOr4Nk73u
       name: Outfit
       uri: spotify:artist:1izAFKIapgqtHzOr4Nk73u
-      popularity: 12
+      popularity: 11
     - external_urls:
         spotify: https://open.spotify.com/artist/4gjrK1MHgJnPCESuzMtWXg
       id: 4gjrK1MHgJnPCESuzMtWXg
@@ -417,7 +417,7 @@
       id: 2n1NhC6PKP4WpUNXFeKzjY
       name: JD73
       uri: spotify:artist:2n1NhC6PKP4WpUNXFeKzjY
-      popularity: 13
+      popularity: 14
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/4ejWc0OTjYLhN8aZlNSKj8
@@ -508,11 +508,11 @@
       uri: spotify:artist:07GE1K6KDRuaX4XAtcTawV
       popularity: 12
     - external_urls:
-        spotify: https://open.spotify.com/artist/0QLkmmM8acu07MIT5GcSPT
-      id: 0QLkmmM8acu07MIT5GcSPT
-      name: First Beige
-      uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
-      popularity: 31
+        spotify: https://open.spotify.com/artist/5NPL2jGG32a4LCnu4koPL7
+      id: 5NPL2jGG32a4LCnu4koPL7
+      name: Bruxas
+      uri: spotify:artist:5NPL2jGG32a4LCnu4koPL7
+      popularity: 32
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/1rISyS1ipslg42GLaJ4cZ7
@@ -549,11 +549,11 @@
       uri: spotify:artist:0a5lsotyiCdV0xmceU44oN
   unpopularArtists:
     - external_urls:
-        spotify: https://open.spotify.com/artist/5NPL2jGG32a4LCnu4koPL7
-      id: 5NPL2jGG32a4LCnu4koPL7
-      name: Bruxas
-      uri: spotify:artist:5NPL2jGG32a4LCnu4koPL7
-      popularity: 33
+        spotify: https://open.spotify.com/artist/0QLkmmM8acu07MIT5GcSPT
+      id: 0QLkmmM8acu07MIT5GcSPT
+      name: First Beige
+      uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
+      popularity: 32
     - external_urls:
         spotify: https://open.spotify.com/artist/255ZPAkvfPjmKwPj4mC48B
       id: 255ZPAkvfPjmKwPj4mC48B
