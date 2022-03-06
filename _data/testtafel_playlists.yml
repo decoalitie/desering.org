@@ -172,17 +172,17 @@
       uri: spotify:artist:2ARO60gI5do88ho6azmzab
   unpopularArtists:
     - external_urls:
+        spotify: https://open.spotify.com/artist/6ERzNHT215iUO0kYb2Zdyw
+      id: 6ERzNHT215iUO0kYb2Zdyw
+      name: Lay-Far
+      uri: spotify:artist:6ERzNHT215iUO0kYb2Zdyw
+      popularity: 21
+    - external_urls:
         spotify: https://open.spotify.com/artist/2805s9LKfRvmaFi6eK6L0f
       id: 2805s9LKfRvmaFi6eK6L0f
       name: Luiz Gabriel Lopes
       uri: spotify:artist:2805s9LKfRvmaFi6eK6L0f
       popularity: 25
-    - external_urls:
-        spotify: https://open.spotify.com/artist/2qJTi04qBpG3C0RR62l1Du
-      id: 2qJTi04qBpG3C0RR62l1Du
-      name: SPARKLE DIVISION
-      uri: spotify:artist:2qJTi04qBpG3C0RR62l1Du
-      popularity: 27
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/6Y4CziMlnWkxtiMSGxz1Al
