@@ -270,7 +270,7 @@
       id: 0uQyVnX8XxnTxe3JEH33Gl
       name: Arthhur
       uri: spotify:artist:0uQyVnX8XxnTxe3JEH33Gl
-      popularity: 4
+      popularity: 3
     - external_urls:
         spotify: https://open.spotify.com/artist/34MeiToHgg61sYGqDs1GqF
       id: 34MeiToHgg61sYGqDs1GqF
@@ -458,7 +458,7 @@
       id: 6uYq0k8pis5LPGzdFRM5FJ
       name: Huw Marc Bennett
       uri: spotify:artist:6uYq0k8pis5LPGzdFRM5FJ
-      popularity: 20
+      popularity: 21
     - external_urls:
         spotify: https://open.spotify.com/artist/4zMgFVljBxMaPn1U0SXGOh
       id: 4zMgFVljBxMaPn1U0SXGOh
@@ -506,12 +506,12 @@
       id: 07GE1K6KDRuaX4XAtcTawV
       name: Saidêra
       uri: spotify:artist:07GE1K6KDRuaX4XAtcTawV
-      popularity: 12
+      popularity: 13
     - external_urls:
-        spotify: https://open.spotify.com/artist/5NPL2jGG32a4LCnu4koPL7
-      id: 5NPL2jGG32a4LCnu4koPL7
-      name: Bruxas
-      uri: spotify:artist:5NPL2jGG32a4LCnu4koPL7
+        spotify: https://open.spotify.com/artist/0QLkmmM8acu07MIT5GcSPT
+      id: 0QLkmmM8acu07MIT5GcSPT
+      name: First Beige
+      uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
       popularity: 32
 - description: ""
   external_urls:
@@ -549,14 +549,14 @@
       uri: spotify:artist:0a5lsotyiCdV0xmceU44oN
   unpopularArtists:
     - external_urls:
-        spotify: https://open.spotify.com/artist/0QLkmmM8acu07MIT5GcSPT
-      id: 0QLkmmM8acu07MIT5GcSPT
-      name: First Beige
-      uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
-      popularity: 32
+        spotify: https://open.spotify.com/artist/5NPL2jGG32a4LCnu4koPL7
+      id: 5NPL2jGG32a4LCnu4koPL7
+      name: Bruxas
+      uri: spotify:artist:5NPL2jGG32a4LCnu4koPL7
+      popularity: 33
     - external_urls:
         spotify: https://open.spotify.com/artist/255ZPAkvfPjmKwPj4mC48B
       id: 255ZPAkvfPjmKwPj4mC48B
       name: Shishani
       uri: spotify:artist:255ZPAkvfPjmKwPj4mC48B
-      popularity: 35
+      popularity: 36
