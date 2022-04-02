@@ -44,7 +44,7 @@
       id: 18PVzmZUhAeyk8YWw2oBo3
       name: Jonny Wildey
       uri: spotify:artist:18PVzmZUhAeyk8YWw2oBo3
-      popularity: 1
+      popularity: 2
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/0tumviHtG40G82DcZIgFR6
@@ -172,16 +172,16 @@
       uri: spotify:artist:2ARO60gI5do88ho6azmzab
   unpopularArtists:
     - external_urls:
-        spotify: https://open.spotify.com/artist/2805s9LKfRvmaFi6eK6L0f
-      id: 2805s9LKfRvmaFi6eK6L0f
-      name: Luiz Gabriel Lopes
-      uri: spotify:artist:2805s9LKfRvmaFi6eK6L0f
-      popularity: 26
-    - external_urls:
         spotify: https://open.spotify.com/artist/2qJTi04qBpG3C0RR62l1Du
       id: 2qJTi04qBpG3C0RR62l1Du
       name: SPARKLE DIVISION
       uri: spotify:artist:2qJTi04qBpG3C0RR62l1Du
+      popularity: 27
+    - external_urls:
+        spotify: https://open.spotify.com/artist/2805s9LKfRvmaFi6eK6L0f
+      id: 2805s9LKfRvmaFi6eK6L0f
+      name: Luiz Gabriel Lopes
+      uri: spotify:artist:2805s9LKfRvmaFi6eK6L0f
       popularity: 27
 - description: ""
   external_urls:
@@ -223,13 +223,13 @@
       id: 4vhCl6MBQvO7FZn1SScoNY
       name: Conjunto Papa Upa
       uri: spotify:artist:4vhCl6MBQvO7FZn1SScoNY
-      popularity: 5
+      popularity: 4
     - external_urls:
         spotify: https://open.spotify.com/artist/4vhCl6MBQvO7FZn1SScoNY
       id: 4vhCl6MBQvO7FZn1SScoNY
       name: Conjunto Papa Upa
       uri: spotify:artist:4vhCl6MBQvO7FZn1SScoNY
-      popularity: 5
+      popularity: 4
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/37OIHXYRvBtijmT5u0fpAe
@@ -323,7 +323,7 @@
       id: 4gjrK1MHgJnPCESuzMtWXg
       name: Ineffekt
       uri: spotify:artist:4gjrK1MHgJnPCESuzMtWXg
-      popularity: 22
+      popularity: 21
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/3U3JFLNgfoededfhqRGC4G
@@ -470,13 +470,13 @@
     spotify: https://open.spotify.com/playlist/7Arw5mPFniRtcw1XmGcdwl
   images:
     - height: 640
-      url: https://mosaic.scdn.co/640/ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273bbd97562a9466a1883bc7229ab67616d0000b273d1920e7247e759a9e808802a
+      url: https://mosaic.scdn.co/640/ab67616d0000b27340080ed5a2ec3c92bf445247ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273d1920e7247e759a9e808802a
       width: 640
     - height: 300
-      url: https://mosaic.scdn.co/300/ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273bbd97562a9466a1883bc7229ab67616d0000b273d1920e7247e759a9e808802a
+      url: https://mosaic.scdn.co/300/ab67616d0000b27340080ed5a2ec3c92bf445247ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273d1920e7247e759a9e808802a
       width: 300
     - height: 60
-      url: https://mosaic.scdn.co/60/ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273bbd97562a9466a1883bc7229ab67616d0000b273d1920e7247e759a9e808802a
+      url: https://mosaic.scdn.co/60/ab67616d0000b27340080ed5a2ec3c92bf445247ab67616d0000b273627f1932db9568072b95ebb4ab67616d0000b273ae2f84fb5143f61aa97adc5fab67616d0000b273d1920e7247e759a9e808802a
       width: 60
   name: "TestTafel #2"
   tracks:
