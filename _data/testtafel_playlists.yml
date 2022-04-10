@@ -1,5 +1,54 @@
 - description: ""
   external_urls:
+    spotify: https://open.spotify.com/playlist/5F1HtEapMcNmSV4Hs1Sz38
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b27320f85fc7f44c06d124540b45ab67616d0000b2737484234a6fee27a2f5ea4a59ab67616d0000b2739c2cf6e4928877da0b2c522bab67616d0000b273f5c863a88e3393974f81fcf0
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b27320f85fc7f44c06d124540b45ab67616d0000b2737484234a6fee27a2f5ea4a59ab67616d0000b2739c2cf6e4928877da0b2c522bab67616d0000b273f5c863a88e3393974f81fcf0
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b27320f85fc7f44c06d124540b45ab67616d0000b2737484234a6fee27a2f5ea4a59ab67616d0000b2739c2cf6e4928877da0b2c522bab67616d0000b273f5c863a88e3393974f81fcf0
+      width: 60
+  name: "TestTafel #14"
+  tracks:
+    href: https://api.spotify.com/v1/playlists/5F1HtEapMcNmSV4Hs1Sz38/tracks
+    total: 70
+  uri: spotify:playlist:5F1HtEapMcNmSV4Hs1Sz38
+  newMusicArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/7AcVYXKD86pBTIEEEGpTge
+      id: 7AcVYXKD86pBTIEEEGpTge
+      name: General Ehi Duncan
+      uri: spotify:artist:7AcVYXKD86pBTIEEEGpTge
+  unpopularArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/3OvnoICc8ZAgI3AHTlU4aq
+      id: 3OvnoICc8ZAgI3AHTlU4aq
+      name: Shifting Gears
+      uri: spotify:artist:3OvnoICc8ZAgI3AHTlU4aq
+      popularity: 2
+    - external_urls:
+        spotify: https://open.spotify.com/artist/42oyeuzTjSz4KLEAr4K3XR
+      id: 42oyeuzTjSz4KLEAr4K3XR
+      name: Galathea
+      uri: spotify:artist:42oyeuzTjSz4KLEAr4K3XR
+      popularity: 4
+    - external_urls:
+        spotify: https://open.spotify.com/artist/0zh0LGeDjSa65dZGdlPe9A
+      id: 0zh0LGeDjSa65dZGdlPe9A
+      name: Endangered Species
+      uri: spotify:artist:0zh0LGeDjSa65dZGdlPe9A
+      popularity: 9
+    - external_urls:
+        spotify: https://open.spotify.com/artist/1CUV6UEfyGRCZXqBbXJ5f7
+      id: 1CUV6UEfyGRCZXqBbXJ5f7
+      name: Opek
+      uri: spotify:artist:1CUV6UEfyGRCZXqBbXJ5f7
+      popularity: 13
+- description: ""
+  external_urls:
     spotify: https://open.spotify.com/playlist/5V7wJftFtZt1l5zvXQ43ix
   images:
     - height: 640
@@ -511,7 +560,7 @@
       id: 4zMgFVljBxMaPn1U0SXGOh
       name: Charles Webster
       uri: spotify:artist:4zMgFVljBxMaPn1U0SXGOh
-      popularity: 34
+      popularity: 35
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/7Arw5mPFniRtcw1XmGcdwl
