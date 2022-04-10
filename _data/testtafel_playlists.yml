@@ -1,5 +1,52 @@
 - description: ""
   external_urls:
+    spotify: https://open.spotify.com/playlist/5V7wJftFtZt1l5zvXQ43ix
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b273294645dbdc802abcae3c8714ab67616d0000b2733dd0e75c2b65decb70f90287ab67616d0000b27385b7178cec59edf04af3bcd9ab67616d0000b273cfa684b0028d28b4e4f7494f
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b273294645dbdc802abcae3c8714ab67616d0000b2733dd0e75c2b65decb70f90287ab67616d0000b27385b7178cec59edf04af3bcd9ab67616d0000b273cfa684b0028d28b4e4f7494f
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b273294645dbdc802abcae3c8714ab67616d0000b2733dd0e75c2b65decb70f90287ab67616d0000b27385b7178cec59edf04af3bcd9ab67616d0000b273cfa684b0028d28b4e4f7494f
+      width: 60
+  name: "TestTafel #13"
+  tracks:
+    href: https://api.spotify.com/v1/playlists/5V7wJftFtZt1l5zvXQ43ix/tracks
+    total: 65
+  uri: spotify:playlist:5V7wJftFtZt1l5zvXQ43ix
+  newMusicArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/4PehrIDIyaLczN1phi5mhY
+      id: 4PehrIDIyaLczN1phi5mhY
+      name: Lorna Fletcher
+      uri: spotify:artist:4PehrIDIyaLczN1phi5mhY
+    - external_urls:
+        spotify: https://open.spotify.com/artist/6L2FmhX67tsAe4o7TrVR3b
+      id: 6L2FmhX67tsAe4o7TrVR3b
+      name: Carwyn Ellis & Rio 18
+      uri: spotify:artist:6L2FmhX67tsAe4o7TrVR3b
+    - external_urls:
+        spotify: https://open.spotify.com/artist/2StcyX3fmelae5agBHIkDO
+      id: 2StcyX3fmelae5agBHIkDO
+      name: Jungle by Night
+      uri: spotify:artist:2StcyX3fmelae5agBHIkDO
+  unpopularArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/6ChwCR4vkgy49q4fO9Nsvf
+      id: 6ChwCR4vkgy49q4fO9Nsvf
+      name: Aeshim
+      uri: spotify:artist:6ChwCR4vkgy49q4fO9Nsvf
+      popularity: 1
+    - external_urls:
+        spotify: https://open.spotify.com/artist/4UydkmR50xCx4uU1aCg3dZ
+      id: 4UydkmR50xCx4uU1aCg3dZ
+      name: Ls+b
+      uri: spotify:artist:4UydkmR50xCx4uU1aCg3dZ
+      popularity: 1
+- description: ""
+  external_urls:
     spotify: https://open.spotify.com/playlist/0WnofhUoqfHl3wD9V6nNt4
   images:
     - height: 640
@@ -44,7 +91,7 @@
       id: 18PVzmZUhAeyk8YWw2oBo3
       name: Jonny Wildey
       uri: spotify:artist:18PVzmZUhAeyk8YWw2oBo3
-      popularity: 1
+      popularity: 2
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/0tumviHtG40G82DcZIgFR6
