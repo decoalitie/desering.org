@@ -1,8 +1,7 @@
 ---
-title: TestTafel - Reserveren
+title: TestTafel - Reserveren (crowdfund backers)
 layout: default
 language: nl
-translation: testtafel/reservation
 backlink: /testtafel
 scripts:
 - reservation-form
@@ -16,11 +15,24 @@ permalink: :path/:basename
     <h1>Reserveren voor TestTafel</h1>
 
     <form id="reservation-form">
+
+      <p class="content-already-reserved">
+        Op deze pagina kunnen ondersteuners van onze crowdfundcampagne alvast reserveren
+        voor de eerste TestTafel edities. Het reserveringsformulier zal later deze week
+        voor een breder publiek openen.
+      </p>
+  
+      <p class="content-already-reserved">
+        Al onze TestTafel avonden zijn vanaf nu op onze nieuwe locatie, De Sering. 
+        Het adres is <a href="https://goo.gl/maps/hYTqwcRNWBs7t1pL6">Rhoneweg 6</a> te Amsterdam. 
+        De aanvang van het diner is 19:00
+      </p>
+
       <input type="hidden" name="lang" value="nl" />
       <fieldset class="content-already-reserved">
         <legend class="form-step-header">Kies een datum</legend>
         <select class="boxed" data-input-controller="SelectRadioList" name="date">
-          {% for event in site.data.testtafels %}
+          {% for event in site.data["testtafels-crowdfund"] %}
           {% comment %}
           68400 = 19 hours (for 19:00 start time)
           59400 = 16.5 hours (for 16:30 start time)
@@ -258,7 +270,7 @@ permalink: :path/:basename
       Reserveren is momenteel mogelijk voor deze TestTafel edities:
     </p>
     <ul>
-      {% for event in site.data.testtafels %}
+      {% for event in site.data["testtafels-crowdfund"] %}
       {% comment %}
       68400 = 19 hours (for 19:00 start time)
       {% endcomment %}

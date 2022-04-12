@@ -1,7 +1,7 @@
 import { isBefore } from 'date-fns';
 import * as inputControllers from '../forms/input-controllers';
 import { getTemplateRender, swapFormWithTemplate } from './templates';
-import { MIN_PEOPLE_OWN_TABLE, SHARED_TABLE_START_TIME, ENDPOINT, SHOW_DATE_UNTIL } from './config';
+import { MIN_PEOPLE_OWN_TABLE, SHARED_TABLE_START_TIME, ENDPOINT, SHOW_DATE_UNTIL, LINKIFY } from './config';
 import { getReservationsForDate, removeOldReservations, storeReservation } from "./reservations";
 
 const reservationForm = document.querySelector("#reservation-form");
@@ -45,11 +45,9 @@ function main() {
   }
 
   watchFields('date', handleDateChange);
-  // watchFields('table', handleTableChange); 
+  watchFields('table', handleTableChange); 
   watchFields('reservation-amount', handleReservationAmountChange);
   watchFields(['vegan-amount', 'vegetarian-amount'], handleDietCountsChange, false);
-  watchFields('verify-corona-check', handleCoronaCheckChange); 
-  // watchFields('test-amount', handleTestAmountChange, false);
 
   reservationForm.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -80,17 +78,37 @@ function watchFields(fieldNames, onChange, immediate = true) {
   }
 }
 
-function handleCoronaCheckChange() {
-  const submitButton = reservationForm.querySelector('button[type="submit"]');
-  submitButton.disabled = !fields['verify-corona-check'].checked;
-}
-
 function handleDateChange() {
   const { fullyBooked, special, specialDescription } = fields.date.selectedOptionElement.dataset;
   const specialElement = getTemplateRender('special-description');
   if (specialDescription !== undefined) {
     specialElement.element.querySelector('h4').innerText = special;
-    specialElement.element.querySelector('p').innerText = specialDescription;
+
+    const textElement = specialElement.element.querySelector('.special-description-text');
+    while (textElement.firstChild) {
+      textElement.removeChild(textElement.firstChild);
+    }
+    const paragraphs = specialDescription.split('\n').filter(Boolean);
+
+    const renderParagraph = (element, text) => {
+      if (Object.keys(LINKIFY).some(key => text.includes(key))) {
+        let linkified = text;
+        for (const [key, href] of Object.entries(LINKIFY)) {
+          linkified = linkified.replace(key, `<a href="${href}" target="_blank">${key}</a>`);
+        }
+        element.innerHTML = linkified;
+      } else {
+        element.innerText = text;
+      }
+    }
+
+    while (paragraphs.length) {
+      const currentParagraph = document.createElement('p');
+      textElement.appendChild(currentParagraph);
+
+      renderParagraph(currentParagraph, paragraphs.shift());
+    }
+
     if (specialElement.visible) {
       specialElement.refreshHeight();
     }
@@ -125,17 +143,16 @@ function handleConfirmAlreadyReservedClick(e) {
 }
 
 function handleReservationAmountChange() {
-  // const amount = fields["reservation-amount"].safeValue;
-  // const sufficient = amount >= MIN_PEOPLE_OWN_TABLE;
+  const amount = fields["reservation-amount"].safeValue;
+  const sufficient = amount >= MIN_PEOPLE_OWN_TABLE;
 
-  // if (!sufficient) {
-  //   fields.table.value = "shared";
-  //   handleTableChange(); 
-  // }
-  // fields.table.disabled = !sufficient;
+  if (!sufficient) {
+    fields.table.value = "shared";
+    handleTableChange(); 
+  }
+  fields.table.disabled = !sufficient;
 
   updateAmountInputs(["vegan-amount", "vegetarian-amount"], "nopref-amount");
-  // updateAmountInputs(["test-amount"], "notest-amount");
 }
 
 function handleDietCountsChange() {
