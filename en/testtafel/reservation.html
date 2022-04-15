@@ -8,7 +8,7 @@ scripts:
 - reservation-form
 stylesheets:
 - reservation-form
-permalink: :path/:basename
+permalink: /en/testtafel/reservation
 ---
 
 <div class="row">
@@ -16,6 +16,12 @@ permalink: :path/:basename
     <h1>Reservation for TestTafel</h1>
 
     <form id="reservation-form">
+  
+      <p class="content-already-reserved">
+        All our TestTafel evenings are now hosted at our new location, De Sering.
+        The address is <a href="https://goo.gl/maps/hYTqwcRNWBs7t1pL6">Rhoneweg 6</a>, Amsterdam. 
+        Dinners will start at 19:00.
+      </p>
       <input type="hidden" name="lang" value="en" />
       <fieldset class="content-already-reserved">
         <legend class="form-step-header">Choose a date</legend>
@@ -29,11 +35,7 @@ permalink: :path/:basename
 
           {% if unix_event > unix_now %}
 
-          {% comment %}
-          temorarily hardcode lunch special
           {% assign special = site.data["testtafel-specials"][event.date] %}
-          {% endcomment %}
-          {% assign special = site.data["testtafel-specials"]["lunch"] %}
 
           <option value="{{ event.date }}" {% if special %} data-special="{{ special.name }}"
             data-special-description="{{ special.description.en }}" {% endif %}{% if event.fullyBooked %}
@@ -48,7 +50,7 @@ permalink: :path/:basename
       <template data-template-id="special-description">
         <section class="special-description content-already-reserved">
           <h4></h4>
-          <p></p>
+          <div class="special-description-text"></div>
         </section>
       </template>
 
@@ -107,20 +109,14 @@ permalink: :path/:basename
         For how many people would you like to reserve?
       </label>
 
-      <p>
-        Due to government policy mandating 1.5 meter distance, we can only seat groups of 4 people or more.
-      </p>
-
       <div class="number-with-steppers-wrapper">
-        <!-- <input data-input-controller="NumberWithSteppers" id="input-reservation-amount" max="20" min="1"
-          name="reservation-amount" required size="3" step="1" type="number" value="1"> -->
-        <input data-input-controller="NumberWithSteppers" id="input-reservation-amount" max="20" min="4"
-          name="reservation-amount" required size="3" step="1" type="number" value="4">
+        <input data-input-controller="NumberWithSteppers" id="input-reservation-amount" max="20" min="1"
+          name="reservation-amount" required size="3" step="1" type="number" value="1">
       </div>
 
       <div data-field-feedback-for="reservation-amount"></div>
 
-      <!-- <fieldset>
+      <fieldset>
         <legend class="form-step-header">Which table would you like to join?</legend>
 
         <p>
@@ -132,9 +128,7 @@ permalink: :path/:basename
           <option selected value="shared">Large shared table</option>
           <option data-tag="5 or more people" value="own">Private table</option>
         </select>
-      </fieldset> -->
-
-      <input type="hidden" name="table" value="own" />
+      </fieldset>
 
       <div data-field-feedback-for="table"></div>
 
@@ -278,35 +272,6 @@ permalink: :path/:basename
         <label for="checkbox-consent-email-contact">Yes, keep me posted through email</label>
 
         <div data-field-feedback-for="consent-email-contact"></div>
-      </fieldset>
-
-      <fieldset>
-        <legend class="form-step-header">Updated COVID-19 policy</legend>
-
-        <p>
-          Due to recent coronavirus developments and the limited amount of space we have, our COVID policy is more
-          strict than usual. In order to attend this TestTafel edition you will need:
-        </p>
-
-        <ol class="requirements-list">
-          <li>An official <a href="https://coronacheck.nl/en/">CoronaCheck</a> QR code with a proof of identity (such
-            as an ID card)
-            <br /><strong>and</strong>
-          </li>
-          <li>a physical negative self-test result</li>
-        </ol>
-
-        <p>
-          You can do the self-test at home shortly before you leave for TestTafel. Please bring the <strong>physical
-            result</strong> (the test itself, not a picture of the test!) to TestTafel. If you don't have a self-test
-          you can get one from us at the door and test yourself at the venue.
-        </p>
-
-        <input id="checkbox-verify-corona-check" name="verify-corona-check" type="checkbox">
-
-        <label for="checkbox-verify-corona-check">I understand that I will need to both bring an official CoronaCheck QR
-          and perform a
-          self-test</label>
       </fieldset>
 
       <fieldset class="submit-section">
