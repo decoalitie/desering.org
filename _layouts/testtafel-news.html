@@ -1,0 +1,59 @@
+---
+layout: base
+---
+
+<!-- TRANSLATION MENU -->
+{% if page.translation %}
+
+<div class="row purple-dark top-bar-row">
+  <div class="back-link">
+    <a href="{%- if page.language == 'en' -%}/en{%- endif %}/testtafel">
+      <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px" fill="#FFFFFF"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+      <span>
+        {%- if page.language == 'en' -%}
+        back
+        {%- else -%}
+        terug
+        {%- endif -%}
+      </span>
+    </a>
+  </div>
+
+  <div class="container top-bar-container">
+    <div class="lang-select">
+      {% if page.language == 'en' %}
+      <a href="/{{ page.translation }}">Nederlands</a>
+      {% else %}
+      <a href="/en/{{ page.translation }}">English</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% endif %}
+
+<div class="row">
+  <div class="container">
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="testtafel-symbol" viewBox="0 0 133.69396 70.47318">
+      <path d="M122.50844,11.45321v15.7901c1.0528,1.4629,2.0625,2.9599,3,4.5058V8.45321H7.84244V31.753c.9375-1.5468,1.9473-3.0429,3-4.5068v-15.793Z"/>
+      <path d="M58.46454,5.09091a61.06273,61.06273,0,0,1,16.4238,0h13.0694a65.48355,65.48355,0,0,0-42.5635,0Z"/>
+      <path d="M.92642,67.28621c0,.62293.01087,1.24335.0282,1.86212H3.9567c-.01813-.61877-.03028-1.239-.03028-1.86212A62.75159,62.75159,0,0,1,33.44986,14.0909h-5.3515A65.69153,65.69153,0,0,0,.92642,67.28621Z"/>
+      <path d="M105.25363,14.0909H99.90207a62.75227,62.75227,0,0,1,29.52435,53.19531c0,.62311-.01214,1.24335-.03027,1.86212h3.00207c.01734-.61877.0282-1.23919.0282-1.86212A65.69228,65.69228,0,0,0,105.25363,14.0909Z"/>
+      <path d="M122.50845,69.14833h3V56.92488a59.2242,59.2242,0,0,0-3-10.88665Z"/>
+      <path d="M7.84244,69.14833h3V46.04311a59.25488,59.25488,0,0,0-3,10.8916Z"/>
+    </svg>
+    
+    <h1 class="testtafel">{{ page.title }}</h1>
+
+    {{ content }}
+
+    <a href="{%- if page.language == 'en' -%}/en{%- endif %}/testtafel">
+      {%- if page.language == 'en' -%}
+      back to home
+      {%- else -%}
+      terug naar home
+      {%- endif -%}
+    </a>
+  </div>
+</div>

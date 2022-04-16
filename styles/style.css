@@ -151,8 +151,33 @@ h1:before {
 	margin-bottom: 1rem;
 }
 
+h1.testtafel {
+	margin-top: .5rem;
+}
+
+h1.testtafel:before,
+h1.no-logo:before {
+	background: none;
+	content: none;
+}
+
+.testtafel-symbol {
+	margin-top: 1rem;
+	height: 70px;
+	width: auto;
+}
+
+.testtafel-symbol path {
+	fill: var(--purple-dark);
+}
+
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1.4;
+}
+
+h2 {
+	margin-top: 2rem;
+	margin-bottom: .3rem;
 }
 
 h3 {
@@ -161,6 +186,10 @@ h3 {
 }
 h3 ~ p {
 	margin-top: 0;
+}
+
+h2 + h3 {
+	margin-top: .6rem;
 }
 
 h3.inline {
@@ -618,4 +647,12 @@ html.landing body {
 	.landing .header-with-tooltip .tooltip:before {
 		display: none;
 	}
+}
+
+.date-list {
+	margin-top: 0;
+}
+.date-list li {
+	margin-top: 0;
+	margin-bottom: 0;
 }
