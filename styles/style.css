@@ -582,7 +582,7 @@ html.landing body {
 	background: var(--purple-dark);
 	color: var(--purple-white);
 	padding: 2rem 2rem;
-	margin-top: 3rem;
+	margin-top: 1rem;
 }
 
 .purple-box h3 {
