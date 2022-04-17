@@ -34,7 +34,7 @@
       id: 42oyeuzTjSz4KLEAr4K3XR
       name: Galathea
       uri: spotify:artist:42oyeuzTjSz4KLEAr4K3XR
-      popularity: 6
+      popularity: 7
     - external_urls:
         spotify: https://open.spotify.com/artist/0zh0LGeDjSa65dZGdlPe9A
       id: 0zh0LGeDjSa65dZGdlPe9A
@@ -183,10 +183,10 @@
       uri: spotify:artist:4IJTjZQVrOffnN6NXX00DG
       popularity: 0
     - external_urls:
-        spotify: https://open.spotify.com/artist/6mQWJFacmbGY4YrI8izaEb
-      id: 6mQWJFacmbGY4YrI8izaEb
-      name: Jos Ma
-      uri: spotify:artist:6mQWJFacmbGY4YrI8izaEb
+        spotify: https://open.spotify.com/artist/33rkBSmVJY21R0Hi251lnf
+      id: 33rkBSmVJY21R0Hi251lnf
+      name: Robbie N4HC
+      uri: spotify:artist:33rkBSmVJY21R0Hi251lnf
       popularity: 2
 - description: Combining some of the best tracks of the first 9 TestTafel playlists
   external_urls:
@@ -209,16 +209,16 @@
       uri: spotify:artist:32IztneRaGHmiRgNki4Mls
       popularity: 0
     - external_urls:
-        spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
-      id: 3y4GCYSmf6KyCXUdfmX6aI
-      name: Brief Work
-      uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
-      popularity: 5
-    - external_urls:
         spotify: https://open.spotify.com/artist/3NGl2LLSZh4VUz2EaBZSUZ
       id: 3NGl2LLSZh4VUz2EaBZSUZ
       name: Roseane Santos
       uri: spotify:artist:3NGl2LLSZh4VUz2EaBZSUZ
+      popularity: 6
+    - external_urls:
+        spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
+      id: 3y4GCYSmf6KyCXUdfmX6aI
+      name: Brief Work
+      uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
       popularity: 6
     - external_urls:
         spotify: https://open.spotify.com/artist/3EDQh3YXwnFIGADDBqNaEu
