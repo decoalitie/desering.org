@@ -57,7 +57,7 @@
 - date: 2021-12-19
   fullyBooked: false
 - date: 2022-04-22
-  fullyBooked: false
+  fullyBooked: true
 - date: 2022-04-23
   fullyBooked: false
 - date: 2022-04-24
