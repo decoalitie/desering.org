@@ -46,7 +46,7 @@
       id: 1CUV6UEfyGRCZXqBbXJ5f7
       name: Opek
       uri: spotify:artist:1CUV6UEfyGRCZXqBbXJ5f7
-      popularity: 13
+      popularity: 14
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/5V7wJftFtZt1l5zvXQ43ix
@@ -209,28 +209,28 @@
       uri: spotify:artist:32IztneRaGHmiRgNki4Mls
       popularity: 0
     - external_urls:
+        spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
+      id: 3y4GCYSmf6KyCXUdfmX6aI
+      name: Brief Work
+      uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
+      popularity: 5
+    - external_urls:
         spotify: https://open.spotify.com/artist/3NGl2LLSZh4VUz2EaBZSUZ
       id: 3NGl2LLSZh4VUz2EaBZSUZ
       name: Roseane Santos
       uri: spotify:artist:3NGl2LLSZh4VUz2EaBZSUZ
       popularity: 6
     - external_urls:
-        spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
-      id: 3y4GCYSmf6KyCXUdfmX6aI
-      name: Brief Work
-      uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
-      popularity: 6
+        spotify: https://open.spotify.com/artist/0A4gPcMJUMuH8wjgMl9Dij
+      id: 0A4gPcMJUMuH8wjgMl9Dij
+      name: Aleisha Lee
+      uri: spotify:artist:0A4gPcMJUMuH8wjgMl9Dij
+      popularity: 14
     - external_urls:
         spotify: https://open.spotify.com/artist/3EDQh3YXwnFIGADDBqNaEu
       id: 3EDQh3YXwnFIGADDBqNaEu
       name: Gary Corben
       uri: spotify:artist:3EDQh3YXwnFIGADDBqNaEu
-      popularity: 13
-    - external_urls:
-        spotify: https://open.spotify.com/artist/0A4gPcMJUMuH8wjgMl9Dij
-      id: 0A4gPcMJUMuH8wjgMl9Dij
-      name: Aleisha Lee
-      uri: spotify:artist:0A4gPcMJUMuH8wjgMl9Dij
       popularity: 14
 - description: ""
   external_urls:
@@ -655,4 +655,4 @@
       id: 255ZPAkvfPjmKwPj4mC48B
       name: Shishani
       uri: spotify:artist:255ZPAkvfPjmKwPj4mC48B
-      popularity: 35
+      popularity: 34
