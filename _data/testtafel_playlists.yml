@@ -456,17 +456,17 @@
       uri: spotify:artist:0O98jlCaPzvsoei6U5jfEL
   unpopularArtists:
     - external_urls:
-        spotify: https://open.spotify.com/artist/1Ptp4nbLolMX9RniidXbbn
-      id: 1Ptp4nbLolMX9RniidXbbn
-      name: Henry Keen
-      uri: spotify:artist:1Ptp4nbLolMX9RniidXbbn
-      popularity: 1
-    - external_urls:
         spotify: https://open.spotify.com/artist/0O2yKE5Jyx5maooLz70DT3
       id: 0O2yKE5Jyx5maooLz70DT3
       name: Kawuku Sound
       uri: spotify:artist:0O2yKE5Jyx5maooLz70DT3
       popularity: 1
+    - external_urls:
+        spotify: https://open.spotify.com/artist/1Ptp4nbLolMX9RniidXbbn
+      id: 1Ptp4nbLolMX9RniidXbbn
+      name: Henry Keen
+      uri: spotify:artist:1Ptp4nbLolMX9RniidXbbn
+      popularity: 2
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/6rspKubI2IiJVfteKlQ5al
@@ -604,11 +604,11 @@
       uri: spotify:artist:2n1NhC6PKP4WpUNXFeKzjY
       popularity: 14
     - external_urls:
-        spotify: https://open.spotify.com/artist/5NPL2jGG32a4LCnu4koPL7
-      id: 5NPL2jGG32a4LCnu4koPL7
-      name: Bruxas
-      uri: spotify:artist:5NPL2jGG32a4LCnu4koPL7
-      popularity: 33
+        spotify: https://open.spotify.com/artist/0QLkmmM8acu07MIT5GcSPT
+      id: 0QLkmmM8acu07MIT5GcSPT
+      name: First Beige
+      uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
+      popularity: 32
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/1rISyS1ipslg42GLaJ4cZ7
@@ -645,10 +645,10 @@
       uri: spotify:artist:0a5lsotyiCdV0xmceU44oN
   unpopularArtists:
     - external_urls:
-        spotify: https://open.spotify.com/artist/0QLkmmM8acu07MIT5GcSPT
-      id: 0QLkmmM8acu07MIT5GcSPT
-      name: First Beige
-      uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
+        spotify: https://open.spotify.com/artist/5NPL2jGG32a4LCnu4koPL7
+      id: 5NPL2jGG32a4LCnu4koPL7
+      name: Bruxas
+      uri: spotify:artist:5NPL2jGG32a4LCnu4koPL7
       popularity: 33
     - external_urls:
         spotify: https://open.spotify.com/artist/255ZPAkvfPjmKwPj4mC48B
