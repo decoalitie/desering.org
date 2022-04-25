@@ -22,7 +22,7 @@ jobs:
 
       - name: Use staging build on develop branch
         if: github.ref == 'refs/heads/develop'
-        run: echo "::set-env name=APP_NAME::sering-staging"
+        run: echo "APP_NAME=sering-staging" >> $GITHUB_ENV
 
       - name: Fail on production (for now)
         if: env.APP_NAME == 'sering-production'
@@ -44,7 +44,7 @@ jobs:
 
       - name: Set remote host variable
         run: |
-          echo "::set-env name=DEPLOY_REMOTE::${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}"
+          echo "DEPLOY_REMOTE=${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" >> $GITHUB_ENV
 
       - name: Log in to the Container registry
         uses: docker/login-action@v1.14.1
