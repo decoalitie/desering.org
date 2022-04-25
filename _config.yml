@@ -10,6 +10,11 @@ exclude:
   - js/src
   - styles/_partials
   - node_modules
+  - webpack.config.js
+  - babel.config.js
+  - key.json
+  - Dockerfile
+  - nginx.default.conf
 theme: null
 remote-theme: null
 plugins:
