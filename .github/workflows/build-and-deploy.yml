@@ -24,10 +24,6 @@ jobs:
         if: github.ref == 'refs/heads/develop'
         run: echo "APP_NAME=sering-staging" >> $GITHUB_ENV
 
-      - name: Fail on production (for now)
-        if: env.APP_NAME == 'sering-production'
-        run: exit 1
-
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
