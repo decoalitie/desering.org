@@ -1,0 +1,79 @@
+name: Bundle JS
+
+on:
+  push:
+    branches: [ develop ]
+  
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+env:
+  APP_NAME: sering-production
+  REPO: ${{ github.repository }}
+  REGISTRY: ghcr.io
+
+jobs:
+  build:
+    name: 'Build JS using Webpack, compile site using Jekyll and deploy'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use staging build on develop branch
+        if: github.ref == 'refs/heads/develop'
+        run: echo "::set-env name=APP_NAME::sering-staging"
+
+      - name: Fail on production (for now)
+        if: env.APP_NAME == 'sering-production'
+        run: exit 1
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          cache: 'npm'
+      
+      - name: Install node dependencies
+        run: npm install
+
+      - name: Compile JS bundles
+        run: npm run build:js
+
+      - name: Build site using Jekyll
+        uses: jerryjvl/jekyll-build-action@v1
+
+      - name: Set remote host variable
+        run: |
+          echo "::set-env name=DEPLOY_REMOTE::${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}"
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v1.14.1
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v3.7.0
+        with:
+          images: ${{ env.REGISTRY }}/${{ github.repository }}
+
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v2.10.0
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Deploy
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEPLOY_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+          ssh-keyscan -H ${{ secrets.DEPLOY_HOST }} >> ~/.ssh/known_hosts
+          ssh ${{ env.DEPLOY_REMOTE }} 'echo $CR_PAT | docker login ${{ env.REGISTRY }} -u ${{ github.actor }} --password-stdin'
+          ssh ${{ env.DEPLOY_REMOTE }} docker pull ${{ steps.meta.outputs.tags[0] }}
+          ssh ${{ env.DEPLOY_REMOTE }} docker tag ${{ steps.meta.outputs.tags[0] }} dokku/${{ env.APP_NAME }}:${{ github.sha }}
+          ssh ${{ env.DEPLOY_REMOTE }} dokku tags:deploy ${{ env.APP_NAME }} ${{ github.sha }}
