@@ -1,5 +1,55 @@
 - description: ""
   external_urls:
+    spotify: https://open.spotify.com/playlist/0KqdbtscW2SWFqRLNKUUgN
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b273065c670f9a58c440fc071dbdab67616d0000b2736c058000d9c800737579e749ab67616d0000b273b70b3e07ad17f88a44d909b7ab67616d0000b273c86a5103b36f125ff31e8ea8
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b273065c670f9a58c440fc071dbdab67616d0000b2736c058000d9c800737579e749ab67616d0000b273b70b3e07ad17f88a44d909b7ab67616d0000b273c86a5103b36f125ff31e8ea8
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b273065c670f9a58c440fc071dbdab67616d0000b2736c058000d9c800737579e749ab67616d0000b273b70b3e07ad17f88a44d909b7ab67616d0000b273c86a5103b36f125ff31e8ea8
+      width: 60
+  name: "TestTafel #15"
+  tracks:
+    href: https://api.spotify.com/v1/playlists/0KqdbtscW2SWFqRLNKUUgN/tracks
+    total: 69
+  uri: spotify:playlist:0KqdbtscW2SWFqRLNKUUgN
+  newMusicArtists: []
+  unpopularArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/7KUtTibl27IP9TYFsaoZqM
+      id: 7KUtTibl27IP9TYFsaoZqM
+      name: WitS & Smitty!
+      uri: spotify:artist:7KUtTibl27IP9TYFsaoZqM
+      popularity: 0
+    - external_urls:
+        spotify: https://open.spotify.com/artist/1vuVOAafDaRQy6GOgoE0Qn
+      id: 1vuVOAafDaRQy6GOgoE0Qn
+      name: Sal Wonder
+      uri: spotify:artist:1vuVOAafDaRQy6GOgoE0Qn
+      popularity: 0
+    - external_urls:
+        spotify: https://open.spotify.com/artist/5ddo6BVS8ZNLIxcQ1bLW3c
+      id: 5ddo6BVS8ZNLIxcQ1bLW3c
+      name: The L.A Propinquity
+      uri: spotify:artist:5ddo6BVS8ZNLIxcQ1bLW3c
+      popularity: 1
+    - external_urls:
+        spotify: https://open.spotify.com/artist/5PXwPxOf2WPn4iOW4vvtLw
+      id: 5PXwPxOf2WPn4iOW4vvtLw
+      name: Fitness Club
+      uri: spotify:artist:5PXwPxOf2WPn4iOW4vvtLw
+      popularity: 2
+    - external_urls:
+        spotify: https://open.spotify.com/artist/3uhAZzBi6uTK3VFCzOH64y
+      id: 3uhAZzBi6uTK3VFCzOH64y
+      name: Quiet Dawn
+      uri: spotify:artist:3uhAZzBi6uTK3VFCzOH64y
+      popularity: 10
+- description: ""
+  external_urls:
     spotify: https://open.spotify.com/playlist/5F1HtEapMcNmSV4Hs1Sz38
   images:
     - height: 640
@@ -40,7 +90,7 @@
       id: 0zh0LGeDjSa65dZGdlPe9A
       name: Endangered Species
       uri: spotify:artist:0zh0LGeDjSa65dZGdlPe9A
-      popularity: 9
+      popularity: 8
     - external_urls:
         spotify: https://open.spotify.com/artist/1CUV6UEfyGRCZXqBbXJ5f7
       id: 1CUV6UEfyGRCZXqBbXJ5f7
@@ -209,16 +259,16 @@
       uri: spotify:artist:32IztneRaGHmiRgNki4Mls
       popularity: 0
     - external_urls:
-        spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
-      id: 3y4GCYSmf6KyCXUdfmX6aI
-      name: Brief Work
-      uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
-      popularity: 5
-    - external_urls:
         spotify: https://open.spotify.com/artist/3NGl2LLSZh4VUz2EaBZSUZ
       id: 3NGl2LLSZh4VUz2EaBZSUZ
       name: Roseane Santos
       uri: spotify:artist:3NGl2LLSZh4VUz2EaBZSUZ
+      popularity: 6
+    - external_urls:
+        spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
+      id: 3y4GCYSmf6KyCXUdfmX6aI
+      name: Brief Work
+      uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
       popularity: 6
     - external_urls:
         spotify: https://open.spotify.com/artist/0A4gPcMJUMuH8wjgMl9Dij
@@ -456,17 +506,17 @@
       uri: spotify:artist:0O98jlCaPzvsoei6U5jfEL
   unpopularArtists:
     - external_urls:
+        spotify: https://open.spotify.com/artist/1Ptp4nbLolMX9RniidXbbn
+      id: 1Ptp4nbLolMX9RniidXbbn
+      name: Henry Keen
+      uri: spotify:artist:1Ptp4nbLolMX9RniidXbbn
+      popularity: 1
+    - external_urls:
         spotify: https://open.spotify.com/artist/0O2yKE5Jyx5maooLz70DT3
       id: 0O2yKE5Jyx5maooLz70DT3
       name: Kawuku Sound
       uri: spotify:artist:0O2yKE5Jyx5maooLz70DT3
       popularity: 1
-    - external_urls:
-        spotify: https://open.spotify.com/artist/1Ptp4nbLolMX9RniidXbbn
-      id: 1Ptp4nbLolMX9RniidXbbn
-      name: Henry Keen
-      uri: spotify:artist:1Ptp4nbLolMX9RniidXbbn
-      popularity: 2
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/6rspKubI2IiJVfteKlQ5al
