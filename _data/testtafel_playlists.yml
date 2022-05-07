@@ -1,5 +1,53 @@
 - description: ""
   external_urls:
+    spotify: https://open.spotify.com/playlist/2UZDKgvi77RI5OgV6FujNS
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b2731e9f83e5ad69bdf1aad0caa9ab67616d0000b27347e18da02273a3b892d09656ab67616d0000b2737ba8c4df079a16507ecb63bfab67616d0000b273b97599a2aba912d792c4175f
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b2731e9f83e5ad69bdf1aad0caa9ab67616d0000b27347e18da02273a3b892d09656ab67616d0000b2737ba8c4df079a16507ecb63bfab67616d0000b273b97599a2aba912d792c4175f
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b2731e9f83e5ad69bdf1aad0caa9ab67616d0000b27347e18da02273a3b892d09656ab67616d0000b2737ba8c4df079a16507ecb63bfab67616d0000b273b97599a2aba912d792c4175f
+      width: 60
+  name: "TestTafel #16"
+  tracks:
+    href: https://api.spotify.com/v1/playlists/2UZDKgvi77RI5OgV6FujNS/tracks
+    total: 70
+  uri: spotify:playlist:2UZDKgvi77RI5OgV6FujNS
+  newMusicArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/5DD56TbdQI5Xe9c8YSiTj5
+      id: 5DD56TbdQI5Xe9c8YSiTj5
+      name: Absolutely Free
+      uri: spotify:artist:5DD56TbdQI5Xe9c8YSiTj5
+    - external_urls:
+        spotify: https://open.spotify.com/artist/0TOZ0i0BHZJYKK2rvoRD2d
+      id: 0TOZ0i0BHZJYKK2rvoRD2d
+      name: Ron Trent
+      uri: spotify:artist:0TOZ0i0BHZJYKK2rvoRD2d
+  unpopularArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/3hhFZONK2jmmcponMeLoDV
+      id: 3hhFZONK2jmmcponMeLoDV
+      name: Nowsm
+      uri: spotify:artist:3hhFZONK2jmmcponMeLoDV
+      popularity: 4
+    - external_urls:
+        spotify: https://open.spotify.com/artist/2dQAz3jNlenyLHfeknfNsn
+      id: 2dQAz3jNlenyLHfeknfNsn
+      name: Do Amor
+      uri: spotify:artist:2dQAz3jNlenyLHfeknfNsn
+      popularity: 16
+    - external_urls:
+        spotify: https://open.spotify.com/artist/0uheKgZvAN1XtSaIsSV3IO
+      id: 0uheKgZvAN1XtSaIsSV3IO
+      name: Loose Fit
+      uri: spotify:artist:0uheKgZvAN1XtSaIsSV3IO
+      popularity: 18
+- description: ""
+  external_urls:
     spotify: https://open.spotify.com/playlist/0KqdbtscW2SWFqRLNKUUgN
   images:
     - height: 640
