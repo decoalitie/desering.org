@@ -51,7 +51,7 @@ async function main() {
     }
     offset += 50;
     next = !!body.next;
-    items = [...result, ...body.items];
+    items = [...items, ...body.items];
   }
 
   const testTafelPlaylists = items.filter(
