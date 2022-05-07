@@ -16,7 +16,22 @@
     href: https://api.spotify.com/v1/playlists/0KqdbtscW2SWFqRLNKUUgN/tracks
     total: 69
   uri: spotify:playlist:0KqdbtscW2SWFqRLNKUUgN
-  newMusicArtists: []
+  newMusicArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/2ieAXAuLe6qQ3RJsqCxpoC
+      id: 2ieAXAuLe6qQ3RJsqCxpoC
+      name: Horace Andy
+      uri: spotify:artist:2ieAXAuLe6qQ3RJsqCxpoC
+    - external_urls:
+        spotify: https://open.spotify.com/artist/7H9Yrb2KoVErAUw0S0UVvv
+      id: 7H9Yrb2KoVErAUw0S0UVvv
+      name: Nikitch
+      uri: spotify:artist:7H9Yrb2KoVErAUw0S0UVvv
+    - external_urls:
+        spotify: https://open.spotify.com/artist/2Kv0ApBohrL213X9avMrEn
+      id: 2Kv0ApBohrL213X9avMrEn
+      name: Lil Silva
+      uri: spotify:artist:2Kv0ApBohrL213X9avMrEn
   unpopularArtists:
     - external_urls:
         spotify: https://open.spotify.com/artist/7KUtTibl27IP9TYFsaoZqM
@@ -30,24 +45,6 @@
       name: Sal Wonder
       uri: spotify:artist:1vuVOAafDaRQy6GOgoE0Qn
       popularity: 0
-    - external_urls:
-        spotify: https://open.spotify.com/artist/5ddo6BVS8ZNLIxcQ1bLW3c
-      id: 5ddo6BVS8ZNLIxcQ1bLW3c
-      name: The L.A Propinquity
-      uri: spotify:artist:5ddo6BVS8ZNLIxcQ1bLW3c
-      popularity: 1
-    - external_urls:
-        spotify: https://open.spotify.com/artist/5PXwPxOf2WPn4iOW4vvtLw
-      id: 5PXwPxOf2WPn4iOW4vvtLw
-      name: Fitness Club
-      uri: spotify:artist:5PXwPxOf2WPn4iOW4vvtLw
-      popularity: 2
-    - external_urls:
-        spotify: https://open.spotify.com/artist/3uhAZzBi6uTK3VFCzOH64y
-      id: 3uhAZzBi6uTK3VFCzOH64y
-      name: Quiet Dawn
-      uri: spotify:artist:3uhAZzBi6uTK3VFCzOH64y
-      popularity: 10
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/5F1HtEapMcNmSV4Hs1Sz38
@@ -72,6 +69,16 @@
       id: 7AcVYXKD86pBTIEEEGpTge
       name: General Ehi Duncan
       uri: spotify:artist:7AcVYXKD86pBTIEEEGpTge
+    - external_urls:
+        spotify: https://open.spotify.com/artist/5GSILaXo4yN4umwJK8eBBY
+      id: 5GSILaXo4yN4umwJK8eBBY
+      name: Kit Sebastian
+      uri: spotify:artist:5GSILaXo4yN4umwJK8eBBY
+    - external_urls:
+        spotify: https://open.spotify.com/artist/09bP40OuEV5tOM1rQnZNxI
+      id: 09bP40OuEV5tOM1rQnZNxI
+      name: Mamas Gun
+      uri: spotify:artist:09bP40OuEV5tOM1rQnZNxI
   unpopularArtists:
     - external_urls:
         spotify: https://open.spotify.com/artist/3OvnoICc8ZAgI3AHTlU4aq
@@ -85,18 +92,6 @@
       name: Galathea
       uri: spotify:artist:42oyeuzTjSz4KLEAr4K3XR
       popularity: 7
-    - external_urls:
-        spotify: https://open.spotify.com/artist/0zh0LGeDjSa65dZGdlPe9A
-      id: 0zh0LGeDjSa65dZGdlPe9A
-      name: Endangered Species
-      uri: spotify:artist:0zh0LGeDjSa65dZGdlPe9A
-      popularity: 8
-    - external_urls:
-        spotify: https://open.spotify.com/artist/1CUV6UEfyGRCZXqBbXJ5f7
-      id: 1CUV6UEfyGRCZXqBbXJ5f7
-      name: Opek
-      uri: spotify:artist:1CUV6UEfyGRCZXqBbXJ5f7
-      popularity: 14
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/5V7wJftFtZt1l5zvXQ43ix
@@ -237,7 +232,7 @@
       id: 33rkBSmVJY21R0Hi251lnf
       name: Robbie N4HC
       uri: spotify:artist:33rkBSmVJY21R0Hi251lnf
-      popularity: 2
+      popularity: 1
 - description: Combining some of the best tracks of the first 9 TestTafel playlists
   external_urls:
     spotify: https://open.spotify.com/playlist/7y59LwHDEvuMd6JQH4W8jC
@@ -250,14 +245,25 @@
     href: https://api.spotify.com/v1/playlists/7y59LwHDEvuMd6JQH4W8jC/tracks
     total: 72
   uri: spotify:playlist:7y59LwHDEvuMd6JQH4W8jC
-  newMusicArtists: []
+  newMusicArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/3AA28KZvwAUcZuOKwyblJQ
+      id: 3AA28KZvwAUcZuOKwyblJQ
+      name: Gorillaz
+      uri: spotify:artist:3AA28KZvwAUcZuOKwyblJQ
   unpopularArtists:
     - external_urls:
         spotify: https://open.spotify.com/artist/32IztneRaGHmiRgNki4Mls
       id: 32IztneRaGHmiRgNki4Mls
       name: Dominick
       uri: spotify:artist:32IztneRaGHmiRgNki4Mls
-      popularity: 0
+      popularity: 1
+    - external_urls:
+        spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
+      id: 3y4GCYSmf6KyCXUdfmX6aI
+      name: Brief Work
+      uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
+      popularity: 5
     - external_urls:
         spotify: https://open.spotify.com/artist/3NGl2LLSZh4VUz2EaBZSUZ
       id: 3NGl2LLSZh4VUz2EaBZSUZ
@@ -265,22 +271,10 @@
       uri: spotify:artist:3NGl2LLSZh4VUz2EaBZSUZ
       popularity: 6
     - external_urls:
-        spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
-      id: 3y4GCYSmf6KyCXUdfmX6aI
-      name: Brief Work
-      uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
-      popularity: 6
-    - external_urls:
         spotify: https://open.spotify.com/artist/0A4gPcMJUMuH8wjgMl9Dij
       id: 0A4gPcMJUMuH8wjgMl9Dij
       name: Aleisha Lee
       uri: spotify:artist:0A4gPcMJUMuH8wjgMl9Dij
-      popularity: 14
-    - external_urls:
-        spotify: https://open.spotify.com/artist/3EDQh3YXwnFIGADDBqNaEu
-      id: 3EDQh3YXwnFIGADDBqNaEu
-      name: Gary Corben
-      uri: spotify:artist:3EDQh3YXwnFIGADDBqNaEu
       popularity: 14
 - description: ""
   external_urls:
@@ -322,13 +316,13 @@
       id: 2qJTi04qBpG3C0RR62l1Du
       name: SPARKLE DIVISION
       uri: spotify:artist:2qJTi04qBpG3C0RR62l1Du
-      popularity: 28
+      popularity: 27
     - external_urls:
         spotify: https://open.spotify.com/artist/2qJTi04qBpG3C0RR62l1Du
       id: 2qJTi04qBpG3C0RR62l1Du
       name: SPARKLE DIVISION
       uri: spotify:artist:2qJTi04qBpG3C0RR62l1Du
-      popularity: 28
+      popularity: 27
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/6Y4CziMlnWkxtiMSGxz1Al
@@ -369,13 +363,13 @@
       id: 4vhCl6MBQvO7FZn1SScoNY
       name: Conjunto Papa Upa
       uri: spotify:artist:4vhCl6MBQvO7FZn1SScoNY
-      popularity: 4
+      popularity: 5
     - external_urls:
         spotify: https://open.spotify.com/artist/4vhCl6MBQvO7FZn1SScoNY
       id: 4vhCl6MBQvO7FZn1SScoNY
       name: Conjunto Papa Upa
       uri: spotify:artist:4vhCl6MBQvO7FZn1SScoNY
-      popularity: 4
+      popularity: 5
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/37OIHXYRvBtijmT5u0fpAe
@@ -416,7 +410,7 @@
       id: 0uQyVnX8XxnTxe3JEH33Gl
       name: Arthhur
       uri: spotify:artist:0uQyVnX8XxnTxe3JEH33Gl
-      popularity: 3
+      popularity: 2
     - external_urls:
         spotify: https://open.spotify.com/artist/34MeiToHgg61sYGqDs1GqF
       id: 34MeiToHgg61sYGqDs1GqF
@@ -465,11 +459,11 @@
       uri: spotify:artist:1izAFKIapgqtHzOr4Nk73u
       popularity: 12
     - external_urls:
-        spotify: https://open.spotify.com/artist/4gjrK1MHgJnPCESuzMtWXg
-      id: 4gjrK1MHgJnPCESuzMtWXg
-      name: Ineffekt
-      uri: spotify:artist:4gjrK1MHgJnPCESuzMtWXg
-      popularity: 21
+        spotify: https://open.spotify.com/artist/3EDQh3YXwnFIGADDBqNaEu
+      id: 3EDQh3YXwnFIGADDBqNaEu
+      name: Gary Corben
+      uri: spotify:artist:3EDQh3YXwnFIGADDBqNaEu
+      popularity: 14
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/3U3JFLNgfoededfhqRGC4G
@@ -604,13 +598,13 @@
       id: 6uYq0k8pis5LPGzdFRM5FJ
       name: Huw Marc Bennett
       uri: spotify:artist:6uYq0k8pis5LPGzdFRM5FJ
-      popularity: 24
+      popularity: 23
     - external_urls:
         spotify: https://open.spotify.com/artist/4zMgFVljBxMaPn1U0SXGOh
       id: 4zMgFVljBxMaPn1U0SXGOh
       name: Charles Webster
       uri: spotify:artist:4zMgFVljBxMaPn1U0SXGOh
-      popularity: 35
+      popularity: 36
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/7Arw5mPFniRtcw1XmGcdwl
