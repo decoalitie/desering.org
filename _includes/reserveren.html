@@ -1,17 +1,6 @@
----
-title: TestTafel - Reserveren
-layout: default
-language: nl
-translation: testtafel/reservation
-redirect_from:
-- /testtafel/reserveren/crowdfund
-backlink: /testtafel
-scripts:
-- reservation-form
-stylesheets:
-- reservation-form
-permalink: /testtafel/reserveren
----
+{% assign endpoint = include.endpoint | default: "https://script.google.com/macros/s/AKfycbwg0O0SXjlwfm4CrCPBE7DrsQ7hxyevViP_ZtUph8BYEnAqIGTZIepvt6deT-v1jjcv/exec" %}
+{% assign noConfirm = include.noConfirm | default: false %}
+{% assign eventsData = include.eventsData | default: site.data.testtafels %}
 
 <div class="row">
   <div class="container">
@@ -27,18 +16,23 @@ permalink: /testtafel/reserveren
 
     <h1 class="testtafel">Reserveren voor TestTafel</h1>
 
-    <form id="reservation-form">
+    <form id="reservation-form" action="{{ endpoint }}">
   
+      {% if include.lead %}
+      {{ include.lead }}
+      {% else %}
       <p class="content-already-reserved">
         Al onze TestTafel avonden zijn vanaf nu op onze nieuwe locatie, De Sering. 
         Het adres is <a href="https://goo.gl/maps/hYTqwcRNWBs7t1pL6">Rhoneweg 6</a> te Amsterdam. 
         De aanvang van het diner is 19:00
       </p>
+      {% endif %}
+
       <input type="hidden" name="lang" value="nl" />
       <fieldset class="content-already-reserved">
-        <legend class="form-step-header">Kies een datum</legend>
+        <legend class="form-step-header">Kies een editie</legend>
         <select class="boxed" data-input-controller="SelectRadioList" name="date">
-          {% for event in site.data.testtafels %}
+          {% for event in eventsData %}
           {% comment %}
           68400 = 19 hours (for 19:00 start time)
           59400 = 16.5 hours (for 16:30 start time)
@@ -54,10 +48,22 @@ permalink: /testtafel/reserveren
 
           {% assign special = site.data["testtafel-specials"][event.date] %}
 
-          <option value="{{ event.date }}" {% if special %} data-special="{{ special.name }}"
-            data-special-description="{{ special.description.nl }}" {% endif %}{% if event.fullyBooked %}
+          {% if event.value %}
+          {% assign value = event.value %}
+          {% else %}
+          {% assign value = event.date %}
+          {% endif %}
+
+
+          <option value="{{ value }}" {% if special %} data-special="{{ special.name }}"
+            data-special-description="{{ special.description.nl }}" {% endif %}{% if event.value %} 
+            data-custom-value {% endif %}{% if event.fullyBooked %}
             data-fully-booked data-tag="volgeboekt" {% else %} data-allow-default{% endif %}>
+            {%- if event.name -%}
+            {{ event.name.nl }}
+            {%- else -%}
             {{ site.data.i18n.weekdays-nl[weekday] | capitalize }} {{ day }} {{ site.data.i18n.months-nl[month] }}
+            {%- endif -%}
           </option>
           {% endif %}
           {% endfor %}
@@ -222,9 +228,15 @@ permalink: /testtafel/reserveren
 
         <label class="form-step-subheader" required for="input-phone-number">Wat is je telefoonnummer?</label>
 
+        {%if noConfirm %}
+        <p>
+          We gebruiken dit telefoonnummer alleen voor praktische communicatie met betrekking tot deze reservering.
+        </p>
+        {% else %}
         <p>
           We sturen je via dit telefoonnummer een bevestiging van je reservering.
         </p>
+        {% endif %}
 
         <input id="input-phone-number" name="phone-number" placeholder="Telefoonnummer" type="tel">
 
@@ -253,9 +265,11 @@ permalink: /testtafel/reserveren
       </fieldset>
 
       <fieldset class="submit-section">
+        {% unless noConfirm %}
         <p class="warning">
           <strong>Let op!</strong> Je reservering is pas geldig na een bevestigingsbericht.
         </p>
+        {% endunless %}
         <button class="button" type="submit">plaats reservering</button>
       </fieldset>
     </form>
@@ -276,7 +290,7 @@ permalink: /testtafel/reserveren
       Reserveren is momenteel mogelijk voor deze TestTafel edities:
     </p>
     <ul>
-      {% for event in site.data.testtafels %}
+      {% for event in eventsData %}
       {% comment %}
       68400 = 19 hours (for 19:00 start time)
       {% endcomment %}
@@ -324,12 +338,19 @@ permalink: /testtafel/reserveren
 
     <template data-template-id="success">
       <div>
+        {% if noConfirm %}
+        <p>
+          Bedankt voor je reservering! We sturen je binnenkort nog een mailtje met een bevestiging. Dit kan een tijdje duren, 
+          maar je kan er vanuit gaan dat je reservering sowieso geldig is.
+        </p>
+        {% else %}
         <p>
           Bedankt voor je reservering. We berichten je zo snel mogelijk per telefoon om je reservering te bevestigen.
         </p>
         <p class="warning">
           <strong>Let op!</strong> Je reservering is pas geldig na een bevestigingsbericht.
         </p>
+        {% endif %}
       </div>
     </template>
 

@@ -1,7 +1,7 @@
 import { isBefore } from 'date-fns';
 import * as inputControllers from '../forms/input-controllers';
 import { getTemplateRender, swapFormWithTemplate } from './templates';
-import { MIN_PEOPLE_OWN_TABLE, SHARED_TABLE_START_TIME, ENDPOINT, SHOW_DATE_UNTIL, LINKIFY } from './config';
+import { MIN_PEOPLE_OWN_TABLE, SHARED_TABLE_START_TIME, SHOW_DATE_UNTIL, LINKIFY } from './config';
 import { getReservationsForDate, removeOldReservations, storeReservation } from "./reservations";
 
 const reservationForm = document.querySelector("#reservation-form");
@@ -14,10 +14,12 @@ function main() {
 
   // remove dates in past
   for (const dateOption of reservationForm.elements.date.querySelectorAll('option')) {
-    const optionTime = new Date(`${dateOption.value}${SHOW_DATE_UNTIL}`);
+    if (typeof dateOption.dataset.customValue !== 'string') {
+      const optionTime = new Date(`${dateOption.value}${SHOW_DATE_UNTIL}`);
 
-    if (isBefore(optionTime, new Date())) {
-      reservationForm.elements.date.removeChild(dateOption);
+      if (isBefore(optionTime, new Date())) {
+        reservationForm.elements.date.removeChild(dateOption);
+      }
     }
   }
 
@@ -58,6 +60,7 @@ function main() {
           Object.entries(fields).map(([fieldName, field]) => [fieldName, field.value])
         ),
         ['consent-email-contact']: !!fields['consent-email-contact'].checked,
+        ['fully-booked']: fields.date.selectedOptionElement.dataset.fullyBooked !== undefined,
         ['notest-amount']: fields['reservation-amount'].value,
         ['test-amount']: 0,
       });
@@ -244,7 +247,9 @@ function submitReservation(data) {
   }
   submitButton.classList.add("loading");
 
-  fetch(ENDPOINT, {
+  const endpoint = reservationForm.getAttribute('action');
+
+  fetch(endpoint, {
     method: "post",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
