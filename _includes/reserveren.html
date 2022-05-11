@@ -305,9 +305,13 @@
       {% assign year = event.date | date: "%Y" %}
 
       <li>
+        {%- if event.name -%}
+        {{ event.name.nl }}
+        {%- else -%}
         {{ site.data.i18n.weekdays-nl[weekday] | capitalize }}
         {{ day }}
         {{ site.data.i18n.months-nl[month] }}
+        {%- endif -%}
       </li>
       {% endunless %}
       {% endif %}
