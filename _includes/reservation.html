@@ -1,0 +1,401 @@
+{% assign endpoint = include.endpoint | default: "https://script.google.com/macros/s/AKfycbwg0O0SXjlwfm4CrCPBE7DrsQ7hxyevViP_ZtUph8BYEnAqIGTZIepvt6deT-v1jjcv/exec" %}
+{% assign noConfirm = include.noConfirm | default: false %}
+{% assign eventsData = include.eventsData | default: site.data.testtafels %}
+
+<div class="row">
+  <div class="container">
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="testtafel-symbol" viewBox="0 0 133.69396 70.47318">
+      <path d="M122.50844,11.45321v15.7901c1.0528,1.4629,2.0625,2.9599,3,4.5058V8.45321H7.84244V31.753c.9375-1.5468,1.9473-3.0429,3-4.5068v-15.793Z"/>
+      <path d="M58.46454,5.09091a61.06273,61.06273,0,0,1,16.4238,0h13.0694a65.48355,65.48355,0,0,0-42.5635,0Z"/>
+      <path d="M.92642,67.28621c0,.62293.01087,1.24335.0282,1.86212H3.9567c-.01813-.61877-.03028-1.239-.03028-1.86212A62.75159,62.75159,0,0,1,33.44986,14.0909h-5.3515A65.69153,65.69153,0,0,0,.92642,67.28621Z"/>
+      <path d="M105.25363,14.0909H99.90207a62.75227,62.75227,0,0,1,29.52435,53.19531c0,.62311-.01214,1.24335-.03027,1.86212h3.00207c.01734-.61877.0282-1.23919.0282-1.86212A65.69228,65.69228,0,0,0,105.25363,14.0909Z"/>
+      <path d="M122.50845,69.14833h3V56.92488a59.2242,59.2242,0,0,0-3-10.88665Z"/>
+      <path d="M7.84244,69.14833h3V46.04311a59.25488,59.25488,0,0,0-3,10.8916Z"/>
+    </svg> 
+
+    <h1 class="testtafel">Reservation for TestTafel</h1>
+
+    <form id="reservation-form" action="{{ endpoint }}">
+  
+      {% if include.lead %}
+      {{ include.lead }}
+      {% else %}
+      <p class="content-already-reserved">
+        All our TestTafel evenings are now hosted at our new location, De Sering.
+        The address is <a href="https://goo.gl/maps/hYTqwcRNWBs7t1pL6">Rhoneweg 6</a>, Amsterdam. 
+        Dinners will start at 19:00.
+      </p>
+      {% endif %}
+
+      <input type="hidden" name="lang" value="en" />
+      <fieldset class="content-already-reserved">
+        <legend class="form-step-header">Choose an event</legend>
+        <select class="boxed" data-input-controller="SelectRadioList" name="date">
+          {% for event in eventsData %}
+          {% comment %}
+          68400 = 19 hours (for 19:00 start time)
+          {% endcomment %}
+          {% assign unix_event = event.date | date: "%s" | plus: 68400 %}
+          {% assign unix_now = "now" | date: "%s" | times: 1 %}
+
+          {% if unix_event > unix_now %}
+
+          {% assign special = site.data["testtafel-specials"][event.date] %}
+          
+          {% if event.value %}
+          {% assign value = event.value %}
+          {% else %}
+          {% assign value = event.date %}
+          {% endif %}
+
+          <option value="{{ value }}" {% if special %} data-special="{{ special.name }}"
+            data-special-description="{{ special.description.en }}" {% endif %}{% if event.value %} 
+            data-custom-value {% endif %}{% if event.fullyBooked %}
+            data-fully-booked data-tag="fully booked" {% else %} data-allow-default{% endif %}>
+            {%- if event.name -%}
+            {{ event.name.en }}
+            {%- else -%}
+            {{ event.date | date: "%A, %B %e" }}
+            {%- endif -%}
+          </option>
+          {% endif %}
+          {% endfor %}
+        </select>
+      </fieldset>
+
+      <template data-template-id="special-description">
+        <section class="special-description content-already-reserved">
+          <h4></h4>
+          <div class="special-description-text"></div>
+        </section>
+      </template>
+
+      <template data-template-id="already-reserved">
+        <div class="content-already-reserved">
+          <h3 class="form-step-header">Reservation already submitted</h3>
+          <p>
+            It seems like a reservation for this date has already been placed from this computer. If you have yet to
+            recieve a confirmation message, please be aware that it can take some time before our staff has verified
+            that enough seats are available.
+          </p>
+          <p>
+            For questions about your reservation or if you would like to change something, please drop us a Whatsapp or
+            text message on <a href="tel:0031684292366">+31684292366</a>
+          </p>
+          <p>
+            To place <strong>a new reservation</strong>, use the button below.
+          </p>
+          <button type="button" class="continue confirm-already-reserved-button">
+            Create another reservation
+          </button>
+        </div>
+      </template>
+
+
+      <div data-field-feedback-for="date">
+      </div>
+
+      <template data-template-id="fully-booked">
+        <p class="warning">
+          <strong>Please note:</strong>
+          This date has been fully booked. You can still place a reservation, which will be added to our waiting list.
+          We
+          will message you if others cancel and a spot becomes available.
+        </p>
+      </template>
+
+      <!--  <fieldset class="align-left">
+        <legend class="form-step-header">Adjusted opening time</legend>
+        <p>
+          <strong>Please note:</strong> we kindly ask you to <strong>arrive between 16:30 and 17:00</strong>. Due to
+          government coronavirus policy we have to <strong>close at 20:00</strong>.
+        </p>
+      </fieldset> -->
+
+      <label class="form-step-header" for="input-reservation-name">
+        Under which name would you like to place a reservation?
+      </label>
+
+      <input id="input-reservation-name" name="reservation-name" placeholder="Naam" required type="text"
+        maxlength="200">
+
+      <div data-field-feedback-for="reservation-name"></div>
+
+      <label class="form-step-header" for="input-reservation-amount">
+        For how many people would you like to reserve?
+      </label>
+
+      <div class="number-with-steppers-wrapper">
+        <input data-input-controller="NumberWithSteppers" id="input-reservation-amount" max="20" min="1"
+          name="reservation-amount" required size="3" step="1" type="number" value="1">
+      </div>
+
+      <div data-field-feedback-for="reservation-amount"></div>
+
+      <fieldset>
+        <legend class="form-step-header">Which table would you like to join?</legend>
+
+        <p>
+          You can reserve a private table if you reserve for 5 or more people. Smaller groups can join our large shared
+          table.
+        </p>
+
+        <select data-input-controller="SelectRadioList" name="table">
+          <option selected value="shared">Large shared table</option>
+          <option data-tag="5 or more people" value="own">Private table</option>
+        </select>
+      </fieldset>
+
+      <div data-field-feedback-for="table"></div>
+
+      <!-- the start time is fixed to 19:00. hide the input -->
+      <!--
+      <template data-template-id="shared-table-start-time">
+        <p class="warning">
+          Please arrive between 19:00 and 19:15
+        </p>
+      </template>
+
+      <template data-template-id="start-time-input">
+        <fieldset>
+          <legend class="form-step-header">Which time would you like to start?</legend>
+
+          <select data-input-controller="SelectRadioList" name="start-time">
+            <option value="19:00">19:00</option>
+            <option value="19:30">19:30</option>
+            <option value="20:00">20:00</option>
+          </select>
+        </fieldset>
+      </template>
+      -->
+      <input type="hidden" name="start-time" value="19:00" />
+
+      <div data-field-feedback-for="start-time"></div>
+
+      <fieldset>
+        <legend class="form-step-header">Dietary preferences</legend>
+
+        <p class="form-step-subheader">
+          How many people have a vegetarian or a vegan diet?
+        </p>
+
+        <div class="number-with-steppers-wrapper">
+          <label for="input-vegan-amount">Vegan</label>
+          <input data-input-controller="NumberWithSteppers" id="input-vegan-amount" max="20" min="0" name="vegan-amount"
+            required size="2" step="1" type="number" value="0">
+        </div>
+
+        <div class="number-with-steppers-wrapper">
+          <label for="input-vegetarian-amount">Vegetarian</label>
+          <input data-input-controller="NumberWithSteppers" id="input-vegetarian-amount" max="20" min="0"
+            name="vegetarian-amount" required size="2" step="1" type="number" value="0">
+        </div>
+
+        <div class="number-with-steppers-wrapper">
+          <label for="input-nopref-amount">No vegan or vegetarian diet</label>
+          <input data-input-controller="NumberWithSteppers" disabled id="input-nopref-amount" max="99" min="0"
+            name="nopref-amount" required size="2" step="1" type="number" value="0">
+        </div>
+
+        <div data-field-feedback-for="vegan-amount"></div>
+        <div data-field-feedback-for="vegetarian-amount"></div>
+        <div data-field-feedback-for="nopref-amount"></div>
+
+        <label class="form-step-subheader" for="input-additional-diet">
+          Does anyone in your group have any other allergies or dietery preferences?
+        </label>
+
+        <p>
+          Please also tell us about the severity of your allergies. Is special food enough or are more precautions
+          necessary?
+        </p>
+
+        <textarea id="input-additional-diet" maxlength="300" name="additional-diet"
+          placeholder="Describe dietary preferences and allergies here"></textarea>
+
+        <div data-field-feedback-for="additional-diet"></div>
+      </fieldset>
+
+      <!-- <fieldset>
+        <legend class="form-step-header">COVID-19 tests</legend>
+
+        <p>
+          Each visitor of TestTafel has to show an
+          <a href="https://coronacheck.nl/en/" target="_blank">official
+            corona proof from the CoronaCheck app</a>
+          or bring a
+          <strong>physical</strong>
+          negative self-test. Alternatively, we sell tests at the door for 2 euros a piece.
+        </p>
+
+        <p class="form-step-subheader">
+          For how many people would you like to purchase a self-test?
+        </p>
+
+        <div class="number-with-steppers-wrapper">
+          <label class="wide" for="input-test-amount">Purchase a test at the door</label>
+          <input data-input-controller="NumberWithSteppers" id="input-test-amount" max="20" min="0" name="test-amount"
+            required size="2" step="1" type="number" value="0">
+        </div>
+
+        <div class="number-with-steppers-wrapper">
+          <label class="wide" for="input-notest-amount">Bring physical self-test or
+            <a href="https://coronacheck.nl/en/" target="_blank">CoronaCheck proof</a>
+          </label>
+          <input data-input-controller="NumberWithSteppers" disabled id="input-notest-amount" max="20" min="0"
+            name="notest-amount" required size="2" step="1" type="number" value="0">
+        </div>
+      </fieldset> -->
+
+      <div data-field-feedback-for="test-amount"></div>
+      <div data-field-feedback-for="notest-amount"></div>
+
+      <fieldset>
+        <legend class="form-step-header">Contact info</legend>
+
+        <label class="form-step-subheader" for="input-email">What is your email?</label>
+
+        <input id="input-email" name="email" placeholder="Email" required type="email" maxlength="200">
+
+        <div data-field-feedback-for="email"></div>
+
+        <label class="form-step-subheader" for="input-phone-number">What is your phone number?</label>
+
+        {%if noConfirm %}
+        <p>
+          We will only use your phone number for essential communication regarding this reservation.
+        </p>
+        {% else %}
+        <p>
+          We will use your phone number to send you a confirmation of your reservation and to contact
+          you in case we have questions
+        </p>
+        {% endif %}
+
+        <input id="input-phone-number" name="phone-number" placeholder="Telefoonnummer" type="tel">
+
+        <div data-field-feedback-for="phone-number"></div>
+
+        <p class="form-step-subheader">
+          Would you like us to update you about TestTafel and other projects of De Sering?
+        </p>
+
+        <p>
+          Select this option if you want to receive our monthly email newsletter. Alternatively, you can stay in touch
+          through our Instagram
+          <a href="https://instagram.com/testtafel" target="_blank">@testtafel</a>
+          or our
+          <a href="https://chat.whatsapp.com/C2fIG6POV8FH0nVQcW3hKs" target="_blank">WhatsApp broadcast
+            group</a>
+        </p>
+
+        <input id="checkbox-consent-email-contact" name="consent-email-contact" type="checkbox">
+
+        <label for="checkbox-consent-email-contact">Yes, keep me posted through email</label>
+
+        <div data-field-feedback-for="consent-email-contact"></div>
+      </fieldset>
+
+      <fieldset class="submit-section">
+        {% unless noConfirm %}
+        <p class="warning">
+          <strong>Please note:</strong> Your reservation is only valid after a confirmation message
+        </p>
+        {% endunless %}
+        <button class="button" type="submit">place reservation</button>
+      </fieldset>
+    </form>
+
+    {% capture contact_info %}
+    contact us directly by messaging or calling
+    <a href="tel:0031684292366">+31684292366</a>
+    or sending an email to
+    <a href="mailto:info@testtafel.nl">info@testtafel.nl</a>
+    {% endcapture %}
+
+    {% capture alternatives %}
+    <p>
+      If you are unable to complete the reservation form, you can also {{ contact_info }}
+    </p>
+
+    <p>
+      Reservations can be made for the following TestTafel editions:
+    </p>
+    <ul>
+      {% for event in eventsData %}
+      {% comment %}
+      68400 = 19 hours (for 19:00 start time)
+      59400 = 16.5 hours (for 16:30 start time)
+      {% endcomment %}
+      {% assign unix_event = event.date | date: "%s" | plus: 59400 %}
+      {% assign unix_now = "now" | date: "%s" | times: 1 %}
+
+      {% if unix_event > unix_now %}
+      {% unless event.fullyBooked %}
+
+      <li>
+        {%- if event.name -%}
+        {{ event.name.en }}
+        {%- else -%}
+        {{ event.date | date: "%A, %B %e %Y" }}
+        {%- endif -%}
+      </li>
+      {% endunless %}
+      {% endif %}
+      {% endfor %}
+    </ul>
+    {% endcapture %}
+
+    <noscript>
+      <div class="noscript">
+        <p>
+          To make a reservation through this website you have to enable javascript in your browser. Please enable
+          javascript to continue.
+        </p>
+
+        {{ alternatives }}
+      </div>
+    </noscript>
+
+    <div id="fatal-form-error">
+      <p>
+        Sorry, something broke in our reservation form.
+      </p>
+
+      {{ alternatives }}
+
+      <pre></pre>
+    </div>
+
+    <template data-template-id="success">
+      <div>
+        {% if noConfirm %}
+        <p>
+          Thank you for your reservation! We will send you an email with a confirmation soon. This might take a while,
+          but you can assume that your reservation is valid.
+        </p>
+        {% else %}
+        <p>
+          Thank you for your reservation. We will get back to you with a confirmation message as soon as possible
+        </p>
+        <p class="warning">
+          <strong>Please note:</strong> Your reservation is only valid after a confirmation message
+        </p>
+        {% endif %}
+      </div>
+    </template>
+
+    <template data-template-id="no-dates">
+      <div>
+        <p>
+          There are no TestTafel editions that are open for reservations at the moment. Please come back later!
+        </p>
+
+        <p>
+          For questions you can {{ contact_info }}
+        </p>
+      </div>
+    </template>
+  </div>
+</div>

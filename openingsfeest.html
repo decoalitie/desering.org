@@ -1,0 +1,28 @@
+---
+title: TestTafel - Reserveren voor Openingsfeest
+layout: default
+language: nl
+translation: openingparty
+scripts:
+- reservation-form
+stylesheets:
+- reservation-form
+permalink: /openingsfeest
+---
+
+{% assign events = site.data["testtafels-opening"] %}
+
+{% capture lead %}
+<p class="content-already-reserved">
+    Je kan hier reserveren voor het TestTafel diner op het openingsfeest van De Sloot op <strong>Hemelvaartsdag, 26 mei 2022</strong>.
+</p>
+<p class="content-already-reserved">
+    Voor meer informatie over De Sering, <a href={% link index.html %}>bezoek onze homepagina</a>. Voor algemene reserveringen, bezoek <a href="{% link testtafel/reserveren.html %}">dit formulier</a>
+</p>
+{% endcapture %}
+
+{% include reserveren.html 
+    endpoint="https://script.google.com/macros/s/AKfycbyvAZUhnGwcTjSjeG_ktK8rFB6sm6W1Wfdq8SNdXXTsX1936NxE4NcllKYnIwLT9BzgMw/exec" 
+    eventsData=events
+    lead=lead
+    noConfirm=true %}
