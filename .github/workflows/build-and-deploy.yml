@@ -1,4 +1,4 @@
-name: Bundle JS
+name: Build and Deploy
 
 on:
   push:
