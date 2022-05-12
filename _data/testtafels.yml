@@ -73,7 +73,7 @@
 - date: 2022-05-07
   fullyBooked: false
 - date: 2022-05-13
-  fullyBooked: true
+  fullyBooked: false
 - date: 2022-05-14
   fullyBooked: false
 - date: 2022-05-20
