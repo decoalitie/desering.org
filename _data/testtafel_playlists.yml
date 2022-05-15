@@ -223,17 +223,17 @@
       uri: spotify:artist:5h5gnysIprQOTY2HoM5ge0
   unpopularArtists:
     - external_urls:
-        spotify: https://open.spotify.com/artist/6ThoEADmVnFqh92lOx2YCC
-      id: 6ThoEADmVnFqh92lOx2YCC
-      name: Jack Stephenson-Oliver
-      uri: spotify:artist:6ThoEADmVnFqh92lOx2YCC
+        spotify: https://open.spotify.com/artist/18PVzmZUhAeyk8YWw2oBo3
+      id: 18PVzmZUhAeyk8YWw2oBo3
+      name: Jonny Wildey
+      uri: spotify:artist:18PVzmZUhAeyk8YWw2oBo3
       popularity: 0
     - external_urls:
         spotify: https://open.spotify.com/artist/18PVzmZUhAeyk8YWw2oBo3
       id: 18PVzmZUhAeyk8YWw2oBo3
       name: Jonny Wildey
       uri: spotify:artist:18PVzmZUhAeyk8YWw2oBo3
-      popularity: 1
+      popularity: 0
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/0tumviHtG40G82DcZIgFR6
@@ -280,7 +280,7 @@
       id: 33rkBSmVJY21R0Hi251lnf
       name: Robbie N4HC
       uri: spotify:artist:33rkBSmVJY21R0Hi251lnf
-      popularity: 1
+      popularity: 0
 - description: Combining some of the best tracks of the first 9 TestTafel playlists
   external_urls:
     spotify: https://open.spotify.com/playlist/7y59LwHDEvuMd6JQH4W8jC
@@ -548,17 +548,17 @@
       uri: spotify:artist:0O98jlCaPzvsoei6U5jfEL
   unpopularArtists:
     - external_urls:
+        spotify: https://open.spotify.com/artist/1Ptp4nbLolMX9RniidXbbn
+      id: 1Ptp4nbLolMX9RniidXbbn
+      name: Henry Keen
+      uri: spotify:artist:1Ptp4nbLolMX9RniidXbbn
+      popularity: 0
+    - external_urls:
         spotify: https://open.spotify.com/artist/0O2yKE5Jyx5maooLz70DT3
       id: 0O2yKE5Jyx5maooLz70DT3
       name: Kawuku Sound
       uri: spotify:artist:0O2yKE5Jyx5maooLz70DT3
       popularity: 0
-    - external_urls:
-        spotify: https://open.spotify.com/artist/1Ptp4nbLolMX9RniidXbbn
-      id: 1Ptp4nbLolMX9RniidXbbn
-      name: Henry Keen
-      uri: spotify:artist:1Ptp4nbLolMX9RniidXbbn
-      popularity: 1
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/6rspKubI2IiJVfteKlQ5al
@@ -737,14 +737,14 @@
       uri: spotify:artist:0a5lsotyiCdV0xmceU44oN
   unpopularArtists:
     - external_urls:
-        spotify: https://open.spotify.com/artist/255ZPAkvfPjmKwPj4mC48B
-      id: 255ZPAkvfPjmKwPj4mC48B
-      name: Shishani
-      uri: spotify:artist:255ZPAkvfPjmKwPj4mC48B
-      popularity: 30
-    - external_urls:
         spotify: https://open.spotify.com/artist/0QLkmmM8acu07MIT5GcSPT
       id: 0QLkmmM8acu07MIT5GcSPT
       name: First Beige
       uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
+      popularity: 29
+    - external_urls:
+        spotify: https://open.spotify.com/artist/255ZPAkvfPjmKwPj4mC48B
+      id: 255ZPAkvfPjmKwPj4mC48B
+      name: Shishani
+      uri: spotify:artist:255ZPAkvfPjmKwPj4mC48B
       popularity: 30
