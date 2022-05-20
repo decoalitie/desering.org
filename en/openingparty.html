@@ -14,14 +14,15 @@ permalink: /en/openingparty
 
 {% capture lead %}
 <p class="content-already-reserved">
-    On this page you can make a reservation for the TestTafel dinner on the opening party of De Sloot on <strong>May 26th, 2022</strong>.
+    On this page you can make a reservation for the TestTafel dinner at the opening event of De Sloot on <strong>May 26th, 2022</strong>. For more information about the
+    grand opening of De Sloot, visit <a href="https://desloot.nl/" target="_blank">desloot.nl</a>.
 </p>
 <p class="content-already-reserved">
-    For more information about us, visit <a href={% link index.html %}>our homepage</a>. For general reservations, visit <a href="{% link en/testtafel/reservation.html %}">this form</a>.
+    For more information about De Sering, visit <a href={% link en/home.html %}>our homepage</a>. For general TestTafel reservations, visit <a href="{% link en/testtafel/reservation.html %}">this form</a>.
 </p>
 {% endcapture %}
 
-{% include reserveren.html 
+{% include reservation.html 
     endpoint="https://script.google.com/macros/s/AKfycbyvAZUhnGwcTjSjeG_ktK8rFB6sm6W1Wfdq8SNdXXTsX1936NxE4NcllKYnIwLT9BzgMw/exec" 
     eventsData=events
     lead=lead
