@@ -1,33 +1,52 @@
 <!DOCTYPE html>
 
-<html {% if page.language %}lang="{{ page.language }}"{% endif %}>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="{{ page.description }}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html {% if page.language %}lang="{{ page.language }}" {% endif %}>
 
-    <title>{{ page.title }}</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="{{ page.description }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="/styles/opening.css" />
+  <title>{{ page.title }}</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e55420" />
-    <meta name="msapplication-TileColor" content="#e55420" />
-    <meta name="theme-color" content="#e55420" />
-  </head>
+  <link rel="stylesheet" href="/styles/opening.css" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e55420" />
+  <meta name="msapplication-TileColor" content="#e55420" />
+  <meta name="theme-color" content="#e55420" />
+</head>
 
 
-  <body lang="{{ page.language }}" class="purple">
-      <div class="page-background">
-          <div class="background-repeat-x"></div>
-        <img class="background-right" src="/img/opening-right.png" alt="" />
-      </div>
+<body lang="{{ page.language }}" class="purple">
+  <div class="page-background">
+    <div class="background-repeat-x"></div>
+    <img class="background-right" src="/img/opening-right.png" alt="" />
+  </div>
 
-      <main>
-          {{ content }}
-      </main>
-  </body>
+  <main>
+    {{ content }}
+  </main>
+
+  <script type="text/javascript">
+    function isIOSLowerThan7() {
+      return [
+        'iPad Simulator',
+        'iPhone Simulator',
+        'iPod Simulator',
+        'iPad',
+        'iPhone',
+        'iPod'
+      ].includes(navigator.platform) && !window.SpeechSynthesisUtterance;
+    }
+
+    if (isIOSLowerThan7()) {
+      document.body.className += ' ios-fix';
+    }
+  </script>
+</body>
+
 </html>
