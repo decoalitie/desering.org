@@ -34,6 +34,7 @@
 }
 
 $page-max-width: 50rem;
+$page-bg-max-width: 65rem;
 
 :root {
   --color-opening-1: #775ca7;
@@ -71,7 +72,7 @@ a {
   left: 50%;
   height: 100%;
   width: 100%;
-  max-width: ($page-max-width * 1.3);
+  max-width: $page-bg-max-width;
   display: flex;
   background-color: #fff;
 
@@ -138,7 +139,6 @@ h6 {
 
 .home-link {
     @include open-sans-semi;
-
     position:  fixed;
     bottom: 0;
     left: 0;
@@ -158,9 +158,17 @@ h6 {
     background: var(--color-opening-1);
 }
 
-@media only screen and (min-width: $page-max-width) {
+@media only screen and (min-width: ($page-bg-max-width + 5rem)) {
     .home-link {
-        
+        position: fixed;
+        left: auto;
+        bottom: auto;
+        right: 50%;
+        top: 0;
+        width: auto;
+        padding: 1rem;
+        border: 0;
+        transform: translate(($page-bg-max-width / 2 + 2.5rem), 0);
     }
 }
 
@@ -304,6 +312,7 @@ main {
   padding: 0 1rem 4rem 1rem;
   width: 100%;
   max-width: $page-max-width;
+  position: relative;
 }
 
 .caps {
