@@ -456,6 +456,15 @@ p + p {
   .program-table-food {
     font-size: 1.2rem;
   }
+
+  p,
+  .practical-info-list {
+    font-size: 1.1rem;
+  }
+
+  .end-home-link {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 350px) {
