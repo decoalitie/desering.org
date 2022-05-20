@@ -1,36 +1,22 @@
 ---
-title: De Sering
-layout: landing
+title: De Sering Openingsfeest - 27 mei 2022
+layout: opening
 language: nl
-description: Volkskeuken De Sering en TestTafel
-landing: true
+description: De Sering
 translation: index
 ---
 
-<div class="sering">
-  <h1>
-    Volkskeuken De Sering
-  </h1>
 
-  <p>
-    De Sering heeft een nieuwe plek! Vanaf 12 april kan je elke <strong>dinsdag</strong> terecht bij onze <strong>nieuwe locatie</strong>, vlakbij Amsterdam Sloterdijk.
-  </p>
+{% capture lead %}
+<p class="description">
+  Vier met ons de opening van de nieuwe locatie van De Sering: een 300m<sup>2</sup> oude fabriekshal vlakbij Station
+  Sloterdijk. Verwacht goedkoop en lekker eten, live-muziek en DJs tot laat in de nacht. Ook zullen vrienden van 
+  De Sering alvast een voorproefje geven van de activiteiten die je in de toekomst bij De Sering kan verwachten.
+</p>
+{% endcapture %}
 
-  <a href="{% link home.html %}" class="button">Ga verder naar De Sering</a>
-
-  <a href="{% link en/home.html %}" class="button">De Sering in English</a>
-</div>
-
-<div class="test-tafel">
-  <h1>TestTafel</h1>
-
-  <p>
-    TestTafel is een pop-up restaurant dat elke vrijdag en zaterdag een wisselend menu van 7 gangen serveert. Het menu
-    is een eclectische verzameling van recepten die we altijd al een keer hebben willen maken, gerechten goed gejat van
-    onze favoriete chefs en recepten die we uit obscure kookboeken hebben gevist.
-  </p>
-
-  <a href="{% link testtafel/index.html %}" class="button">Bezoek TestTafel</a>
-
-  <a href="{% link en/testtafel/index.html %}" class="button">TestTafel in English</a>
-</div>
+{% include opening_nl.html 
+    continueText="Naar de normale Sering website" 
+    continueTextFooter="Klik hier om verder te gaan naar de website van De Sering"
+    continueHref="/home"
+    lead=lead %}

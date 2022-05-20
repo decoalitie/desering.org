@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 
-<html class="{% if page.landing %}landing{% endif %}">
-
-
+<html class="{% if page.landing %}landing{% endif %}" {% if page.language %}lang="{{ page.language }}"{% endif %}>
   <head>
     <meta charset="utf-8" />
     <meta name="description" content="{{ page.description }}" />

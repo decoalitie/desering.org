@@ -24,9 +24,9 @@ layout: base
   <div class="container top-bar-container">
     <div class="lang-select">
       {% if page.language == 'en' %}
-      <a href="/{{ page.translation }}">Nederlands</a>
+      <a href="/{{ page.translation }}?lang=nl">Nederlands</a>
       {% else %}
-      <a href="/en/{{ page.translation }}">English</a>
+      <a href="/en/{{ page.translation }}?lang=en">English</a>
       {% endif %}
     </div>
   </div>
