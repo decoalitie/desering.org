@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="{% if page.landing %}landing{% endif %}" {% if page.language %}lang="{{ page.language }}"{% endif %}>
+<html {% if page.language %}lang="{{ page.language }}"{% endif %}>
   <head>
     <meta charset="utf-8" />
     <meta name="description" content="{{ page.description }}" />
@@ -8,15 +8,8 @@
 
     <title>{{ page.title }}</title>
 
-    <link rel="stylesheet" href="/styles/normalize.css" />
-    <link rel="stylesheet" href="/styles/decoalitie-colours.css" />
-    <link rel="stylesheet" href="/styles/decoalitie-fonts.css" />
-    <link rel="stylesheet" href="/styles/style.css" />
-    {% for stylesheet in page.stylesheets %}
-      <link rel="stylesheet" href="/styles/{{ stylesheet }}.css" />
-    {% endfor %}
+    <link rel="stylesheet" href="/styles/opening.css" />
 
-    <!-- generated with realfavicongenerator.net -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -28,14 +21,13 @@
 
 
   <body lang="{{ page.language }}" class="purple">
+      <div class="page-background">
+          <div class="background-repeat-x"></div>
+        <img class="background-right" src="/img/opening-right.png" alt="" />
+      </div>
 
-    {{ content }}
-
-    {% for script in page.scripts %}
-      <script type="text/javascript" src="/js/dist/{{ script }}{% if jekyll.environment == "watch" %}-dev{% endif %}.js?v=202204151358"></script>
-    {% endfor %}
-
+      <main>
+          {{ content }}
+      </main>
   </body>
-
-
 </html>
