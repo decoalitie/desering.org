@@ -29,6 +29,12 @@
       uri: spotify:artist:0TOZ0i0BHZJYKK2rvoRD2d
   unpopularArtists:
     - external_urls:
+        spotify: https://open.spotify.com/artist/3QCGGDtsgEU4Lh3LabEpA6
+      id: 3QCGGDtsgEU4Lh3LabEpA6
+      name: Stalactite
+      uri: spotify:artist:3QCGGDtsgEU4Lh3LabEpA6
+      popularity: 3
+    - external_urls:
         spotify: https://open.spotify.com/artist/3hhFZONK2jmmcponMeLoDV
       id: 3hhFZONK2jmmcponMeLoDV
       name: Nowsm
@@ -39,13 +45,7 @@
       id: 2dQAz3jNlenyLHfeknfNsn
       name: Do Amor
       uri: spotify:artist:2dQAz3jNlenyLHfeknfNsn
-      popularity: 12
-    - external_urls:
-        spotify: https://open.spotify.com/artist/0uheKgZvAN1XtSaIsSV3IO
-      id: 0uheKgZvAN1XtSaIsSV3IO
-      name: Loose Fit
-      uri: spotify:artist:0uheKgZvAN1XtSaIsSV3IO
-      popularity: 15
+      popularity: 11
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/0KqdbtscW2SWFqRLNKUUgN
@@ -139,19 +139,19 @@
       id: 42oyeuzTjSz4KLEAr4K3XR
       name: Galathea
       uri: spotify:artist:42oyeuzTjSz4KLEAr4K3XR
-      popularity: 4
+      popularity: 3
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/5V7wJftFtZt1l5zvXQ43ix
   images:
     - height: 640
-      url: https://mosaic.scdn.co/640/ab67616d0000b273294645dbdc802abcae3c8714ab67616d0000b2733dd0e75c2b65decb70f90287ab67616d0000b27385b7178cec59edf04af3bcd9ab67616d0000b273cfa684b0028d28b4e4f7494f
+      url: https://mosaic.scdn.co/640/ab67616d0000b273294645dbdc802abcae3c8714ab67616d0000b27385b7178cec59edf04af3bcd9ab67616d0000b273cfa684b0028d28b4e4f7494fab67616d0000b273d5fddea988720d9cadf9d19f
       width: 640
     - height: 300
-      url: https://mosaic.scdn.co/300/ab67616d0000b273294645dbdc802abcae3c8714ab67616d0000b2733dd0e75c2b65decb70f90287ab67616d0000b27385b7178cec59edf04af3bcd9ab67616d0000b273cfa684b0028d28b4e4f7494f
+      url: https://mosaic.scdn.co/300/ab67616d0000b273294645dbdc802abcae3c8714ab67616d0000b27385b7178cec59edf04af3bcd9ab67616d0000b273cfa684b0028d28b4e4f7494fab67616d0000b273d5fddea988720d9cadf9d19f
       width: 300
     - height: 60
-      url: https://mosaic.scdn.co/60/ab67616d0000b273294645dbdc802abcae3c8714ab67616d0000b2733dd0e75c2b65decb70f90287ab67616d0000b27385b7178cec59edf04af3bcd9ab67616d0000b273cfa684b0028d28b4e4f7494f
+      url: https://mosaic.scdn.co/60/ab67616d0000b273294645dbdc802abcae3c8714ab67616d0000b27385b7178cec59edf04af3bcd9ab67616d0000b273cfa684b0028d28b4e4f7494fab67616d0000b273d5fddea988720d9cadf9d19f
       width: 60
   name: "TestTafel #13"
   tracks:
@@ -307,23 +307,23 @@
       uri: spotify:artist:32IztneRaGHmiRgNki4Mls
       popularity: 0
     - external_urls:
+        spotify: https://open.spotify.com/artist/3NGl2LLSZh4VUz2EaBZSUZ
+      id: 3NGl2LLSZh4VUz2EaBZSUZ
+      name: Roseane Santos
+      uri: spotify:artist:3NGl2LLSZh4VUz2EaBZSUZ
+      popularity: 3
+    - external_urls:
         spotify: https://open.spotify.com/artist/3y4GCYSmf6KyCXUdfmX6aI
       id: 3y4GCYSmf6KyCXUdfmX6aI
       name: Brief Work
       uri: spotify:artist:3y4GCYSmf6KyCXUdfmX6aI
       popularity: 3
     - external_urls:
-        spotify: https://open.spotify.com/artist/3NGl2LLSZh4VUz2EaBZSUZ
-      id: 3NGl2LLSZh4VUz2EaBZSUZ
-      name: Roseane Santos
-      uri: spotify:artist:3NGl2LLSZh4VUz2EaBZSUZ
-      popularity: 4
-    - external_urls:
         spotify: https://open.spotify.com/artist/0A4gPcMJUMuH8wjgMl9Dij
       id: 0A4gPcMJUMuH8wjgMl9Dij
       name: Aleisha Lee
       uri: spotify:artist:0A4gPcMJUMuH8wjgMl9Dij
-      popularity: 11
+      popularity: 10
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/3wL7yQoGyIGKS7cDRs3lHs
@@ -364,13 +364,13 @@
       id: 2qJTi04qBpG3C0RR62l1Du
       name: SPARKLE DIVISION
       uri: spotify:artist:2qJTi04qBpG3C0RR62l1Du
-      popularity: 23
+      popularity: 21
     - external_urls:
         spotify: https://open.spotify.com/artist/2qJTi04qBpG3C0RR62l1Du
       id: 2qJTi04qBpG3C0RR62l1Du
       name: SPARKLE DIVISION
       uri: spotify:artist:2qJTi04qBpG3C0RR62l1Du
-      popularity: 23
+      popularity: 21
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/6Y4CziMlnWkxtiMSGxz1Al
@@ -411,13 +411,13 @@
       id: 4vhCl6MBQvO7FZn1SScoNY
       name: Conjunto Papa Upa
       uri: spotify:artist:4vhCl6MBQvO7FZn1SScoNY
-      popularity: 3
+      popularity: 2
     - external_urls:
         spotify: https://open.spotify.com/artist/4vhCl6MBQvO7FZn1SScoNY
       id: 4vhCl6MBQvO7FZn1SScoNY
       name: Conjunto Papa Upa
       uri: spotify:artist:4vhCl6MBQvO7FZn1SScoNY
-      popularity: 3
+      popularity: 2
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/37OIHXYRvBtijmT5u0fpAe
@@ -464,7 +464,7 @@
       id: 34MeiToHgg61sYGqDs1GqF
       name: Michael Ozone
       uri: spotify:artist:34MeiToHgg61sYGqDs1GqF
-      popularity: 10
+      popularity: 9
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/16uOvUTQmIPM7UBe4C9Mmv
@@ -505,13 +505,13 @@
       id: 1izAFKIapgqtHzOr4Nk73u
       name: Outfit
       uri: spotify:artist:1izAFKIapgqtHzOr4Nk73u
-      popularity: 9
+      popularity: 8
     - external_urls:
         spotify: https://open.spotify.com/artist/3EDQh3YXwnFIGADDBqNaEu
       id: 3EDQh3YXwnFIGADDBqNaEu
       name: Gary Corben
       uri: spotify:artist:3EDQh3YXwnFIGADDBqNaEu
-      popularity: 11
+      popularity: 10
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/3U3JFLNgfoededfhqRGC4G
@@ -605,7 +605,7 @@
       id: 3EMzfV9nhsrQWF7Ww8M74S
       name: Kiimi
       uri: spotify:artist:3EMzfV9nhsrQWF7Ww8M74S
-      popularity: 21
+      popularity: 20
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/4ejWc0OTjYLhN8aZlNSKj8
@@ -646,13 +646,13 @@
       id: 6uYq0k8pis5LPGzdFRM5FJ
       name: Huw Marc Bennett
       uri: spotify:artist:6uYq0k8pis5LPGzdFRM5FJ
-      popularity: 19
+      popularity: 18
     - external_urls:
         spotify: https://open.spotify.com/artist/4zMgFVljBxMaPn1U0SXGOh
       id: 4zMgFVljBxMaPn1U0SXGOh
       name: Charles Webster
       uri: spotify:artist:4zMgFVljBxMaPn1U0SXGOh
-      popularity: 32
+      popularity: 30
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/7Arw5mPFniRtcw1XmGcdwl
@@ -694,13 +694,13 @@
       id: 2n1NhC6PKP4WpUNXFeKzjY
       name: JD73
       uri: spotify:artist:2n1NhC6PKP4WpUNXFeKzjY
-      popularity: 11
+      popularity: 10
     - external_urls:
         spotify: https://open.spotify.com/artist/5NPL2jGG32a4LCnu4koPL7
       id: 5NPL2jGG32a4LCnu4koPL7
       name: Bruxas
       uri: spotify:artist:5NPL2jGG32a4LCnu4koPL7
-      popularity: 29
+      popularity: 28
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/1rISyS1ipslg42GLaJ4cZ7
@@ -737,14 +737,14 @@
       uri: spotify:artist:0a5lsotyiCdV0xmceU44oN
   unpopularArtists:
     - external_urls:
-        spotify: https://open.spotify.com/artist/0QLkmmM8acu07MIT5GcSPT
-      id: 0QLkmmM8acu07MIT5GcSPT
-      name: First Beige
-      uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
-      popularity: 29
-    - external_urls:
         spotify: https://open.spotify.com/artist/255ZPAkvfPjmKwPj4mC48B
       id: 255ZPAkvfPjmKwPj4mC48B
       name: Shishani
       uri: spotify:artist:255ZPAkvfPjmKwPj4mC48B
-      popularity: 30
+      popularity: 28
+    - external_urls:
+        spotify: https://open.spotify.com/artist/4KewrgdzmKzWiJT3Znotp3
+      id: 4KewrgdzmKzWiJT3Znotp3
+      name: Me and My Friends
+      uri: spotify:artist:4KewrgdzmKzWiJT3Znotp3
+      popularity: 31
