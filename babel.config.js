@@ -5,7 +5,7 @@ module.exports = {
             {
                 targets: 'last 2 versions, >0.01% in NL and not dead and supports css-variables',
                 useBuiltIns: 'usage',
-                corejs: '3.16',
+                corejs: '3.22.5',
                 shippedProposals: true,
                 bugfixes: true
             }
