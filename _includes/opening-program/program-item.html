@@ -1,0 +1,9 @@
+<dialog id="program-{{include.slug}}" class="fixed" data-program="{{include.slug}}">
+  <h2>{{include.title}}</h2>
+  <h3 data-time-display></h3>
+  {{include.content}}
+
+  <div class="close-button-wrapper">
+    <button data-close-dialog="{{include.slug}}" class="close-button">{{include.close}}</button>
+  </div>
+</dialog>

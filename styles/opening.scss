@@ -3,6 +3,7 @@
 ---
 
 @import "_normalize";
+@import "_dialog-polyfill";
 
 @font-face {
   font-family: "Syne";
@@ -152,7 +153,7 @@ h6 {
 
     z-index: 10;
 
-    border-top: 4px solid #fff;
+    border: 2px solid rgb(173, 12, 107);
 
     text-decoration: none;
     display: block;
@@ -162,6 +163,10 @@ h6 {
     font-size: 1rem;
     color: #fff;
     background: RGB(82, 0, 48);
+
+    .has-dialog-open & {
+      display: none;
+    }
 }
 
 @media only screen and (min-width: ($page-bg-max-width + 5rem)) {
@@ -173,7 +178,6 @@ h6 {
         top: 0;
         width: auto;
         padding: 0.5rem 1rem;
-        border: 0;
         transform: translate(($page-bg-max-width / 2 + 2.5rem), 0);
     }
 }
@@ -302,6 +306,8 @@ h4 {
     display: inline-block;
     padding: 0 0.2rem 0.1rem 0.2rem;
     background: var(--color-opening-2);
+
+    text-decoration: underline;
   }
 
   td:first-child {
@@ -310,6 +316,71 @@ h4 {
     &:last-child {
       padding-right: 0;
     }
+  }
+}
+
+.program-button,
+dialog .close-button {
+  @include open-sans-semi;
+
+  display: inline-block;
+  appearance: none;
+  border: 0;
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  outline: 0;
+  padding: 0 0.2rem 0.1rem 0.2rem;
+  background: var(--color-opening-2);
+
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform ease-out 0.2s;
+
+  span {
+    display: inline-block;
+    transition: transform ease-out 0.2s;
+    transform: scale(1);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #2176aa;
+  }
+}
+
+.program-button {
+  &:hover {
+    transform: scale(1.1);
+    span {
+      transform: scale(1.2);
+    }
+  }
+}
+
+dialog {
+  width: $page-max-width;
+  max-width: 95vw;
+  min-height: 60vh;
+  max-height: 94vh;
+
+  display: flex;
+  flex-direction: column;
+
+  border-color: var(--color-opening-1);
+
+  .close-button-wrapper {
+    flex: 0 0 auto;
+    margin-top: auto;
+  }
+
+  .close-button {
+    @include syne;
+    
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 0.3rem 1rem;
+    background: var(--color-opening-2);
+    color: var(--color-opening-1);
   }
 }
 
