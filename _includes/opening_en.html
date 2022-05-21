@@ -46,21 +46,27 @@
 
       <table class="program-table">
         <tr>
-          <td>18:00 - 19:00</td>
+          <td data-time-for-program="blue-dog">18:00 - 19:00</td>
           <td>
-            Blue Dog
+            <button data-program-trigger="blue-dog" class="program-button">
+              <span>Blue Dog</span>
+            </button>
           </td>
         </tr>
         <tr>
-          <td>20:30 - 21:30</td>
+          <td data-time-for-program="eckhardt">20:30 - 21:30</td>
           <td>
-            Eckhardt and the House
+            <button data-program-trigger="eckhardt" class="program-button">
+              <span>Eckhardt and the House</span>
+            </button>
           </td>
         </tr>
         <tr>
-          <td>22:00 - 23:00</td>
+          <td data-time-for-program="mungo-bungo">22:00 - 23:00</td>
           <td>
-            Mungo Bungo
+            <button data-program-trigger="mungo-bungo" class="program-button">
+              <span>Mungo Bungo</span>
+            </button>
           </td>
         </tr>
         <tr>
@@ -249,3 +255,6 @@
 <div class="end-home-link">
   <a href="{{ include.continueHref }}">{{ include.continueTextFooter }}</a>
 </div>
+
+{% include opening-program/index.html
+  lang="en" %}

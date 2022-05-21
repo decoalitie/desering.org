@@ -322,14 +322,21 @@ h4 {
 .program-button,
 dialog .close-button {
   @include open-sans-semi;
-
-  display: inline-block;
+  
   appearance: none;
   border: 0;
   margin: 0;
+  padding: 0;
   color: inherit;
   font-size: inherit;
   outline: 0;
+  background: none;
+}
+
+.program-button:not(.missing-dialog),
+dialog .close-button {
+
+  display: inline-block;
   padding: 0 0.2rem 0.1rem 0.2rem;
   background: var(--color-opening-2);
 
@@ -348,7 +355,7 @@ dialog .close-button {
   }
 }
 
-.program-button {
+.program-button:not(.missing-dialog) {
   &:hover {
     transform: scale(1.1);
     span {
@@ -375,12 +382,57 @@ dialog {
 
   .close-button {
     @include syne;
-    
+
     display: inline-block;
     text-transform: uppercase;
     padding: 0.3rem 1rem;
     background: var(--color-opening-2);
     color: var(--color-opening-1);
+  }
+
+  hgroup {
+    width: calc(100% + 2em);
+    flex: 0 0 auto;
+    margin: 0 -1em 1rem -1em;
+    overflow: hidden;
+    text-overflow: clip;
+  }
+
+  h2, h3 {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    mix-blend-mode: multiply;
+
+    span {
+      margin-left: 1.2rem;
+      display: inline-block;
+
+      &.clone {
+        user-select: none;
+      }
+    }
+  }
+
+  p {
+    @include open-sans-semi;
+    font-size: 1.1rem;
+    color: var(--color-opening-1);
+  }
+
+  h2 {
+    font-size: 3rem;
+    transform: translate(-2rem);
+    width: calc(100% + 2rem);
+    color: var(--color-opening-1);
+  }
+
+  h3 {
+    font-size: 2.4rem;
+    margin-top: -2rem;
+    transform: translate(-3.6rem);
+    width: calc(100% + 3.6rem);
+    color: var(--color-opening-2);
   }
 }
 
