@@ -28,14 +28,18 @@ function closeDialog(slug) {
 
     const triggers = document.querySelectorAll('[data-program-trigger]');
     for (const element of triggers) {
-        element.addEventListener('click', () => openProgramDialog(element.dataset.programTrigger));
-
-        const timeElement = document.querySelector(`[data-time-for-program="${element.dataset.programTrigger}"]`);
-        if (timeElement && dialogs[element.dataset.programTrigger]) {
-            const displayElements = dialogs[element.dataset.programTrigger].querySelectorAll('[data-time-display]');
-            for (const element of displayElements) {
-                element.innerText = timeElement.innerText;
+        if (dialogs[element.dataset.programTrigger]) {
+            element.addEventListener('click', () => openProgramDialog(element.dataset.programTrigger));
+    
+            const timeElement = document.querySelector(`[data-time-for-program="${element.dataset.programTrigger}"]`);
+            if (timeElement) {
+                const displayElements = dialogs[element.dataset.programTrigger].querySelectorAll('[data-time-display]');
+                for (const element of displayElements) {
+                    element.innerText = timeElement.innerText;
+                }
             }
+        } else {
+            element.classList.add('missing-dialog');
         }
     }
 

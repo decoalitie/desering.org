@@ -1,6 +1,20 @@
 <dialog id="program-{{include.slug}}" class="fixed" data-program="{{include.slug}}">
-  <h2>{{include.title}}</h2>
-  <h3 data-time-display></h3>
+  <hgroup>
+    <h2>
+      <span>{{include.title}}</span>
+
+      {% for i in (1..6) %}
+      <span aria-hidden="true" class="clone">{{include.title}}</span>
+      {% endfor %}
+    </h2>
+    <h3>
+      <span data-time-display></span>
+      {% for i in (1..6) %}
+      <span aria-hidden="true" class="clone" data-time-display></span>
+      {% endfor %}
+    </h3>
+  </hgroup>
+
   {{include.content}}
 
   <div class="close-button-wrapper">
