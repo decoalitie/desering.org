@@ -2,9 +2,12 @@ const path = require('path');
 
 module.exports = (env, argv) => {
     return {
-        entry: path.resolve(__dirname, 'js/src/reservation-form/main.js'),
+        entry: {
+            'reservation-form': path.resolve(__dirname, 'js/src/reservation-form/main.js'),
+            'opening': path.resolve(__dirname, 'js/src/opening/main.js'),
+        },
         output: {
-            filename: `reservation-form${argv.mode === 'development' ? '-dev' : ''}.js`,
+            filename: `[name]${argv.mode === 'development' ? '-dev' : ''}.js`,
             path: path.resolve(__dirname, 'js/dist'),
         },
         module: {
