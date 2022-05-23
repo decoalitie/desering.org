@@ -51,7 +51,7 @@ async function main() {
     }
     offset += 50;
     next = !!body.next;
-    items = [...result, ...body.items];
+    items = [...items, ...body.items];
   }
 
   const testTafelPlaylists = items.filter(
@@ -101,7 +101,7 @@ async function main() {
     });
 
     tracks.sort((a, b) => a.age - b.age);
-    const newMusic = tracks.filter((entry) => entry.age < 8);
+    const newMusic = tracks.filter((entry) => entry.age < 14);
     const newMusicArtists = newMusic
       .reduce((artists, entry) => {
         const artist = entry.track.artists[0];
