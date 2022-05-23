@@ -80,3 +80,7 @@
   fullyBooked: true
 - date: 2022-05-21
   fullyBooked: true
+- date: 2022-06-03
+  fullyBooked: false
+- date: 2022-06-04
+  fullyBooked: false
