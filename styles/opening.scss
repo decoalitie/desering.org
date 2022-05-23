@@ -421,6 +421,7 @@ dialog {
     
     &.right {
       float: right;
+      margin-left: 1rem;
     }
 
     &.left {
@@ -675,6 +676,7 @@ p + p {
 
   dialog {
     .media.mobile-full {
+      margin: 0;
       float: none;
       width: 100%;
     }
