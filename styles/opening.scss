@@ -410,6 +410,48 @@ dialog {
     color: var(--color-opening-1);
   }
 
+  .media {
+    width: 40%;
+    flex: 0 0 auto;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+    
+    &.right {
+      float: right;
+    }
+
+    &.left {
+      float: left;
+    }
+  }
+
+  h4 {
+    @include title;
+    color: var(--color-opening-1);
+  }
+
+  .link-list {
+    @include syne;
+    @include title;
+    color: var(--color-opening-1);
+
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0 0 2rem 0;
+    padding: 0;
+
+    li {
+      flex: 0 0 auto;
+      margin-right: 2rem;
+    }
+  }
+
   hgroup {
     width: calc(100% + 2em);
     flex: 0 0 auto;
