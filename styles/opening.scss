@@ -169,6 +169,15 @@ h6 {
     }
 }
 
+.locale-link {
+  display: inline-block;
+  width: auto;
+  background-color: var(--color-opening-1);
+  padding: 0.2rem;
+  font-size: 0.9rem;
+  color: var(--color-opening-2);
+}
+
 @media only screen and (min-width: ($page-bg-max-width + 5rem)) {
     .home-link {
         position: fixed;
@@ -179,6 +188,17 @@ h6 {
         width: auto;
         padding: 0.5rem 1rem;
         transform: translate(($page-bg-max-width / 2 + 2.5rem), 0);
+    }
+
+    .locale-link {
+      position: fixed;
+      display: block;
+      width: auto;
+      left: auto;
+      bottom: auto;
+      right: 50%;
+      top: 4rem;
+      transform: translate(($page-bg-max-width / 2 + 2.5rem), 0);
     }
 }
 
@@ -191,7 +211,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  margin: 0 0 2rem 0;
+  margin: 0;
 
   @include title;
 }
@@ -453,7 +473,7 @@ main {
   @include syne;
   @include title;
 
-  margin: 0 0 0.5rem 0;
+  margin: 2rem 0 0.5rem 0;
   display: flex;
   flex-wrap: wrap;
 
