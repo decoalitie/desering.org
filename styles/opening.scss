@@ -413,6 +413,8 @@ dialog {
   .media {
     width: 40%;
     flex: 0 0 auto;
+    position: relative;
+    z-index: 10;
 
     img {
       width: 100%;
