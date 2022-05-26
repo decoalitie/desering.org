@@ -1,4 +1,4 @@
-FROM fabiocicerchia/nginx-lua:v1.20220524.000204
+FROM fabiocicerchia/nginx-lua@sha256:4a8872bc8b2d1b1d1d515c9df279a4d1d040c82fb313cbed654e03af664d3491
 
 RUN  mkdir -p /run/nginx
 RUN  apk add --no-cache nginx-mod-http-lua-upstream
