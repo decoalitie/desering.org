@@ -560,7 +560,7 @@ main {
   @include syne;
 
   font-size: 2rem;
-  margin: 0 0 2.5rem 0;
+  margin: 0 0 0.5rem 0;
 }
 
 .highlight {
@@ -625,6 +625,23 @@ p + p {
 
   font-size: 1.2rem;
   margin: 0.5rem 0 0 0;
+
+  &.lead,
+  &.end {
+    font-size: 1.4rem;
+  }
+
+  &.end.name {
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
+
+  &.first {
+    margin-top: 2rem;
+  }
+  &.sign-off {
+    margin-top: 3rem;
+  }
 }
 
 .program-wrapper {
