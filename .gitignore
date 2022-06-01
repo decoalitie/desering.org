@@ -4,3 +4,4 @@ node_modules
 .env
 key.json
 js/dist
+.DS_Store
