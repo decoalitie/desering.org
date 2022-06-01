@@ -1,7 +1,7 @@
 import { isBefore } from 'date-fns';
 import * as inputControllers from '../forms/input-controllers';
 import { getTemplateRender, swapFormWithTemplate } from './templates';
-import { MIN_PEOPLE_OWN_TABLE, SHARED_TABLE_START_TIME, SHOW_DATE_UNTIL, LINKIFY } from './config';
+import { MIN_PEOPLE_OWN_TABLE, SHARED_TABLE_START_TIME, SHOW_DATE_UNTIL } from './config';
 import { getReservationsForDate, removeOldReservations, storeReservation } from "./reservations";
 
 const reservationForm = document.querySelector("#reservation-form");
@@ -94,15 +94,12 @@ function handleDateChange() {
     const paragraphs = specialDescription.split('\n').filter(Boolean);
 
     const renderParagraph = (element, text) => {
-      if (Object.keys(LINKIFY).some(key => text.includes(key))) {
-        let linkified = text;
-        for (const [key, href] of Object.entries(LINKIFY)) {
-          linkified = linkified.replace(key, `<a href="${href}" target="_blank">${key}</a>`);
-        }
-        element.innerHTML = linkified;
-      } else {
-        element.innerText = text;
-      }
+      let markup = text;
+
+      markup = markup.replace(/\*(.+?)\*/g, '<strong>$1</strong>');
+      markup = markup.replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank">$1</a>');
+
+      element.innerHTML = markup;
     }
 
     while (paragraphs.length) {
