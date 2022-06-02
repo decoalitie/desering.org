@@ -1,22 +1,39 @@
 ---
-title: De Sering Opening Party - May 27th 2022
-layout: opening
+title: De Sering
+layout: default
 language: en
-description: De Sering
-translation: /
-permalink: :path
+translation: index
+permalink: :path/:basename
 ---
 
-{% capture lead %}
-<p class="description">
-  Join us in celebrating the new location of De Sering: a 300m<sup>2</sup> old factory hall near Sloterdijk
-  train station. Expect cheap and tasty food, live music and DJs until late in the night. Additionally, friends of De Sering
-  will give us a taste of the activities that you can expect at De Sering going forward.
-</p>
-{% endcapture %}
+<div class="row">
+  <div class="container">
+    <h1>People's Kitchen De Sering</h1>
 
-{% include opening_en.html 
-    continueText="Continue to De Sering website" 
-    continueTextFooter="Click here to continue to the website of De Sering"
-    continueHref="/en/home"
-    lead=lead %}
+    <p>
+      Every Tuesday we serve two vegan courses for a suggested donation of €2.50-€5.00. Everyone is welcome
+      between 18:30 and 22:00 at Rhôneweg 6.
+    </p>
+
+
+    <p>It's no longer necessary to make a reservation. Please feel free to drop by!</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="container">
+    <img src="/img/sering.png" />
+
+    <h3>TestTafel</h3>
+
+    <p>
+      Visit <a href="{% link en/testtafel/index.html %}">this page</a> for information about our pop-up restaurant
+      TestTafel.
+    </p>
+
+    <h3>Contact</h3>
+
+    <p><a href="mailto:info@desering.org">info@desering.org</a></p>
+
+  </div>
+</div>
