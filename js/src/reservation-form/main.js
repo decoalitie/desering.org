@@ -1,7 +1,7 @@
 import { isBefore } from 'date-fns';
 import * as inputControllers from '../forms/input-controllers';
 import { getTemplateRender, swapFormWithTemplate } from './templates';
-import { MIN_PEOPLE_OWN_TABLE, SHARED_TABLE_START_TIME, SHOW_DATE_UNTIL } from './config';
+import { MIN_PEOPLE_OWN_TABLE, DEFAULT_START_TIME, SHOW_DATE_UNTIL } from './config';
 import { getReservationsForDate, removeOldReservations, storeReservation } from "./reservations";
 
 const reservationForm = document.querySelector("#reservation-form");
@@ -82,7 +82,10 @@ function watchFields(fieldNames, onChange, immediate = true) {
 }
 
 function handleDateChange() {
-  const { fullyBooked, special, specialDescription } = fields.date.selectedOptionElement.dataset;
+  const { fullyBooked, special, specialDescription, startTime = DEFAULT_START_TIME } = fields.date.selectedOptionElement.dataset;
+
+  fields['start-time'].value = startTime;
+  
   const specialElement = getTemplateRender('special-description');
   if (specialDescription !== undefined) {
     specialElement.element.querySelector('h4').innerText = special;

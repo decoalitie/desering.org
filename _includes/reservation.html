@@ -1,4 +1,4 @@
-{% assign endpoint = include.endpoint | default: "https://script.google.com/macros/s/AKfycbwg0O0SXjlwfm4CrCPBE7DrsQ7hxyevViP_ZtUph8BYEnAqIGTZIepvt6deT-v1jjcv/exec" %}
+{% assign endpoint = include.endpoint | default: "https://script.google.com/macros/s/AKfycbzTfI6vr5VvVqATARmiKolmzJPca5sEc5ZnRBiC475x02vXZCGzSGtm1e5TB1W8UJ_R/exec" %}
 {% assign noConfirm = include.noConfirm | default: false %}
 {% assign eventsData = include.eventsData | default: site.data.testtafels %}
 
@@ -49,7 +49,7 @@
           {% assign value = event.date %}
           {% endif %}
 
-          <option value="{{ value }}" {% if special %} data-special="{{ special.name }}"
+          <option value="{{ value }}" {% if special %} data-special="{{ special.name }}"{% if special['start-time'] %} data-start-time="{{ special['start-time'] }}"{% endif %}
             data-special-description="{{ special.description.en }}" {% endif %}{% if event.value %} 
             data-custom-value {% endif %}{% if event.fullyBooked %}
             data-fully-booked data-tag="fully booked" {% else %} data-allow-default{% endif %}>
