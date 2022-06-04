@@ -1,5 +1,53 @@
 - description: ""
   external_urls:
+    spotify: https://open.spotify.com/playlist/22QlQt7XUtOsGW7Pc3D8Nu
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b27326dfcaa07d8a456aa761b80fab67616d0000b2733a34dcdf7d804c2b4b2638d4ab67616d0000b27375ad46b1c09bad7c6c89d0b6ab67616d0000b273f2b6590be072f0f8aba7a4ca
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b27326dfcaa07d8a456aa761b80fab67616d0000b2733a34dcdf7d804c2b4b2638d4ab67616d0000b27375ad46b1c09bad7c6c89d0b6ab67616d0000b273f2b6590be072f0f8aba7a4ca
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b27326dfcaa07d8a456aa761b80fab67616d0000b2733a34dcdf7d804c2b4b2638d4ab67616d0000b27375ad46b1c09bad7c6c89d0b6ab67616d0000b273f2b6590be072f0f8aba7a4ca
+      width: 60
+  name: "TestTafel #17"
+  tracks:
+    href: https://api.spotify.com/v1/playlists/22QlQt7XUtOsGW7Pc3D8Nu/tracks
+    total: 61
+  uri: spotify:playlist:22QlQt7XUtOsGW7Pc3D8Nu
+  newMusicArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/7H9Yrb2KoVErAUw0S0UVvv
+      id: 7H9Yrb2KoVErAUw0S0UVvv
+      name: Nikitch
+      uri: spotify:artist:7H9Yrb2KoVErAUw0S0UVvv
+    - external_urls:
+        spotify: https://open.spotify.com/artist/4hDECVsh9KRPgQj19SGULJ
+      id: 4hDECVsh9KRPgQj19SGULJ
+      name: Dutchie
+      uri: spotify:artist:4hDECVsh9KRPgQj19SGULJ
+  unpopularArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/7unObIw4zbKUXYKFynXqQC
+      id: 7unObIw4zbKUXYKFynXqQC
+      name: Jules Brennan
+      uri: spotify:artist:7unObIw4zbKUXYKFynXqQC
+      popularity: 2
+    - external_urls:
+        spotify: https://open.spotify.com/artist/7unObIw4zbKUXYKFynXqQC
+      id: 7unObIw4zbKUXYKFynXqQC
+      name: Jules Brennan
+      uri: spotify:artist:7unObIw4zbKUXYKFynXqQC
+      popularity: 2
+    - external_urls:
+        spotify: https://open.spotify.com/artist/3HZXCS9A5mStGrqbs79Sxg
+      id: 3HZXCS9A5mStGrqbs79Sxg
+      name: Reginaldo Bessa
+      uri: spotify:artist:3HZXCS9A5mStGrqbs79Sxg
+      popularity: 2
+- description: ""
+  external_urls:
     spotify: https://open.spotify.com/playlist/2UZDKgvi77RI5OgV6FujNS
   images:
     - height: 640
