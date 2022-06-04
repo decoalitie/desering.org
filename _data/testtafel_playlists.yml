@@ -133,7 +133,7 @@
       id: 3OvnoICc8ZAgI3AHTlU4aq
       name: Shifting Gears
       uri: spotify:artist:3OvnoICc8ZAgI3AHTlU4aq
-      popularity: 1
+      popularity: 0
     - external_urls:
         spotify: https://open.spotify.com/artist/42oyeuzTjSz4KLEAr4K3XR
       id: 42oyeuzTjSz4KLEAr4K3XR
@@ -464,7 +464,7 @@
       id: 34MeiToHgg61sYGqDs1GqF
       name: Michael Ozone
       uri: spotify:artist:34MeiToHgg61sYGqDs1GqF
-      popularity: 9
+      popularity: 8
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/16uOvUTQmIPM7UBe4C9Mmv
@@ -505,7 +505,7 @@
       id: 1izAFKIapgqtHzOr4Nk73u
       name: Outfit
       uri: spotify:artist:1izAFKIapgqtHzOr4Nk73u
-      popularity: 8
+      popularity: 7
     - external_urls:
         spotify: https://open.spotify.com/artist/3EDQh3YXwnFIGADDBqNaEu
       id: 3EDQh3YXwnFIGADDBqNaEu
@@ -554,11 +554,11 @@
       uri: spotify:artist:1Ptp4nbLolMX9RniidXbbn
       popularity: 0
     - external_urls:
-        spotify: https://open.spotify.com/artist/0O2yKE5Jyx5maooLz70DT3
-      id: 0O2yKE5Jyx5maooLz70DT3
-      name: Kawuku Sound
-      uri: spotify:artist:0O2yKE5Jyx5maooLz70DT3
-      popularity: 0
+        spotify: https://open.spotify.com/artist/6qkUvfdDxPrjNJNgY2KzE5
+      id: 6qkUvfdDxPrjNJNgY2KzE5
+      name: Lamont Butler
+      uri: spotify:artist:6qkUvfdDxPrjNJNgY2KzE5
+      popularity: 2
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/6rspKubI2IiJVfteKlQ5al
@@ -605,7 +605,7 @@
       id: 3EMzfV9nhsrQWF7Ww8M74S
       name: Kiimi
       uri: spotify:artist:3EMzfV9nhsrQWF7Ww8M74S
-      popularity: 19
+      popularity: 18
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/4ejWc0OTjYLhN8aZlNSKj8
@@ -646,13 +646,13 @@
       id: 6uYq0k8pis5LPGzdFRM5FJ
       name: Huw Marc Bennett
       uri: spotify:artist:6uYq0k8pis5LPGzdFRM5FJ
-      popularity: 16
+      popularity: 18
     - external_urls:
         spotify: https://open.spotify.com/artist/4zMgFVljBxMaPn1U0SXGOh
       id: 4zMgFVljBxMaPn1U0SXGOh
       name: Charles Webster
       uri: spotify:artist:4zMgFVljBxMaPn1U0SXGOh
-      popularity: 30
+      popularity: 29
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/7Arw5mPFniRtcw1XmGcdwl
@@ -696,10 +696,10 @@
       uri: spotify:artist:2n1NhC6PKP4WpUNXFeKzjY
       popularity: 9
     - external_urls:
-        spotify: https://open.spotify.com/artist/5NPL2jGG32a4LCnu4koPL7
-      id: 5NPL2jGG32a4LCnu4koPL7
-      name: Bruxas
-      uri: spotify:artist:5NPL2jGG32a4LCnu4koPL7
+        spotify: https://open.spotify.com/artist/0QLkmmM8acu07MIT5GcSPT
+      id: 0QLkmmM8acu07MIT5GcSPT
+      name: First Beige
+      uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
       popularity: 28
 - description: ""
   external_urls:
@@ -741,7 +741,7 @@
       id: 255ZPAkvfPjmKwPj4mC48B
       name: Shishani
       uri: spotify:artist:255ZPAkvfPjmKwPj4mC48B
-      popularity: 28
+      popularity: 27
     - external_urls:
         spotify: https://open.spotify.com/artist/4KewrgdzmKzWiJT3Znotp3
       id: 4KewrgdzmKzWiJT3Znotp3
