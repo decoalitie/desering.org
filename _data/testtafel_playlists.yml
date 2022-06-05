@@ -14,7 +14,7 @@
   name: "TestTafel #17"
   tracks:
     href: https://api.spotify.com/v1/playlists/22QlQt7XUtOsGW7Pc3D8Nu/tracks
-    total: 61
+    total: 64
   uri: spotify:playlist:22QlQt7XUtOsGW7Pc3D8Nu
   newMusicArtists:
     - external_urls:
