@@ -35,17 +35,17 @@
       uri: spotify:artist:7unObIw4zbKUXYKFynXqQC
       popularity: 2
     - external_urls:
-        spotify: https://open.spotify.com/artist/7unObIw4zbKUXYKFynXqQC
-      id: 7unObIw4zbKUXYKFynXqQC
-      name: Jules Brennan
-      uri: spotify:artist:7unObIw4zbKUXYKFynXqQC
-      popularity: 2
-    - external_urls:
         spotify: https://open.spotify.com/artist/3HZXCS9A5mStGrqbs79Sxg
       id: 3HZXCS9A5mStGrqbs79Sxg
       name: Reginaldo Bessa
       uri: spotify:artist:3HZXCS9A5mStGrqbs79Sxg
       popularity: 2
+    - external_urls:
+        spotify: https://open.spotify.com/artist/2gbO1WIhdYAqbwwh6LaASF
+      id: 2gbO1WIhdYAqbwwh6LaASF
+      name: schroothoop
+      uri: spotify:artist:2gbO1WIhdYAqbwwh6LaASF
+      popularity: 4
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/2UZDKgvi77RI5OgV6FujNS
@@ -277,10 +277,10 @@
       uri: spotify:artist:18PVzmZUhAeyk8YWw2oBo3
       popularity: 0
     - external_urls:
-        spotify: https://open.spotify.com/artist/18PVzmZUhAeyk8YWw2oBo3
-      id: 18PVzmZUhAeyk8YWw2oBo3
-      name: Jonny Wildey
-      uri: spotify:artist:18PVzmZUhAeyk8YWw2oBo3
+        spotify: https://open.spotify.com/artist/6ThoEADmVnFqh92lOx2YCC
+      id: 6ThoEADmVnFqh92lOx2YCC
+      name: Jack Stephenson-Oliver
+      uri: spotify:artist:6ThoEADmVnFqh92lOx2YCC
       popularity: 0
 - description: ""
   external_urls:
@@ -318,16 +318,16 @@
       uri: spotify:artist:1FVo44KTXqxo3JxXADWTd9
   unpopularArtists:
     - external_urls:
-        spotify: https://open.spotify.com/artist/4IJTjZQVrOffnN6NXX00DG
-      id: 4IJTjZQVrOffnN6NXX00DG
-      name: Khus Fir
-      uri: spotify:artist:4IJTjZQVrOffnN6NXX00DG
-      popularity: 0
-    - external_urls:
         spotify: https://open.spotify.com/artist/33rkBSmVJY21R0Hi251lnf
       id: 33rkBSmVJY21R0Hi251lnf
       name: Robbie N4HC
       uri: spotify:artist:33rkBSmVJY21R0Hi251lnf
+      popularity: 0
+    - external_urls:
+        spotify: https://open.spotify.com/artist/4IJTjZQVrOffnN6NXX00DG
+      id: 4IJTjZQVrOffnN6NXX00DG
+      name: Khus Fir
+      uri: spotify:artist:4IJTjZQVrOffnN6NXX00DG
       popularity: 0
 - description: Combining some of the best tracks of the first 9 TestTafel playlists
   external_urls:
@@ -412,13 +412,13 @@
       id: 2qJTi04qBpG3C0RR62l1Du
       name: SPARKLE DIVISION
       uri: spotify:artist:2qJTi04qBpG3C0RR62l1Du
-      popularity: 20
+      popularity: 19
     - external_urls:
-        spotify: https://open.spotify.com/artist/2qJTi04qBpG3C0RR62l1Du
-      id: 2qJTi04qBpG3C0RR62l1Du
-      name: SPARKLE DIVISION
-      uri: spotify:artist:2qJTi04qBpG3C0RR62l1Du
-      popularity: 20
+        spotify: https://open.spotify.com/artist/2805s9LKfRvmaFi6eK6L0f
+      id: 2805s9LKfRvmaFi6eK6L0f
+      name: Luiz Gabriel Lopes
+      uri: spotify:artist:2805s9LKfRvmaFi6eK6L0f
+      popularity: 26
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/6Y4CziMlnWkxtiMSGxz1Al
@@ -461,11 +461,11 @@
       uri: spotify:artist:4vhCl6MBQvO7FZn1SScoNY
       popularity: 3
     - external_urls:
-        spotify: https://open.spotify.com/artist/4vhCl6MBQvO7FZn1SScoNY
-      id: 4vhCl6MBQvO7FZn1SScoNY
-      name: Conjunto Papa Upa
-      uri: spotify:artist:4vhCl6MBQvO7FZn1SScoNY
-      popularity: 3
+        spotify: https://open.spotify.com/artist/5maB2WqB6U2Mi7DKZQYmcS
+      id: 5maB2WqB6U2Mi7DKZQYmcS
+      name: Yelfris Valdés
+      uri: spotify:artist:5maB2WqB6U2Mi7DKZQYmcS
+      popularity: 10
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/37OIHXYRvBtijmT5u0fpAe
@@ -602,23 +602,23 @@
       uri: spotify:artist:1Ptp4nbLolMX9RniidXbbn
       popularity: 0
     - external_urls:
-        spotify: https://open.spotify.com/artist/6qkUvfdDxPrjNJNgY2KzE5
-      id: 6qkUvfdDxPrjNJNgY2KzE5
-      name: Lamont Butler
-      uri: spotify:artist:6qkUvfdDxPrjNJNgY2KzE5
-      popularity: 2
+        spotify: https://open.spotify.com/artist/0O2yKE5Jyx5maooLz70DT3
+      id: 0O2yKE5Jyx5maooLz70DT3
+      name: Kawuku Sound
+      uri: spotify:artist:0O2yKE5Jyx5maooLz70DT3
+      popularity: 0
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/6rspKubI2IiJVfteKlQ5al
   images:
     - height: 640
-      url: https://mosaic.scdn.co/640/ab67616d0000b27312cae88350edd90906ef2609ab67616d0000b27343c6467b01944882824e1c50ab67616d0000b2736e28466a704a5e26f93f8260ab67616d0000b273f73ae09b808856ed2b72e442
+      url: https://mosaic.scdn.co/640/ab67616d0000b27312cae88350edd90906ef2609ab67616d0000b273351cea32c42df382c8bd6ba8ab67616d0000b2736e28466a704a5e26f93f8260ab67616d0000b273f73ae09b808856ed2b72e442
       width: 640
     - height: 300
-      url: https://mosaic.scdn.co/300/ab67616d0000b27312cae88350edd90906ef2609ab67616d0000b27343c6467b01944882824e1c50ab67616d0000b2736e28466a704a5e26f93f8260ab67616d0000b273f73ae09b808856ed2b72e442
+      url: https://mosaic.scdn.co/300/ab67616d0000b27312cae88350edd90906ef2609ab67616d0000b273351cea32c42df382c8bd6ba8ab67616d0000b2736e28466a704a5e26f93f8260ab67616d0000b273f73ae09b808856ed2b72e442
       width: 300
     - height: 60
-      url: https://mosaic.scdn.co/60/ab67616d0000b27312cae88350edd90906ef2609ab67616d0000b27343c6467b01944882824e1c50ab67616d0000b2736e28466a704a5e26f93f8260ab67616d0000b273f73ae09b808856ed2b72e442
+      url: https://mosaic.scdn.co/60/ab67616d0000b27312cae88350edd90906ef2609ab67616d0000b273351cea32c42df382c8bd6ba8ab67616d0000b2736e28466a704a5e26f93f8260ab67616d0000b273f73ae09b808856ed2b72e442
       width: 60
   name: "TestTafel #4"
   tracks:
@@ -694,7 +694,7 @@
       id: 6uYq0k8pis5LPGzdFRM5FJ
       name: Huw Marc Bennett
       uri: spotify:artist:6uYq0k8pis5LPGzdFRM5FJ
-      popularity: 18
+      popularity: 19
     - external_urls:
         spotify: https://open.spotify.com/artist/4zMgFVljBxMaPn1U0SXGOh
       id: 4zMgFVljBxMaPn1U0SXGOh
@@ -748,7 +748,7 @@
       id: 0QLkmmM8acu07MIT5GcSPT
       name: First Beige
       uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
-      popularity: 28
+      popularity: 27
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/1rISyS1ipslg42GLaJ4cZ7
