@@ -21,6 +21,21 @@ const asyncMap = async (array, mapFn) => {
   return result;
 };
 
+function dedupeBy(array, callback) {
+  const result = [];
+  const tokens = new Set();
+
+  for (const item of array) {
+    const token = callback(item);
+    if (!tokens.has(token)) {
+      tokens.add(token);
+      result.push(item);
+    }
+  }
+
+  return result;
+}
+
 async function main() {
   try {
     const { body: { access_token } = {} } =
@@ -143,7 +158,10 @@ async function main() {
 
     unpopularTracksArtists.sort((a, b) => a.popularity - b.popularity);
 
-    const unpopularArtists = unpopularTracksArtists.slice(
+    const unpopularArtists = dedupeBy(
+      unpopularTracksArtists,
+      artist => artist.id
+    ).slice(
       0,
       Math.max(2, 5 - newMusicArtists.length)
     );
