@@ -1,5 +1,52 @@
 - description: ""
   external_urls:
+    spotify: https://open.spotify.com/playlist/6qEdqQGD1dw1a8MDXHGfDa
+  images:
+    - height: 640
+      url: https://mosaic.scdn.co/640/ab67616d0000b2736b5ae962903762aea414b355ab67616d0000b2739c9167ee21eaacacd6866947ab67616d0000b273ac3b10f4cdb9a75770a89295ab67616d0000b273f863465f98dd6b913e5656a7
+      width: 640
+    - height: 300
+      url: https://mosaic.scdn.co/300/ab67616d0000b2736b5ae962903762aea414b355ab67616d0000b2739c9167ee21eaacacd6866947ab67616d0000b273ac3b10f4cdb9a75770a89295ab67616d0000b273f863465f98dd6b913e5656a7
+      width: 300
+    - height: 60
+      url: https://mosaic.scdn.co/60/ab67616d0000b2736b5ae962903762aea414b355ab67616d0000b2739c9167ee21eaacacd6866947ab67616d0000b273ac3b10f4cdb9a75770a89295ab67616d0000b273f863465f98dd6b913e5656a7
+      width: 60
+  name: "TestTafel #18"
+  tracks:
+    href: https://api.spotify.com/v1/playlists/6qEdqQGD1dw1a8MDXHGfDa/tracks
+    total: 72
+  uri: spotify:playlist:6qEdqQGD1dw1a8MDXHGfDa
+  newMusicArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/4hKrRKWY1mF3LTwGIMj99R
+      id: 4hKrRKWY1mF3LTwGIMj99R
+      name: Aili
+      uri: spotify:artist:4hKrRKWY1mF3LTwGIMj99R
+    - external_urls:
+        spotify: https://open.spotify.com/artist/3TaUSUXn41GixL7zbvrIDt
+      id: 3TaUSUXn41GixL7zbvrIDt
+      name: A-Trak
+      uri: spotify:artist:3TaUSUXn41GixL7zbvrIDt
+    - external_urls:
+        spotify: https://open.spotify.com/artist/07YivsJVCrmhhjzBcBtMGv
+      id: 07YivsJVCrmhhjzBcBtMGv
+      name: Adrian Quesada
+      uri: spotify:artist:07YivsJVCrmhhjzBcBtMGv
+  unpopularArtists:
+    - external_urls:
+        spotify: https://open.spotify.com/artist/0xrEikFxJhC6jj7EyB1xTh
+      id: 0xrEikFxJhC6jj7EyB1xTh
+      name: Malaaz
+      uri: spotify:artist:0xrEikFxJhC6jj7EyB1xTh
+      popularity: 0
+    - external_urls:
+        spotify: https://open.spotify.com/artist/7hW6UsQ5FEwCSOwhSGqbMD
+      id: 7hW6UsQ5FEwCSOwhSGqbMD
+      name: The IgG Band
+      uri: spotify:artist:7hW6UsQ5FEwCSOwhSGqbMD
+      popularity: 3
+- description: ""
+  external_urls:
     spotify: https://open.spotify.com/playlist/22QlQt7XUtOsGW7Pc3D8Nu
   images:
     - height: 640
@@ -39,7 +86,7 @@
       id: 3HZXCS9A5mStGrqbs79Sxg
       name: Reginaldo Bessa
       uri: spotify:artist:3HZXCS9A5mStGrqbs79Sxg
-      popularity: 2
+      popularity: 3
     - external_urls:
         spotify: https://open.spotify.com/artist/2gbO1WIhdYAqbwwh6LaASF
       id: 2gbO1WIhdYAqbwwh6LaASF
@@ -318,16 +365,16 @@
       uri: spotify:artist:1FVo44KTXqxo3JxXADWTd9
   unpopularArtists:
     - external_urls:
-        spotify: https://open.spotify.com/artist/33rkBSmVJY21R0Hi251lnf
-      id: 33rkBSmVJY21R0Hi251lnf
-      name: Robbie N4HC
-      uri: spotify:artist:33rkBSmVJY21R0Hi251lnf
-      popularity: 0
-    - external_urls:
         spotify: https://open.spotify.com/artist/4IJTjZQVrOffnN6NXX00DG
       id: 4IJTjZQVrOffnN6NXX00DG
       name: Khus Fir
       uri: spotify:artist:4IJTjZQVrOffnN6NXX00DG
+      popularity: 0
+    - external_urls:
+        spotify: https://open.spotify.com/artist/33rkBSmVJY21R0Hi251lnf
+      id: 33rkBSmVJY21R0Hi251lnf
+      name: Robbie N4HC
+      uri: spotify:artist:33rkBSmVJY21R0Hi251lnf
       popularity: 0
 - description: Combining some of the best tracks of the first 9 TestTafel playlists
   external_urls:
@@ -367,23 +414,23 @@
       uri: spotify:artist:3NGl2LLSZh4VUz2EaBZSUZ
       popularity: 3
     - external_urls:
-        spotify: https://open.spotify.com/artist/0A4gPcMJUMuH8wjgMl9Dij
-      id: 0A4gPcMJUMuH8wjgMl9Dij
-      name: Aleisha Lee
-      uri: spotify:artist:0A4gPcMJUMuH8wjgMl9Dij
+        spotify: https://open.spotify.com/artist/3EDQh3YXwnFIGADDBqNaEu
+      id: 3EDQh3YXwnFIGADDBqNaEu
+      name: Gary Corben
+      uri: spotify:artist:3EDQh3YXwnFIGADDBqNaEu
       popularity: 9
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/3wL7yQoGyIGKS7cDRs3lHs
   images:
     - height: 640
-      url: https://mosaic.scdn.co/640/ab67616d0000b2735379bf5f70b87f736f20a9a0ab67616d0000b2739b4a37473d016fe17e665435ab67616d0000b273a1eb647e636834df911ec886ab67616d0000b273b63fd1afe3c9a3549cd94f62
+      url: https://mosaic.scdn.co/640/ab67616d0000b2735379bf5f70b87f736f20a9a0ab67616d0000b273a1eb647e636834df911ec886ab67616d0000b273b63fd1afe3c9a3549cd94f62ab67616d0000b273e29fab5766887dfc51422d34
       width: 640
     - height: 300
-      url: https://mosaic.scdn.co/300/ab67616d0000b2735379bf5f70b87f736f20a9a0ab67616d0000b2739b4a37473d016fe17e665435ab67616d0000b273a1eb647e636834df911ec886ab67616d0000b273b63fd1afe3c9a3549cd94f62
+      url: https://mosaic.scdn.co/300/ab67616d0000b2735379bf5f70b87f736f20a9a0ab67616d0000b273a1eb647e636834df911ec886ab67616d0000b273b63fd1afe3c9a3549cd94f62ab67616d0000b273e29fab5766887dfc51422d34
       width: 300
     - height: 60
-      url: https://mosaic.scdn.co/60/ab67616d0000b2735379bf5f70b87f736f20a9a0ab67616d0000b2739b4a37473d016fe17e665435ab67616d0000b273a1eb647e636834df911ec886ab67616d0000b273b63fd1afe3c9a3549cd94f62
+      url: https://mosaic.scdn.co/60/ab67616d0000b2735379bf5f70b87f736f20a9a0ab67616d0000b273a1eb647e636834df911ec886ab67616d0000b273b63fd1afe3c9a3549cd94f62ab67616d0000b273e29fab5766887dfc51422d34
       width: 60
   name: "TestTafel #9 - Cocktail Night"
   tracks:
@@ -416,9 +463,9 @@
     - external_urls:
         spotify: https://open.spotify.com/artist/2805s9LKfRvmaFi6eK6L0f
       id: 2805s9LKfRvmaFi6eK6L0f
-      name: Luiz Gabriel Lopes
+      name: Luizga
       uri: spotify:artist:2805s9LKfRvmaFi6eK6L0f
-      popularity: 26
+      popularity: 27
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/6Y4CziMlnWkxtiMSGxz1Al
@@ -518,13 +565,13 @@
     spotify: https://open.spotify.com/playlist/16uOvUTQmIPM7UBe4C9Mmv
   images:
     - height: 640
-      url: https://mosaic.scdn.co/640/ab67616d0000b2732d477e33e6172f960783f6b0ab67616d0000b2739c2ccb85534d1b99ddc18e13ab67616d0000b273bed66f2dd27217272ca4aa5fab67616d0000b273d990653ea71f3ef4bf46d27b
+      url: https://mosaic.scdn.co/640/ab67616d0000b2732d477e33e6172f960783f6b0ab67616d0000b2739b6e416dff46ddffd16b5788ab67616d0000b2739c2ccb85534d1b99ddc18e13ab67616d0000b273d990653ea71f3ef4bf46d27b
       width: 640
     - height: 300
-      url: https://mosaic.scdn.co/300/ab67616d0000b2732d477e33e6172f960783f6b0ab67616d0000b2739c2ccb85534d1b99ddc18e13ab67616d0000b273bed66f2dd27217272ca4aa5fab67616d0000b273d990653ea71f3ef4bf46d27b
+      url: https://mosaic.scdn.co/300/ab67616d0000b2732d477e33e6172f960783f6b0ab67616d0000b2739b6e416dff46ddffd16b5788ab67616d0000b2739c2ccb85534d1b99ddc18e13ab67616d0000b273d990653ea71f3ef4bf46d27b
       width: 300
     - height: 60
-      url: https://mosaic.scdn.co/60/ab67616d0000b2732d477e33e6172f960783f6b0ab67616d0000b2739c2ccb85534d1b99ddc18e13ab67616d0000b273bed66f2dd27217272ca4aa5fab67616d0000b273d990653ea71f3ef4bf46d27b
+      url: https://mosaic.scdn.co/60/ab67616d0000b2732d477e33e6172f960783f6b0ab67616d0000b2739b6e416dff46ddffd16b5788ab67616d0000b2739c2ccb85534d1b99ddc18e13ab67616d0000b273d990653ea71f3ef4bf46d27b
       width: 60
   name: "TestTafel #6"
   tracks:
@@ -649,10 +696,10 @@
       uri: spotify:artist:3Ww9kqkmNqA2Yb4X8HcIgw
       popularity: 0
     - external_urls:
-        spotify: https://open.spotify.com/artist/2n1NhC6PKP4WpUNXFeKzjY
-      id: 2n1NhC6PKP4WpUNXFeKzjY
-      name: JD73
-      uri: spotify:artist:2n1NhC6PKP4WpUNXFeKzjY
+        spotify: https://open.spotify.com/artist/0A4gPcMJUMuH8wjgMl9Dij
+      id: 0A4gPcMJUMuH8wjgMl9Dij
+      name: Aleisha Lee
+      uri: spotify:artist:0A4gPcMJUMuH8wjgMl9Dij
       popularity: 9
 - description: ""
   external_urls:
@@ -694,7 +741,7 @@
       id: 6uYq0k8pis5LPGzdFRM5FJ
       name: Huw Marc Bennett
       uri: spotify:artist:6uYq0k8pis5LPGzdFRM5FJ
-      popularity: 19
+      popularity: 20
     - external_urls:
         spotify: https://open.spotify.com/artist/4zMgFVljBxMaPn1U0SXGOh
       id: 4zMgFVljBxMaPn1U0SXGOh
@@ -738,17 +785,17 @@
       uri: spotify:artist:5nyhiWT6YJBpWb8rfSHAsx
       popularity: 0
     - external_urls:
+        spotify: https://open.spotify.com/artist/2n1NhC6PKP4WpUNXFeKzjY
+      id: 2n1NhC6PKP4WpUNXFeKzjY
+      name: JD73
+      uri: spotify:artist:2n1NhC6PKP4WpUNXFeKzjY
+      popularity: 9
+    - external_urls:
         spotify: https://open.spotify.com/artist/0QLkmmM8acu07MIT5GcSPT
       id: 0QLkmmM8acu07MIT5GcSPT
       name: First Beige
       uri: spotify:artist:0QLkmmM8acu07MIT5GcSPT
       popularity: 27
-    - external_urls:
-        spotify: https://open.spotify.com/artist/5NPL2jGG32a4LCnu4koPL7
-      id: 5NPL2jGG32a4LCnu4koPL7
-      name: Bruxas
-      uri: spotify:artist:5NPL2jGG32a4LCnu4koPL7
-      popularity: 28
 - description: ""
   external_urls:
     spotify: https://open.spotify.com/playlist/1rISyS1ipslg42GLaJ4cZ7
@@ -795,4 +842,4 @@
       id: 4KewrgdzmKzWiJT3Znotp3
       name: Me and My Friends
       uri: spotify:artist:4KewrgdzmKzWiJT3Znotp3
-      popularity: 30
+      popularity: 29
