@@ -1,40 +1,92 @@
 ---
 title: De Sering
-layout: default
+layout: base
 language: nl
-description: 'Volkskeuken De Sering in Amsterdam: elke dinsdag samen eten voor €2,50'
 translation: index
 permalink: :path
 ---
 
-<div class="row">
-  <div class="container">
-    <h1>Volkskeuken De Sering</h1>
+{% include menu_sering_nl.html %}
 
-    <p>
-      Elke dinsdag serveren we twee veganistische gangen voor een gesuggereerde donatie van €2.50-€5.00.
-      Iedereen is tussen 18:30 en 22:00 welkom op Rhôneweg 6.
-    </p>
+<main>
+  <div class="row">
+    <div class="container">
+      <p>
+        De Sering is verhuisd! Ons nieuwe adres is <strong>Rhoneweg 6</strong>,
+        Amsterdam
+      </p>
 
-    <p>Het is niet meer nodig een reservering te maken. Kom vooral langs!</p>
+      <section>
+        <h2>Lunch en avondeten</h2>
+
+        <p>
+          Je bent <strong>op dinsdag t/m vrijdag</strong> elke dag welkom om mee
+          te eten met ons personeelsdiner! Wat ooit begon als de maaltijd voor
+          ons eigen personeel is nu toegankelijk voor iedereen. Voor slechts
+          4.50 krijg je een vegan soep en hoofdgerecht.
+        </p>
+
+        <ul>
+          <li>
+            <strong>Lunch</strong> De keuken is open tussen 13:00-14:00. Na deze
+            tijd kan het zijn dat het eten op is of niet meer wordt opgeschept.
+          </li>
+          <li>
+            <strong>Avondeten</strong> We serveren avondeten tussen 18:00 en
+            19:00. Na deze tijd kan het zijn dat het eten op is of niet meer
+            wordt opgeschept.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Volkskeuken</h2>
+
+        <p>
+          <strong>Elke dinsdag</strong> opent onze Volkskeuken: het diner
+          waarvoor De Sering oorspronkelijk opgericht is. Hier is iedereen
+          welkom voor twee veganistische gangen voor een gesuggereerde donatie
+          van €2.50-€5.00. serveren we twee veganistische gangen voor een
+          gesuggereerde donatie van €2.50-€5.00. Iedereen is tussen 18:30 en
+          22:00 welkom aan onze eettafel.
+        </p>
+
+        <p>
+          De Volkskeuken serveert eten <strong>tussen 18:00 en 22:00</strong>
+        </p>
+      </section>
+
+      <section>
+        <h2>TestTafel</h2>
+
+        <p>
+          Elke <strong>vrijdag en zaterdag</strong> serveert het experimenteel
+          restaurant TestTafel een zevengangendiner in De Sering. Voor dit diner
+          is een reservering verplicht.
+        </p>
+
+        <p>
+          TestTafel is een stichting zonder winstoogmerk. Door te eten bij
+          TestTafel ondersteun je de activiteiten van De Sering!
+        </p>
+
+        <p>
+          Ga naar <a href="{% link testtafel/index.html %}">deze pagina</a> voor
+          meer informatie.
+        </p>
+      </section>
+    </div>
   </div>
-</div>
 
-<div class="row">
-  <div class="container">
-    <img src="/img/sering.png" />
+  <div class="row">
+    <div class="container">
+      <img src="/img/sering.png" />
 
-    <h3>TestTafel</h3>
+      <h3>Contact</h3>
 
-    <p>
-      Ga naar <a href="{% link testtafel/index.html %}">deze pagina</a> voor informatie over ons pop-up restaurant
-      TestTafel.
-    </p>
+      <p><a href="mailto:info@desering.org">info@desering.org</a></p>
 
-    <h3>Contact</h3>
-
-    <p><a href="mailto:info@desering.org">info@desering.org</a></p>
-
-    <p><a href="tel:0031684292366">0684292366</a></p>
+      <p><a href="tel:0031684292366">0684292366</a></p>
+    </div>
   </div>
-</div>
+</main>
