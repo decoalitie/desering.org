@@ -6,7 +6,7 @@
       <ul>
         {% for item in site.data["main-menu"][page.language] %}
           {% assign item_page = site.pages | where: "path", item | first %}
-          <li><a href="{{ item_page.url }}">{{ item_page["main-menu"] }} </a></li>
+          <li{% if item_page["main-menu-type"] %} class="special"{% endif %}><a href="{{ item_page.url }}">{{ item_page["main-menu"] }} </a></li>
         {% endfor %}
       </ul>
     </nav>
