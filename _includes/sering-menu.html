@@ -1,0 +1,21 @@
+<header class="main-header">
+  <div>
+    <h1><a href="{% link index.html %}">De Sering</a></h1>
+
+    <nav>
+      <ul>
+        {% for item in site.data["main-menu"][page.language] %}
+          {% assign item_page = site.pages | where: "path", item | first %}
+          <li><a href="{{ item_page.url }}">{{ item_page["main-menu"] }} </a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    {% assign translation_link = "" %}
+    {% if page.language == 'en' %}
+    <a href="/{{ translation_link }}?lang=nl" class="translation-link">Nederlands</a>
+    {% else %}
+    <a href="/en/{{ translation_link }}?lang=en" class="translation-link">English</a>
+    {% endif %}
+  </div>
+</header>
