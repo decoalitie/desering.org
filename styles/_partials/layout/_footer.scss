@@ -32,3 +32,21 @@ footer {
     height: auto;
     margin: 1rem auto;
 }
+
+@media (max-width: 600px) {
+    footer {
+        ul {
+            flex-direction: column;
+        }
+
+        li {
+            &:not(:last-child):after {
+                display: none;
+            }
+        }
+    }
+
+    .footer-image {
+        margin-bottom: 0;
+    }
+}
