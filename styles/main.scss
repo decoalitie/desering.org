@@ -32,7 +32,7 @@ body {
 main {
     max-width: var(--main-content-max-width);
     margin: var(--main-header-height) auto 0 auto;
-    padding: 1rem;
+    padding: 2rem 1rem 1rem 1rem;
 }
 
 @import "layout/header";
