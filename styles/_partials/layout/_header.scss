@@ -4,6 +4,10 @@
 	--main-header-height: 3rem;
 }
 
+.mobile-select-nav {
+    display: none;
+}
+
 .main-header {
 	display: block;
 	position: fixed;
@@ -92,5 +96,28 @@
         color: var(--color-dark);
         background: var(--color-white);
         text-transform: lowercase;
+    }
+}
+
+/* 56rem === var(--main-header-max-width) */
+@media (max-width: 56rem) {
+    .main-header {
+        position: relative;
+
+        > div {
+            padding: 0 1rem;
+            justify-content: space-between;
+            width: 100%;
+        }
+        nav{ 
+            display: none;
+        }
+    }
+
+    .mobile-select-nav {
+        display: block;
+        margin: 1rem;
+        padding: 0.5rem;
+        width: calc(100% - 2rem);
     }
 }

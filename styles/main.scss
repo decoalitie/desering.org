@@ -35,5 +35,14 @@ main {
     padding: 2rem 1rem 1rem 1rem;
 }
 
+
+/* 56rem === var(--main-header-max-width) */
+@media (max-width: 56rem) {
+	main {
+		margin-top: 0;
+		padding-top: 1rem;
+	}
+}
+
 @import "layout/header";
 @import "layout/footer";

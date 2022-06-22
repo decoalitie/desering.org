@@ -34,6 +34,18 @@
     
     {% include sering-footer.html %}
 
+    <script type="text/javascript">
+      const selectNav = document.querySelectorAll('.mobile-select-nav');
+
+      function handleSelectNavChange(e) {
+        location.href = e.currentTarget.value;
+      }
+
+      for (const selectElement of selectNav) {
+        selectElement.addEventListener('change', handleSelectNavChange)
+      }
+    </script>
+
     {% for script in page.scripts %}
       <script type="text/javascript" src="/js/dist/{{ script }}{% if jekyll.environment == "watch" %}-dev{% endif %}.js?v=202204151358"></script>
     {% endfor %}

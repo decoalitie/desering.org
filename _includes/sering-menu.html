@@ -6,7 +6,7 @@
       <ul>
         {% for item in site.data["main-menu"][page.language] %}
           {% assign item_page = site.pages | where: "path", item | first %}
-          <li{% if item_page["main-menu-type"] %} class="special"{% endif %}><a href="{{ item_page.url }}">{{ item_page["main-menu"] }} </a></li>
+          <li{% if item_page["main-menu-type"] %} class="special"{% endif %}><a href="{{ item_page.url }}">{{ item_page["main-menu"] }}</a></li>
         {% endfor %}
       </ul>
     </nav>
@@ -19,3 +19,20 @@
     {% endif %}
   </div>
 </header>
+
+<select class="mobile-select-nav">
+  <option value="_none_" disabled selected>Main menu</option>
+  
+  {% for item in site.data["main-menu"][page.language] %}
+  {% assign item_page = site.pages | where: "path", item | first %}
+    <option value="{{ item_page.url }}">
+      {% if item_page["main-menu-type"] -%}
+      *
+      {%- endif -%}
+      {{ item_page["main-menu"] }}
+      {%- if item_page["main-menu-type"] -%}
+      *
+      {%- endif %}
+    </option>
+  {% endfor %}
+</select>
