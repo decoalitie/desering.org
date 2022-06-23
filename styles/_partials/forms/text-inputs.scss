@@ -13,7 +13,7 @@ input[type="email"]:focus,
 input[type="tel"]:focus,
 input[type="number"]:focus {
   outline: none;
-  border-color: var(--pink);
+  border-color: var(--color-light);
 }
 
 input[type="checkbox"] {
