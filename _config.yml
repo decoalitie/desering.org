@@ -8,7 +8,6 @@ exclude:
   - package.json
   - package-lock.json
   - js/src
-  - styles/_partials
   - node_modules
   - webpack.config.js
   - babel.config.js

@@ -1,0 +1,50 @@
+<header class="main-header">
+  <div>
+    <h1>
+      {% if page.language == 'en' %}
+      <a href="{% link en/index.html %}">De Sering</a>
+      {% else %}
+      <a href="{% link index.html %}">De Sering</a>
+      {% endif %}
+    </h1>
+
+    <nav>
+      <ul>
+        {% for item in site.data["main-menu"][page.language] %}
+          {% assign item_page = site.pages | where: "path", item | first %}
+          <li{% if item_page["main-menu-type"] %} class="special"{% endif %}><a href="{{ item_page.url }}">{{ item_page["main-menu"] }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    {% assign translation_link = "" %}
+
+
+    {% if page.translation %}
+    {% assign translation_link = page.translation %}
+    {% endif %}
+
+    {% if page.language == 'en' %}
+    <a href="/{{ translation_link }}?lang=nl" class="translation-link">Nederlands</a>
+    {% else %}
+    <a href="/en/{{ translation_link }}?lang=en" class="translation-link">English</a>
+    {% endif %}
+  </div>
+</header>
+
+<select class="mobile-select-nav">
+  <option value="_none_" disabled selected>Main menu</option>
+  
+  {% for item in site.data["main-menu"][page.language] %}
+  {% assign item_page = site.pages | where: "path", item | first %}
+    <option value="{{ item_page.url }}">
+      {% if item_page["main-menu-type"] -%}
+      *
+      {%- endif -%}
+      {{ item_page["main-menu"] }}
+      {%- if item_page["main-menu-type"] -%}
+      *
+      {%- endif %}
+    </option>
+  {% endfor %}
+</select>

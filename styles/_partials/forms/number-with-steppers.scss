@@ -10,7 +10,7 @@
     font-size: 1.4rem;
     padding: 0.3rem 0.3rem 0.3rem 0.6rem;
     border: 2px solid transparent;
-    border-bottom: 2px solid var(--purple);
+    border-bottom: 2px solid var(--color-main);
     margin-right: 1rem;
 
     -webkit-appearance: textfield;
@@ -52,7 +52,7 @@
     appearance: none;
     cursor: pointer;
     border: none;
-    background: var(--purple);
+    background: var(--color-main);
 
     position: relative;
     transform-origin: 50% 50%;
@@ -64,15 +64,15 @@
     }
 
     &:focus-visible {
-      border: 2px solid var(--purple-white);
-      outline: 2px solid var(--purple);
+      border: 2px solid var(--color-white);
+      outline: 2px solid var(--color-main);
     }
 
     &.add:after,
     &:before {
       content: " ";
       display: block;
-      background-color: var(--purple-white);
+      background-color: var(--color-white);
       position: absolute;
       top: 50%;
       left: 50%;

@@ -1,0 +1,107 @@
+@font-face {
+	font-family: 'Syne';
+	font-weight: 700;
+	font-style: normal;
+	src: local('Syne Bold'), local('Syne-Bold'), url('../fonts/Syne-Bold.otf');
+}
+@font-face {
+	font-family: 'Sporting Grotesque';
+	font-weight: 700;
+	font-style: normal;
+	src: local('Sporting Grotesque Bold'), local('SportingGrotesque-Bold'), url('../fonts/SportingGrotesque-Bold.otf');
+}
+@font-face {
+	font-family: 'Libre Franklin';
+	font-weight: 400;
+	font-style: normal;
+	src: local('Libre Franklin Regular'), local('LibreFranklin-Regular'), url('../fonts/LibreFranklin-Regular.otf');
+}
+@font-face {
+	font-family: 'Libre Franklin';
+	font-weight: 400;
+	font-style: italic;
+	src: local('Libre Franklin Italic'), local('LibreFranklin-Italic'), url('../fonts/LibreFranklin-Italic.otf');
+}
+
+::selection {
+	color: var(--color-white);
+	background-color: var(--color-accent);
+}
+
+main > section:not(:first-child) {
+	margin-top: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.4;
+}
+
+h2 {
+	margin-top: 1rem;
+	margin-bottom: .5rem;
+}
+
+h3 {
+	margin-top: 2rem;
+	margin-bottom: .5rem;
+}
+
+h2 + h3 {
+	margin-top: .6rem;
+}
+
+h1 {
+	font-family: var(--syne-stack);
+	color: var(--red-accent);
+}
+
+p {
+	text-align: justify;
+	hyphens: auto;
+	margin: 0 0 1rem 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	border-bottom: 2px solid var(--color-main);
+}
+
+a.button {
+	display: block;
+	border: 3px solid var(--color-main);
+	color: var(--color-accent);
+	font-weight: bold;
+	margin: 0 auto;
+	max-width: 28rem;
+	margin-bottom: 2rem;
+	margin-top: 2rem;
+	border-radius: 10px;
+	padding: 1rem;
+	text-align: center;
+}
+
+a.button:hover {
+	background: var(--color-main);
+	color: var(--color-white);
+}
+
+.purple-box {
+	background: var(--color-dark);
+	color: var(--color-white);
+	padding: 2rem 2rem;
+	margin-top: 1rem;
+}
+
+.purple-box h3 {
+	color: var(--color-light);
+	font-size: 2rem;
+	font-weight: bold;
+	margin-top: 0;
+}
+
+@media(max-width: 600px) {
+	html {
+		font-size: 16px;
+	}
+}

@@ -4,8 +4,8 @@ form {
   --step-spacing: 2rem;
   --input-padding: 0.5rem;
 
-  --color-dark-bg: var(--purple-dark);
-  --color-dark-text: var(--purple-white);
+  --color-dark-bg: var(--color-dark);
+  --color-dark-text: var(--color-white);
 
   p {
     hyphens: none;
@@ -26,10 +26,10 @@ form {
 
 .warning {
   padding: 0.5rem;
-  border: 1px solid var(--purple);
+  border: 1px solid var(--color-main);
 
   strong {
-    color: var(--purple);
+    color: var(--color-main);
   }
 }
 

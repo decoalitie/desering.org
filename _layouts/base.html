@@ -8,10 +8,7 @@
 
     <title>{{ page.title }}</title>
 
-    <link rel="stylesheet" href="/styles/normalize.css" />
-    <link rel="stylesheet" href="/styles/decoalitie-colours.css" />
-    <link rel="stylesheet" href="/styles/decoalitie-fonts.css" />
-    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
     {% for stylesheet in page.stylesheets %}
       <link rel="stylesheet" href="/styles/{{ stylesheet }}.css" />
     {% endfor %}
@@ -29,7 +26,25 @@
 
   <body lang="{{ page.language }}" class="purple">
 
-    {{ content }}
+    {% include global-header.html %}
+
+    <main>
+      {{ content }}
+    </main>
+    
+    {% include global-footer.html %}
+
+    <script type="text/javascript">
+      const selectNav = document.querySelectorAll('.mobile-select-nav');
+
+      function handleSelectNavChange(e) {
+        location.href = e.currentTarget.value;
+      }
+
+      for (const selectElement of selectNav) {
+        selectElement.addEventListener('change', handleSelectNavChange)
+      }
+    </script>
 
     {% for script in page.scripts %}
       <script type="text/javascript" src="/js/dist/{{ script }}{% if jekyll.environment == "watch" %}-dev{% endif %}.js?v=202204151358"></script>
