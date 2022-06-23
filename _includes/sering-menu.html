@@ -12,6 +12,12 @@
     </nav>
 
     {% assign translation_link = "" %}
+
+
+    {% if page.translation %}
+    {% assign translation_link = page.translation %}
+    {% endif %}
+
     {% if page.language == 'en' %}
     <a href="/{{ translation_link }}?lang=nl" class="translation-link">Nederlands</a>
     {% else %}
