@@ -2,10 +2,10 @@
   "name": "desering-org-scripts",
   "version": "1.0.0",
   "scripts": {
-    "build": "npm run build:js && npm run build:jekyll",
+    "build": "npm run build:jekyll",
     "build:jekyll": "bundle exec jekyll build",
     "build:js": "webpack build --mode production",
-    "dev": "concurrently \"webpack watch --mode development\" \"JEKYLL_ENV=watch bundle exec jekyll serve\"",
+    "dev": "JEKYLL_ENV=watch bundle exec jekyll serve",
     "get-sheets-data": "node _scripts/get-sheets-data.js",
     "get-playlists": "node _scripts/get-playlists.js",
     "serve": "bundle exec jekyll serve"
