@@ -1,6 +1,12 @@
 <header class="main-header">
   <div>
-    <h1><a href="{% link index.html %}">De Sering</a></h1>
+    <h1>
+      {% if page.language == 'en' %}
+      <a href="{% link en/index.html %}">De Sering</a>
+      {% else %}
+      <a href="{% link index.html %}">De Sering</a>
+      {% endif %}
+    </h1>
 
     <nav>
       <ul>
