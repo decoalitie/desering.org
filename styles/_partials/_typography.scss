@@ -28,22 +28,22 @@
 	background-color: var(--color-accent);
 }
 
+main > section:not(:first-child) {
+	margin-top: 2rem;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1.4;
 }
 
 h2 {
-	margin-top: 2rem;
-	margin-bottom: .3rem;
-	
-	&:first-child {
-		margin-top: 0;
-	}
+	margin-top: 1rem;
+	margin-bottom: .5rem;
 }
 
 h3 {
 	margin-top: 2rem;
-	margin-bottom: .3rem;
+	margin-bottom: .5rem;
 }
 
 h2 + h3 {
@@ -58,7 +58,7 @@ h1 {
 p {
 	text-align: justify;
 	hyphens: auto;
-	margin-bottom: 1rem;
+	margin: 0 0 1rem 0;
 }
 
 a {

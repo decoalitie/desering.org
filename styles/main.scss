@@ -32,7 +32,7 @@ body {
 main {
     max-width: var(--main-content-max-width);
     margin: var(--main-header-height) auto 0 auto;
-    padding: 2rem 1rem 1rem 1rem;
+    padding: 1rem;
 }
 
 
@@ -40,7 +40,6 @@ main {
 @media (max-width: 56rem) {
 	main {
 		margin-top: 0;
-		padding-top: 1rem;
 		min-height: 60vh;
 	}
 }
