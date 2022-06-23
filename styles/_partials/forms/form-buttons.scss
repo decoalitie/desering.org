@@ -43,13 +43,13 @@ form {
         overflow: hidden;
         padding: 1rem;
         text-align: center;
-        border: 3px solid var(--purple-dark);
-        background: var(--purple-accent);
-        color: var(--purple-white);
+        border: 3px solid var(--color-dark);
+        background: var(--color-accent);
+        color: var(--color-white);
 
         &:hover {
-            border: 3px solid var(--purple-accent);
-            background: var(--purple);
+            border: 3px solid var(--color-accent);
+            background: var(--color-main);
         }
 
         &:disabled {
