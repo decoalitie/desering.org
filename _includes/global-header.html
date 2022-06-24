@@ -1,3 +1,4 @@
+{% assign i18n = site.data.i18n.header[page.language] %}
 <header class="main-header">
   <div>
     <h1>
@@ -33,7 +34,7 @@
 </header>
 
 <select class="mobile-select-nav">
-  <option value="_none_" disabled selected>Main menu</option>
+  <option value="_none_" disabled selected>{{ i18n["main-menu"] }}</option>
   
   {% for item in site.data["main-menu"][page.language] %}
   {% assign item_page = site.pages | where: "path", item | first %}
