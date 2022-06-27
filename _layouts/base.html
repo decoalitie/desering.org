@@ -6,6 +6,21 @@
     <meta name="description" content="{{ page.description }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <meta property="og:site_name" content="De Sering" />
+    <meta property="og:type" content="website" />    
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:description" content="{{ page.description }}" />
+    {% if page["og-misc"] %}
+    {{ page["og-misc"] }}
+    {% endif %}
+    {% if page.language == 'en' %}
+    <meta property="og:locale" content="en" />
+    <meta property="og:locale:alternate" content="nl" />
+    {% else %}
+    <meta property="og:locale" content="nl" />
+    <meta property="og:locale:alternate" content="en" />
+    {% endif %}
+
     <title>{{ page.title }}</title>
 
     <link rel="stylesheet" href="/styles/main.css" />
