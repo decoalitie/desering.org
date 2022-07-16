@@ -65,14 +65,44 @@
     {% include global-footer.html %}
 
     <script type="text/javascript">
-      const selectNav = document.querySelectorAll('.mobile-select-nav');
-
-      function handleSelectNavChange(e) {
-        location.href = e.currentTarget.value;
+      const expandMenuElement = document.querySelector('.menu-expand-button');
+      const mainNavElement = document.querySelector('.main-nav');
+      const mainHeaderElement = document.querySelector('.main-header');
+    
+      let menuIsOpen = false;
+    
+      function handleExpandClick() {
+        if (menuIsOpen) {
+          closeMenu();
+        } else { 
+          openMenu();
+        }
       }
-
-      for (const selectElement of selectNav) {
-        selectElement.addEventListener('change', handleSelectNavChange)
+    
+      function handleDocumentClick(e) {
+        if (!mainHeaderElement.contains(e.target)) {
+          e.preventDefault();
+          e.stopPropagation();
+          closeMenu();
+        }
+      }
+    
+      function openMenu() {
+        menuIsOpen = true;
+        expandMenuElement.classList.add('is-active');
+        mainNavElement.classList.add('open');
+        document.addEventListener('click', handleDocumentClick);
+      }
+    
+      function closeMenu() {
+        menuIsOpen = false;
+        expandMenuElement.classList.remove('is-active');
+        mainNavElement.classList.remove('open');
+        document.removeEventListener('click', handleDocumentClick);
+      }
+    
+      if (expandMenuElement && mainNavElement) {
+        expandMenuElement.addEventListener('click', handleExpandClick);
       }
     </script>
 
